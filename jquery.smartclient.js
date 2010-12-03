@@ -445,15 +445,21 @@
             top.$(":submit", this).after("<span />");
 
 
-            top.$("table[rules=all]", this).addClass("ui-theme-table")
-                                          .filter("tr")
-                                           .hover(function() {
-                                               $(this).addClass('hover');
-                                           },
-                                          function() {
-                                              $(this).removeClass();
-                                          });
+            top.$("table[rules=all]", this)
+               .addClass("ui-theme-table")
+               .filter("tr")
+               .hover(function() { $(this).addClass('hover'); },
+                      function() { $(this).removeClass(); });
 
+            top.$("table[rowselectable=true]", this).each(function(i, elem) {
+                var $table = $(elem);
+
+                $.each(this.rows, function(i, elem) {
+                    $(this).has(".delete").click(function() {
+                        __doPostBack(($table.attr("id") || "").replace(/\_/g, "$"), 'Select$' + (i - 1));
+                    });
+                });
+            })
 
         }
 
