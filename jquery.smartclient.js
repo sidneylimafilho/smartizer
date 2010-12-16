@@ -452,12 +452,12 @@
                         parse: function(response) {
                             var parsed = [];
                             if (response) {
-                                var data = response.Data;
+                                var data = response.Data || response;
                                 for (var i = 0; i < data.length; i++) {
                                     parsed[parsed.length] = {
                                         data: data[i],
-                                        value: data[i].Name,
-                                        result: data[i].Name
+                                        value: data[i].Name || data[i],
+                                        result: data[i].Name || data[i]
                                     };
                                 }
                             }
