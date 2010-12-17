@@ -291,17 +291,20 @@
 
             this._initializeCommandControls();
 
-            this._initializeCalendars();
-
-            this._initializeThemeStyle();
-
-            this._initializeHtmlBox();
-
             this._initializeAutocomplete();
 
-            this._initializeLightboxEvolution();
+            $("[plugin]", this).each(function(i, ctrl) {
+                var it = $(ctrl);
+                if (it.hasControl()) return;
+                it.hasControl(true);
 
+                var plugin = it.attr("plugin");
+                var options = eval("(" + it.attr("options") + ")");
 
+                it[plugin](options);
+            });
+
+            this._initializeThemeStyle();
 
             return this;
 
@@ -330,113 +333,9 @@
                 }
             });
         },
-        _initializeCalendars: function() {
-            $("[plugin*=calendar]", this).each(function() {
-
-                if (!$(this).hasControl()) {
-                    $(this).hasControl(true);
-
-                    var dateOptions = {
-                        inline: true,
-                        showOn: "button",
-                        changeMonth: true,
-                        changeYear: true,
-                        constrainInput: false,
-                        nextText: "Próximo",
-                        prevText: "Anterior",
-                        dateFormat: "dd/mm/yy",
-                        // monthNamesShort: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
-                        //                   'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                        // dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
-                        // dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
-                        numberOfMonths: 2,
-                        showOtherMonths: true,
-                        selectOtherMonths: true,
-                        showButtonPanel: false,
-                        // minDate: 0,
-                        // maxDate: "+12M",
-                        onSelect: function(selectedDate) {
-                            var option = "minDate",
-                                instance = $(this).data("datepicker"),
-                                date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
-
-                            $(instance.settings.relatedCalendar).datepicker("option", option, date);
-                        }
-                    };
-
-                    dateOptions = $.extend(true, dateOptions, eval("(" + $(this).attr("options") + ")"));
-
-                    $(this).datepicker(dateOptions);
-
-                    $(this).setMask({ mask: "39/19/9999" });
-                }
-            });
 
 
-        },
 
-        _initializeHtmlBox: function() {
-
-            /***************************************************************************************************
-            HTML Box
-            ***************************************************************************************************/
-            if ($.fn.htmlbox) {
-                $("[plugin=htmlbox]", this).each(function() {
-                    if (!$(this).hasControl()) {
-                        $(this).hasControl(true);
-
-                        var options = {
-                            toolbars: [
-                                ["separator", "cut", "copy", "paste", "separator", "undo", "redo", "separator", "bold", "italic", "underline", "strike", "sup", "sub", "separator", "justify", "left", "center", "right", "separator", "ol", "ul", "indent", "outdent", "separator", "link", "unlink", "image",
-                            //Strip tags
-                                "separator", "removeformat", "striptags", "hr", "paragraph"
-                            // Styles, Source code syntax buttons
-                            //, "separator", "quote", "styles", "syntax"
-                                ],
-                                [
-                            // Formats, Font size, Font family, Font color, Font, Background
-                                "separator", "formats", "fontsize", "fontfamily", "separator", "fontcolor", "highlight",
-                            // Show code
-                                "separator", "code"]
-                            ],
-                            idir: "../../App_Shared/themes/glasscyan/controls/Editor/",
-                            icons: "default",
-                            // Icon set
-                            about: false,
-                            skin: "silver",
-                            // Skin, silver
-                            output: "xhtml",
-                            // Output
-                            toolbar_height: 24,
-                            // Toolbar height
-                            tool_height: 16,
-                            // Tools height
-                            tool_width: 16,
-                            // Tools width
-                            tool_image_height: 16,
-                            // Tools image height
-                            tool_image_width: 16,
-                            // Tools image width
-                            css: "body{margin:3px;font-family:verdana;font-size:11px; background-image:none;}p{margin:0px;}",
-                            success: function(data) {
-                                alert(data);
-                            },
-                            // AJAX on success
-                            error: function(a, b, c) {
-                                return this;
-                            } // AJAX on error
-                        };
-
-                        options = $.extend(options, eval("(" + $(this).attr("options") + ")"));
-
-                        var height = $(this).css("height") || "400px";
-                        var weight = $(this).css("weight") || "100%";
-                        $(this).css("height", height).css("weight", weight).htmlbox(options);
-                    }
-                });
-            }
-
-        },
 
         _initializeAutocomplete: function() {
             /***************************************************************************************************
@@ -471,16 +370,7 @@
                 }
             });
         },
-        _initializeLightboxEvolution: function() {
 
-
-            $("[plugin*=lightbox]", this).click(function(ev) {
-                top.$.lightbox($(this).getAddress(), {});
-                ev.preventDefault();
-            });
-
-
-        },
         _initializeThemeStyle: function() {
             top.$(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
             top.$(":text", this).focusin(function() {
@@ -493,8 +383,11 @@
                 $(this).parent().removeClass('cDat11_hover');
             }).after("<span />");
 
-            top.$(":submit", this).wrap("<span class='ui-theme-button cBtn11' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
-            top.$(":submit", this).after("<span />");
+            top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
+                $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
+            });
+            
+            top.$(":submit, :button, :reset", this).after("<span />");
 
 
             top.$("table[rules=all]", this)
