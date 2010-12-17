@@ -493,8 +493,8 @@
                 $(this).parent().removeClass('cDat11_hover');
             }).after("<span />");
 
-            top.$(":submit", this).wrap("<span class='ui-theme-button cBtn11' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
-            top.$(":submit", this).after("<span />");
+            top.$(":submit, :button, :reset", this).wrap("<span class='ui-theme-button cBtn11' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
+            top.$(":submit, :button, :reset", this).after("<span />");
 
 
             top.$("table[rules=all]", this)
