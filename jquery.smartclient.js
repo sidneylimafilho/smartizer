@@ -383,10 +383,11 @@
                 $(this).parent().removeClass('cDat11_hover');
             }).after("<span />");
 
-            top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
+        top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
                 $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
             });
             
+
             top.$(":submit, :button, :reset", this).after("<span />");
 
 
