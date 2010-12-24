@@ -291,8 +291,6 @@
 
             this._initializeCommandControls();
 
-            this._initializeAutocomplete();
-
             $("[plugin]", this).each(function(i, ctrl) {
                 var it = $(ctrl);
                 if (it.hasControl()) return;
@@ -337,39 +335,6 @@
 
 
 
-        _initializeAutocomplete: function() {
-            /***************************************************************************************************
-            Autocomplete
-            ***************************************************************************************************/
-            $("[plugin=autocomplete]", this).each(function() {
-                if (!$(this).hasControl()) {
-                    $(this).hasControl(true);
-
-                    $(this).autocomplete({
-                        url: $(this).getAddress(),
-                        minChars: $(this).attr("minChars") || 1,
-                        parse: function(response) {
-                            var parsed = [];
-                            if (response) {
-                                var data = response.Data || response;
-                                for (var i = 0; i < data.length; i++) {
-                                    parsed[parsed.length] = {
-                                        data: data[i],
-                                        value: data[i].Name || data[i],
-                                        result: data[i].Name || data[i]
-                                    };
-                                }
-                            }
-
-                            return parsed;
-                        },
-                        formatItem: function(item) {
-                            return item.Name; // +' (' + item.mail + ')';
-                        }
-                    });
-                }
-            });
-        },
 
         _initializeThemeStyle: function() {
             top.$(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
@@ -383,14 +348,19 @@
                 $(this).parent().removeClass('cDat11_hover');
             }).after("<span />");
 
-        top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
-                $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
+            //
+            // Botões
+            //
+            top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
+                $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
             });
-            
 
             top.$(":submit, :button, :reset", this).after("<span />");
 
 
+            //
+            // Grid
+            //
             top.$("table[rules=all]", this)
                .addClass("ui-theme-table")
                .filter("tr")
