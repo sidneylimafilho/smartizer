@@ -298,7 +298,11 @@
 
                 var plugin = it.attr("plugin");
                 var options = eval("(" + it.attr("options") + ")");
-
+                
+                if (!it[plugin]) {
+                    alert("The plugin \"" + plugin + "\" don´t loaded!");
+                }
+                
                 it[plugin](options);
             });
 

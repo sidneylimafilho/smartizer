@@ -1,4 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SampleService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SampleService" %>
 
 using System;
 using System.Collections;
@@ -15,17 +15,16 @@ using Vivina.Erp.SystemFramework;
 // NOTE: If you change the class name "TooltipService" here, you must also update the reference to "TooltipService" in Web.config.
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 [ServiceContract(Namespace = "Http://InfoControl")]
-[ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class SampleService : DataServiceBase
 {
-    [OperationContract, System.ServiceModel.Web.WebGet]
-    public List<object> TestAutocomplete(string q, int limit)
+    [OperationContract]
+    public object TestAutocomplete(string q, int limit)
     {
-        var list = new List<object>();
+        var list = new List<string>();
         var rnd = new Random();
         for (var i = 0; i < limit; i++)
         {
-            list.Add(new { Name = q + rnd.NextDouble().ToString().Substring(5 - q.Length) });
+            list.Add(q + rnd.NextDouble().ToString().Substring(5 - q.Length));
         }
         return list;
     }
