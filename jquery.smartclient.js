@@ -206,7 +206,7 @@
                 return;
             }
 
-            // Only fires ajax if there are url
+            // Only fires ajax if there are url 
             if (options.url) {
                 $.ajax({
                     type: options.type,
