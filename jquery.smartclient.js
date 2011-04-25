@@ -49,10 +49,15 @@
             }
 
         },
-        render: function(data) {
+        render: function(data, options) {
             if (this.size() == 0) throw new Error("Zero element selected!");
 
+            options = $.expand({}, options);
             var template = this.html();
+
+            if ($(options.template).size() > 0) {
+                template = $(options.template).html();
+            }
 
             // Convert the template into pure JavaScript
             var script = "var p=[], print=function(){ p.push.apply(p,arguments); }; " +
@@ -154,7 +159,7 @@
 
             var formData = {};
 
-            options.data = options.data || {};
+            options.data = $.extend({}, options.data);
             if ($this.attrUp("options") && $this.attrUp("options") != "") {
                 options.data = $.extend(eval("(" + $this.attrUp("options") + ")"), options.data);
             }
@@ -196,15 +201,7 @@
             // Prepare the url
             options.url = $this.getAddress();
 
-            // Allow fire DataBinding in controls that has TRIGGER atribute
-            if ($this.attrUp("trigger")) {
-                $this.closest("[trigger]").find("[options]").each(function() {
-                    options.data[$this.attr("options")] = $this.val();
-                });
 
-                $($this.attrUp("trigger")).dataBind(options);
-                return;
-            }
 
             // Only fires ajax if there are url 
             if (options.url) {
@@ -215,7 +212,6 @@
                     contentType: "application/json",
                     ifModified: true,
                     success: function(result, status, request) {
-
 
                         // If Not Modified then get cached content file by iframe
                         if (request.status == 304) {
@@ -228,57 +224,82 @@
                             if (result && request.responseText != "") {
                                 if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
 
-                                    if (result.Errors) {
-                                        if ($.isArray(result.Errors)) {
-                                            for (var item in result.Errors)
-                                                alert(item);
-                                        } else {
-                                            alert(result.Errors);
-                                        }
-                                    }
+                                    handlerResultErrors(result);
 
-                                    //
-                                    // result.Data   = ClientResponse
-                                    // result.d      = ASMX/WCF JSON return
-                                    // result.d.Data = ASMX/WCF JSON return ClientResponse
-                                    // 
-                                    var data = result.Data || result.d || result.d.Data || result;
-
-                                    if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
-                                        result.isEmpty = true;
-                                        html = $($this.attrUp("emptytemplate")).html();
-
-                                    } else {
-                                        // Get template tag
-                                        tpl = $this;
-                                        if ($(options.template).size() > 0) {
-                                            tpl = $(options.template);
-                                        }
-
-                                        html = tpl.render(data);
-                                    }
+                                    html = renderDataInHtml(result, $this, options);
                                 }
                             }
 
                             $this.attachHtmlInTarget(html, target);
                         }
-
                         if (options.onsucess)
                             options.onsucess(result, status, request);
 
                         if ($this.attr("onsucess"))
                             eval($this.attr("onsucess"));
 
-                        if ($this.attrUp("once"))
-                            $this.unbind($this.attr("command"));
-
-
+                        fireActions($this, options);
                     },
                     error: function(result, status, event) {
                         eval($this.attrUp("onerror"));
                         if (result.status == "404") PageNotFoundException($this);
                     }
                 });
+            } else {
+                fireActions($this, options);
+            }
+
+            function fireActions($this, options) {
+
+                if ($this.attrUp("once"))
+                    $this.unbind($this.attr("command"));
+
+                if ($this.attr("hide"))
+                    $($this.attr("hide")).hide();
+
+                if ($this.attr("show"))
+                    $($this.attr("show")).show();
+
+                // Allow fire DataBinding in controls that has TRIGGER atribute
+                if ($this.attrUp("trigger")) {
+                    $this.closest("[trigger]").find("[options]").each(function() {
+                        options.data[$this.attr("options")] = $this.val();
+                    });
+
+                    $($this.attrUp("trigger")).dataBind(options);
+                    return;
+                }
+            }
+
+            function handlerResultErrors(result) {
+                if (result.Errors) {
+                    if ($.isArray(result.Errors)) {
+                        for (var item in result.Errors)
+                            alert(item);
+                    } else {
+                        alert(result.Errors);
+                    }
+                }
+            }
+
+            function renderDataInHtml(result, $this, options) {
+                //
+                // result.Data   = ClientResponse
+                // result.d      = ASMX/WCF JSON return
+                // result.d.Data = ASMX/WCF JSON return ClientResponse
+                // 
+                var data = result.Data || result.d || result.d.Data || result;
+
+                if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
+                    result.isEmpty = true;
+                    html = $($this.attrUp("emptytemplate")).html();
+
+                } else {
+
+                    html = $this.render(data, options);
+                }
+
+                return html;
             }
         },
 
@@ -298,11 +319,11 @@
 
                 var plugin = it.attr("plugin");
                 var options = eval("(" + it.attr("options") + ")");
-                
+
                 if (!it[plugin]) {
                     alert("The plugin \"" + plugin + "\" don´t loaded!");
                 }
-                
+
                 it[plugin](options);
             });
 

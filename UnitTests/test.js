@@ -106,13 +106,12 @@ $(document).ready(function() {
 
     asyncTest("chama recursos de dados em JSON assincronamente", function() {
         stop();
-        sandbox.html("<div><span command='click' source='json.aspx' " +
-                     "action='GetSampleData' options='{parameters:{companyId:1, itemId:null}, formData:{}}' /></div>")
+        sandbox.html("<div><span command='click' source='data.js' method='get' /></div>")
                 .initializeControls()
                 .find("span")
                 .dataBind({
                     onsucess: function(result, status, request) {
-                        ok(result.d, "OK, Veio JSON: " + $.toJSON(result.d));
+                        ok(result, "OK, Veio JSON: " + $.toJSON(result));
                         start();
                     }
                 });
@@ -145,7 +144,7 @@ $(document).ready(function() {
     asyncTest("TRIGGER: Ao disparar a tag A deve chamar o DataBind do elemento que está do atributo trigger", function() {
         stop();
         var c = sandbox
-                .html("<span id='test' command='click' source='json.aspx' action='GetSampleData' " +
+                .html("<span id='test' command='click' source='blank.htm' method='get' " +
                       " onsucess='ok(true, request.responseText); start();' " +
                       " options='{parameters:{companyId:1, itemId:null}, formData:{}}'  ></span>" +
                       "<a command='click' trigger='#test'  ></a>")
