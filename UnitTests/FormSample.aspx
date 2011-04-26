@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" %>
+﻿<%@ Page Inherits="System.Web.Mvc.ViewPage" %>
 
 <div command="load" controller="<%=ResolveUrl("~/Infocontrol/SearchService/GetOneSampleData") %>"          
      selecteditemclass="myselected">

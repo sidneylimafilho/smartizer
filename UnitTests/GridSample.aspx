@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" %>
+﻿<%@ Page Inherits="System.Web.Mvc.ViewPage" %>
 
 <table id="table1" command="load" controller="<%=ResolveUrl("~/infocontrol/SearchService.svc/") %>"
     action="GetSampleData" params="{companyId:1, teste:{ casa:'JPA', status:'Atrasado', data: new Date(2010, 11, 31)}, itemId:null}" template="#table1 .template"

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" %>
+﻿<%@ Page Inherits="System.Web.Mvc.ViewPage" %>
 <fieldset>
             <legend>Combo:</legend>
             Exemplo de combo:
