@@ -30,8 +30,8 @@
             url = url.replace(/(.*)\/$/, "$1") // remove a trailing "/"
                      .replace("~", appPath);
 
-            if (this.attrUp("source") && this.attrUp("action")) {
-                url += "/" + this.attrUp("action");
+            if (this.attrUp("source") && this.attrUp("op")) {
+                url += "/" + this.attrUp("op");
             }
             return url;
         },
@@ -52,7 +52,7 @@
         render: function(data, options) {
             if (this.size() == 0) throw new Error("Zero element selected!");
 
-            options = $.expand({}, options);
+            options = $.extend({}, options);
             var template = this.html();
 
             if ($(options.template).size() > 0) {
@@ -160,8 +160,8 @@
             var formData = {};
 
             options.data = $.extend({}, options.data);
-            if ($this.attrUp("options") && $this.attrUp("options") != "") {
-                options.data = $.extend(eval("(" + $this.attrUp("options") + ")"), options.data);
+            if ($this.attrUp("args") && $this.attrUp("args") != "") {
+                options.data = $.extend(eval("(" + $this.attrUp("args") + ")"), options.data);
             }
 
             var form = $this.closest("[asform]") || $this.closest("[action]") || $this.closest("FORM");
@@ -238,11 +238,14 @@
                         if ($this.attr("onsucess"))
                             eval($this.attr("onsucess"));
 
-                        fireActions($this, options);
+
                     },
                     error: function(result, status, event) {
                         eval($this.attrUp("onerror"));
                         if (result.status == "404") PageNotFoundException($this);
+                    },
+                    complete: function() {
+                        fireActions($this, options);
                     }
                 });
             } else {
