@@ -32,7 +32,7 @@
         </fieldset>
         <fieldset>
             <legend>Buttons:</legend>
-            <input type="submit" command="click" value="enviar">
+            <input type="submit" on="click" value="enviar">
         </fieldset>
 
-<a href="blank.htm" command="click" target="#content">Limpa Tela</a>  sd <a href="SampleAll.ascx" command="click">Reload</a>
+<a href="blank.htm" target="#content">Limpa Tela</a>  sd <a href="SampleAll.ascx" command="click">Reload</a>

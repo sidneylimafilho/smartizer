@@ -424,8 +424,11 @@
         return null;
     }
 
+
     // Inicializa todos os controles da tela.
-    $(document).initializeControls();
+    $(document).ready(function() {
+        $(document).initializeControls();
+    });
 
     // Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento 
     if ($.preferCulture)
