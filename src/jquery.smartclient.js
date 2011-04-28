@@ -21,18 +21,85 @@
         outerHtml: function(html) {
             return html ? this.before(html).remove() : jQuery("<p>").append(this.eq(0).clone()).html();
         },
-        getAddress: function() {
+        smart: function() {
+            if (!this._smart) {
+                this._smart = eval("(" + this.attr("smart") + ")");
+
+                var events = 0;
+                var errors = "";
+                for (var event in this._smart) {
+                    var obj = this._smart[event];
+                    events++;
+
+                    if (!!obj.show && $(obj.show).size() == 0)
+                        errors += "The attribute SHOW (" + this._smart.show + ") don´t exists!\n";
+
+                    if (!!obj.hide && $(obj.hide).size() == 0)
+                        errors += "The attribute HIDE (" + this._smart.hide + ") don´t exists!\n";
+
+                    if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
+                        errors += "The attribute onbinding don´t is a Function!\n";
+
+                    if (!!obj.onrequest && typeof (obj.onrequest) !== "function")
+                        errors += "The attribute onrequest don´t is a Function!\n";
+
+                    if (!!obj.onresponse && typeof (obj.onresponse) !== "function")
+                        errors += "The attribute onresponse don´t is a Function!\n";
+
+                    if (!!obj.onsucess && typeof (obj.onsucess) !== "function")
+                        errors += "The attribute onsucess don´t is a Function!\n";
+
+                    if (!!obj.onerror && typeof (obj.onerror) !== "function")
+                        errors += "The attribute onerror don´t is a Function!\n";
+
+                    if (!!obj.onbounded && typeof (obj.onbounded) !== "function")
+                        errors += "The attribute onbounded don´t is a Function!\n";
+
+                    if (!!obj.once && typeof (obj.once) !== "boolean")
+                        errors += "The attribute ONCE is not a valid boolean!\n";
+
+                    if (!!obj.method && typeof (obj.method) !== "string")
+                        errors += "The attribute METHOD is not a valid boolean!\n";
+
+                    if (!!obj.target && ($(obj.target).size() == 0 || typeof (obj.target) !== "string"))
+                        errors += "The attribute TARGET (" + this._smart.target + ") don´t exists!\n";
+
+                    if (!!obj.template && ($(obj.template).size() == 0 || typeof (obj.template) !== "string"))
+                        errors += "The attribute TEMPLATE (" + this._smart.template + ") don´t exists!\n";
+
+                    if (!!obj.emptytemplate && ($(obj.emptytemplate).size() == 0 || typeof (obj.emptytemplate) !== "string"))
+                        errors += "The attribute EMPTYTEMPLATE (" + this._smart.emptytemplate + ") don´t exists!\n";
+
+                }
+
+                if (events == 0) errors += "Don´t exists event configured!\n";
+                if (errors != "") Exception(errors);
+
+            }
+            return this._smart;
+        },
+
+        getAddress: function(event) {
 
             var appPath = (window.applicationPath || "").replace(/(.*)\/$/, "$1"); // remove a trailing "/"
 
             // Prepare the url
-            var url = this.attrUp("source") || this.attrUp("href") || "";
-            url = url.replace(/(.*)\/$/, "$1") // remove a trailing "/"
+            var url = this.attrUp("href");
+
+            if (!url) {
+                if (!!event) {
+                    url = this.smart()[event.type].source;
+                } else {
+                    for (var key in this.smart()) {
+                        url = this.smart()[key].source;
+                        break;
+                    }
+                }
+            }
+
+            url = (url || "").replace(/(.*)\/$/, "$1") // remove a trailing "/"
                      .replace("~", appPath);
 
-            if (this.attrUp("source") && this.attrUp("op")) {
-                url += "/" + this.attrUp("op");
-            }
             return url;
         },
         attachHtmlInTarget: function(html, t, mode) {
@@ -142,26 +209,29 @@
 
             });
         },
-        dataBind: function(options) {
-            for (var i = 0; i < this.length; i++)
-                $(this[i])._dataBind(options);
+
+        dataBind: function(options, event) {
+            for (var i = 0; i < this.length; i++) {
+                $(this[i])._dataBind(options, event);
+            }
 
             return this;
         },
         /* End DataBind*/
 
-        _dataBind: function(opt) {
+        _dataBind: function(opt, event) {
             var options = $.extend({}, opt);
             var $this = $(this[0]);
+            var smart = $this.smart()[event.type];
 
-            if ($this.attr("onbinding")) eval($this.attr("onbinding"));
-            if (options.onbinding) options.onbinding();
+            if (smart.onbinding)
+                smart.onbinding();
 
             var formData = {};
 
             options.data = $.extend({}, options.data);
-            if ($this.attrUp("args") && $this.attrUp("args") != "") {
-                options.data = $.extend(eval("(" + $this.attrUp("args") + ")"), options.data);
+            if (!!smart.data) {
+                options.data = $.extend(smart.data, options.data);
             }
 
             var form = $this.closest("[asform]") || $this.closest("[action]") || $this.closest("FORM");
@@ -174,13 +244,13 @@
 
 
             // Get target tag
-            if (!options.target && $this.attrUp("target")) {
-                options.target = $this.attrUp("target");
+            if (!!smart.target) {
+                options.target = smart.target;
             }
 
             // Get template tag
-            if (!options.template && $this.attrUp("template")) {
-                options.template = $this.attrUp("template");
+            if (!!smart.template) {
+                options.template = smart.template;
             }
 
 
@@ -196,15 +266,19 @@
             //                options.data = $.toJSON(options.data);
             // save the control that is fire dataBind, because closure "sucess" dont access
             //var ctrl = $this;
-            options.type = $this.attrUp("method") || "POST";
+            options.type = smart.method || "POST";
 
             // Prepare the url
-            options.url = $this.getAddress();
+            options.url = $this.getAddress(event);
 
 
 
-            // Only fires ajax if there are url 
+            // Only fires ajax if there are url
             if (options.url) {
+
+                if (smart.onrequest)
+                    smart.onrequest(options);
+
                 $.ajax({
                     type: options.type,
                     url: options.url,
@@ -212,6 +286,9 @@
                     contentType: "application/json",
                     ifModified: true,
                     success: function(result, status, request) {
+
+                        if (smart.onresponse)
+                            result = smart.onresponse(result, status, request);
 
                         // If Not Modified then get cached content file by iframe
                         if (request.status == 304) {
@@ -232,46 +309,45 @@
 
                             $this.attachHtmlInTarget(html, target);
                         }
-                        if (options.onsucess)
-                            options.onsucess(result, status, request);
 
-                        if ($this.attr("onsucess"))
-                            eval($this.attr("onsucess"));
-
+                        if (smart.onsucess)
+                            smart.onsucess(result, status, request);
 
                     },
                     error: function(result, status, event) {
-                        eval($this.attrUp("onerror"));
+                        if (smart.onerror)
+                            smart.onerror(result, status, event);
+
                         if (result.status == "404") PageNotFoundException($this);
                     },
                     complete: function() {
-                        fireActions($this, options);
+                        fireActions($this, smart);
                     }
                 });
             } else {
-                fireActions($this, options);
+                fireActions($this, smart);
             }
 
-            function fireActions($this, options) {
 
-                if ($this.attrUp("once"))
-                    $this.unbind($this.attr("command"));
+            function fireActions($this, smart) {
 
-                if ($this.attr("hide"))
-                    $($this.attr("hide")).hide();
+                if (smart.once)
+                    $this.unbind(event.type);
 
-                if ($this.attr("show"))
-                    $($this.attr("show")).show();
+                if (smart.hide)
+                    $(smart.hide).hide();
+
+                if (smart.show)
+                    $(smart.show).show();
 
                 // Allow fire DataBinding in controls that has TRIGGER atribute
-                if ($this.attrUp("trigger")) {
-                    $this.closest("[trigger]").find("[options]").each(function() {
-                        options.data[$this.attr("options")] = $this.val();
-                    });
-
-                    $($this.attrUp("trigger")).dataBind(options);
+                if (smart.trigger) {
+                    $(smart.trigger).dataBind(options, event);
                     return;
                 }
+
+                if (smart.onbounded)
+                    smart.onbounded();
             }
 
             function handlerResultErrors(result) {
@@ -312,8 +388,25 @@
 
         initializeControls: function() {
 
+            // enable link fire dataBinding
+            $("[href]", this).attr("method", "GET");
 
-            this._initializeCommandControls();
+            $("[smart]", this).each(function(i, ctrl) {
+                var $ctrl = $(ctrl);
+                if (!$ctrl.hasControl()) {
+                    $ctrl.hasControl(true);
+
+                    for (var eventType in $ctrl.smart()) {
+                        $ctrl.bind(eventType, function(event) {
+                            $ctrl.dataBind({}, event);
+                            event.stopPropagation();
+                            event.preventDefault();
+                            return false;
+                        });
+                    }
+                }
+            });
+
 
             $("[plugin]", this).each(function(i, ctrl) {
                 var it = $(ctrl);
@@ -335,29 +428,6 @@
             return this;
 
 
-        },
-        _initializeCommandControls: function() {
-
-            // enable link fire dataBinding            
-            $("[href]", this).attr("method", "GET");
-
-            $("[command]", this).each(function(i, ctrl) {
-                if (!$(ctrl).hasControl()) {
-                    $(ctrl).hasControl(true);
-
-                    var eventType = $(ctrl).attr("command") || "click";
-                    if (eventType === "load") {
-                        $(ctrl).dataBind();
-                    } else {
-                        $(ctrl).bind(eventType, function(event) {
-                            $(ctrl).dataBind();
-                            event.stopPropagation();
-                            event.preventDefault();
-                            return false;
-                        });
-                    }
-                }
-            });
         },
 
 
@@ -439,7 +509,7 @@
 
 function Exception(msg) {
     msg = " SmartClient Error:  \n" + msg;
-    alert(msg);
+    //alert(msg);
     throw ReferenceError(msg);
 };
 

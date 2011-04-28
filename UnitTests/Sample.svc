@@ -1,4 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SampleService" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SampleService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
 
 using System;
 using System.Collections;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
+using System.ServiceModel.Web;
 using System.Text;
 using InfoControl.Web.Services;
 using InfoControl.Web.Security;
@@ -18,6 +19,7 @@ using InfoControl.Web.Security;
 public class SampleService : InfoControl.Web.Services.DataService
 {
     [OperationContract]
+    [WebGet(ResponseFormat = WebMessageFormat.Json)]        
     public object TestAutocomplete(string q, int limit)
     {
         var list = new List<string>();
