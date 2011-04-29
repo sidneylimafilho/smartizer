@@ -102,20 +102,7 @@
 
             return url;
         },
-        attachHtmlInTarget: function(html, t, mode) {
-            // Get target tag
-            var target = t || this;
 
-            if ($(target).size() == 0) TargetMissingException(this);
-
-            if (mode === "after") {
-                $(target).after(html);
-                $(target).parent().initializeControls();
-            } else {
-                $(target).hide().html(html).initializeControls().fadeIn('slow');
-            }
-
-        },
         render: function(data, options) {
             if (this.size() == 0) throw new Error("Zero element selected!");
 
@@ -156,13 +143,13 @@
                 // Generate a reusable function that will serve as a template
                 // generator (and which will be cached).
                 //var fn = !/\W/.test(this.id) ? cache[this.id] = (cache[this.id] || $(this).template()) :
-                var fn = $.cache[template] || ($.cache[template] = new Function("dataItem", script));
+                var fn = $.cache[template] || ($.cache[template] = new Function("index", "dataItem", script));
 
                 var html = "";
                 if ($.isArray(data)) {
-                    for (var i = 0; i < data.length; i++) html += fn(data[i]);
+                    for (var i = 0; i < data.length; i++) html += fn(i, data[i]);
                 } else {
-                    html += fn(data);
+                    html += fn(0, data);
                 }
 
             } catch (err) {
@@ -186,7 +173,7 @@
 
             iframe.unbind("load").bind("load", function() {
                 var html = $("body", iframe.contents()).html();
-                ctrl.attachHtmlInTarget(html);
+                //ctrl.attachHtmlInTarget(html);
                 if (onsucess) onsucess(html, "notmodified", null);
                 iframe.unbind("load");
             });
@@ -212,7 +199,14 @@
 
         dataBind: function(options, event) {
             for (var i = 0; i < this.length; i++) {
-                $(this[i])._dataBind(options, event);
+                var $this = $(this[i]);
+                if (!!event) {
+                    $this._dataBind(options, event);
+                } else {
+                    for (var eventType in $this.smart()) {
+                        $this._dataBind(options, jQuery.Event(eventType));
+                    }
+                }
             }
 
             return this;
@@ -221,17 +215,16 @@
 
         _dataBind: function(opt, event) {
             var options = $.extend({}, opt);
-            var $this = $(this[0]);
+            var $this = this;
             var smart = $this.smart()[event.type];
 
             if (smart.onbinding)
-                smart.onbinding();
+                smart.onbinding.apply($this);
 
-            var formData = {};
 
-            options.data = $.extend({}, options.data);
-            if (!!smart.data) {
-                options.data = $.extend(smart.data, options.data);
+            options.sourceparams = $.extend({}, options.sourceparams);
+            if (!!smart.sourceparams) {
+                options.sourceparams = $.extend(smart.sourceparams, options.sourceparams);
             }
 
             var form = $this.closest("[asform]") || $this.closest("[action]") || $this.closest("FORM");
@@ -239,8 +232,9 @@
             // Get All html form controls
             var fields = form.find(":input, select, textarea, :password, [type=hidden]").serializeArray();
             $.each(fields, function(i, elem) {
-                options.data[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
+                options.sourceparams[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
             });
+
 
 
             // Get target tag
@@ -266,70 +260,95 @@
             //                options.data = $.toJSON(options.data);
             // save the control that is fire dataBind, because closure "sucess" dont access
             //var ctrl = $this;
+            if (this[0].tagName == "A") smart.method = "GET";
             options.type = smart.method || "POST";
 
             // Prepare the url
             options.url = $this.getAddress(event);
 
-
+            //Exists only for tests
+            options.responseBody = smart.defaultResponseBody;
 
             // Only fires ajax if there are url
             if (options.url) {
 
                 if (smart.onrequest)
-                    smart.onrequest(options);
+                    smart.onrequest.call($this, options);
+
+                options.sourceparams = $.toJSON(options.sourceparams);
 
                 $.ajax({
                     type: options.type,
                     url: options.url,
-                    data: $.toJSON(options.data),
+                    data: options.sourceparams,
                     contentType: "application/json",
                     ifModified: true,
-                    success: function(result, status, request) {
+                    success: function(responseBody, status, request) {
 
                         if (smart.onresponse)
-                            result = smart.onresponse(result, status, request);
+                            responseBody = smart.onresponse.call($this, responseBody, status, request, options);
 
                         // If Not Modified then get cached content file by iframe
-                        if (request.status == 304) {
-                            $this.ajaxIframe(options.url, $this, options.onsucess);
-                        } else {
-                            // If Http Status 200 then OK, process JSON because data should be transform on html
-                            var html = result;
-                            var target = options.target || $this;
+                        //                        if (request.status == 304) {
+                        //                            $this.ajaxIframe(options.url, $this, options.onsucess);
+                        //                        } else {
+                        // If Http Status 200 then OK, process JSON because data should be transform on html
+                        options.responseBody = responseBody;
 
-                            if (result && request.responseText != "") {
-                                if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
-
-                                    handlerResultErrors(result);
-
-                                    html = renderDataInHtml(result, $this, options);
-                                }
+                        if (responseBody && request.responseText != "") {
+                            if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
+                                handlerResultErrors(responseBody);
                             }
-
-                            $this.attachHtmlInTarget(html, target);
                         }
+                        //}
 
                         if (smart.onsucess)
-                            smart.onsucess(result, status, request);
+                            smart.onsucess.call($this, responseBody, status, request, options);
 
                     },
-                    error: function(result, status, event) {
+                    error: function(request, textStatus, errorThrown) {
                         if (smart.onerror)
-                            smart.onerror(result, status, event);
+                            smart.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        if (result.status == "404") PageNotFoundException($this);
+                        if (request.status == "404") PageNotFoundException($this);
                     },
                     complete: function() {
                         fireActions($this, smart);
                     }
                 });
             } else {
+
                 fireActions($this, smart);
             }
 
 
-            function fireActions($this, smart) {
+
+            function fireActions($this, smart, mode) {
+
+                if (smart.template || smart.target) {
+                    var html = options.responseBody || $(smart.template).html() || "";
+
+                    if (html.length == 0 && $(smart.emptytemplate).size() > 0) {
+
+                        html = $(smart.emptytemplate).html();
+
+                    } else if (typeof (options.responseBody) == "object" || typeof (options.responseBody) == "array") {
+
+                        html = $this.render(options.responseBody, options);
+                    }
+
+                    // Get target tag
+                    smart.target = smart.target || $this;
+
+                    if ($(smart.target).size() == 0) TargetMissingException(this);
+
+                    if (mode === "after") {
+                        $(smart.target).after(html);
+                        $(smart.target).parent().initializeControls();
+                    } else {
+                        $(smart.target).hide().html(html).initializeControls().fadeIn('slow');
+                    }
+                }
 
                 if (smart.once)
                     $this.unbind(event.type);
@@ -342,12 +361,12 @@
 
                 // Allow fire DataBinding in controls that has TRIGGER atribute
                 if (smart.trigger) {
-                    $(smart.trigger).dataBind(options, event);
+                    $(smart.trigger).dataBind(options);
                     return;
                 }
 
                 if (smart.onbounded)
-                    smart.onbounded();
+                    smart.onbounded.call($this, options);
             }
 
             function handlerResultErrors(result) {
@@ -361,25 +380,7 @@
                 }
             }
 
-            function renderDataInHtml(result, $this, options) {
-                //
-                // result.Data   = ClientResponse
-                // result.d      = ASMX/WCF JSON return
-                // result.d.Data = ASMX/WCF JSON return ClientResponse
-                // 
-                var data = result.Data || result.d || result.d.Data || result;
 
-                if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
-                    result.isEmpty = true;
-                    html = $($this.attrUp("emptytemplate")).html();
-
-                } else {
-
-                    html = $this.render(data, options);
-                }
-
-                return html;
-            }
         },
 
         /***************************************************************************************************
@@ -388,21 +389,22 @@
 
         initializeControls: function() {
 
-            // enable link fire dataBinding
-            $("[href]", this).attr("method", "GET");
-
             $("[smart]", this).each(function(i, ctrl) {
                 var $ctrl = $(ctrl);
                 if (!$ctrl.hasControl()) {
                     $ctrl.hasControl(true);
 
                     for (var eventType in $ctrl.smart()) {
-                        $ctrl.bind(eventType, function(event) {
-                            $ctrl.dataBind({}, event);
-                            event.stopPropagation();
-                            event.preventDefault();
-                            return false;
-                        });
+                        if (eventType == "load") {
+                            $ctrl.dataBind({}, jQuery.Event("load"));
+                        } else {
+                            $ctrl.bind(eventType, function(event) {
+                                $ctrl.dataBind({}, event);
+                                event.stopPropagation();
+                                event.preventDefault();
+                                return false;
+                            });
+                        }
                     }
                 }
             });
@@ -485,18 +487,24 @@
     DAteTime Extensions
     ***************************************************************************************************/
 
-    String.prototype.JsonToDate = function() {
+    String.prototype.JsonToDate = function(culture) {
+        var date = null;
+
         if (this && this != "") {
             var result = new Date(parseFloat(this.replace(/(\/)|\)|Date\(/g, "")));
-            return new Date(result.valueOf() + result.getTimezoneOffset() * 60000);
+            date = new Date(result.valueOf() + result.getTimezoneOffset() * 60000);
         }
 
-        return null;
+        if ($.preferCulture && !!date) {
+            return $.format(date, "d", culture);
+        }
+
+        return date;
     }
 
 
     // Inicializa todos os controles da tela.
-    $(document).ready(function() {
+    $(function() {
         $(document).initializeControls();
     });
 
