@@ -10,9 +10,7 @@
     ***************************************************************************************************/
     $.fn.extend({
         hasControl: function(bool) {
-            if (bool) this[0].control = bool;
-
-            return this[0].control != undefined;
+            return arguments.length ? this.data('control', bool) : this.data('control');
         },
         attrUp: function(name) {
             if (this.length > 0) return this.attr(name) || this.parent().attrUp(name);
