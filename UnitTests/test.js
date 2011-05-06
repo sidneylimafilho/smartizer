@@ -1,5 +1,4 @@
-$(document).ready(function() {
-
+$(function() {
     var sandbox = $("<div />").hide().appendTo("Body");
 
     module("BASIC");
@@ -15,6 +14,7 @@ $(document).ready(function() {
         var comm = sandbox.html(html).find("A").attrUp("command");
         equal(comm, "click");
     });
+
 
     module("SMART")
 
@@ -162,14 +162,12 @@ $(document).ready(function() {
         var html = "<a id='teste' smart=\"{click:{ emptytemplate:'#teste' } }\" ></a>";
         ok($(sandbox.html(html).find("A").smart().click.emptytemplate).size() > 0, "emptytemplate válido!");
 
-
-
     });
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado by HREF ", function() {
         var html = "<a href=\"index.html\"></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "index.html");
+        ok(outerHtml.indexOf("index.html") > -1);
     });
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado by SOURCE ", function() {
@@ -184,14 +182,47 @@ $(document).ready(function() {
         equal(outerHtml, "data.js");
     });
 
-
-    test("Um elemento com atributo SMART deve disparar o evento de acordo com conteúdo do atributo", function() {
+    test("Um elemento com atributo SMART deve disparar o evento LOAD", function() {
         window.t = 0;
-        sandbox.html("<p><div smart=\"{click:{onbinding:function(){window.t=2}}}\" /></p>")
+        sandbox.html("<p><div smart=\"{load:{onbinding:function(){window.t=2}}}\" /></p>")
+               .initializeControls()
+               .find("div")
+        equals(t, 2);
+    });
+
+    test("Um elemento com atributo SMART deve disparar o evento CLICK", function() {
+        window.t = 0;
+        sandbox.html("<p><div smart=\"{click:{onbinding:function(){window.t=3}}}\" /></p>")
                .initializeControls()
                .find("div")
                .click();
-        equals(t, 2);
+        equals(t, 3);
+    });
+
+    test("Um elemento com atributo SMART deve disparar o evento KEYPRESS", function() {
+        window.t = 0;
+        sandbox.html("<p><div smart=\"{keypress:{onbinding:function(){window.t=3}}}\" /></p>")
+               .initializeControls()
+               .find("div")
+               .keypress();
+        equals(t, 3);
+    });
+
+    test("Um elemento com atributo SMART deve disparar o keyCode especifico do KEYPRESS", function() {
+        window.t = 0;
+        var e = $.Event("keypress");
+        e.keyCode = 27;
+        sandbox.html("<p><input type='text' smart=\"{" +
+                                        "keypress: {" +
+                                           "27 : {" +
+                                                "onbinding:function(){window.t=3}" +
+                                           "}" +
+                                        "}" +
+                                     "}\" /></p>")
+               .initializeControls()
+               .find("input")
+               .trigger(e);
+        equals(t, 3);
     });
 
     test("Um elemento com atributo SMART deve disparar o evento onbinding", function() {
@@ -259,11 +290,74 @@ $(document).ready(function() {
                     .click();
     });
 
+    module("RENDER");
+
+    test("A renderização deve funcionar sem dados!", function() {
+        window.t = 0;
+        sandbox.html("<p id='template'>teste</p>" +
+                     "<span id='target'></span>" +
+                     "<div smart=\"{click:{" +
+                                      "template:'#template', " +
+                                      "target:'#target', " +
+                                      "onbounded:function(){equals($('#target').html(), 'teste');}" +
+                                      "}}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
 
 
 
+    asyncTest("A renderização deve funcionar quando o retorno é html puro!", function() {
+        window.t = 0;
+        sandbox.html("<span id='target'>Teste</span>" +
+                     "<div smart=\"{click:{" +
+                                      "source:'data.js', " +
+                                      "method:'GET', " +
+                                      "target:'#target', " +
+                                      "onbounded:function(){equals($('#target').html(), '{teste:1}'); start();}" +
+                                      "}}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
 
-    asyncTest("TRIGGER: Ao disparar o DataBind deve chamar o DataBind do elemento que está do atributo trigger", function() {
+
+    asyncTest("A renderização deve funcionar quando o retorno é JSON!", function() {
+        window.t = 0;
+        sandbox.html("<p id='template'>teste <$=t$></p>" +
+                     "<span id='target'>Teste</span>" +
+                     "<div smart=\"{click:{" +
+                                      "defaultResponseBody:{t:1}, " +
+                                      "method:'GET', " +
+                                      "target:'#target', " +
+                                      "template:'#template', " +
+                                      "onbounded:function(){equals($('#target').html(),'teste 1'); start();}" +
+                                      "}}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
+
+    asyncTest("A renderização deve funcionar informando o item a ser renderizado!", function() {
+        window.t = 0;
+        sandbox.html("<p id='template'>teste <$=index$> </p>" +
+                     "<span id='target'>Teste</span>" +
+                     "<div smart=\"{click:{" +
+                                      "defaultResponseBody:[{t:1},{t:4},{t:6},{t:8}], " +
+                                      "method:'GET', " +
+                                      "target:'#target', " +
+                                      "template:'#template', " +
+                                      "onbounded:function(){equals($('#target').html(),'teste 0 teste 1 teste 2 teste 3 '); start();}" +
+                                      "}}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
+
+
+
+    asyncTest("TRIGGER: Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER", function() {
         window["t"] = 0;
         sandbox.html("<p  smart=\"{click: {method:'GET', " +
                                   "onbounded:function(result) {ok(true);start();}" +
@@ -279,20 +373,37 @@ $(document).ready(function() {
     });
 
 
-    asyncTest("TRIGGER: Ao disparar a tag A deve passar o parametro options", function() {
+    asyncTest("TRIGGER: Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER respeitando o evento ", function() {
 
-        window["t"] = 0;
-        sandbox.html("<p  id='target'>" +
+        sandbox.html("<p  smart=\"{mouseover: {method:'GET', " +
+                                  "onbounded:function(result) {ok(true);start();}" +
+                                  "}}\"  id='target'>" +
                      "<div smart=\"{click: {method:'GET', " +
                                   "source:'blank.htm', " +
-                                  "data:{teste:1}, " +
-                                  "onrequest:function(options) {equals(options.data.teste, 1, 'OK');start();}" +
+                                  "trigger:'#target' " +
                                   "}}\" /></p>")
                 .initializeControls()
                 .find("div")
                 .click();
-
     });
+
+
+
+    asyncTest("TRIGGER: Ao disparar a tag A deve passar o parametro options", function() {
+
+        sandbox.html("<p  id='target'>" +
+                     "<div smart=\"{click: {method:'GET', " +
+                                  "source:'blank.htm', " +
+                                  "sourceparams:{teste:1}, " +
+                                  "onrequest:function(options) {equals(options.sourceparams.teste, 1, 'OK');start();}" +
+                                  "}}\" /></p>")
+                .initializeControls()
+                .find("div")
+                .click();
+    });
+
+
+
 
 
 
@@ -369,11 +480,35 @@ $(document).ready(function() {
 
 
 
-    //    module("SCENARIO");
+    module("SCENARIO");
 
-    //    test("GRID", function() {
-    //        ok(false);
-    //    });
+
+    asyncTest("Links devem carregar assincronamente", function() {
+        sandbox.html("<a href='blank.htm' smart=\"{click: {onbounded:function(){ok(true); start();}}}\" /></p>")
+                .initializeControls()
+                .find("a")
+                .click();
+    });
+
+    asyncTest("Links devem carregar assincronamente com metodo GET", function() {
+        sandbox.html("<a href='data.js' " +
+                        "smart=\"{click: {onbounded:function(options){ok(options.type=='GET'); start();}" +
+                                         "}}\" /></p>")
+                .initializeControls()
+                .find("a")
+                .click();
+    });
+
+    asyncTest("Links devem carregar assincronamente colocando o conteudo no TARGET", function() {
+        sandbox.html("<div id='div'></div>" +
+                     "<a href='../license.htm' " +
+                        "smart=\"{click: {target:'#div', " +
+                                         "onbounded:function(options){ok(options.responseBody != ''); $('#div').html(' '); start(); }" +
+                                         "}}\" >teste</a>")
+                .initializeControls()
+                .find("a")
+                .click();
+    });
 
     //    test("GRID Editável", function() {
     //        ok(false);

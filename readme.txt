@@ -1,1 +1,1 @@
- SmartClient
+ SmartClient a client framework 

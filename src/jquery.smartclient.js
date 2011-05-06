@@ -77,30 +77,6 @@
             return this._smart;
         },
 
-        getAddress: function(event) {
-
-            var appPath = (window.applicationPath || "").replace(/(.*)\/$/, "$1"); // remove a trailing "/"
-
-            // Prepare the url
-            var url = this.attrUp("href");
-
-            if (!url) {
-                if (!!event) {
-                    url = this.smart()[event.type].source;
-                } else {
-                    for (var key in this.smart()) {
-                        url = this.smart()[key].source;
-                        break;
-                    }
-                }
-            }
-
-            url = (url || "").replace(/(.*)\/$/, "$1") // remove a trailing "/"
-                     .replace("~", appPath);
-
-            return url;
-        },
-
         render: function(data, options) {
             if (this.size() == 0) throw new Error("Zero element selected!");
 
@@ -216,6 +192,9 @@
             var $this = this;
             var smart = $this.smart()[event.type];
 
+            if (event.type.indexOf("key") >= 0 && !!event.keyCode && !!smart[event.keyCode])
+                smart = smart[event.keyCode];
+
             if (smart.onbinding)
                 smart.onbinding.apply($this);
 
@@ -262,7 +241,13 @@
             options.type = smart.method || "POST";
 
             // Prepare the url
-            options.url = $this.getAddress(event);
+            var trim = function(text) { return (text || "").replace(/(.*)\/$/, "$1"); }
+
+            window.applicationPath = trim(window.applicationPath);
+
+            options.url = trim($this.attrUp("href") || smart.source);
+            options.url = options.url.replace("~", window.applicationPath);
+            
 
             //Exists only for tests
             options.responseBody = smart.defaultResponseBody;
@@ -308,7 +293,7 @@
                         if (smart.onerror)
                             smart.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        if (request.status == "404") PageNotFoundException($this);
+                        if (request.status == "404") PageNotFoundException(options.url);
                     },
                     complete: function() {
                         fireActions($this, smart);
@@ -519,8 +504,8 @@ function Exception(msg) {
     throw ReferenceError(msg);
 };
 
-function PageNotFoundException(sender) {
-    Exception(" A página '" + sender.getAddress() + "' não foi encontrada!");
+function PageNotFoundException(url) {
+    Exception(" A página '" + url  + "' não foi encontrada!");
 }
 
 function TargetMissingException(sender) {
