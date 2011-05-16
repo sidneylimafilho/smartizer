@@ -342,14 +342,14 @@
                 if (smart.show)
                     $(smart.show).show();
 
-                // Allow fire DataBinding in controls that has TRIGGER atribute
+                if (smart.onbounded)
+                    smart.onbounded.call($this, options);
+                
+				// Allow fire DataBinding in controls that has TRIGGER atribute
                 if (smart.trigger) {
                     $(smart.trigger).dataBind(options);
                     return;
-                }
-
-                if (smart.onbounded)
-                    smart.onbounded.call($this, options);
+                }					
             }
 
             function handlerResultErrors(result) {
