@@ -247,7 +247,7 @@
 
             options.url = trim($this.attrUp("href") || smart.source);
             options.url = options.url.replace("~", window.applicationPath);
-            
+
 
             //Exists only for tests
             options.responseBody = smart.defaultResponseBody;
@@ -401,11 +401,11 @@
                 var plugin = it.attr("plugin");
                 var options = eval("(" + it.attr("options") + ")");
 
-                if (!it[plugin]) {
+                if (!!$.fn[plugin]) {
+                    $.fn[plugin].call(it, options);
+                } else {
                     alert("The plugin \"" + plugin + "\" don´t loaded!");
                 }
-
-                it[plugin](options);
             });
 
             this._initializeThemeStyle();
@@ -434,11 +434,11 @@
             //
             // Botões
             //
-            top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
-                $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
-            });
+//            top.$(":submit, :button, :reset", this).each(function(i, ctrl) {
+//                $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
+//            });
 
-            top.$(":submit, :button, :reset", this).after("<span />");
+//            top.$(":submit, :button, :reset", this).after("<span />");
 
 
             //
@@ -505,7 +505,7 @@ function Exception(msg) {
 };
 
 function PageNotFoundException(url) {
-    Exception(" A página '" + url  + "' não foi encontrada!");
+    Exception(" A página '" + url + "' não foi encontrada!");
 }
 
 function TargetMissingException(sender) {
