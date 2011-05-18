@@ -304,7 +304,7 @@
                 fireActions($this, smart);
             }
 
-
+ 
 
             function fireActions($this, smart, mode) {
 
