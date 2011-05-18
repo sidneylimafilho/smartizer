@@ -478,7 +478,7 @@
             date = new Date(result.valueOf() + result.getTimezoneOffset() * 60000);
         }
 
-        if ($.preferCulture && !!date) {
+        if (!!culture && !!$.preferCulture && !!date) {
             return $.format(date, "d", culture);
         }
 
