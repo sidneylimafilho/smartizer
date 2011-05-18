@@ -195,8 +195,8 @@
             if (event.type.indexOf("key") >= 0 && !!event.keyCode && !!smart[event.keyCode])
                 smart = smart[event.keyCode];
 
-            if (smart.onbinding)
-                smart.onbinding.apply($this);
+             if (smart.onbinding)
+                if (!smart.onbinding.apply($this)) return this;
 
 
             options.sourceparams = $.extend({}, options.sourceparams);
@@ -304,7 +304,7 @@
                 fireActions($this, smart);
             }
 
-
+ 
 
             function fireActions($this, smart, mode) {
 
