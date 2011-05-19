@@ -99,8 +99,7 @@
                     .split("&quot;").join('"')
                     .replace("<!--", " ")
                     .replace("-->", " ")
-                    .replace(/'/g, "\\'")
-                    .replace(/[\r\t\n]/g, " ")
+                    .replace(/'/g, "\\'")                    
 
                    .replace(/'(?=[^$]*$>)/g, "\t")
 
@@ -109,6 +108,7 @@
 
                    .split("<$").join("');")
                    .split("$>").join("p.push('")
+                   .replace(/[\r\t\n]/g, " ")
 
           + "');}return p.join('');";
 
