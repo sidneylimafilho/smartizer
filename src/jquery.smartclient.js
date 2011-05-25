@@ -60,13 +60,13 @@
                         errors += "The attribute METHOD is not a valid boolean!\n";
 
                     if (!!obj.target && ($(obj.target).size() == 0 || typeof (obj.target) !== "string"))
-                        errors += "The attribute TARGET (" + this._smart.target + ") don´t exists!\n";
+                        errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
 
                     if (!!obj.template && ($(obj.template).size() == 0 || typeof (obj.template) !== "string"))
-                        errors += "The attribute TEMPLATE (" + this._smart.template + ") don´t exists!\n";
+                        errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
 
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() == 0 || typeof (obj.emptytemplate) !== "string"))
-                        errors += "The attribute EMPTYTEMPLATE (" + this._smart.emptytemplate + ") don´t exists!\n";
+                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
 
                 }
 
@@ -195,7 +195,7 @@
             if (event.type.indexOf("key") >= 0 && !!event.keyCode && !!smart[event.keyCode])
                 smart = smart[event.keyCode];
 
-             if (smart.onbinding)
+            if (smart.onbinding)
                 if (!smart.onbinding.apply($this)) return this;
 
 
@@ -247,7 +247,7 @@
 
             options.url = trim($this.attrUp("href") || smart.source);
             options.url = options.url.replace("~", window.applicationPath);
-            
+
 
             //Exists only for tests
             options.responseBody = smart.defaultResponseBody;
@@ -258,8 +258,8 @@
                 if (smart.onrequest)
                     smart.onrequest.call($this, options);
 
-                options.sourceparams = smart.method != "GET"? $.toJSON(options.sourceparams) : null;
-                
+                options.sourceparams = smart.method != "GET" ? $.toJSON(options.sourceparams) : null;
+
                 $.ajax({
                     type: options.type,
                     url: options.url,
@@ -268,17 +268,18 @@
                     ifModified: true,
                     success: function(responseBody, status, request) {
 
+                        // If Not Modified then get cached content file by iframe
+                        if (!!request && request.status == 304) {
+                            $this.ajaxIframe(options.url, $this, this.success);
+                        }
+
                         if (smart.onresponse)
                             responseBody = smart.onresponse.call($this, responseBody, status, request, options);
 
-                        // If Not Modified then get cached content file by iframe
-                        //                        if (request.status == 304) {
-                        //                            $this.ajaxIframe(options.url, $this, options.onsucess);
-                        //                        } else {
                         // If Http Status 200 then OK, process JSON because data should be transform on html
                         options.responseBody = responseBody;
 
-                        if (responseBody && request.responseText != "") {
+                        if (responseBody && !!request && request.responseText != "") {
                             if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
                                 handlerResultErrors(responseBody);
                             }
@@ -304,7 +305,7 @@
                 fireActions($this, smart);
             }
 
- 
+
 
             function fireActions($this, smart, mode) {
 
@@ -344,12 +345,12 @@
 
                 if (smart.onbounded)
                     smart.onbounded.call($this, options);
-                
-				// Allow fire DataBinding in controls that has TRIGGER atribute
+
+                // Allow fire DataBinding in controls that has TRIGGER atribute
                 if (smart.trigger) {
                     $(smart.trigger).dataBind(options);
                     return;
-                }					
+                }
             }
 
             function handlerResultErrors(result) {
@@ -505,7 +506,7 @@ function Exception(msg) {
 };
 
 function PageNotFoundException(url) {
-    Exception(" A página '" + url  + "' não foi encontrada!");
+    Exception(" A página '" + url + "' não foi encontrada!");
 }
 
 function TargetMissingException(sender) {

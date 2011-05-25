@@ -164,24 +164,7 @@ $(function() {
 
     });
 
-    test("getAddress: Deve retornar o endereço do recurso a ser acessado by HREF ", function() {
-        var html = "<a href=\"index.html\"></a>";
-        var outerHtml = sandbox.html(html).find("A").getAddress();
-        ok(outerHtml.indexOf("index.html") > -1);
-    });
-
-    test("getAddress: Deve retornar o endereço do recurso a ser acessado by SOURCE ", function() {
-        var html = "<span smart=\"{click:{source:'data.js', options:{companyId:1, itemId:null}}}\"></span>";
-        var outerHtml = sandbox.html(html).find("span").getAddress();
-        equal(outerHtml, "data.js");
-    });
-
-    test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE ends with slash ", function() {
-        var html = "<a smart=\"{click:{source:'data.js/', options:{companyId:1, itemId:null}}}\"></a>";
-        var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "data.js");
-    });
-
+  
     test("Um elemento com atributo SMART deve disparar o evento LOAD", function() {
         window.t = 0;
         sandbox.html("<p><div smart=\"{load:{onbinding:function(){window.t=2}}}\" /></p>")
@@ -245,7 +228,7 @@ $(function() {
 
     test("Um elemento com atributo SMART deve disparar o evento onrequest", function() {
         window.t = 0;
-        sandbox.html("<p><div smart=\"{click:{source:'blank.htm', onrequest:function(){window.t=6}}}\" /></p>")
+        sandbox.html("<p><div smart=\"{click:{source:'blank.htm', method:'GET', onrequest:function(){window.t=6}}}\" /></p>")
                .initializeControls()
                .find("div")
                .click();
@@ -407,25 +390,23 @@ $(function() {
 
 
 
-    //    module("NOT MODIFIED")
+    module("NOT MODIFIED")
 
-    //    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {
-    //        stop();
-    //        sandbox.html("<P />")
-    //               .ajaxIframe('blank.htm', sandbox, function(result, status, xhr) {
-    //                   ok(result === "");
-    //                   start();
-    //               });
-    //    });
+    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {        
+        sandbox.html("<P />")
+               .ajaxIframe('blank.htm', sandbox, function(result, status, xhr) {
+                   ok(result === "");
+                   start();
+               });
+    });
 
-    //    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
-    //        stop();
-    //        sandbox.html("<P />")
-    //               .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
-    //                   ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
-    //                   start();
-    //               });
-    //    });
+    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
+            sandbox.html("<P />")
+               .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
+                   ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
+                   start();
+               });
+    });
 
 
     //    asyncTest("Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304", function() {
@@ -500,13 +481,17 @@ $(function() {
     });
 
     asyncTest("Links devem carregar assincronamente colocando o conteudo no TARGET", function() {
-        sandbox.html("<div id='div'></div>" +
-                     "<a href='../license.htm' " +
-                        "smart=\"{click: {target:'#div', " +
-                                         "onbounded:function(options){ok(options.responseBody != ''); $('#div').html(' '); start(); }" +
-                                         "}}\" >teste</a>")
+        sandbox.html("<div id='text'></div>" +
+                     "<a id='link' href='qunit/qunit.css' " +
+                        "smart=\"{click: { target:'#text', " +
+                                         "onbounded:function(options){ " +
+                                            "ok(options.responseBody != ''); " +
+                                            "$('#div').html(' '); " +
+                                            "start();" +
+                                         "}" +
+                                    "}}\" >teste</a>")
                 .initializeControls()
-                .find("a")
+                .find("#link")
                 .click();
     });
 
