@@ -30,10 +30,10 @@
                     events++;
 
                     if (!!obj.show && $(obj.show).size() == 0)
-                        errors += "The attribute SHOW (" + this._smart.show + ") don´t exists!\n";
+                        errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
 
                     if (!!obj.hide && $(obj.hide).size() == 0)
-                        errors += "The attribute HIDE (" + this._smart.hide + ") don´t exists!\n";
+                        errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
 
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
                         errors += "The attribute onbinding don´t is a Function!\n";
@@ -330,7 +330,7 @@
                         $(smart.target).after(html);
                         $(smart.target).parent().initializeControls();
                     } else {
-                        $(smart.target).hide().html(html).initializeControls().fadeIn('slow');
+                        $(smart.target).hide().html(html).initializeControls().fadeIn("slow");
                     }
                 }
 
@@ -338,10 +338,10 @@
                     $this.unbind(event.type);
 
                 if (smart.hide)
-                    $(smart.hide).hide();
+                    $(smart.hide).hide("slow");
 
                 if (smart.show)
-                    $(smart.show).show();
+                    $(smart.show).show("slow");
 
                 if (smart.onbounded)
                     smart.onbounded.call($this, options);
