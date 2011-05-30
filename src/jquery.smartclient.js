@@ -527,10 +527,8 @@
             var smart = $this.smart()[event.type];
 
             if (event.type.indexOf("key") >= 0) {
-                if (!!event.keyCode && !smart[event.keyCode])
-                    return this;
-
-                smart = smart[event.keyCode];
+                if (!!event.keyCode && !!smart[event.keyCode])
+                    smart = smart[event.keyCode];
             }
 
             if (smart.onbinding)
@@ -675,11 +673,19 @@
                 if (smart.once)
                     $this.unbind(event.type);
 
-                if (smart.hide)
-                    $(smart.hide).hide("slow");
+                if (smart.hide) {
+                    if (smart.speed)
+                        $(smart.hide).hide(smart.speed || "slow");
+                    else
+                        $(smart.hide).hide();
+                }
 
-                if (smart.show)
-                    $(smart.show).show("slow");
+                if (smart.show) {
+                    if (smart.speed)
+                        $(smart.show).show(smart.speed || "slow");
+                    else
+                        $(smart.show).show();
+                }
 
                 if (smart.onbounded)
                     smart.onbounded.call($this, options);

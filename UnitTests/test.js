@@ -1,5 +1,6 @@
 $(function() {
     var sandbox = $("<div style='position:absolute; top:-1000px;'></div>").appendTo("Body");
+    
 
     module("BASIC");
 
@@ -164,7 +165,7 @@ $(function() {
 
     });
 
-  
+
     test("Um elemento com atributo SMART deve disparar o evento LOAD", function() {
         window.t = 0;
         sandbox.html("<p><div smart=\"{load:{onbinding:function(){window.t=2}}}\" /></p>")
@@ -182,29 +183,17 @@ $(function() {
         equals(t, 3);
     });
 
- 
+
 
     test("Um elemento com atributo SMART deve disparar o evento KEYPRESS", function() {
         window.t = 0;
+        var e = $.Event("keypress");
+
         sandbox.html("<p><div smart=\"{keypress:{onbinding:function(){window.t=3}}}\" /></p>")
                .initializeControls()
                .find("div")
-               .keypress();
+               .trigger(e);
         equals(t, 3);
-    });
-
-    test("Um elemento com atributo SMART deve disparar o HIDE", function() {
-        var span = sandbox.html("<p><div smart=\"{load:{hide:'#oculto'}}\" /></p><span id='oculto'>teste</span>")
-               .initializeControls()
-               .find("span")
-        ok(!span.is(":visible"));
-    });
-
-    test("Um elemento com atributo SMART deve disparar o SHOW", function() {
-        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p><div smart=\"{load:{show:'#oculto'}}\" >.</div>")
-               .initializeControls()
-               .find("p")
-        ok(tag.is(":visible"));
     });
 
     test("Um elemento com atributo SMART deve disparar o keyCode especifico do KEYPRESS", function() {
@@ -223,6 +212,17 @@ $(function() {
                .trigger(e);
         equals(t, 3);
     });
+
+    test("Um elemento com atributo SMART deve disparar o HIDE/SHOW", function() {
+        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
+                               "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
+                               "<div smart=\"{load:{hide:'#visivel', show:'#oculto', speed:0}}\" ></div>")
+               .initializeControls()
+               .find("p");
+        ok($("#oculto").is(":visible"));
+        ok($("#visivel").is(":hidden"));
+    });
+
 
     test("Um elemento com atributo SMART deve disparar o evento onbinding", function() {
         window.t = 0;
@@ -408,7 +408,7 @@ $(function() {
 
     module("NOT MODIFIED")
 
-    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {        
+    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {
         sandbox.html("<P />")
                .ajaxIframe('blank.htm', sandbox, function(result, status, xhr) {
                    ok(result === "");
@@ -417,7 +417,7 @@ $(function() {
     });
 
     asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
-            sandbox.html("<P />")
+        sandbox.html("<P />")
                .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
                    ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
                    start();
