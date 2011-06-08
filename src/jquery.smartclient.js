@@ -631,10 +631,10 @@
                         if (smart.onerror)
                             smart.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        if (request.status == "404")
-                            PageNotFoundException(options.url);
-
                         fireActions($this, smart);
+                        
+                        if (request.status == "404")
+                            PageNotFoundException(options.url);                        
                     },
                     complete: function() {
                         // Retirada a função fireActions deste evento pois o sucess é passado 
@@ -827,7 +827,8 @@
 function Exception(msg) {
     msg = " SmartClient Error:  \n" + msg;
     //alert(msg);
-    throw ReferenceError(msg);
+    throw new ReferenceError(msg);
+    //console.log(msg);
 };
 
 function PageNotFoundException(url) {
