@@ -625,15 +625,21 @@
                         if (smart.onsucess)
                             smart.onsucess.call($this, responseBody, status, request, options);
 
+                        fireActions($this, smart);
+
                     },
                     error: function(request, textStatus, errorThrown) {
                         if (smart.onerror)
                             smart.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        if (request.status == "404") PageNotFoundException(options.url);
+                        if (request.status == "404")
+                            PageNotFoundException(options.url);
+
+                        fireActions($this, smart);
                     },
                     complete: function() {
-                        fireActions($this, smart);
+                        // Retirada a função fireActions deste evento pois o sucess é passado 
+                        // como argumento da função ajaxIframe
                     }
                 });
             } else {
