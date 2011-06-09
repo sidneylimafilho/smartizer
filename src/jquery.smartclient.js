@@ -586,7 +586,7 @@
             options.url = options.url.replace("~", window.applicationPath);
 
             //Exists only for tests
-            options.responseBody = smart.defaultResponseBody;
+            options.responseBody = smart.dataSource || smart.defaultResponseBody;
 
             // Only fires ajax if there are url
             if (options.url) {
