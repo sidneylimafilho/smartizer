@@ -1,6 +1,24 @@
 $(function() {
     var sandbox = $("<div style='position:absolute; top:-1000px;'></div>").appendTo("Body");
-    
+
+
+    module("NOT MODIFIED")
+
+    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {
+        sandbox.html("<P />")
+               .ajaxIframe('blank.htm', sandbox, function(result, status, xhr) {
+                   ok(result === "");
+                   start();
+               });
+    });
+
+    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
+        sandbox.html("<P />")
+               .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
+                   ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
+                   start();
+               });
+    });
 
     module("BASIC");
 
@@ -17,9 +35,27 @@ $(function() {
     });
 
 
-    module("SMART")
+    module("SMART");
 
-    test("SMART: Deve utilizar o atributo SMART para pegar as configurações", function() {
+    test("O atributo SMART pode ser declarado como JSON", function() {
+
+        var smart = sandbox.html("<p><div smart=\"{click:{once:true}}\" /></p>").find("DIV").smart();
+        ok(smart.click, "");
+    });
+
+    test("O atributo SMART pode ser declarado com espaços ", function() {
+
+        var smart = sandbox.html("<p><div smart=\" { click : { once:true } } \" /></p>").find("DIV").smart();
+        ok(smart.click, "");
+    });
+
+    test("O atributo SMART pode ser declarado sem abrir e fechar chaves", function() {
+
+        var smart = sandbox.html("<p><div smart=\"click:{ once:true }\" /></p>").find("DIV").smart();
+        ok(smart.click, "");
+    });
+
+    test("Deve utilizar o atributo SMART para pegar as configurações", function() {
         var html = "<a id='teste' smart=\"{click:{source:'data.js/GetSampleData', " +
                                       "options:{companyId:1, itemId:null}, " +
 
@@ -189,7 +225,7 @@ $(function() {
         window.t = 0;
         var e = $.Event("keypress");
 
-        sandbox.html("<p><div smart=\"{keypress:{onbinding:function(){window.t=3}}}\" /></p>")
+        sandbox.html("<p><div smart=\" { keypress:{onbinding:function(){window.t=3 } } } \" /></p>")
                .initializeControls()
                .find("div")
                .trigger(e);
@@ -289,6 +325,9 @@ $(function() {
                     .click();
     });
 
+
+
+
     module("RENDER");
 
     test("A renderização deve funcionar sem dados!", function() {
@@ -354,17 +393,14 @@ $(function() {
                .click();
     });
 
+    module("TRIGGER");
 
-
-    asyncTest("TRIGGER: Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER", function() {
+    asyncTest("Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER", function() {
         window["t"] = 0;
-        sandbox.html("<p  smart=\"{click: {method:'GET', " +
-                                  "onbounded:function(result) {ok(true);start();}" +
+        sandbox.html("<p  smart=\"{click: { " +
+                                  "onbinding:function(result) {ok(true);start(); return false;}" +
                                   "}}\"  id='target'>" +
-                     "<div smart=\"{click: {method:'GET', " +
-                                  "source:'blank.htm', " +
-                                  "trigger:'#target' " +
-                                  "}}\" /></p>")
+                     "<div smart=\"click: { trigger:'#target' }\" /></p>")
                 .initializeControls()
                 .find("div")
                 .click();
@@ -372,30 +408,26 @@ $(function() {
     });
 
 
-    asyncTest("TRIGGER: Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER respeitando o evento ", function() {
+    asyncTest("Ao disparar o DataBind deve disparar subsequentemente o elemento no atributo TRIGGER respeitando o evento ", function() {
 
-        sandbox.html("<p  smart=\"{mouseover: {method:'GET', " +
-                                  "onbounded:function(result) {ok(true);start();}" +
-                                  "}}\"  id='target'>" +
-                     "<div smart=\"{click: {method:'GET', " +
-                                  "source:'blank.htm', " +
-                                  "trigger:'#target' " +
-                                  "}}\" /></p>")
+        sandbox.html("<p  smart=\"mouseover: {onbinding:function(result) {throw new Exception(); }}," +
+                                  "click: { onbinding:function(result) {ok(true); start(); return false;}}\"  id='target'>" +
+                     "<div smart=\"click: { trigger:'#target' }\" /></p>")
                 .initializeControls()
                 .find("div")
-                .click();
+                .trigger($.Event("click"));
     });
 
 
 
-    asyncTest("TRIGGER: Ao disparar a tag A deve passar o parametro options", function() {
+    asyncTest("Ao disparar a tag deve passar o parametro options", function() {
 
         sandbox.html("<p  id='target'>" +
-                     "<div smart=\"{click: {method:'GET', " +
+                     "<div smart=\"click: {method:'GET', " +
                                   "source:'blank.htm', " +
                                   "sourceparams:{teste:1}, " +
-                                  "onrequest:function(options) {equals(options.sourceparams.teste, 1, 'OK');start();}" +
-                                  "}}\" /></p>")
+                                  "onrequest:function(options) {equals(options.sourceparams.teste, 1, 'OK');start(); return false;}" +
+                                  "}\" /></p>")
                 .initializeControls()
                 .find("div")
                 .click();
@@ -406,23 +438,7 @@ $(function() {
 
 
 
-    module("NOT MODIFIED")
 
-    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {
-        sandbox.html("<P />")
-               .ajaxIframe('blank.htm', sandbox, function(result, status, xhr) {
-                   ok(result === "");
-                   start();
-               });
-    });
-
-    asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
-        sandbox.html("<P />")
-               .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
-                   ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
-                   start();
-               });
-    });
 
 
     //    asyncTest("Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304", function() {
@@ -481,10 +497,10 @@ $(function() {
 
 
     asyncTest("Links devem carregar assincronamente", function() {
-        sandbox.html("<a href='blank.htm' smart=\"{click: {onbounded:function(){ok(true); start();}}}\" /></p>")
+    sandbox.html("<a href='data.js' smart=\"{click: {onresponse:function(){ok(true); start();}}}\" /></p>")
                 .initializeControls()
                 .find("a")
-                .click();
+                .trigger($.Event("click"));
     });
 
     asyncTest("Links devem carregar assincronamente com metodo GET", function() {
@@ -493,7 +509,7 @@ $(function() {
                                          "}}\" /></p>")
                 .initializeControls()
                 .find("a")
-                .click();
+                .trigger($.Event("click"));
     });
 
     asyncTest("Links devem carregar assincronamente colocando o conteudo no TARGET", function() {
@@ -508,7 +524,7 @@ $(function() {
                                     "}}\" >teste</a>")
                 .initializeControls()
                 .find("#link")
-                .click();
+                .trigger($.Event("click"));
     });
 
     //    test("GRID Editável", function() {
