@@ -56,65 +56,6 @@
         outerHtml: function(html) {
             return html ? this.before(html).remove() : jQuery("<p>").append(this.eq(0).clone()).html();
         },
-        smart: function() {
-            if (!this._smart) {
-
-                var smartJson = (this.attr("smart") || "").trim("\\{", "\\}");
-                this._smart = eval("({" + smartJson + "})");
-
-                var events = 0;
-                var errors = "";
-                for (var event in this._smart) {
-                    var obj = this._smart[event];
-                    events++;
-
-                    if (!!obj.show && $(obj.show).size() == 0)
-                        errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
-
-                    if (!!obj.hide && $(obj.hide).size() == 0)
-                        errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
-
-                    if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
-                        errors += "The attribute onbinding don´t is a Function!\n";
-
-                    if (!!obj.onrequest && typeof (obj.onrequest) !== "function")
-                        errors += "The attribute onrequest don´t is a Function!\n";
-
-                    if (!!obj.onresponse && typeof (obj.onresponse) !== "function")
-                        errors += "The attribute onresponse don´t is a Function!\n";
-
-                    if (!!obj.onsucess && typeof (obj.onsucess) !== "function")
-                        errors += "The attribute onsucess don´t is a Function!\n";
-
-                    if (!!obj.onerror && typeof (obj.onerror) !== "function")
-                        errors += "The attribute onerror don´t is a Function!\n";
-
-                    if (!!obj.onbounded && typeof (obj.onbounded) !== "function")
-                        errors += "The attribute onbounded don´t is a Function!\n";
-
-                    if (!!obj.once && typeof (obj.once) !== "boolean")
-                        errors += "The attribute ONCE is not a valid boolean!\n";
-
-                    if (!!obj.method && typeof (obj.method) !== "string")
-                        errors += "The attribute METHOD is not a valid boolean!\n";
-
-                    if (!!obj.target && ($(obj.target).size() == 0 || typeof (obj.target) !== "string"))
-                        errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
-
-                    if (!!obj.template && ($(obj.template).size() == 0 || typeof (obj.template) !== "string"))
-                        errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
-
-                    if (!!obj.emptytemplate && ($(obj.emptytemplate).size() == 0 || typeof (obj.emptytemplate) !== "string"))
-                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
-
-                }
-
-                if (events == 0) errors += "Don´t exists event configured!\n";
-                if (errors != "") Exception(errors);
-
-            }
-            return this._smart;
-        },
 
         render: function(data, options) {
             if (this.size() == 0) throw new Error("Zero element selected!");
@@ -210,6 +151,67 @@
 
             });
         },
+        smart: function() {
+            if (!this._smart) {
+
+                var smartJson = (this.attr("smart") || "").replace(/(\n*)/g, "").trim("\\{", "\\}");
+                this._smart = eval("({" + smartJson + "})");
+
+                var events = 0;
+                var errors = "";
+                for (var event in this._smart) {
+                    var obj = this._smart[event];
+                    events++;
+
+                    if (!!obj.show && $(obj.show).size() == 0)
+                        errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
+
+                    if (!!obj.hide && $(obj.hide).size() == 0)
+                        errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
+
+                    if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
+                        errors += "The attribute onbinding don´t is a Function!\n";
+
+                    if (!!obj.onrequest && typeof (obj.onrequest) !== "function")
+                        errors += "The attribute onrequest don´t is a Function!\n";
+
+                    if (!!obj.onresponse && typeof (obj.onresponse) !== "function")
+                        errors += "The attribute onresponse don´t is a Function!\n";
+
+                    if (!!obj.onsucess && typeof (obj.onsucess) !== "function")
+                        errors += "The attribute onsucess don´t is a Function!\n";
+
+                    if (!!obj.onerror && typeof (obj.onerror) !== "function")
+                        errors += "The attribute onerror don´t is a Function!\n";
+
+                    if (!!obj.onbounded && typeof (obj.onbounded) !== "function")
+                        errors += "The attribute onbounded don´t is a Function!\n";
+
+                    if (!!obj.once && typeof (obj.once) !== "boolean")
+                        errors += "The attribute ONCE is not a valid boolean!\n";
+
+                    if (!!obj.method && typeof (obj.method) !== "string")
+                        errors += "The attribute METHOD is not a valid boolean!\n";
+
+                    if (!!obj.target && ($(obj.target).size() == 0 || typeof (obj.target) !== "string"))
+                        errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
+
+                    if (!!obj.template && ($(obj.template).size() == 0 || typeof (obj.template) !== "string"))
+                        errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
+
+                    if (!!obj.emptytemplate && ($(obj.emptytemplate).size() == 0 || typeof (obj.emptytemplate) !== "string"))
+                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
+
+                }
+
+                if (events == 0) errors += "Don´t exists event configured!\n";
+                if (errors != "") Exception(errors);
+
+            }
+            return this._smart;
+        },
+
+
 
         dataBind: function(options, event) {
             for (var i = 0; i < this.length; i++) {
@@ -227,8 +229,8 @@
         },
         /* End DataBind*/
 
-        _dataBind: function(opt, event) {
-            var options = $.extend({}, opt);
+        _dataBind: function(options, event) {
+
             var $this = this;
             var smart = $this.smart()[event.type];
 
@@ -237,8 +239,14 @@
                     smart = smart[event.keyCode];
             }
 
-            if (smart.onbinding)
-                if (!smart.onbinding.apply($this)) return this;
+            if (!smart) for (var key in $this.smart()) {
+                smart = $this.smart()[key]; break;
+            }
+
+            options = $.extend(smart, options || {});
+
+            if (options.onbinding)
+                if (!options.onbinding.apply($this)) return this;
 
 
             options.sourceparams = $.extend({}, options.sourceparams);
@@ -246,65 +254,38 @@
                 options.sourceparams = $.extend(smart.sourceparams, options.sourceparams);
             }
 
-            var form = $this.closest("[asform]") || $this.closest("[action]") || $this.closest("FORM");
-
-            // Get All html form controls
-            var fields = form.find(":input, select, textarea, :password, [type=hidden]").serializeArray();
-            $.each(fields, function(i, elem) {
-                options.sourceparams[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
-            });
-
-
-
-            // Get target tag
-            if (!!smart.target) {
-                options.target = smart.target;
-            }
-
-            // Get template tag
-            if (!!smart.template) {
-                options.template = smart.template;
-            }
-
-
-            // Get mode
-            //            if ($this.attrUp("mode")) {
-            //                options.mode = $this.attrUp("mode");
-            //            }
-
-
             // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
             // is fired otherwise prepares the data Request Payload
             //            if (!options.data)
             //                options.data = $.toJSON(options.data);
             // save the control that is fire dataBind, because closure "sucess" dont access
             //var ctrl = $this;
-            if (this[0].tagName == "A") smart.method = "GET";
-            options.type = smart.method || "POST";
+            if (this[0].tagName == "A") options.method = "GET";
+            options.method = options.method || "POST";
 
             // Prepare the url
             var trim = function(text) { return (text || "").replace(/(.*)\/$/, "$1"); }
 
             window.applicationPath = trim(window.applicationPath);
 
-            options.url = trim(smart.source || $this.attrUp("href"));
-            options.url = options.url.replace("~", window.applicationPath);
+            options.source = trim(options.source || $this.attrUp("href"));
+            options.source = options.source.replace("~", window.applicationPath);
 
             //Exists only for tests
-            options.responseBody = smart.dataSource || smart.defaultResponseBody;
+            options.responseBody = options.dataSource || options.responseBody || options.defaultResponseBody;
 
             // Only fires ajax if there are url
-            if (options.url) {
+            if (options.source) {
 
-                if (smart.onrequest)
-                    if (!smart.onrequest.call($this, options)) return this;
+                if (options.onrequest)
+                    if (!options.onrequest.call($this, options)) return this;
 
 
-                options.sourceparams = smart.method != "GET" ? $.toJSON(options.sourceparams) : null;
+                options.sourceparams = options.method != "GET" ? $.toJSON(options.sourceparams) : null;
 
                 $.ajax({
-                    type: options.type,
-                    url: options.url,
+                    type: options.method,
+                    url: options.source,
                     data: options.sourceparams,
                     contentType: "application/json",
                     ifModified: true,
@@ -315,8 +296,8 @@
                             $this.ajaxIframe(options.url, $this, this.success);
                         }
 
-                        if (smart.onresponse)
-                            responseBody = smart.onresponse.call($this, responseBody, status, request, options);
+                        if (options.onresponse)
+                            responseBody = options.onresponse.call($this, responseBody, status, request, options);
 
                         // If Http Status 200 then OK, process JSON because data should be transform on html
                         options.responseBody = responseBody;
@@ -327,17 +308,17 @@
                             }
                         }
 
-                        if (smart.onsucess)
-                            smart.onsucess.call($this, responseBody, status, request, options);
+                        if (options.onsucess)
+                            options.onsucess.call($this, responseBody, status, request, options);
 
-                        fireActions($this, smart);
+                        fireActions($this, options);
 
                     },
                     error: function(request, textStatus, errorThrown) {
-                        if (smart.onerror)
-                            smart.onerror.call($this, request, textStatus, errorThrown, options);
+                        if (options.onerror)
+                            options.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        fireActions($this, smart);
+                        fireActions($this, options);
 
                         if (request.status == "404")
                             PageNotFoundException(options.url);
@@ -348,60 +329,62 @@
                     }
                 });
             } else {
-                fireActions($this, smart);
+                fireActions($this, options);
             }
 
 
-            function fireActions($this, smart, mode) {
+            function fireActions($this, options, mode) {
 
-                if (smart.template || smart.target) {
-                    var html = options.responseBody || $(smart.template).html() || "";
+                // Get target tag
+                options.target = options.target || $this;
+
+                if (options.source || options.template) {
+                    var html = options.responseBody || $(options.template).html() || "";
 
                     if (html.length == 0 && $(smart.emptytemplate).size() > 0) {
 
-                        html = $(smart.emptytemplate).html();
+                        html = $(options.emptytemplate).html();
 
                     } else if (typeof (options.responseBody) == "object" || typeof (options.responseBody) == "array") {
 
                         html = $this.render(options.responseBody, options);
                     }
 
-                    // Get target tag
-                    smart.target = smart.target || $this;
 
-                    if ($(smart.target).size() == 0) TargetMissingException(this);
+
+                    if ($(options.target).size() == 0) TargetMissingException(this);
 
                     if (mode === "after") {
-                        $(smart.target).after(html);
-                        $(smart.target).parent().initializeControls();
+                        $(options.target).after(html);
+                        $(options.target).parent().initializeControls();
                     } else {
-                        $(smart.target).hide().html(html).initializeControls().fadeIn(smart.speed || "slow");
+                        $(options.target).hide().html(html).initializeControls().fadeIn(options.speed || "slow");
                     }
                 }
 
-                if (smart.once)
+                if (options.once)
                     $this.unbind(event.type);
 
-                if (smart.hide) {
-                    if (smart.speed)
-                        $(smart.hide).hide(smart.speed || "slow");
+                if (options.hide) {
+                    if (options.speed)
+                        $(options.hide).hide(options.speed || "slow");
                     else
-                        $(smart.hide).hide();
+                        $(options.hide).hide();
                 }
 
-                if (smart.show) {
-                    if (smart.speed)
-                        $(smart.show).show(smart.speed || "slow");
+                if (options.show) {
+                    if (options.speed)
+                        $(options.show).show(options.speed || "slow");
                     else
-                        $(smart.show).show();
+                        $(options.show).show();
                 }
 
-                if (smart.onbounded)
-                    smart.onbounded.call($this, options);
+                if (options.onbounded)
+                    options.onbounded.call($this, options);
 
                 // Allow fire DataBinding in controls that has TRIGGER atribute
-                if (smart.trigger) {
-                    $(smart.trigger).dataBind(options, event);
+                if (options.trigger) {
+                    $(options.trigger).dataBind(options, event);
                     return;
                 }
             }

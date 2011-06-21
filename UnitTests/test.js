@@ -1,4 +1,4 @@
-$(function() {
+Ôªø$(function() {
     var sandbox = $("<div style='position:absolute; top:-1000px;'></div>").appendTo("Body");
 
 
@@ -22,13 +22,13 @@ $(function() {
 
     module("BASIC");
 
-    test("AttrUp: Deve retornar o attributo desejado na prÛpria tag ou ir buscando nas tag pai", function() {
+    test("AttrUp: Deve retornar o attributo desejado na pr√≥pria tag ou ir buscando nas tag pai", function() {
         var html = "<div><p><a command=\"click\" href=\"index.html\"></a></P></div>";
         var comm = sandbox.html(html).find("A").attrUp("command");
         equal(comm, "click");
     });
 
-    test("AttrUp: Deve retornar o attributo desejado na prÛpria tag ou ir buscando nas tag pai", function() {
+    test("AttrUp: Deve retornar o attributo desejado na pr√≥pria tag ou ir buscando nas tag pai", function() {
         var html = "<div command=\"click\" ><p><a href=\"index.html\"></a></P></div>";
         var comm = sandbox.html(html).find("A").attrUp("command");
         equal(comm, "click");
@@ -43,7 +43,7 @@ $(function() {
         ok(smart.click, "");
     });
 
-    test("O atributo SMART pode ser declarado com espaÁos ", function() {
+    test("O atributo SMART pode ser declarado com espa√ßos ", function() {
 
         var smart = sandbox.html("<p><div smart=\" { click : { once:true } } \" /></p>").find("DIV").smart();
         ok(smart.click, "");
@@ -55,7 +55,7 @@ $(function() {
         ok(smart.click, "");
     });
 
-    test("Deve utilizar o atributo SMART para pegar as configuraÁıes", function() {
+    test("Deve utilizar o atributo SMART para pegar as configura√ß√µes", function() {
         var html = "<a id='teste' smart=\"{click:{source:'data.js/GetSampleData', " +
                                       "options:{companyId:1, itemId:null}, " +
 
@@ -101,103 +101,103 @@ $(function() {
     test("SMART: Deve validar os argumentos do atributo SMART", function() {
 
         var html = "<a id='teste' smart=\"\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o Conte˙do Vazio disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o Conte√∫do Vazio disparada!");
 
         var html = "<a id='teste' smart=\"{}\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o Conte˙do Vazio disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o Conte√∫do Vazio disparada!");
 
         var html = "<a id='teste' smart=\"{click:{onbinding:1}}\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "onbinding inv·lido!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "onbinding inv√°lido!");
 
         var html = "<a id='teste' smart=\"{click:{ onbinding:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onbinding), "function", "onbinding v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onbinding), "function", "onbinding v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ onrequest:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "onrequest inv·lido!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "onrequest inv√°lido!");
 
         var html = "<a id='teste' smart=\"{click:{ onrequest:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onrequest), "function", "onrequest v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onrequest), "function", "onrequest v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ onresponse:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "onresponse inv·lido!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "onresponse inv√°lido!");
 
         var html = "<a id='teste' smart=\"{click:{ onresponse:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onresponse), "function", "onresponse v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onresponse), "function", "onresponse v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ onsucess:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "onsucess inv·lido!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "onsucess inv√°lido!");
 
         var html = "<a id='teste' smart=\"{click:{ onsucess:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onsucess), "function", "onsucess v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onsucess), "function", "onsucess v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ onerror:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "onerror inv·lido!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "onerror inv√°lido!");
 
         var html = "<a id='teste' smart=\"{click:{ onerror:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onerror), "function", "onerror v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onerror), "function", "onerror v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ onbounded:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o onbounded disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o onbounded disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ onbounded:function(){} } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.onbounded), "function", "onbounded v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.onbounded), "function", "onbounded v√°lido!");
 
 
         var html = "<a id='teste' smart=\"{click:{ once:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o once disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o once disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ once:true } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.once), "boolean", "once v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.once), "boolean", "once v√°lido!");
 
 
         var html = "<a id='teste' smart=\"{click:{ method:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o method disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o method disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ method:'GET' } }\" ></a>";
-        equal(typeof (sandbox.html(html).find("A").smart().click.method), "string", "method v·lido!");
+        equal(typeof (sandbox.html(html).find("A").smart().click.method), "string", "method v√°lido!");
 
 
 
         var html = "<a id='teste' smart=\"{click:{ target:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o target disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o target disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ target:'@' } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o target disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o target disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ target:'#teste' } }\" ></a>";
-        ok($(sandbox.html(html).find("A").smart().click.target).size() > 0, "target v·lido!");
+        ok($(sandbox.html(html).find("A").smart().click.target).size() > 0, "target v√°lido!");
 
 
 
 
         var html = "<a id='teste' smart=\"{click:{ template:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o template disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o template disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ template:'@' } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o template disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o template disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ template:'#teste' } }\" ></a>";
-        ok($(sandbox.html(html).find("A").smart().click.template).size() > 0, "template v·lido!");
+        ok($(sandbox.html(html).find("A").smart().click.template).size() > 0, "template v√°lido!");
 
 
         var html = "<a id='teste' smart=\"{click:{ emptytemplate:1 } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o emptytemplate disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o emptytemplate disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ emptytemplate:'@' } }\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "ValidaÁ„o emptytemplate disparada!");
+        raises(function() { sandbox.html(html).find("A").smart(); }, "Valida√ß√£o emptytemplate disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ emptytemplate:'#teste' } }\" ></a>";
-        ok($(sandbox.html(html).find("A").smart().click.emptytemplate).size() > 0, "emptytemplate v·lido!");
+        ok($(sandbox.html(html).find("A").smart().click.emptytemplate).size() > 0, "emptytemplate v√°lido!");
 
     });
 
@@ -330,7 +330,7 @@ $(function() {
 
     module("RENDER");
 
-    test("A renderizaÁ„o deve funcionar sem dados!", function() {
+    test("A renderiza√ß√£o deve funcionar sem dados!", function() {
         window.t = 0;
         sandbox.html("<p id='template'>teste</p>" +
                      "<span id='target'></span>" +
@@ -346,7 +346,7 @@ $(function() {
 
 
 
-    asyncTest("A renderizaÁ„o deve funcionar quando o retorno È html puro!", function() {
+    asyncTest("A renderiza√ß√£o deve funcionar quando o retorno √© html puro!", function() {
         window.t = 0;
         sandbox.html("<span id='target'>Teste</span>" +
                      "<div smart=\"{click:{" +
@@ -361,7 +361,7 @@ $(function() {
     });
 
 
-    asyncTest("A renderizaÁ„o deve funcionar quando o retorno È JSON!", function() {
+    asyncTest("A renderiza√ß√£o deve funcionar quando o retorno √© JSON!", function() {
         window.t = 0;
         sandbox.html("<p id='template'>teste <$=t$></p>" +
                      "<span id='target'>Teste</span>" +
@@ -377,7 +377,7 @@ $(function() {
                .click();
     });
 
-    asyncTest("A renderizaÁ„o deve funcionar informando o item a ser renderizado!", function() {
+    asyncTest("A renderiza√ß√£o deve funcionar informando o item a ser renderizado!", function() {
         window.t = 0;
         sandbox.html("<p id='template'>teste <$=index$> </p>" +
                      "<span id='target'>Teste</span>" +
@@ -466,7 +466,7 @@ $(function() {
 
 
 
-    //    asyncTest("TARGET: Ao disparar o DataBind o retorno da requisiÁ„o deve ser enviada para o controle identificado no atributo TARGET", function() {
+    //    asyncTest("TARGET: Ao disparar o DataBind o retorno da requisi√ß√£o deve ser enviada para o controle identificado no atributo TARGET", function() {
     //        stop();
 
     //        if ($("#test").hide().size() == 0)
@@ -478,13 +478,13 @@ $(function() {
     //               .find("A")
     //               .dataBind({
     //                   onsucess: function(result, status, request) {
-    //                       ok($("#test").html(), "OK, Pegou o conte˙do: " + $("#test").html());
+    //                       ok($("#test").html(), "OK, Pegou o conte√∫do: " + $("#test").html());
     //                       start();
     //                   }
     //               });
     //    });
 
-    //    test("Outer HTML: Deve retornar o conte˙do do html incluindo ele mesmo", function() {
+    //    test("Outer HTML: Deve retornar o conte√∫do do html incluindo ele mesmo", function() {
     //        var html = "<p><a command=\"click\" href=\"blank.htm\"></a></p>";
     //        var outerHtml = $(html).outerHtml();
     //        equal(outerHtml, html);
@@ -505,7 +505,7 @@ $(function() {
 
     asyncTest("Links devem carregar assincronamente com metodo GET", function() {
         sandbox.html("<a href='data.js' " +
-                        "smart=\"{click: {onbounded:function(options){ok(options.type=='GET'); start();}" +
+                        "smart=\"{click: {onbounded:function(options){ok(options.method=='GET'); start();}" +
                                          "}}\" /></p>")
                 .initializeControls()
                 .find("a")
@@ -527,7 +527,7 @@ $(function() {
                 .trigger($.Event("click"));
     });
 
-    //    test("GRID Edit·vel", function() {
+    //    test("GRID Edit√°vel", function() {
     //        ok(false);
     //    });
 
