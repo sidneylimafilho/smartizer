@@ -482,7 +482,7 @@
             iframe.unbind("load").bind("load", function() {
                 var html = $("body", iframe.contents()).html();
                 //ctrl.attachHtmlInTarget(html);
-                if (onsucess) 
+                if (onsucess)
                     onsucess(html, "notmodified", null);
                 iframe.unbind("load");
             });
@@ -619,7 +619,7 @@
                             if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
                                 handlerResultErrors(responseBody);
                             }
-                        }                   
+                        }
 
                         if (smart.onsucess)
                             smart.onsucess.call($this, responseBody, status, request, options);
@@ -632,9 +632,9 @@
                             smart.onerror.call($this, request, textStatus, errorThrown, options);
 
                         fireActions($this, smart);
-                        
+
                         if (request.status == "404")
-                            PageNotFoundException(options.url);                        
+                            PageNotFoundException(options.url);
                     },
                     complete: function() {
                         // Retirada a função fireActions deste evento pois o sucess é passado 
@@ -669,7 +669,7 @@
                         $(smart.target).after(html);
                         $(smart.target).parent().initializeControls();
                     } else {
-                        $(smart.target).hide().html(html).initializeControls().fadeIn("slow");
+                        $(smart.target).hide().html(html).initializeControls().fadeIn(smart.speed || "slow");
                     }
                 }
 
@@ -709,7 +709,7 @@
                         alert(result.Errors);
                     }
                 }
-            } 
+            }
 
 
         },
