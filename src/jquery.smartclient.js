@@ -187,7 +187,8 @@
             iframe.unbind("load").bind("load", function() {
                 var html = $("body", iframe.contents()).html();
                 //ctrl.attachHtmlInTarget(html);
-                if (onsucess) onsucess(html, "notmodified", null);
+                if (onsucess)
+                    onsucess(html, "notmodified", null);
                 iframe.unbind("load");
             });
             iframe.hide().attr("src", url);
@@ -286,12 +287,11 @@
 
             window.applicationPath = trim(window.applicationPath);
 
-            options.url = trim($this.attrUp("href") || smart.source);
+            options.url = trim(smart.source || $this.attrUp("href"));
             options.url = options.url.replace("~", window.applicationPath);
 
-
             //Exists only for tests
-            options.responseBody = smart.defaultResponseBody;
+            options.responseBody = smart.dataSource || smart.defaultResponseBody;
 
             // Only fires ajax if there are url
             if (options.url) {
@@ -311,7 +311,7 @@
                     success: function(responseBody, status, request) {
 
                         // If Not Modified then get cached content file by iframe
-                        if (!!request && request.status == 304) {
+                        if (!!request && (request.status == 304 || status == "notmodified")) {
                             $this.ajaxIframe(options.url, $this, this.success);
                         }
 
@@ -326,7 +326,6 @@
                                 handlerResultErrors(responseBody);
                             }
                         }
-                        //}
 
                         if (smart.onsucess)
                             smart.onsucess.call($this, responseBody, status, request, options);
@@ -338,10 +337,10 @@
                         if (smart.onerror)
                             smart.onerror.call($this, request, textStatus, errorThrown, options);
 
+                        fireActions($this, smart);
+
                         if (request.status == "404")
                             PageNotFoundException(options.url);
-
-                        fireActions($this, smart);
                     },
                     complete: function() {
                         // Retirada a função fireActions deste evento pois o sucess é passado 
@@ -349,10 +348,8 @@
                     }
                 });
             } else {
-
                 fireActions($this, smart);
             }
-
 
 
             function fireActions($this, smart, mode) {
@@ -378,7 +375,7 @@
                         $(smart.target).after(html);
                         $(smart.target).parent().initializeControls();
                     } else {
-                        $(smart.target).hide().html(html).initializeControls().fadeIn("slow");
+                        $(smart.target).hide().html(html).initializeControls().fadeIn(smart.speed || "slow");
                     }
                 }
 
@@ -440,7 +437,8 @@
                         } else {
                             $ctrl.bind(eventType, function(event) {
                                 $ctrl.dataBind({}, event);
-
+                                if (ctrl.tagName == "A")
+                                    event.preventDefault();
                             });
                         }
                     }
@@ -535,7 +533,8 @@
 function Exception(msg) {
     msg = " SmartClient Error:  \n" + msg;
     //alert(msg);
-    throw ReferenceError(msg);
+    throw new ReferenceError(msg);
+    //console.log(msg);
 };
 
 function PageNotFoundException(url) {
