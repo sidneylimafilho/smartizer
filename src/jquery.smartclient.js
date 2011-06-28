@@ -152,6 +152,7 @@
             });
         },
         smart: function() {
+            var $this = this[0];
             if (!this._smart) {
 
                 var smartJson = (this.attr("smart") || "").replace(/(\n*)/g, "").trim("\\{", "\\}");
@@ -232,61 +233,55 @@
         _dataBind: function(options, event) {
 
             var $this = this;
-            var smart = $this.smart()[event.type];
+            var smart = $this.smart();
 
+            // Get configuration for event or first configuration possible
+            for (key in smart) smart = smart[key];
+
+            smart = $this.smart()[event.type] || smart;
+
+            // Check whether keyDown, keyPress, keyUp event fires in a specific key
             if (event.type.indexOf("key") >= 0) {
                 if (!!event.keyCode && !!smart[event.keyCode])
                     smart = smart[event.keyCode];
             }
 
-            if (!smart) for (var key in $this.smart()) {
-                smart = $this.smart()[key]; break;
-            }
-
-            options = $.extend(smart, options || {});
+            // Add a {} as first parameter because otherwise override smart variable
+            options = $.extend(true, {}, smart, options);
 
             if (options.onbinding)
-                if (!options.onbinding.apply($this)) return this;
+                if (!options.onbinding.apply($this))
+                return this;
 
 
-            options.sourceparams = $.extend({}, options.sourceparams);
-            if (!!smart.sourceparams) {
+            if (!!options.sourceparams)
                 options.sourceparams = $.extend(smart.sourceparams, options.sourceparams);
-            }
 
-            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
-            // is fired otherwise prepares the data Request Payload
-            //            if (!options.data)
-            //                options.data = $.toJSON(options.data);
-            // save the control that is fire dataBind, because closure "sucess" dont access
-            //var ctrl = $this;
-            if (this[0].tagName == "A") options.method = "GET";
-            options.method = options.method || "POST";
 
             // Prepare the url
             var trim = function(text) { return (text || "").replace(/(.*)\/$/, "$1"); }
 
             window.applicationPath = trim(window.applicationPath);
 
-            options.source = trim(options.source || $this.attrUp("href"));
-            options.source = options.source.replace("~", window.applicationPath);
-
             //Exists only for tests
-            options.responseBody = options.dataSource || options.responseBody || options.defaultResponseBody;
+            if (options.dataSource || options.responseBody || options.defaultResponseBody)
+                options.responseBody = options.dataSource || options.responseBody || options.defaultResponseBody;
 
-            // Only fires ajax if there are url
-            if (options.source) {
+            var source = trim(options.source || $this.attrUp("href"));
+            if (!!source) // Only fires ajax if there are url
+            {
+                options.source = source.replace("~", window.applicationPath);
+
+                options.method = this[0].tagName == "A" ? "GET": (options.method || "POST");
 
                 if (options.onrequest)
-                    if (!options.onrequest.call($this, options)) return this;
-
-
-                options.sourceparams = options.method != "GET" ? $.toJSON(options.sourceparams) : null;
+                    if (!options.onrequest.call($this, options))
+                    return this;
 
                 $.ajax({
                     type: options.method,
                     url: options.source,
-                    data: options.sourceparams,
+                    data: options.method != "GET" ? $.toJSON(options.sourceparams) : null,
                     contentType: "application/json",
                     ifModified: true,
                     success: function(responseBody, status, request) {
@@ -311,14 +306,14 @@
                         if (options.onsucess)
                             options.onsucess.call($this, responseBody, status, request, options);
 
-                        fireActions($this, options);
+                        fireActions($this, options, smart);
 
                     },
                     error: function(request, textStatus, errorThrown) {
                         if (options.onerror)
                             options.onerror.call($this, request, textStatus, errorThrown, options);
 
-                        fireActions($this, options);
+                        fireActions($this, options, smart);
 
                         if (request.status == "404")
                             PageNotFoundException(options.url);
@@ -329,11 +324,11 @@
                     }
                 });
             } else {
-                fireActions($this, options);
+                fireActions($this, options, smart);
             }
 
 
-            function fireActions($this, options, mode) {
+            function fireActions($this, options, smart, mode) {
 
                 // Get target tag
                 options.target = options.target || $this;
@@ -379,12 +374,18 @@
                         $(options.show).show();
                 }
 
+                for (var key in options) if ($.fn[key] && (typeof (options[key]) == "object" || typeof (options[key]) == "array")) {
+                    var ctx = options[key].shift();
+                    $.fn[key].apply($(ctx), options[key]);
+                }
+
                 if (options.onbounded)
                     options.onbounded.call($this, options);
 
                 // Allow fire DataBinding in controls that has TRIGGER atribute
                 if (options.trigger) {
-                    $(options.trigger).dataBind(options, event);
+                    delete smart.trigger;
+                    $(options.trigger).dataBind(smart, event);
                     return;
                 }
             }

@@ -418,6 +418,16 @@
                 .trigger($.Event("click"));
     });
 
+    asyncTest("O atributo trigger não deve propagar evitando uma chamada recursiva disparando sempre o mesmo elemento", function() {
+
+        sandbox.html("<p  smart=\"mouseover: {onbinding:function(result) {throw new Exception(); }}," +
+                                  "click: { onbinding:function(result) {ok(true); start(); return true;}}\"  id='target'>" +
+                     "<div smart=\"click: { trigger:'#target' }\" /></p>")
+                .initializeControls()
+                .find("div")
+                .trigger($.Event("click"));
+    });
+
 
 
     asyncTest("Ao disparar a tag deve passar o parametro options", function() {
