@@ -258,7 +258,7 @@
                 options.sourceparams = $.extend(smart.sourceparams, options.sourceparams);
 
 
-            // Prepare the url
+            // Prepare the url 
             var trim = function(text) { return (text || "").replace(/(.*)\/$/, "$1"); }
 
             window.applicationPath = trim(window.applicationPath);

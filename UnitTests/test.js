@@ -405,7 +405,7 @@
                 .find("div")
                 .click();
 
-    });
+    }); 
 
 
     asyncTest("Ao disparar o DataBind deve disparar subsequentemente o elemento no atributo TRIGGER respeitando o evento ", function() {
