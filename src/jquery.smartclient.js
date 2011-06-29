@@ -210,7 +210,7 @@
             options = $.extend(true, {}, options, smart);
 
             if (options.onbinding)
-                if (!options.onbinding.apply($this) === false) // case undefined or true the code continues
+                if (options.onbinding.apply($this) === false) // case undefined or true the code continues
                 return this;
 
             // Prepare the url 
