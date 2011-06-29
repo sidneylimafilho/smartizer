@@ -14,7 +14,7 @@
 
     asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, FORMSAMPLE", function() {
         sandbox.html("<P />")
-               .ajaxIframe('data.js', sandbox, function(result, status, xhr) {
+               .ajaxIframe('index.html?', sandbox, function(result, status, xhr) {
                    ok(result != "" && result != null, "OK, Pegou o conteudo: " + result);
                    start();
                });
@@ -203,7 +203,7 @@
 
 
     test("Um elemento com atributo SMART deve disparar o evento LOAD", function() {
-        window.t = 0;
+        //window.t = 0;
         sandbox.html("<p><div smart=\"{load:{onbinding:function(){window.t=2}}}\" /></p>")
                .initializeControls()
                .find("div")
@@ -393,6 +393,15 @@
                .click();
     });
 
+
+
+
+
+
+
+
+
+
     module("TRIGGER");
 
     asyncTest("Ao disparar o DataBind deve disparar o elemento no atributo TRIGGER", function() {
@@ -405,7 +414,7 @@
                 .find("div")
                 .click();
 
-    }); 
+    });
 
 
     asyncTest("Ao disparar o DataBind deve disparar subsequentemente o elemento no atributo TRIGGER respeitando o evento ", function() {
@@ -430,7 +439,7 @@
 
 
 
-    asyncTest("Ao disparar a tag deve passar o parametro options", function() {
+    asyncTest("Ao disparar a tag deve passar o parametro options para o próximo elemento", function() {
 
         sandbox.html("<p  id='target'>" +
                      "<div smart=\"click: {method:'GET', " +
@@ -438,6 +447,25 @@
                                   "sourceparams:{teste:1}, " +
                                   "onrequest:function(options) {equals(options.sourceparams.teste, 1, 'OK');start(); return false;}" +
                                   "}\" /></p>")
+                .initializeControls()
+                .find("div")
+                .click();
+    });
+
+
+    asyncTest("Ao disparar a tag deve passar o parametro options sem sobrescrever o options do proximo elemento", function() {
+
+        sandbox.html("<p id='target' smart=\"click: {method:'GET', " +
+                                  "once:true, " +
+                                  "source:'blank.htm', " +
+                                  "sourceparams:{teste:1}, " +
+                                  "onrequest:function(options) { equals(options.once, true, 'OK'); equals(options.sourceparams.div, true, 'OK'); start(); return false;}" +
+                                  "}\" ></p>" +
+                     "<div smart=\"click: {method:'POST', " +
+                                  "sourceparams:{div:true}, " +
+                                  "once:false, " +                                                            
+                                  "trigger:'#target' " +
+                                  "}\" ></div>")
                 .initializeControls()
                 .find("div")
                 .click();
@@ -507,7 +535,7 @@
 
 
     asyncTest("Links devem carregar assincronamente", function() {
-    sandbox.html("<a href='data.js' smart=\"{click: {onresponse:function(){ok(true); start();}}}\" /></p>")
+        sandbox.html("<a href='data.js' smart=\"{click: {onresponse:function(){ok(true); start();}}}\" /></p>")
                 .initializeControls()
                 .find("a")
                 .trigger($.Event("click"));
