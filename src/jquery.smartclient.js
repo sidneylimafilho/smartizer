@@ -117,12 +117,12 @@
             });
         },
         smart: function() {
-            var $this = this[0];
+            var $this = $(this[0]);
             if (!this._smart) {
 
                 var smartJson = (this.attr("smart") || "");
-                smartJson = smartJson.replace(/\n/g, "").replace(/\r/g, "").replace(/\t/g, ""); // Remove invalid chars by JSON http://www.json.org/
-                smartJson = smartJson.trim("\\{", "\\}"); // Remove braces if exists
+                smartJson = smartJson.replace(/([\n\r\t])|(\u[0-9a-fA-F]{4})/g, ""); // Remove invalid chars by JSON http://www.json.org/
+                smartJson = smartJson.trimChars("\\{", "\\}"); // Remove braces if exists
                 this._smart = eval("({" + smartJson + "})");
 
                 var events = 0;
@@ -169,6 +169,12 @@
 
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
                         errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
+                        
+                        obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
+                        var candidate = obj.source.replace(/javascript(.*)/g, "");
+                        if (!!obj.source && obj.source !== candidate){
+                        obj.source = candidate;
+                        }
 
                 }
 
@@ -221,19 +227,16 @@
                 if (options.onbinding.apply($this) === false) // case undefined or true the code continues
                 return this;
 
-            // Prepare the url 
-            var trim = function(text) { return (text || "").replace(/(.*)\/$/, "$1"); }
-
-            window.applicationPath = trim(window.applicationPath);
 
             //Exists only for tests
             if (options.dataSource || options.responseBody || options.defaultResponseBody)
-                options.responseBody = options.dataSource || options.responseBody || options.defaultResponseBody;
-
-            var source = trim(options.source || $this.attrUp("href"));
-            if (!!source) // Only fires ajax if there are url
+                options.dataSource = options.dataSource || options.responseBody || options.defaultResponseBody;
+                        
+            if (!!options.source) // Only fires ajax if there are url
             {
-                options.source = source.replace("~", window.applicationPath);
+                if (!!window.applicationPath) { window.applicationPath = window.applicationPath.trimChars("", "\\/"); }
+                options.source = options.source.replace("~", window.applicationPath);
+
 
                 options.method = this[0].tagName === "A" ? "GET" : (options.method || "POST");
 
@@ -247,7 +250,7 @@
                     data: (options.method !== "GET" ? $.toJSON(options.sourceparams || {}) : null),
                     contentType: "application/json",
                     ifModified: true,
-                    success: function(responseBody, status, request) {
+                    success: function(dataSource, status, request) {
 
                         // If Not Modified then get cached content file by iframe
                         if (!!request && (request.status === 304 || status === "notmodified")) {
@@ -255,19 +258,13 @@
                         }
 
                         if (options.onresponse)
-                            responseBody = options.onresponse.call($this, responseBody, status, request, options);
+                            dataSource = options.onresponse.call($this, dataSource, status, request, options);
 
                         // If Http Status 200 then OK, process JSON because data should be transform on html
-                        options.responseBody = responseBody;
-
-                        if (responseBody && !!request && request.responseText !== "") {
-                            if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
-                                handlerResultErrors(responseBody);
-                            }
-                        }
+                        options.dataSource = dataSource;
 
                         if (options.onsucess)
-                            options.onsucess.call($this, responseBody, status, request, options);
+                            options.onsucess.call($this, dataSource, status, request, options);
 
                         fireActions($this, options, smart);
 
@@ -297,21 +294,21 @@
                 options.target = options.target || $this;
 
                 // options.template indicates um HTML to be transformed or a content 
-                if (!!options.template || !!options.source) {
+                if (!!options.template || !!options.source || !!options.dataSource) {
 
-                    var html = options.responseBody || $(options.template).html() || "";
+                    var html = options.dataSource || $(options.template).html() || "";
 
                     if (html.length === 0 && $(smart.emptytemplate).size() > 0) {
 
                         html = $(options.emptytemplate).html();
 
-                    } else if (typeof (options.responseBody) === "object" || typeof (options.responseBody) === "array") {
+                    } else if (typeof (options.dataSource) === "object" || typeof (options.dataSource) === "array") {
 
                         var $template = $(options.template);
                         if (!!options.template && $template.size() > 0) {
-                            html = $template.render(options.responseBody, options);
+                            html = $template.render(options.dataSource, options);
                         } else {
-                            html = $this.render(options.responseBody, options);
+                            html = $this.render(options.dataSource, options);
                         }
 
                     }
@@ -515,13 +512,13 @@
     }
 
 
-    String.prototype.trim = function(left, right) {
+    String.prototype.trimChars = function(left, right) {
         left = left || "";
         right = right || left;
 
         //        tmp = tmp.replace(new RegExp("^(" + boundaries + ")"), "");
         //        tmp = tmp.replace(new RegExp("(" + boundaries + ")$"), "");
-        return this.replace(new RegExp("^( *" + left + ")(.*)(" + right + " *)$", "g"), "$2");
+        return this.replace(new RegExp("^( *" + left + " *)(.*)( *" + right + " *)$", "g"), "$2");
     }
 
 
