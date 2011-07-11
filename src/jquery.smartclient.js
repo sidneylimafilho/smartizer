@@ -114,7 +114,8 @@
             var $this = this[0];
             if (!this._smart) {
 
-                var smartJson = (this.attr("smart") || "").replace(/(\n*)/g, "").trim("\\{", "\\}");
+                var smartJson = (this.attr("smart") || "").trim("\\{", "\\}");
+                smartJson = smartJson.replace(/(\b*)/g, "").replace(/(\f*)/g, "").replace(/(\n*)/g, "").replace(/(\r*)/g, "").replace(/(\t*)/g, ""); // Remove invalid chars by JSON http://www.json.org/
                 this._smart = eval("({" + smartJson + "})");
 
                 var events = 0;
@@ -207,7 +208,7 @@
 
             // Add a {} as first parameter because otherwise override smart variable
             // The order are true, {}, options, smart to copy the properties of the smart to options
-            options = $.extend(true, {}, options, smart);
+            options = $.extend(true, {}, smart, options);
 
             if (options.onbinding)
                 if (options.onbinding.apply($this) === false) // case undefined or true the code continues
@@ -347,8 +348,7 @@
 
                 // Allow fire DataBinding in controls that has TRIGGER atribute
                 if (options.trigger) {
-                    delete smart.trigger;
-                    $(options.trigger).dataBind(smart, event);
+                    $(options.trigger).dataBind({ sourceparams: smart.sourceparams }, event);
                     return;
                 }
             }
