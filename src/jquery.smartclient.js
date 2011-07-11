@@ -1,8 +1,9 @@
 ﻿/// <reference path="jquery-vsdoc.js" />
 /// <summary>
 /// SmartClient 
-/// </summary> 
+/// </summary>
 (function($) {
+    "use strict";
 
     /***************************************************************************************************
     Extend jQuery with SmarClient 
@@ -13,20 +14,24 @@
             return arguments.length ? this.data('control', bool) : this.data('control');
         },
         attrUp: function(name) {
-            if (this.length > 0) return this.attr(name) || this.parent().attrUp(name);
-            return undefined;
+            if (this.length > 0) {
+                return this.attr(name) || this.parent().attrUp(name);
+            }
         },
         outerHtml: function(html) {
-            return html ? this.before(html).remove() : jQuery("<p>").append(this.eq(0).clone()).html();
+            return html ? this.before(html).remove() : $("<p>").append(this.eq(0).clone()).html();
         },
 
         render: function(data, options) {
-            if (this.size() == 0) throw new Error("Zero element selected!");
+            if (this.size() === 0) { throw new Error("Zero element selected!"); }
 
             options = $.extend({}, options);
 
             // Introduce the data as local variables using with(){}
-            var template = this.html();
+            var html = "",
+                script = "",
+                fn,
+                template = this.html();
             template = template.split("&lt;").join("<");
             template = template.split("%3C").join("<");
             template = template.split("&gt;").join(">");
@@ -47,21 +52,24 @@
 
 
             // Convert the template into pure JavaScript
-            var script = "var p=[], dataItem = dataItem || []; with(dataItem){ p.push('" + template + "');} return p.join('');";
+            script = "var p=[], dataItem = dataItem || []; with(dataItem){ p.push('" + template + "');} return p.join('');";
 
             try {
                 $.cache = $.cache || {};
                 // Generate a reusable function that will serve as a template
                 // generator (and which will be cached).
                 //var fn = !/\W/.test(this.id) ? cache[this.id] = (cache[this.id] || $(this).template()) :
-                var fn = $.cache[template] || ($.cache[template] = new Function("index", "dataItem", script));
+                fn = $.cache[template];
+                if (!fn) {
+                    fn = $.cache[template] = new Function("index", "dataItem", script);
+                }
 
-                var html = "";
-                if ($.isArray(data)) {
-                    for (var i = 0; i < data.length; i++)
-                        html += fn(i, data[i]);
-                } else {
+                if (!$.isArray(data)) {
                     html += fn(0, data);
+                } else {
+                    for (var i = 0; i < data.length; i++) {
+                        html += fn(i, data[i]);
+                    }
                 }
 
             } catch (err) {
@@ -74,13 +82,11 @@
             //var html = fn(data);
             //this.html(html);
             return data ? html : fn;
-
-
         },
         ajaxIframe: function(url, ctrl, onsucess) {
             var iframe = $("#ajaxIFrame");
 
-            if ($("#ajaxIFrame").size() == 0) {
+            if ($("#ajaxIFrame").size() === 0) {
                 iframe = $(document.body).prepend("<IFRAME id=\"ajaxIFrame\">").find("#ajaxIFrame");
             }
 
@@ -101,11 +107,11 @@
 
                 if (e.shiftKey) {
                     // Lower case letters are seen while depressing the Shift key, therefore Caps Lock is on
-                    if ((myKeyCode >= 97 && myKeyCode <= 122)) callback();
+                    if ((myKeyCode >= 97 && myKeyCode <= 122)) { callback(); }
                 }
                 else {
                     // Upper case letters are seen without depressing the Shift key, therefore Caps Lock is on
-                    if ((myKeyCode >= 65 && myKeyCode <= 90)) callback();
+                    if ((myKeyCode >= 65 && myKeyCode <= 90)) { callback(); }
                 }
 
             });
@@ -114,8 +120,9 @@
             var $this = this[0];
             if (!this._smart) {
 
-                var smartJson = (this.attr("smart") || "").trim("\\{", "\\}");
-                smartJson = smartJson.replace(/(\b*)/g, "").replace(/(\f*)/g, "").replace(/(\n*)/g, "").replace(/(\r*)/g, "").replace(/(\t*)/g, ""); // Remove invalid chars by JSON http://www.json.org/
+                var smartJson = (this.attr("smart") || "");
+                smartJson = smartJson.replace(/\n/g, "").replace(/\r/g, "").replace(/\t/g, ""); // Remove invalid chars by JSON http://www.json.org/
+                smartJson = smartJson.trim("\\{", "\\}"); // Remove braces if exists
                 this._smart = eval("({" + smartJson + "})");
 
                 var events = 0;
@@ -124,10 +131,10 @@
                     var obj = this._smart[event];
                     events++;
 
-                    if (!!obj.show && $(obj.show).size() == 0)
+                    if (!!obj.show && $(obj.show).size() === 0)
                         errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
 
-                    if (!!obj.hide && $(obj.hide).size() == 0)
+                    if (!!obj.hide && $(obj.hide).size() === 0)
                         errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
 
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
@@ -154,19 +161,19 @@
                     if (!!obj.method && typeof (obj.method) !== "string")
                         errors += "The attribute METHOD is not a valid boolean!\n";
 
-                    if (!!obj.target && ($(obj.target).size() == 0 || typeof (obj.target) !== "string"))
+                    if (!!obj.target && ($(obj.target).size() === 0 || typeof (obj.target) !== "string"))
                         errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
 
-                    if (!!obj.template && ($(obj.template).size() == 0 || typeof (obj.template) !== "string"))
+                    if (!!obj.template && ($(obj.template).size() === 0 || typeof (obj.template) !== "string"))
                         errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
 
-                    if (!!obj.emptytemplate && ($(obj.emptytemplate).size() == 0 || typeof (obj.emptytemplate) !== "string"))
+                    if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
                         errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
 
                 }
 
-                if (events == 0) errors += "Don´t exists event configured!\n";
-                if (errors != "") Exception(errors);
+                if (events === 0) errors += "Don´t exists event configured!\n";
+                if (errors !== "") Exception(errors);
 
             }
             return this._smart;
@@ -196,7 +203,7 @@
             var smart = $this.smart();
 
             // Get configuration for event or first configuration possible
-            for (key in smart) smart = smart[key];
+            for (var key in smart) { smart = smart[key]; }
 
             smart = $this.smart()[event.type] || smart;
 
@@ -228,7 +235,7 @@
             {
                 options.source = source.replace("~", window.applicationPath);
 
-                options.method = this[0].tagName == "A" ? "GET" : (options.method || "POST");
+                options.method = this[0].tagName === "A" ? "GET" : (options.method || "POST");
 
                 if (options.onrequest)
                     if (options.onrequest.call($this, options) === false) // case undefined or true the code continues
@@ -237,13 +244,13 @@
                 $.ajax({
                     type: options.method,
                     url: options.source,
-                    data: (options.method != "GET" ? $.toJSON(options.sourceparams || {}) : null),
+                    data: (options.method !== "GET" ? $.toJSON(options.sourceparams || {}) : null),
                     contentType: "application/json",
                     ifModified: true,
                     success: function(responseBody, status, request) {
 
                         // If Not Modified then get cached content file by iframe
-                        if (!!request && (request.status == 304 || status == "notmodified")) {
+                        if (!!request && (request.status === 304 || status === "notmodified")) {
                             $this.ajaxIframe(options.url, $this, this.success);
                         }
 
@@ -253,7 +260,7 @@
                         // If Http Status 200 then OK, process JSON because data should be transform on html
                         options.responseBody = responseBody;
 
-                        if (responseBody && !!request && request.responseText != "") {
+                        if (responseBody && !!request && request.responseText !== "") {
                             if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
                                 handlerResultErrors(responseBody);
                             }
@@ -271,7 +278,7 @@
 
                         fireActions($this, options, smart);
 
-                        if (request.status == "404")
+                        if (request.status === "404")
                             PageNotFoundException(options.url);
                     },
                     complete: function() {
@@ -294,11 +301,11 @@
 
                     var html = options.responseBody || $(options.template).html() || "";
 
-                    if (html.length == 0 && $(smart.emptytemplate).size() > 0) {
+                    if (html.length === 0 && $(smart.emptytemplate).size() > 0) {
 
                         html = $(options.emptytemplate).html();
 
-                    } else if (typeof (options.responseBody) == "object" || typeof (options.responseBody) == "array") {
+                    } else if (typeof (options.responseBody) === "object" || typeof (options.responseBody) === "array") {
 
                         var $template = $(options.template);
                         if (!!options.template && $template.size() > 0) {
@@ -311,7 +318,7 @@
 
 
 
-                    if ($(options.target).size() == 0) TargetMissingException(this);
+                    if ($(options.target).size() === 0) TargetMissingException(this);
 
                     if (mode === "after") {
                         $(options.target).after(html);
@@ -338,7 +345,7 @@
                         $(options.show).show();
                 }
 
-                for (var key in options) if ($.fn[key] && (typeof (options[key]) == "object" || typeof (options[key]) == "array")) {
+                for (var key in options) if ($.fn[key] && (typeof (options[key]) === "object" || typeof (options[key]) === "array")) {
                     var ctx = options[key].shift();
                     $.fn[key].apply($(ctx), options[key]);
                 }
@@ -379,12 +386,12 @@
                     $ctrl.hasControl(true);
 
                     for (var eventType in $ctrl.smart()) {
-                        if (eventType == "load") {
+                        if (eventType === "load") {
                             $ctrl.dataBind({}, jQuery.Event("load"));
                         } else {
                             $ctrl.bind(eventType, function(event) {
                                 $ctrl.dataBind({}, event);
-                                if (ctrl.tagName == "A")
+                                if (ctrl.tagName === "A")
                                     event.preventDefault();
                             });
                         }
@@ -495,7 +502,7 @@
     String.prototype.JsonToDate = function(culture) {
         var date = null;
 
-        if (this && this != "") {
+        if (this && this !== "") {
             var result = new Date(parseFloat(this.replace(/(\/)|\)|Date\(/g, "")));
             date = new Date(result.valueOf() + result.getTimezoneOffset() * 60000);
         }
@@ -645,7 +652,7 @@
                     // for non-JSON values.
 
                     length = value.length;
-                    for (i = 0; i < length; i += 1) {
+                    for (i = 0; i < length; i++) {
                         partial[i] = str(i, value) || 'null';
                     }
 
@@ -837,10 +844,3 @@
     $.preferCulture && $.preferCulture("pt-BR");
 
 })(jQuery);
-
-
-
-
-
-
-
