@@ -106,20 +106,29 @@
         var html = "<a id='teste' smart=\"{}\" ></a>";
         raises(function() { sandbox.html(html).find("A").smart(); }, "Validação Conteúdo Vazio disparada!");
 
+        var html = "<a id='teste' smart=\"{click:{ source:'blank.htm' } }\" ></a>";
+        equal(sandbox.html(html).find("A").smart().click.source, "blank.htm", "source válido!");
+
+        var html = "<a id='teste' smart=\"{click:{ source:'javascript:;' } }\" ></a>";
+        equal(sandbox.html(html).find("A").smart().click.source, "", "source inválido!");
+
+        var html = "<a id='teste' smart=\"{click:{ source:'javascript:void;' } }\" ></a>";
+        equal(sandbox.html(html).find("A").smart().click.source, "", "source inválido!");
+
+        var html = "<a id='teste' smart=\"{click:{ source:'javascript:void(0);' } }\" ></a>";
+        equal(sandbox.html(html).find("A").smart().click.source, "", "source inválido!");
+        
         var html = "<a id='teste' smart=\"{click:{onbinding:1}}\" ></a>";
         raises(function() { sandbox.html(html).find("A").smart(); }, "onbinding inválido!");
 
         var html = "<a id='teste' smart=\"{click:{ onbinding:function(){} } }\" ></a>";
         equal(typeof (sandbox.html(html).find("A").smart().click.onbinding), "function", "onbinding válido!");
 
-
-
         var html = "<a id='teste' smart=\"{click:{ onrequest:1 } }\" ></a>";
         raises(function() { sandbox.html(html).find("A").smart(); }, "onrequest inválido!");
 
         var html = "<a id='teste' smart=\"{click:{ onrequest:function(){} } }\" ></a>";
         equal(typeof (sandbox.html(html).find("A").smart().click.onrequest), "function", "onrequest válido!");
-
 
 
         var html = "<a id='teste' smart=\"{click:{ onresponse:1 } }\" ></a>";
@@ -248,6 +257,8 @@
                .trigger(e);
         equals(t, 3);
     });
+
+    
 
     test("Um elemento com atributo SMART deve disparar o HIDE/SHOW", function() {
         var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +

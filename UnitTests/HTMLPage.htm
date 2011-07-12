@@ -1,0 +1,678 @@
+﻿<table smart="{load:{hide:'.sampleItem, .samplesPanel', show:'#firstSample'}}" cellspacing="0">
+    <tbody>
+        <tr>
+            <td id="samplesMenu" style="width: 150px; padding-right: 0px" valign="top"><br />
+                <a href="javascript:;" class="clicked" style="width: 100%; display: inline-block" smart="click:{
+                        hide:'.samplesPanel', 
+                        show:'#firstSample', 
+                        addClass:'clicked', 
+                        removeClass:['#samplesMenu a', 'clicked']
+                    }">Entendendo a Bagaça</a> <br />
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#buttonSamples'}}" style="width: 100%;
+                    display: inline-block">Buttons</a><br />
+                <ul id="button" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#comboSamples'}}" style="width: 100%;
+                    display: inline-block">Combo</a><br />
+                <ul id="combo" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#linksSamples'}}" style="width: 100%;
+                    display: inline-block">Links</a><br />
+                <ul id="links" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#formsSamples'}}" style="width: 100%;
+                    display: inline-block">Forms</a><br />
+                <ul id="forms" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#pluginSamples'}}" style="width: 100%;
+                    display: inline-block">Plugins</a><br />
+                <ul id="plugins" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+                <a href="javascript:;" smart="{click:{hide:'.samplesPanel', show:'#templatingSamples'}}" style="width: 100%;
+                    display: inline-block">Templating</a><br />
+                <ul id="templating" class="sampleItem">
+                    <li><a href="" smart="{click:{show:'#buttonSamples'}}">Funcionalidade</a></li>
+                    <li>Cenários de uso</li>
+                </ul>
+            </td>
+            <td style="border-color: #FF9900; border-left: 1px solid #FF9900; border-radius: 20px 20px 20px 20px;
+                border-style: solid; border-width: 3px 1px; padding: 0 10px; background-color: #FFF9F0" valign="top">
+                <div id="firstSample" class="samplesPanel">
+                    <h2 style="padding-left: 10px; margin-left: -10px; margin-right: -10px; border-radius: 15px 15px 0pt 0pt;
+                        color: rgb(255, 153, 0);">Entendendo a Bagaça</h2>
+                    Abaixo estão descritas alguns exemplos de funcionalidades que normalmente criamos, apesar de as vezes
+                    requerer muito html, todo o controle fica na mão do desenvolvedor, podendo manipular com maior precisão
+                    aquilo que lhe convier. Para começar a entender e brincar com o SmartClient, primeiros vamos aos conceitos
+                    básicos, este plugin se baseia no conceito de que a maior parte do desenvolvimento de qualquer software
+                    consiste em 1/3 do tempo trabalhando na interface, logo o plugin visa facilitar este passo, permitindo
+                    convencionar algumas caracteristicas básicas do jQuery e ajax, que usamos muitas vezes. <br />
+                    <br />
+                    No exemplo abaixo vamos colocar uma caixa de texto e ao digitar algum texto nela será apresentada na
+                    linha abaixo uma mensagem no famoso estilo Hello World.<br />
+                    <br />
+                    <fieldset>
+                        <legend><b>Exemplo</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="tmp">Olá, Visitante</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top;">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+                <div id="buttonSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Buttons</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Botão que dispara ações de ocultar divs</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">
+                                        <input smart="click:{hide:'#label'}" value="Ocultar Div Abaixo" type="button" />
+                                        <div id="label">Texto que será Oculto</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: top;">
+                                        <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
+                                        <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span style="color: red;">"button"</span>
+                                        <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span style="color: red;">"click:{hide:'#label'}"</span>
+                                        <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span style="color: red;">"Ocultar
+                                            Div Abaixo"</span>
+                                        <span style="color: #00d5d5;">/&gt;</span>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #404040;"></span>
+                                            <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
+                                            <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"label"</span><span
+                                                style="color: #00d5d5;">&gt;</span>Texto que será Oculto<span style="color: #00d5d5;">&lt;/</span><span
+                                                    style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Botão que ser acionado busca uma página e coloca seu conteúdo numa div</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">
+                                        <input type="button" value="Buscar Texto" smart="click:{
+                                             source:'/App_Shared/JS/smartclient/readme.txt',
+                                             method:'GET', 
+                                             target:'#buttonsBuscarTexto'
+                                           }" />
+                                        <div id="buttonsBuscarTexto">O texto entrará aqui!</div>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <div style="font-family: Consolas; font-size: 11pt; color: black; background: white;">
+                                                <div style="font-family: Consolas; font-size: 11pt; color: black; background: white;">
+                                                    <p style="margin: 0px;">
+                                                        <span style="color: #404040;"></span>
+                                                        <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
+                                                        <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span style="color: red;">"button"</span>
+                                                        <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span style="color: red;">"Buscar
+                                                            Texto"</span>
+                                                    </p>
+                                                    <p style="margin: 0px;">
+                                                        <span style="color: #404040;"></span>
+                                                        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                                        <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span style="color: red;">"click:{
+                                                            source:'/App_Shared/JS/smartclient/readme.txt', method:'GET', target:'#buttonsBuscarTexto'&nbsp; }"</span>
+                                                        <span style="color: #00d5d5;">/&gt;</span><span style="color: rgb(64, 64, 64);"></span></p>
+                                                    <p style="margin: 0px;">
+                                                        <span style="color: #404040;"></span>
+                                                        <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
+                                                        <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"buttonsBuscarTexto"</span><span
+                                                            style="color: #00d5d5;">&gt;</span>O texto entrará aqui!<span style="color: #00d5d5;">&lt;/</span><span
+                                                                style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Botão que ser acionado muda seu status = ToggleButton</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H3">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Botão que dispara uma requisição ajax com seu valor e muda seu status</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H4">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Implementando um controle tabs, só com botões</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H10">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+                <div id="linksSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Links</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Link que dispara ações de ocultar divs</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H5">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Link que ser acionado busca uma página e coloca seu conteúdo numa div</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H6">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Link que dispara uma requisição ajax e se comporta como button</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H8">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Implementando um controle tabs, só com links</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H11">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+                <div id="pluginSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Plugins</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Atribuindo um plugin a tags</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H12">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Criação um controle Autocomplete</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H13">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Criando um controle tipo DatePicker/Calendar do jQuery UI</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H14">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+                <div id="comboSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Combos</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Carregando uma combobox dinamicamente</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H7">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Populando uma combobox através da seleção de outra combobox</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H9">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+                <div id="formsSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Forms</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Criando um form e usando um button para disparar o request via ajax</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H15">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Form + Plugin: Validando um form com o plugin jQuery Validate</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H16">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+                <div id="templatingSamples" class="samplesPanel">
+                    <h2 style="border-bottom: 1px solid #CCC;">Templating</h2>
+                    <br />
+                    <fieldset>
+                        <legend><b>Usando um template para gerar um conteúdo num div</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H17">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                    <fieldset>
+                        <legend><b>Transformando o retorno JSON de uma requisição e preenchendo colocando no target</b></legend>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right: 15px;" valign="top">Quem é você?<br />
+                                        <input value="Visitante" smart="{blur:{target:'#tmp', defaultResponseBody: 'Olá, ' + this.val() }}" type="text" /><br />
+                                        <h4 id="H18">Olá, Visitante</h4>
+                                    </td>
+                                    <td style="padding-left: 15px; border-left: 1px solid #CCC">
+                                        <div style="font-family: Consolas; font-size: 10pt; color: black;">
+                                            <p style="margin: 0px;">Quem é você?<span style="color: #646464;">&lt;</span><span style="color: #005555;">br</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">input</span>
+                                                <span style="color: #00989f;">type</span><span style="color: gray;">=</span><span style="color: #f46200;">"text"</span>
+                                                <span style="color: #00989f;">smart</span><span style="color: gray;">=</span><span style="color: #f46200;">"{blur:{target:'#tmp',
+                                                    dataSource:'Olá, '+this.val() }}"</span>
+                                                <span style="color: #646464;">/&gt;</span></p>
+                                            <p style="margin: 0px;">
+                                                <span style="color: #646464;">&lt;</span><span style="color: #005555;">h4</span>
+                                                <span style="color: #00989f;">id</span><span style="color: gray;">=</span><span style="color: #f46200;">"tmp"</span><span
+                                                    style="color: #646464;">&gt;&lt;/</span><span style="color: #005555;">h4</span><span style="color: #646464;">&gt;</span></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </fieldset>
+                    <br />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
