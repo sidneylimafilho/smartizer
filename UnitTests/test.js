@@ -1,4 +1,5 @@
-﻿$(function() {
+﻿
+$(function() {
     var sandbox = $("<div style='position:absolute; top:-1000px;'></div>").appendTo("Body");
 
 
