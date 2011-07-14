@@ -1,4 +1,4 @@
-ï»¿///  <reference path="jquery-vsdoc.js" /> 
+///  <reference path="jquery-vsdoc.js" /> 
 ///  <summary> 
 ///  SmartClient  
 ///  </summary> 
@@ -123,7 +123,7 @@
 
                 var text = this.attr("smart") || "";
 
-                // Execute fromJSON by call method, because the context itÂ´s "this", otherwise will be $
+                // Execute fromJSON by call method, because the context it´s "this", otherwise will be $
                 this._smart = $.fromJSON.call(this, text);
 
                 var events = 0;
@@ -133,28 +133,28 @@
                     events++;
 
                     if (!!obj.show && $(obj.show).size() === 0)
-                        errors += "The attribute SHOW (" + obj.show + ") donÂ´t exists!\n";
+                        errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
 
                     if (!!obj.hide && $(obj.hide).size() === 0)
-                        errors += "The attribute HIDE (" + obj.hide + ") donÂ´t exists!\n";
+                        errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
 
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
-                        errors += "The attribute onbinding donÂ´t is a Function!\n";
+                        errors += "The attribute onbinding don´t is a Function!\n";
 
                     if (!!obj.onrequest && typeof (obj.onrequest) !== "function")
-                        errors += "The attribute onrequest donÂ´t is a Function!\n";
+                        errors += "The attribute onrequest don´t is a Function!\n";
 
                     if (!!obj.onresponse && typeof (obj.onresponse) !== "function")
-                        errors += "The attribute onresponse donÂ´t is a Function!\n";
+                        errors += "The attribute onresponse don´t is a Function!\n";
 
                     if (!!obj.onsucess && typeof (obj.onsucess) !== "function")
-                        errors += "The attribute onsucess donÂ´t is a Function!\n";
+                        errors += "The attribute onsucess don´t is a Function!\n";
 
                     if (!!obj.onerror && typeof (obj.onerror) !== "function")
-                        errors += "The attribute onerror donÂ´t is a Function!\n";
+                        errors += "The attribute onerror don´t is a Function!\n";
 
                     if (!!obj.onbounded && typeof (obj.onbounded) !== "function")
-                        errors += "The attribute onbounded donÂ´t is a Function!\n";
+                        errors += "The attribute onbounded don´t is a Function!\n";
 
                     if (!!obj.once && typeof (obj.once) !== "boolean")
                         errors += "The attribute ONCE is not a valid boolean!\n";
@@ -163,13 +163,13 @@
                         errors += "The attribute METHOD is not a valid boolean!\n";
 
                     if (!!obj.target && ($(obj.target).size() === 0 || typeof (obj.target) !== "string"))
-                        errors += "The attribute TARGET (" + obj.target + ") donÂ´t exists!\n";
+                        errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
 
                     if (!!obj.template && ($(obj.template).size() === 0 || typeof (obj.template) !== "string"))
-                        errors += "The attribute TEMPLATE (" + obj.template + ") donÂ´t exists!\n";
+                        errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
 
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
-                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") donÂ´t exists!\n";
+                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
 
                     obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
                     var candidate = obj.source.replace(/javascript(.*)/g, "");
@@ -180,7 +180,7 @@
                 }
 
                 if (events === 0) {
-                    errors += "DonÂ´t exists event configured!\n";
+                    errors += "Don´t exists event configured!\n";
                 }
 
 
@@ -292,8 +292,8 @@
                         }
                     },
                     complete: function() {
-                        /*  Retirada a funÃ§Ã£o fireActions deste evento pois o sucess Ã© passado  */
-                        /*  como argumento da funÃ§Ã£o ajaxIframe */
+                        /*  Retirada a função fireActions deste evento pois o sucess é passado  */
+                        /*  como argumento da função ajaxIframe */
                     }
                 });
             } else {
@@ -345,27 +345,12 @@
                 if (options.once)
                     $this.unbind(event.type);
 
-                if (options.hide) {
-                    if (options.speed)
-                        $(options.hide).hide(options.speed || "slow");
-                    else
-                        $(options.hide).hide();
-                }
-
-                if (options.show) {
-                    if (options.speed)
-                        $(options.show).show(options.speed || "slow");
-                    else
-                        $(options.show).show();
-                }
-
-
                 /*  If exists options that are jQuery methods then executes them */
                 for (var key in options) if ($.fn[key] && !!options[key]) {
                     var $func = $.fn[key],
                         value = options[key];
                     if (typeof (value) === "string" && key !== "trigger") {
-                        $(value)[key]();
+                        $func.call($this, value);
                     } else if (typeof (options[key].shift) === "function") {
                         $func.apply($(value.shift()), value);
                     }
@@ -417,7 +402,7 @@
                 var options = eval("(" + it.attr("options") + ")");
 
                 if (!it[plugin]) {
-                    alert("The plugin \"" + plugin + "\" donÂ´t loaded!");
+                    alert("The plugin \"" + plugin + "\" don´t loaded!");
                 }
 
                 it[plugin](options);
@@ -447,7 +432,7 @@
             }).after("<span />");
 
             //
-            /*  BotÃµes */
+            /*  Botões */
             //
             $(":submit, :button, :reset", this).each(function(i, ctrl) {
                 $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
@@ -491,11 +476,11 @@
     };
 
     function PageNotFoundException(url) {
-        Exception(" A pÃ¡gina '" + url + "' nÃ£o foi encontrada!");
+        Exception(" A página '" + url + "' não foi encontrada!");
     }
 
     function TargetMissingException(sender) {
-        Exception(" NÃ£o foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
+        Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
     }
 
     //#JSCOVERAGE_ENDIF    
@@ -663,7 +648,7 @@
 
 
         //
-        /*  Para corrigir o problema do JavascriptSerializer que nÃ£o converte o valor */
+        /*  Para corrigir o problema do JavascriptSerializer que não converte o valor */
         /*  /Date(123456789000)/ -> \/Date(123456789000)\/ */
         /*  .replace("\/Date", "\\/Date") */
         //
@@ -682,7 +667,7 @@
     /*  Inicializa todos os controles da tela. */
     $(function() { $(document).initializeControls(); });
 
-    /*  Se o globalization for declarado entÃ£o comeÃ§a com pt-BR para facilitar o desenvolvimento */
+    /*  Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento */
     $.preferCulture && $.preferCulture("pt-BR");
 
 })(jQuery);
