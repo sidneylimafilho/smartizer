@@ -124,7 +124,7 @@
                 var text = this.attr("smart") || "";
 
                 // Execute fromJSON by call method, because the context it´s "this", otherwise will be $
-                this._smart = $.fromJSON.call(this, text);
+                this._smart = $.parseJSON.call(this, text);
 
                 var events = 0;
                 var errors = "";
@@ -656,7 +656,7 @@
     };
 
 
-    $.fromJSON = function(text) {
+    $.parseJSON = function(text) {
         text = (text || "").replace(/([\n\r\t]|(\\u[0-9a-fA-F]{4}))/g, ""); /*  Remove invalid chars by JSON http://www.json.org/ */
         text = text.trimChars("\\{", "\\}"); /*  Remove braces if exists */
         return eval("({" + text + "})");
