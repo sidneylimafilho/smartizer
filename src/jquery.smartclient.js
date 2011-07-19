@@ -1,9 +1,8 @@
-/*  <reference path="jquery-vsdoc.js" /> */
-/*  <summary> */
-/*  SmartClient  */
-/*  </summary> */
+///  <reference path="jquery-vsdoc.js" /> 
+///  <summary> 
+///  SmartClient  
+///  </summary> 
 (function($) {
-    "use strict";
 
     /***************************************************************************************************
     Extend jQuery with SmarClient 
@@ -122,9 +121,10 @@
             var $this = $(this[0]);
             if (!this._smart) {
 
-                var smartJson = this.attr("smart");
-            
-                this._smart = $.fromJSON( smartJson );
+                var text = this.attr("smart") || "";
+
+                // Execute fromJSON by call method, because the context it´s "this", otherwise will be $
+                this._smart = $.parseJSON.call(this, text);
 
                 var events = 0;
                 var errors = "";
@@ -170,26 +170,26 @@
 
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
                         errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
-                        
-                        obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
-                        var candidate = obj.source.replace(/javascript(.*)/g, "");
-                        if (!!obj.source && obj.source !== candidate){
+
+                    obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
+                    var candidate = obj.source.replace(/javascript(.*)/g, "");
+                    if (!!obj.source && obj.source !== candidate) {
                         obj.source = candidate;
-                        }
+                    }
 
                 }
 
                 if (events === 0) {
                     errors += "Don´t exists event configured!\n";
                 }
-                
-                
+
+
                 if (errors !== "") {
                     //#JSCOVERAGE_IF false
                     Exception(errors);
                     //#JSCOVERAGE_ENDIF 
                 }
-                 
+
 
             }
             return this._smart;
@@ -233,15 +233,17 @@
             /*  The order are true, {}, options, smart to copy the properties of the smart to options */
             options = $.extend(true, {}, smart, options);
 
-            if (options.onbinding)
-                if (options.onbinding.apply($this) === false) /*  case undefined or true the code continues */
-                return this;
+            if (options.onbinding) {
+                if (options.onbinding.apply($this) === false) { /*  case undefined or true the code continues */
+                    return this;
+                }
+            }
 
 
             /* Exists only for tests */
             if (options.dataSource || options.responseBody || options.defaultResponseBody)
                 options.dataSource = options.dataSource || options.responseBody || options.defaultResponseBody;
-                        
+
             if (!!options.source) /*  Only fires ajax if there are url */
             {
                 if (!!window.applicationPath) { window.applicationPath = window.applicationPath.trimChars("", "\\/"); }
@@ -250,9 +252,12 @@
 
                 options.method = this[0].tagName === "A" ? "GET" : (options.method || "POST");
 
-                if (options.onrequest)
-                    if (options.onrequest.call($this, options) === false) /*  case undefined or true the code continues */
-                    return this;
+                /*  case undefined or true the code continues */
+                if (options.onrequest) {
+                    if (options.onrequest.call($this, options) === false) {
+                        return this;
+                    }
+                }
 
                 $.ajax({
                     type: options.method,
@@ -345,30 +350,17 @@
                 if (options.once)
                     $this.unbind(event.type);
 
-                if (options.hide) {
-                    if (options.speed)
-                        $(options.hide).hide(options.speed || "slow");
-                    else
-                        $(options.hide).hide();
-                }
-
-                if (options.show) {
-                    if (options.speed)
-                        $(options.show).show(options.speed || "slow");
-                    else
-                        $(options.show).show();
-                }
-
-                
-                /*  If exists options that are jQuery methods then executes them */                
-                for (var key in options) if ($.fn[key] && !!options[key]) {
-                    var $func = $.fn[key],
+                /*  If exists options that are jQuery methods then executes them */
+                for (var key in options) {
+                    if ($.fn[key] && !!options[key]) {
+                        var $func = $.fn[key],
                         value = options[key];
-                    if(typeof (value) === "string" && key!== "trigger"){                        
-                        $(value)[key]();
-                    } else if (typeof (options[key].shift) === "function"){          
-                        $func.apply($(value.shift()), value);
-                    }                    
+                        if (typeof (value) === "string" && key !== "trigger") {
+                            $func.call($this, value);
+                        } else if (typeof (options[key].shift) === "function") {
+                            $func.apply($(value.shift()), value);
+                        }
+                    }
                 }
 
                 if (options.onbounded)
@@ -380,6 +372,8 @@
                     return;
                 }
             }
+
+            return null;
         },
 
         /***************************************************************************************************
@@ -432,8 +426,8 @@
 
 
 
-// The tests dont cover theming
-//#JSCOVERAGE_IF false
+        // The tests dont cover theming
+        //#JSCOVERAGE_IF false
         _initializeThemeStyle: function() {
             $(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
             $(":text", this).focusin(function() {
@@ -459,10 +453,7 @@
             //
             /*  Grid */
             //
-            $("table[rules=all]", this)
-               .addClass("ui-theme-table")
-               .filter("tr")
-               .hover(function() { $(this).addClass('hover'); },
+            $("table[rules=all]", this).addClass("ui-theme-table").filter("tr").hover(function() { $(this).addClass('hover'); },
                       function() { $(this).removeClass(); });
 
             $("table[rowselectable=true]", this).each(function(i, elem) {
@@ -473,22 +464,22 @@
                         __doPostBack(($table.attr("id") || "").replace(/\_/g, "$"), 'Select$' + (i - 1));
                     });
                 });
-            })
+            });
 
         }
-//#JSCOVERAGE_ENDIF           
+        //#JSCOVERAGE_ENDIF           
 
 
     }); /*  End Initialize Controls */
 
-// Dont cover errors code
-//#JSCOVERAGE_IF false
+    // Dont cover errors code
+    //#JSCOVERAGE_IF false
     function Exception(msg) {
         msg = " SmartClient Error:  \n" + msg;
         /* alert(msg); */
         throw new ReferenceError(msg);
         /* console.log(msg); */
-    };
+    }
 
     function PageNotFoundException(url) {
         Exception(" A página '" + url + "' não foi encontrada!");
@@ -497,8 +488,8 @@
     function TargetMissingException(sender) {
         Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
     }
-    
-//#JSCOVERAGE_ENDIF    
+
+    //#JSCOVERAGE_ENDIF    
 
 
 
@@ -523,7 +514,7 @@
         }
 
         return date;
-    }
+    };
 
 
     String.prototype.trimChars = function(left, right) {
@@ -533,15 +524,15 @@
         /*         tmp = tmp.replace(new RegExp("^(" + boundaries + ")"), ""); */
         /*         tmp = tmp.replace(new RegExp("(" + boundaries + ")$"), ""); */
         return this.replace(new RegExp("^( *" + left + " *)(.*)( *" + right + " *)$", "g"), "$2");
-    }
+    };
 
-// Does not cover the JSON Serializer, it is external plugin
-//#JSCOVERAGE_IF false
+    // Does not cover the JSON Serializer, it is external plugin
+    //#JSCOVERAGE_IF false
     if (typeof Date.prototype.toJSON !== 'function') {
 
         Date.prototype.toJSON = function(key) {
 
-            var f = function(n) { return n < 10 ? '0' + n : n; }
+            var f = function(n) { return n < 10 ? '0' + n : n; };
 
             return isFinite(this.valueOf()) ?
                    this.getUTCFullYear() + '-' +
@@ -577,88 +568,92 @@
     /*  backslash characters, then we can safely slap some quotes around it. */
     /*  Otherwise we must also replace the offending characters with safe escape */
     /*  sequences. */
-    function quote(string) { escapable.lastIndex = 0; return escapable.test(string) ?'"' + string.replace(escapable, function(a) {var c = meta[a];return typeof c === 'string' ? c :'\\u' + ('0000' + a.charCodeAt(0).toString(16)).slice(-4);}) + '"' :'"' + string + '"';}
+    function quote(string) { escapable.lastIndex = 0; return escapable.test(string) ? '"' + string.replace(escapable, function(a) { var c = meta[a]; return typeof c === 'string' ? c : '\\u' + ('0000' + a.charCodeAt(0).toString(16)).slice(-4); }) + '"' : '"' + string + '"'; }
 
+    function str(key, holder) {
+        /*  Produce a string from holder[key]. */
+        var i, /*  The member value. */v, length, partial, value = holder[key];
 
-   
+        /*  If the value has a toJSON method, call it to obtain a replacement value. */
+        if (value && typeof value === 'object' && typeof value.toJSON === 'function') { value = value.toJSON(key); }
+
+        /*  If we were called with a replacer function, then call the replacer to obtain a replacement value. */
+        if (typeof rep === 'function') { value = rep.call(holder, key, value); }
+
+        /*  What happens next depends on the value's type. */
+        if (typeof value === "string") { return quote(value); }
+
+        /*  JSON numbers must be finite. Encode non-finite numbers as null. */
+        if (typeof value === "number") { return isFinite(value) ? String(value) : 'null'; }
+
+        /* boolean or null should return String */
+        if (typeof value === "boolean" || typeof value === "null") { return String(value); }
+
+        if (typeof value === "object") {
+
+            /*  Due to a specification blunder in ECMAScript, typeof null is 'object', so watch out for that case. */
+            if (!value) { return 'null'; }
+
+            /*  Make an array to hold the partial results of stringifying this object value. */
+            partial = [];
+
+            /*  Is the value an array? */
+            if (Object.prototype.toString.apply(value) === '[object Array]') {
+
+                /*  The value is an array. Stringify every element. Use null as a placeholder for non-JSON values. */
+                length = value.length;
+                for (i = 0; i < length; i++) { partial[i] = str(i, value) || 'null'; }
+
+                /*  Join all of the elements together, separated with commas, and wrap them in brackets. */
+                return '[' + partial.join(',') + ']';
+            }
+
+            /*  If the replacer is an array, use it to select the members to be stringified. */
+            if (rep && typeof rep === 'object') {
+                length = rep.length;
+                for (i = 0; i < length; i += 1) {
+                    k = rep[i];
+                    if (typeof k === 'string') {
+                        v = str(k, value);
+                        if (v) { partial.push(quote(k) + ':' + v); }
+                    }
+                }
+            } else {
+
+                /*  Otherwise, iterate through all of the keys in the object. */
+                for (var k in value) {
+                    if (Object.hasOwnProperty.call(value, k)) {
+                        v = str(k, value);
+                        if (v) { partial.push(quote(k) + ':' + v); }
+                    }
+                }
+            }
+
+            /*  Join all of the member texts together, separated with commas, and wrap them in braces. */
+            v = '{' + partial.join(',') + '}';
+
+            return v;
+        }
+    }
 
     $.toJSON = function(value, replacer) {
 
+
+
         /*  The stringify method takes a value and an optional replacer, and an optional space parameter, and returns a JSON text. The replacer can be a function *//*  that can replace values, or an array of strings that will select the keys. *//*  A default replacer method can be provided. Use of the space parameter can *//*  produce text that is more easily readable. */
-        var i;   
-       
+        var i;
+
         /*  If there is a replacer, it must be a function or an array. */
         /*  Otherwise, throw an error. */
 
         rep = replacer;
-        if (replacer && typeof replacer !== 'function' &&(typeof replacer !== 'object' ||typeof replacer.length !== 'number')) {throw new Error('JSON.stringify');}
+        if (replacer && typeof replacer !== 'function' && (typeof replacer !== 'object' || typeof replacer.length !== 'number')) { throw new Error('JSON.stringify'); }
+
 
         /*  Make a fake root object containing our value under the key of ''. */
         /*  Return the result of stringifying the value. */
-        var tmp = (function (key, holder) {
+        var tmp = str('', { '': value });
 
-                /*  Produce a string from holder[key]. */
-
-                var /*  The loop counter. */ i, /*  The member key. */ k, /*  The member value. */ v, length,partial,value = holder[key];
-
-                /*  If the value has a toJSON method, call it to obtain a replacement value. */
-                if (value && typeof value === 'object' && typeof value.toJSON === 'function') {value = value.toJSON(key);}
-
-                /*  If we were called with a replacer function, then call the replacer to obtain a replacement value. */
-                if (typeof rep === 'function') {value = rep.call(holder, key, value);}
-
-                /*  What happens next depends on the value's type. */
-                switch (typeof value) {
-                    case 'string': return quote(value);
-                    case 'number': /*  JSON numbers must be finite. Encode non-finite numbers as null. */
-                        return isFinite(value) ? String(value) : 'null';
-                    case 'boolean':
-                    case 'null':
-                        return String(value);
-                    case 'object':
-
-                        /*  Due to a specification blunder in ECMAScript, typeof null is 'object', so watch out for that case. */
-                        if (!value) {return 'null';}
-
-                        /*  Make an array to hold the partial results of stringifying this object value. */
-                        partial = [];
-
-                        /*  Is the value an array? */
-                        if (Object.prototype.toString.apply(value) === '[object Array]') {
-
-                            /*  The value is an array. Stringify every element. Use null as a placeholder for non-JSON values. */
-                            length = value.length;
-                            for (i = 0; i < length; i++) { partial[i] = arguments.callee(i, value) || 'null'; }
-
-                            /*  Join all of the elements together, separated with commas, and wrap them in brackets. */
-                            return  '[' + partial.join(',') + ']';                    
-                        }
-
-                        /*  If the replacer is an array, use it to select the members to be stringified. */
-                        if (rep && typeof rep === 'object') {
-                            length = rep.length;
-                            for (i = 0; i < length; i += 1) {
-                                k = rep[i];
-                                if (typeof k === 'string') {
-                                    v = arguments.callee(k, value);
-                                    if (v) { partial.push(quote(k) + ':' + v); }
-                                }
-                            }
-                        } else {
-
-                            /*  Otherwise, iterate through all of the keys in the object. */
-                            for (k in value) if (Object.hasOwnProperty.call(value, k)) {
-                                v = arguments.callee(k, value);
-                                if (v) { partial.push(quote(k) + ':' + v); }                        
-                            }
-                        }
-
-                        /*  Join all of the member texts together, separated with commas, and wrap them in braces. */
-                        v = '{' + partial.join(',') + '}';
-          
-                        return v;
-                }
-            })('', { '': value });
 
         //
         /*  Para corrigir o problema do JavascriptSerializer que não converte o valor */
@@ -669,13 +664,12 @@
     };
 
 
-    $.fromJSON = function(text, reviver) {
-        var str = text || "";
-        str = str.replace(/([\n\r\t])|(\u[0-9a-fA-F]{4})/g, ""); /*  Remove invalid chars by JSON http://www.json.org/ */
-                str = str.trimChars("\\{", "\\}"); /*  Remove braces if exists */
-                return eval("({" + str + "})");                
-    }
-//#JSCOVERAGE_ENDIF  
+    $.parseJSON = function(text) {
+        text = (text || "").replace(/([\n\r\t]|(\\u[0-9a-fA-F]{4}))/g, ""); /*  Remove invalid chars by JSON http://www.json.org/ */
+        text = text.trimChars("\\{", "\\}"); /*  Remove braces if exists */
+        return eval("({" + text + "})");
+    };
+    //#JSCOVERAGE_ENDIF  
 
 
     /*  Inicializa todos os controles da tela. */
@@ -685,3 +679,5 @@
     $.preferCulture && $.preferCulture("pt-BR");
 
 })(jQuery);
+
+
