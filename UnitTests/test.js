@@ -3,6 +3,7 @@ $(function() {
     var sandbox = $("<div style='position:absolute; top:-1000px;'></div>").appendTo("Body");
 
 
+
     module("NOT MODIFIED")
 
     asyncTest("Ajax Iframe: Ajax deve ter a capacidade de buscar arquivos atraves de Iframe para casos 304, VAZIO", function() {
@@ -33,6 +34,13 @@ $(function() {
         var html = "<div command=\"click\" ><p><a href=\"index.html\"></a></P></div>";
         var comm = sandbox.html(html).find("A").attrUp("command");
         equal(comm, "click");
+    });
+
+
+    test("OuterHtml: Deve retornar o attributo desejado na própria tag ou ir buscando nas tag pai", function() {
+        var html = "<p><a href=\"index.html\"></a></P>";
+        var comm = sandbox.html(html).find("p").outerHtml();
+        equal(comm, "<p><a href=\"index.html\"></a></p>");
     });
 
 
@@ -264,7 +272,7 @@ $(function() {
     test("Um elemento com atributo SMART deve disparar o HIDE/SHOW", function() {
         var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
                                "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
-                               "<div smart=\"{load:{hide:'#visivel', show:'#oculto', speed:0}}\" ></div>")
+                               "<div smart=\"{load:{hide:['#visivel'], show:['#oculto'], speed:0}}\" ></div>")
                .initializeControls()
                .find("p");
         ok($("#oculto").is(":visible"));
@@ -358,19 +366,6 @@ $(function() {
 
 
 
-    asyncTest("A renderização deve funcionar quando o retorno é html puro!", function() {
-        window.t = 0;
-        sandbox.html("<span id='target'>Teste</span>" +
-                     "<div smart=\"{click:{" +
-                                      "source:'data.js', " +
-                                      "method:'GET', " +
-                                      "target:'#target', " +
-                                      "onbounded:function(){equals($('#target').html(), '{teste:1}'); start();}" +
-                                      "}}\" />")
-               .initializeControls()
-               .find("div")
-               .click();
-    });
 
 
     asyncTest("A renderização deve funcionar quando o retorno é JSON!", function() {

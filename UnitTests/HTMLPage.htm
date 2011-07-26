@@ -1,8 +1,7 @@
 ﻿<table smart="{load:{hide:'.sampleItem, .samplesPanel', show:'#firstSample'}}" cellspacing="0">
     <tbody>
         <tr>
-            <td id="samplesMenu" style="width: 150px; padding-right: 0px" valign="top">
-                <br />
+            <td id="samplesMenu" style="width: 150px; padding-right: 0px" valign="top"><br />
                 <a href="javascript:;" class="clicked" style="width: 100%; display: inline-block"
                     smart="click:{
                         source:'Exemplos/Entendendo-a-Bagaca,506.raw', 
@@ -28,7 +27,7 @@
                     removeClass:['#samplesMenu a', 'clicked'],  
                     addClass:'clicked'  
                 }">Links</a><br />
-                <a href="javascript:;" style="width: 100%; display: inline-block" smart="click:{
+               <!-- <a href="javascript:;" style="width: 100%; display: inline-block" smart="click:{
                     source:'Exemplos/Buttons,513.raw', 
                     target:'#firstSample',  
                     removeClass:['#samplesMenu a', 'clicked'],  
@@ -45,7 +44,7 @@
                     target:'#firstSample',  
                     removeClass:['#samplesMenu a', 'clicked'],  
                     addClass:'clicked'  
-                }">Templating</a><br />
+                }">Templating</a><br />-->
             </td>
             <td style="border-color: #FF9900; border-left: 1px solid #FF9900; border-radius: 20px 20px 20px 20px;
                 border-style: solid; border-width: 3px 1px; padding: 0 10px; background-color: #FFF9F0"
@@ -75,26 +74,28 @@
                                         <h4 id="tmp">Olá, Visitante</h4>
                                     </td>
                                     <td style="padding: 15px;" valign="top" width="60%">
-                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt; font-size: inherits; padding: 10px; border-radius: 10px;">
+                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                            font-size: inherits; padding: 10px; border-radius: 10px;">
                                             <p style="margin: 0px;">
-                                                <span style="color: #006060;">&lt;</span><span style="color: #60d7d7;">input</span>
-                                                <span style="color: #ff5900;">type</span><span style="color: #ff8000;">=</span><span 
-                                                    style="color: #ffbf00;">&quot;text&quot;</span>
-                                                <span style="color: #ff5900;">value</span><span style="color: #ff8000;">=</span><span 
-                                                    style="color: #ffbf00;">&quot;Visitante&quot;</span>
-                                                <span style="color: #ff5900;">smart</span><span style="color: #ff8000;">=</span><span 
-                                                    style="color: #ffbf00;">&quot;keyup:{target:&#39;#tmp&#39;, dataSource: &#39;Olá, &#39; + 
-                                                this.val() }&quot;</span>
-                                                <span style="color: #006060;">/&gt;</span></p>
+                                                <span style="color: #e1d2b5;">&lt;</span><span style="color: #ff6b1c;">input</span>
+                                                <span style="color: #ffb840;">type</span><span style="color: #ff8000;">=</span><span
+                                                    style="color: #ffe840;">&quot;text&quot;</span>
+                                                <span style="color: #ffb840;">value</span><span style="color: #ff8000;">=</span><span
+                                                    style="color: #ffe840;">&quot;Visitante&quot;</span>
+                                            </p>
+                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span style="color: #ffb840;">smart</span><span style="color: #ff8000;">=</span><span
+                                                    style="color: #ffe840;">&quot;keyup:{target:&#39;#tmp&#39;, dataSource: &#39;Olá,
+                                                    &#39; + this.val() }&quot;</span>
+                                                <span style="color: #e1d2b5;">/&gt;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: #006060;">&lt;</span><span style="font-weight: bold;">h4 </span>
-                                                <span style="color: #ff5900;">id</span><span style="color: #ff8000;">=</span><span 
-                                                    style="color: #ffbf00;">&quot;tmp&quot;</span><span style="color: #006060;">&gt;</span>Olá, 
-                                                Visitante<span style="color: #006060;">&lt;/</span><span 
-                                                    style="font-weight: bold;">h4</span><span style="color: #006060;">&gt;</span></p>
+                                                <span style="color: #e1d2b5;">&lt;</span><span style="font-weight: bold;">h4 </span>
+                                                <span style="color: #ffb840;">id</span><span style="color: #ff8000;">=</span><span
+                                                    style="color: #ffe840;">&quot;tmp&quot;</span><span style="color: #e1d2b5;">&gt;</span>Olá,
+                                                Visitante<span style="color: #e1d2b5;">&lt;/</span><span style="font-weight: bold;">h4</span><span
+                                                    style="color: #e1d2b5;">&gt;</span></p>
                                         </div>
-<!--EndFragment-->
-</td>
+                                        <!--EndFragment--></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -112,26 +113,23 @@
                                         <input smart="click:{hide:['#label']}" value="Ocultar Div Abaixo" type="button" />
                                         <div id="label">Texto que será Oculto</div>
                                     </td>
-                                    <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                        <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
+                                    <td style="padding: 15px;" width="60%">
+                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                            font-size: inherits; padding: 10px; border-radius: 10px;">
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #004040;">input</span>
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{hide:'#label'}"</span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"Ocultar Div Abaixo"</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{hide:[&#39;#label&#39;]}&quot;</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;Ocultar
+                                                    Div Abaixo&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"label"</span><span
-                                                    style="color: #00d5d5;">&gt;</span>Texto que será Oculto<span style="color: #00d5d5;">&lt;/</span><span
-                                                        style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">div</span>
+                                                <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;label&quot;</span><span
+                                                    style="color: #ded1bc;">&gt;</span>Texto que será Oculto<span style="color: #ded1bc;">&lt;/</span><span
+                                                        style="color: #ff7300;">div</span><span style="color: #ded1bc;">&gt;</span></p>
                                         </div>
-                                    </td>
+                                        <!--EndFragment--></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -149,31 +147,27 @@
                                            }" type="button" />
                                         <div id="buttonsBuscarTexto">O texto entrará aqui!</div>
                                     </td>
-                                    <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                        <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
+                                    <td style="padding: 15px;" width="60%">
+                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                            font-size: inherits; padding: 10px; border-radius: 10px;">
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"Buscar Texto"</span>
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;Buscar
+                                                    Texto&quot;</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp; source:'/App_Shared/JS/smartclient/readme.txt',</span></p>
+                                                <span style="color: yellow;">&nbsp;&nbsp;&nbsp;&nbsp; source:&#39;Texto-Exemplo,509.raw&#39;,</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp; method:'GET', </span>
-                                            </p>
+                                                <span style="color: yellow;">&nbsp;&nbsp;&nbsp;&nbsp; target:&#39;#buttonsBuscarTexto&#39;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp; target:'#buttonsBuscarTexto'</span></p>
+                                                <span style="color: yellow;">&nbsp;&nbsp; }&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: red;">&nbsp;&nbsp; }"</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"buttonsBuscarTexto"</span><span
-                                                    style="color: #00d5d5;">&gt;</span>O texto entrará aqui!<span style="color: #00d5d5;">&lt;/</span><span
-                                                        style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">div</span>
+                                                <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;buttonsBuscarTexto&quot;</span><span
+                                                    style="color: #ded1bc;">&gt;</span>O texto entrará aqui!<span style="color: #ded1bc;">&lt;/</span><span
+                                                        style="color: #ff7300;">div</span><span style="color: #ded1bc;">&gt;</span></p>
                                         </div>
                                         <!--EndFragment--></td>
                                 </tr>
@@ -189,17 +183,18 @@
                                     <td style="padding: 15px;" valign="middle">
                                         <input value="Mudar o estado do botão" smart="click:{toggleClass:'source'}" type="button" />
                                     </td>
-                                    <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                        <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
+                                    <td style="padding: 15px;" width="60%">
+                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                            font-size: inherits; padding: 10px; border-radius: 10px;">
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button" </span>
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{toggleClass:'clicked'}"</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;Mudar
+                                                    o estado do botão&quot;</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{toggleClass:&#39;source&#39;}&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                         </div>
-                                        <!--EndFragment--></td>
+                                        <!--EndFragment--><!--EndFragment--></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -230,65 +225,44 @@
                                             Cicero are also reproduced in their exact original form, accompanied by English
                                             versions from the 1914 translation by H. Rackham.</div>
                                     </td>
-                                    <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                        <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
+                                    <td style="padding: 15px;" width="60%">
+                                        <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                            font-size: inherits; padding: 10px; border-radius: 10px;">
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"TAB 1"</span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{hide:['.tabs'], show:['#tab1']}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;TAB 1&quot;</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{hide:[&#39;.tabs&#39;],
+                                                    show:[&#39;#tab1&#39;]}&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"tab1"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs" </span>
-                                                <span style="color: #00d5d5;">&gt;</span>Conteúdo TAB 1<span style="color: #00d5d5;">&lt;/</span><span
-                                                    style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">div</span>
+                                                <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;tab1&quot;</span>
+                                                <span style="color: #ffc515;">class=</span><span style="color: yellow;">&quot;tabs&quot;</span><span
+                                                    style="color: #ded1bc;">&gt;&lt;</span><span style="color: #ff7300;">b</span><span
+                                                        style="color: #ded1bc;">&gt;</span>Conteúdo TAB 1<span style="color: #ded1bc;">&lt;/</span><span
+                                                            style="color: #ff7300;">b</span><span style="color: #ded1bc;">&gt;&lt;</span><span
+                                                                style="color: #ff7300;">br</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
+                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp; Lorem Ipsum has been the industry&#39;s standard
+                                                dummy text ever since the 1500s, when</p>
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"TAB 2"</span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{hide:['.tabs'], show:['#tab2']}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;TAB 2&quot;</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{hide:[&#39;.tabs&#39;],
+                                                    show:[&#39;#tab2&#39;]}&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                             <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"tab2"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs"</span>
-                                                <span style="color: #00d5d5;">&gt;</span>Conteúdo TAB 2<span style="color: #00d5d5;">&lt;/</span><span
-                                                    style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"TAB 3"</span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{hide:['.tabs'], show:['#tab3']}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"tab3"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs"</span>
-                                                <span style="color: #00d5d5;">&gt;</span>Conteúdo TAB 3<span style="color: #00d5d5;">&lt;/</span><span
-                                                    style="color: #006060;">div</span><span style="color: #00d5d5;">&gt;</span></p>
+                                                <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">input</span>
+                                                <span style="color: #ffc515;">value=</span><span style="color: yellow;">&quot;TAB 3&quot;</span>
+                                                <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{hide:[&#39;.tabs&#39;],
+                                                    show:[&#39;#tab3&#39;]}&quot;</span>
+                                                <span style="color: #ffc515;">type=</span><span style="color: yellow;">&quot;button&quot;</span>
+                                                <span style="color: #ded1bc;">/&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                                <span style="color: #ded1bc;">/&gt;</span></p>
                                         </div>
                                         <!--EndFragment--></td>
                                 </tr>
@@ -296,116 +270,6 @@
                         </table>
                     </fieldset>
                     <br />
-                    <fieldset>
-                        <legend><b>Implementando um controle tabs, marcando a aba selecionada</b></legend>
-                        <table width="100%">
-                            <tbody>
-                                <tr>
-                                    <td style="padding: 15px;" valign="middle">
-                                        <input value="TAB 1" class="cTxt24" smart="click:{hide:['.tabs2'], show:['#Div1'], removeClass:['input', 'cTxt24'], addClass:'cTxt24'}"
-                                            type="button" /><br />
-                                        <div id="Div1" class="tabs2"><b>Conteúdo TAB 1</b><br />
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-                                            an unknown printer took a galley of type and scrambled it to make a type specimen
-                                            book. It has survived not only five centuries, but also the leap into electronic
-                                            typesetting, remaining essentially unchanged.</div>
-                                        <input value="TAB 2" smart="click:{hide:['.tabs2'], show:['#Div2'], removeClass:['input', 'cTxt24'], addClass:'cTxt24'}"
-                                            type="button" /><br />
-                                        <div id="Div2" class="tabs2" style="display: none"><b>Conteúdo TAB 2</b><br />
-                                            Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                            default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                            in their infancy. Various versions have evolved over the years, sometimes by accident,
-                                            sometimes on purpose (injected humour and the like)</div>
-                                        <input value="TAB 3" smart="click:{hide:['.tabs2'], show:['#Div3'], removeClass:['input', 'cTxt24'], addClass:'cTxt24'}"
-                                            type="button" /><br />
-                                        <div id="Div3" class="tabs2" style="display: none"><b>Conteúdo TAB 3</b><br />
-                                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                                            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                                            Cicero are also reproduced in their exact original form, accompanied by English
-                                            versions from the 1914 translation by H. Rackham.</div>
-                                    </td>
-                                    <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%"><!--EndFragment-->
-                                        <div style="color: black; background: white; font-family: Consolas; font-size: 10pt;
-                                            background-color: transparent; font-size: inherits;">
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"
-                                                    <span style="color: #ff8000;">id</span><span style="color: gray;">=</span>"input1"
-                                                    <span style="color: #ff8000;">class</span><span style="color: gray;">=</span>"source"</span>
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{</span></p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: red;">hide:['.tabs'], </span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: red;">show:['#Div1'], </span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: red;">removeClass:['.tabs', 'source'], </span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: red;">addClass:'source'}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"Div1"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs"</span><span style="color: #00d5d5;">&gt;</span>Conteúdo
-                                                TAB 1<span style="color: #00d5d5;">&lt;/</span><span style="color: #006060;">div</span><span
-                                                    style="color: #00d5d5;">&gt;</span></p>
-                                            <p style="margin: 0px;">&nbsp;</p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"TAB 2"</span>
-                                            </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{inherits:'#input1', show:['#Div2']}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"Div2"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs"</span>
-                                                <span style="color: #ff8000;">style</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"</span><span style="color: #bf80ff;">display</span>:
-                                                <span style="color: purple;">none</span><span style="color: red;">"</span><span style="color: #00d5d5;">&gt;</span>Conteúdo
-                                                TAB 2<span style="color: #00d5d5;">&lt;/</span><span style="color: #006060;">div</span><span
-                                                    style="color: #00d5d5;">&gt;</span></p>
-                                            <p style="margin: 0px;">&nbsp;</p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                                <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"button"</span>
-                                                <span style="color: #ff8000;">value</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"TAB 3"</span>&nbsp;&nbsp;&nbsp; </p>
-                                            <p style="margin: 0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"click:{inherits:'#input1', show:['#Div3']}"</span>
-                                                <span style="color: #00d5d5;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                                <span style="color: #00d5d5;">/&gt;</span></p>
-                                            <p style="margin: 0px;">
-                                                <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">div</span>
-                                                <span style="color: #ff8000;">id</span><span style="color: gray;">=</span><span style="color: red;">"Div3"</span>
-                                                <span style="color: #ff8000;">class</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"tabs"</span>
-                                                <span style="color: #ff8000;">style</span><span style="color: gray;">=</span><span
-                                                    style="color: red;">"</span><span style="color: #bf80ff;">display</span>:
-                                                <span style="color: purple;">none</span><span style="color: red;">"</span><span style="color: #00d5d5;">&gt;</span>Conteúdo
-                                                TAB 3<span style="color: #00d5d5;">&lt;/</span><span style="color: #006060;">div</span><span
-                                                    style="color: #00d5d5;">&gt;</span></p>
-                                        </div>
-                                        <!--EndFragment--></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </fieldset>
                 </div>
                 <div id="linksSamples" class="samplesPanel">
                     <h2 style="padding-left: 10px; margin-left: -10px; margin-right: -10px; border-radius: 15px 15px 0pt 0pt;
@@ -420,25 +284,24 @@
                                     <br />
                                     <div id="Div4">Texto que será oculto quando alguém clicar no link acima!</div>
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
                                         font-size: inherits; padding: 10px; border-radius: 10px;">
                                         <p style="margin: 0px;">
-                                            <span style="color: #475c5c;">&lt;</span><span style="color: #bbeeee;">a</span>
-                                            <span style="color: #ff5900;">href</span><span style="color: #ff8000;">=</span><span
-                                                style="color: #ffbf00;">&quot;javascript:;&quot;</span>
-                                            <span style="color: #ff5900;">smart</span><span style="color: #ff8000;">=</span><span
-                                                style="color: #ffbf00;">&quot;click:{hide:[&#39;#Div4&#39;]}&quot;</span><span style="color: #475c5c;">&gt;</span>Ocultar
-                                            a div abaixo<span style="color: #475c5c;">&lt;/</span><span style="color: #bbeeee;">a</span><span
-                                                style="color: #475c5c;">&gt;&lt;</span><span style="color: #bbeeee;">br</span>
-                                            <span style="color: #475c5c;">/&gt;&lt;</span><span style="color: #bbeeee;">br</span>
-                                            <span style="color: #475c5c;">/&gt;</span></p>
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">a</span>
+                                            <span style="color: #ffc515;">href=</span><span style="color: yellow;">&quot;javascript:;&quot;</span>
+                                            <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{hide:[&#39;#Div4&#39;]}&quot;</span><span
+                                                style="color: #ded1bc;">&gt;</span>Ocultar a div abaixo<span style="color: #ded1bc;">&lt;/</span><span
+                                                    style="color: #ff7300;">a</span><span style="color: #ded1bc;">&gt;&lt;</span><span
+                                                        style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;</span></p>
                                         <p style="margin: 0px;">
-                                            <span style="color: #475c5c;">&lt;</span><span style="color: #bbeeee;">div</span>
-                                            <span style="color: #ff5900;">id</span><span style="color: #ff8000;">=</span><span
-                                                style="color: #ffbf00;">&quot;Div4&quot;</span><span style="color: #475c5c;">&gt;</span>Texto
-                                            que será oculto quando alguém clicar no link acima!<span style="color: #475c5c;">&lt;/</span><span
-                                                style="color: #bbeeee;">div</span><span style="color: #475c5c;">&gt;</span></p>
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">div</span>
+                                            <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;Div4&quot;</span><span
+                                                style="color: #ded1bc;">&gt;</span>Texto que será oculto quando alguém clicar
+                                            no link acima!<span style="color: #ded1bc;">&lt;/</span><span style="color: #ff7300;">div</span><span
+                                                style="color: #ded1bc;">&gt;</span></p>
                                     </div>
                                     <!--EndFragment--></td>
                             </tr>
@@ -454,74 +317,25 @@
                                     <br />
                                     <div id="Div5">Aqui entrará um texto carregado dinamicamente ao clicar no link acima!</div>
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%"><!--EndFragment-->
-                                    <!--EndFragment-->
-                                    <div style="color: black; background: white; font-family: Consolas; font-size: 10pt;
-                                        background-color: transparent; font-size: inherits;">
+                                <td style="padding: 15px;" width="60%"><!--EndFragment--><!--EndFragment--><!--EndFragment-->
+                                    <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                        font-size: inherits; padding: 10px; border-radius: 10px;">
                                         <p style="margin: 0px;">
-                                            <span style="color: #00eaea;">&lt;</span><span style="color: #006060;">a</span>
-                                            <span style="color: #009f9f;">href</span><span style="color: gray;">=</span><span
-                                                style="color: #ff6000;">&quot;javascript:;&quot;</span>
-                                        </p>
-                                        <p style="margin: 0px;">&nbsp;&nbsp;
-                                            <span style="color: #009f9f;">smart</span><span style="color: gray;">=</span><span
-                                                style="color: #ff6000;">&quot;click:{source:&#39;sample,509.raw&#39;, target:&#39;#Div5&#39;}&quot;</span><span
-                                                    style="color: #00eaea;">&gt;</span></p>
-                                        <p style="margin: 0px;">&nbsp;&nbsp; Carregar um texto na div abaixo<span style="color: #00eaea;">&lt;/</span><span
-                                            style="color: #006060;">a</span><span style="color: #00eaea;">&gt;&lt;</span><span
-                                                style="color: #006060;">br</span>
-                                            <span style="color: #00eaea;">/&gt;&lt;</span><span style="color: #006060;">br</span>
-                                            <span style="color: #00eaea;">/&gt;</span></p>
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">a</span>
+                                            <span style="color: #ffc515;">href=</span><span style="color: yellow;">&quot;javascript:;&quot;</span>
+                                            <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;click:{source:&#39;sample,509.raw&#39;,
+                                                target:&#39;#Div5&#39;}&quot;</span><span style="color: #ded1bc;">&gt;</span></p>
+                                        <p style="margin: 0px;">Carregar um texto na div abaixo<span style="color: #ded1bc;">&lt;/</span><span
+                                            style="color: #ff7300;">a</span><span style="color: #ded1bc;">&gt;&lt;</span><span
+                                                style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;</span></p>
                                         <p style="margin: 0px;">
-                                            <span style="color: #00eaea;">&lt;</span><span style="color: #006060;">div</span>
-                                            <span style="color: #009f9f;">id</span><span style="color: gray;">=</span><span style="color: #ff6000;">&quot;Div5&quot;</span><span
-                                                style="color: #00eaea;">&gt;</span>Aqui entrará um texto carregado dinamicamente
-                                            ao clicar no link acima!<span style="color: #00eaea;">&lt;/</span><span style="color: #006060;">div</span><span
-                                                style="color: #00eaea;">&gt;</span></p>
-                                    </div>
-                                    <!--EndFragment--></td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                    <br />
-                    <fieldset>
-                        <legend><b>Link que dispara uma requisição ajax e se comporta como button</b></legend>
-                        <table width="100%">
-                            <tr>
-                                <td style="padding: 15px;" valign="middle">
-                                    <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
-                                </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                    <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
-                                        <p style="margin: 0px;">
-                                            <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                            <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                style="color: red;">&quot;button&quot; </span>
-                                            <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                style="color: red;">&quot;click:{toggleClass:&#39;clicked&#39;}&quot;</span>
-                                            <span style="color: #00d5d5;">/&gt;</span></p>
-                                    </div>
-                                    <!--EndFragment--></td>
-                            </tr>
-                        </table>
-                    </fieldset>
-                    <br />
-                    <fieldset>
-                        <legend><b>Implementando um controle tabs, só com links</b></legend>
-                        <table width="100%">
-                            <tr>
-                                <td style="padding: 15px;" valign="middle">
-                                    <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
-                                </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
-                                    <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
-                                        <p style="margin: 0px;">
-                                            <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
-                                            <span style="color: #ff8000;">type</span><span style="color: gray;">=</span><span
-                                                style="color: red;">&quot;button&quot; </span>
-                                            <span style="color: #ff8000;">smart</span><span style="color: gray;">=</span><span
-                                                style="color: red;">&quot;click:{toggleClass:&#39;clicked&#39;}&quot;</span>
-                                            <span style="color: #00d5d5;">/&gt;</span></p>
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">div</span>
+                                            <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;Div5&quot;</span><span
+                                                style="color: #ded1bc;">&gt;</span>Aqui entrará um texto carregado dinamicamente
+                                            ao clicar no link acima!<span style="color: #ded1bc;">&lt;/</span><span style="color: #ff7300;">div</span><span
+                                                style="color: #ded1bc;">&gt;</span></p>
                                     </div>
                                     <!--EndFragment--></td>
                             </tr>
@@ -540,7 +354,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -562,7 +376,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -584,7 +398,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -605,19 +419,85 @@
                         text-shadow: 0pt 1px 3px rgba(255, 128, 0, 0.3); color: #FF9900;">Combos</h2>
                     <fieldset>
                         <legend><b>Carregando uma combobox dinamicamente</b></legend>
-                        <select smart="load:{method:'GET', source:'http://uat.vivina.com.br/odata.svc/States?$format=json', onresponse:function(result){ return result.d; }}">
-                        <option><$=Name$></option>
-                        </select>
+                        <table width="100%">
+                            <tr>
+                                <td style="padding: 15px;" valign="middle">
+                                    <select smart="load:{ method:'GET', source:'/odata.svc/States?$format=json' }"><!--<option><$=Name$></option> -->
+                                    </select>
+                                </td>
+                                <td style="padding: 15px;" width="60%"><!--EndFragment--><!--EndFragment--><!--EndFragment-->
+                                    <!--EndFragment--><!--EndFragment-->
+                                    <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt;
+                                        font-size: inherits; padding: 10px; border-radius: 10px;">
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">select</span>
+                                            <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;load:{
+                                                method:&#39;GET&#39;, source:&#39;/odata.svc/States?$format=json&#39; }&quot;</span><span
+                                                    style="color: #ded1bc;">&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #496161;">&lt;!--&lt;option&gt;&lt;$=Name$&gt;&lt;/option&gt; --&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;/</span><span style="color: #ff7300;">select</span><span
+                                                style="color: #ded1bc;">&gt;</span></p>
+                                    </div>
+                                    <!--EndFragment--></td>
+                            </tr>
+                        </table>
                     </fieldset>
                     <br />
                     <fieldset>
-                        <legend><b>Populando uma combobox através da seleção de outra combobox</b></legend>
-                        <label>Estados:</label><br />
-                        <select smart="load:{method:'GET', source:'http://uat.vivina.com.br/odata.svc/States?$format=json', onresponse:function(result){ return result.d; }}, change:{trigger:'#cities'}">
-                        <!-- <option><$=Name$></option> --></select><br />
-                        <label>Cidades:</label><br />
-                        <select id="cities" smart="load:{method:'GET', source:'http://uat.vivina.com.br/odata.svc/Cities?$format=json', onresponse:function(result){ return result.d; }}">
-                        <!-- <option><$=Name$></option> --></select>
+                        <legend><b>Populando uma combobox através da seleção de outra combobox, usando REST</b></legend>
+                        <table width="100%">
+                            <tr>
+                                <td style="padding: 15px;" valign="middle">
+                                    <label>Estados:</label><br />
+                                    <select id="states" smart="load:{method:'GET',  source:'/odata.svc/States?$format=json'},  change:{once:true,trigger:'#cities'}">
+                                    <!-- <option value="<$=Cities.__deferred.uri$>"><$=Name$></option> --></select><br />
+                                    <label>Cidades:</label><br />
+                                    <select id="cities" smart="unload:{method:'GET', onbinding:function(options){options.source = $('#states').val() + '?$format=json'} }">
+                                    <!-- <option><$=Name$></option> --></select>
+                                </td>
+                                <td style="padding: 15px;" width="60%">
+                                    <div style="color: white; background: #002020; font-family: Consolas; font-size: 10pt; font-size: inherits; padding: 10px; border-radius: 10px;">
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">label</span><span 
+                                                style="color: #ded1bc;">&gt;</span>Estados:<span style="color: #ded1bc;">&lt;/</span><span 
+                                                style="color: #ff7300;">label</span><span style="color: #ded1bc;">&gt;&lt;</span><span 
+                                                style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">select</span>
+                                            <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;states&quot;</span>
+                                            <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;load:{method:&#39;GET&#39;,&nbsp; 
+                                            source:&#39;/odata.svc/States?$format=json&#39;},&nbsp; 
+                                            change:{once:true,trigger:&#39;#cities&#39;}&quot;</span><span style="color: #ded1bc;">&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #496161;">&lt;!-- &lt;option 
+                                            value=&quot;&lt;$=Cities.__deferred.uri$&gt;&quot;&gt;&lt;$=Name$&gt;&lt;/option&gt; --&gt;</span><span 
+                                                style="color: #ded1bc;">&lt;/</span><span style="color: #ff7300;">select</span><span 
+                                                style="color: #ded1bc;">&gt;&lt;</span><span style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">label</span><span 
+                                                style="color: #ded1bc;">&gt;</span>Cidades:<span style="color: #ded1bc;">&lt;/</span><span 
+                                                style="color: #ff7300;">label</span><span style="color: #ded1bc;">&gt;&lt;</span><span 
+                                                style="color: #ff7300;">br</span>
+                                            <span style="color: #ded1bc;">/&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #ded1bc;">&lt;</span><span style="color: #ff7300;">select</span>
+                                            <span style="color: #ffc515;">id=</span><span style="color: yellow;">&quot;cities&quot;</span>
+                                            <span style="color: #ffc515;">smart=</span><span style="color: yellow;">&quot;unload:{method:&#39;GET&#39;, 
+                                            onbinding:function(options){options.source = $(&#39;#states&#39;).val() + 
+                                            &#39;?$format=json&#39;} }&quot;</span><span style="color: #ded1bc;">&gt;</span></p>
+                                        <p style="margin: 0px;">
+                                            <span style="color: #496161;">&lt;!-- &lt;option&gt;&lt;$=Name$&gt;&lt;/option&gt; --&gt;</span><span 
+                                                style="color: #ded1bc;">&lt;/</span><span style="color: #ff7300;">select</span><span 
+                                                style="color: #ded1bc;">&gt;</span></p>
+                                    </div>
+<!--EndFragment-->
+</td>
+                            </tr>
+                        </table>
                     </fieldset>
                     <br />
                 </div>
@@ -632,7 +512,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -654,7 +534,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -681,7 +561,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>
@@ -704,7 +584,7 @@
                                 <td style="padding: 15px;" valign="middle">
                                     <input smart="click:{toggleClass:'source'}" type="button" value="Mudar o estado do botão" />
                                 </td>
-                                <td style="padding: 15px; border-left: 1px solid #CCC;" width="60%">
+                                <td style="padding: 15px;" width="60%">
                                     <div style="color: black; background: white; font-family: Consolas; background-color: transparent;">
                                         <p style="margin: 0px;">
                                             <span style="color: #00d5d5;">&lt;</span><span style="color: #006060;">input</span>

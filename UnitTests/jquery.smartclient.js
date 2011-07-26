@@ -40,15 +40,15 @@ if (typeof _$jscoverage !== 'object') {
 if (! _$jscoverage['jquery.smartclient.js']) {
   _$jscoverage['jquery.smartclient.js'] = [];
   _$jscoverage['jquery.smartclient.js'][5] = 0;
-  _$jscoverage['jquery.smartclient.js'][6] = 0;
-  _$jscoverage['jquery.smartclient.js'][11] = 0;
-  _$jscoverage['jquery.smartclient.js'][14] = 0;
+  _$jscoverage['jquery.smartclient.js'][10] = 0;
+  _$jscoverage['jquery.smartclient.js'][13] = 0;
+  _$jscoverage['jquery.smartclient.js'][16] = 0;
   _$jscoverage['jquery.smartclient.js'][17] = 0;
-  _$jscoverage['jquery.smartclient.js'][18] = 0;
-  _$jscoverage['jquery.smartclient.js'][22] = 0;
-  _$jscoverage['jquery.smartclient.js'][26] = 0;
-  _$jscoverage['jquery.smartclient.js'][28] = 0;
-  _$jscoverage['jquery.smartclient.js'][31] = 0;
+  _$jscoverage['jquery.smartclient.js'][21] = 0;
+  _$jscoverage['jquery.smartclient.js'][25] = 0;
+  _$jscoverage['jquery.smartclient.js'][27] = 0;
+  _$jscoverage['jquery.smartclient.js'][30] = 0;
+  _$jscoverage['jquery.smartclient.js'][34] = 0;
   _$jscoverage['jquery.smartclient.js'][35] = 0;
   _$jscoverage['jquery.smartclient.js'][36] = 0;
   _$jscoverage['jquery.smartclient.js'][37] = 0;
@@ -56,373 +56,362 @@ if (! _$jscoverage['jquery.smartclient.js']) {
   _$jscoverage['jquery.smartclient.js'][39] = 0;
   _$jscoverage['jquery.smartclient.js'][40] = 0;
   _$jscoverage['jquery.smartclient.js'][41] = 0;
-  _$jscoverage['jquery.smartclient.js'][42] = 0;
-  _$jscoverage['jquery.smartclient.js'][47] = 0;
+  _$jscoverage['jquery.smartclient.js'][46] = 0;
+  _$jscoverage['jquery.smartclient.js'][48] = 0;
   _$jscoverage['jquery.smartclient.js'][49] = 0;
   _$jscoverage['jquery.smartclient.js'][50] = 0;
-  _$jscoverage['jquery.smartclient.js'][51] = 0;
-  _$jscoverage['jquery.smartclient.js'][55] = 0;
+  _$jscoverage['jquery.smartclient.js'][54] = 0;
+  _$jscoverage['jquery.smartclient.js'][56] = 0;
   _$jscoverage['jquery.smartclient.js'][57] = 0;
-  _$jscoverage['jquery.smartclient.js'][58] = 0;
+  _$jscoverage['jquery.smartclient.js'][61] = 0;
   _$jscoverage['jquery.smartclient.js'][62] = 0;
   _$jscoverage['jquery.smartclient.js'][63] = 0;
-  _$jscoverage['jquery.smartclient.js'][64] = 0;
+  _$jscoverage['jquery.smartclient.js'][66] = 0;
   _$jscoverage['jquery.smartclient.js'][67] = 0;
-  _$jscoverage['jquery.smartclient.js'][68] = 0;
+  _$jscoverage['jquery.smartclient.js'][69] = 0;
   _$jscoverage['jquery.smartclient.js'][70] = 0;
-  _$jscoverage['jquery.smartclient.js'][71] = 0;
-  _$jscoverage['jquery.smartclient.js'][78] = 0;
-  _$jscoverage['jquery.smartclient.js'][86] = 0;
-  _$jscoverage['jquery.smartclient.js'][89] = 0;
+  _$jscoverage['jquery.smartclient.js'][77] = 0;
+  _$jscoverage['jquery.smartclient.js'][85] = 0;
+  _$jscoverage['jquery.smartclient.js'][88] = 0;
+  _$jscoverage['jquery.smartclient.js'][90] = 0;
   _$jscoverage['jquery.smartclient.js'][91] = 0;
-  _$jscoverage['jquery.smartclient.js'][92] = 0;
+  _$jscoverage['jquery.smartclient.js'][94] = 0;
   _$jscoverage['jquery.smartclient.js'][95] = 0;
-  _$jscoverage['jquery.smartclient.js'][96] = 0;
+  _$jscoverage['jquery.smartclient.js'][97] = 0;
   _$jscoverage['jquery.smartclient.js'][98] = 0;
   _$jscoverage['jquery.smartclient.js'][99] = 0;
-  _$jscoverage['jquery.smartclient.js'][100] = 0;
-  _$jscoverage['jquery.smartclient.js'][102] = 0;
+  _$jscoverage['jquery.smartclient.js'][101] = 0;
   _$jscoverage['jquery.smartclient.js'][106] = 0;
   _$jscoverage['jquery.smartclient.js'][108] = 0;
   _$jscoverage['jquery.smartclient.js'][110] = 0;
   _$jscoverage['jquery.smartclient.js'][112] = 0;
   _$jscoverage['jquery.smartclient.js'][116] = 0;
-  _$jscoverage['jquery.smartclient.js'][122] = 0;
   _$jscoverage['jquery.smartclient.js'][123] = 0;
-  _$jscoverage['jquery.smartclient.js'][125] = 0;
-  _$jscoverage['jquery.smartclient.js'][127] = 0;
+  _$jscoverage['jquery.smartclient.js'][124] = 0;
+  _$jscoverage['jquery.smartclient.js'][126] = 0;
   _$jscoverage['jquery.smartclient.js'][129] = 0;
-  _$jscoverage['jquery.smartclient.js'][130] = 0;
   _$jscoverage['jquery.smartclient.js'][131] = 0;
   _$jscoverage['jquery.smartclient.js'][132] = 0;
   _$jscoverage['jquery.smartclient.js'][133] = 0;
+  _$jscoverage['jquery.smartclient.js'][134] = 0;
   _$jscoverage['jquery.smartclient.js'][135] = 0;
-  _$jscoverage['jquery.smartclient.js'][136] = 0;
+  _$jscoverage['jquery.smartclient.js'][137] = 0;
   _$jscoverage['jquery.smartclient.js'][138] = 0;
-  _$jscoverage['jquery.smartclient.js'][139] = 0;
+  _$jscoverage['jquery.smartclient.js'][140] = 0;
   _$jscoverage['jquery.smartclient.js'][141] = 0;
-  _$jscoverage['jquery.smartclient.js'][142] = 0;
+  _$jscoverage['jquery.smartclient.js'][143] = 0;
   _$jscoverage['jquery.smartclient.js'][144] = 0;
-  _$jscoverage['jquery.smartclient.js'][145] = 0;
+  _$jscoverage['jquery.smartclient.js'][146] = 0;
   _$jscoverage['jquery.smartclient.js'][147] = 0;
-  _$jscoverage['jquery.smartclient.js'][148] = 0;
+  _$jscoverage['jquery.smartclient.js'][149] = 0;
   _$jscoverage['jquery.smartclient.js'][150] = 0;
-  _$jscoverage['jquery.smartclient.js'][151] = 0;
+  _$jscoverage['jquery.smartclient.js'][152] = 0;
   _$jscoverage['jquery.smartclient.js'][153] = 0;
-  _$jscoverage['jquery.smartclient.js'][154] = 0;
+  _$jscoverage['jquery.smartclient.js'][155] = 0;
   _$jscoverage['jquery.smartclient.js'][156] = 0;
-  _$jscoverage['jquery.smartclient.js'][157] = 0;
+  _$jscoverage['jquery.smartclient.js'][158] = 0;
   _$jscoverage['jquery.smartclient.js'][159] = 0;
-  _$jscoverage['jquery.smartclient.js'][160] = 0;
+  _$jscoverage['jquery.smartclient.js'][161] = 0;
   _$jscoverage['jquery.smartclient.js'][162] = 0;
-  _$jscoverage['jquery.smartclient.js'][163] = 0;
+  _$jscoverage['jquery.smartclient.js'][164] = 0;
   _$jscoverage['jquery.smartclient.js'][165] = 0;
-  _$jscoverage['jquery.smartclient.js'][166] = 0;
+  _$jscoverage['jquery.smartclient.js'][167] = 0;
   _$jscoverage['jquery.smartclient.js'][168] = 0;
-  _$jscoverage['jquery.smartclient.js'][169] = 0;
+  _$jscoverage['jquery.smartclient.js'][170] = 0;
   _$jscoverage['jquery.smartclient.js'][171] = 0;
   _$jscoverage['jquery.smartclient.js'][172] = 0;
-  _$jscoverage['jquery.smartclient.js'][174] = 0;
-  _$jscoverage['jquery.smartclient.js'][175] = 0;
-  _$jscoverage['jquery.smartclient.js'][176] = 0;
-  _$jscoverage['jquery.smartclient.js'][177] = 0;
-  _$jscoverage['jquery.smartclient.js'][182] = 0;
+  _$jscoverage['jquery.smartclient.js'][173] = 0;
+  _$jscoverage['jquery.smartclient.js'][178] = 0;
+  _$jscoverage['jquery.smartclient.js'][179] = 0;
   _$jscoverage['jquery.smartclient.js'][183] = 0;
-  _$jscoverage['jquery.smartclient.js'][187] = 0;
-  _$jscoverage['jquery.smartclient.js'][189] = 0;
-  _$jscoverage['jquery.smartclient.js'][195] = 0;
-  _$jscoverage['jquery.smartclient.js'][201] = 0;
+  _$jscoverage['jquery.smartclient.js'][185] = 0;
+  _$jscoverage['jquery.smartclient.js'][191] = 0;
+  _$jscoverage['jquery.smartclient.js'][197] = 0;
+  _$jscoverage['jquery.smartclient.js'][198] = 0;
+  _$jscoverage['jquery.smartclient.js'][199] = 0;
+  _$jscoverage['jquery.smartclient.js'][200] = 0;
   _$jscoverage['jquery.smartclient.js'][202] = 0;
   _$jscoverage['jquery.smartclient.js'][203] = 0;
-  _$jscoverage['jquery.smartclient.js'][204] = 0;
-  _$jscoverage['jquery.smartclient.js'][206] = 0;
-  _$jscoverage['jquery.smartclient.js'][207] = 0;
-  _$jscoverage['jquery.smartclient.js'][212] = 0;
+  _$jscoverage['jquery.smartclient.js'][208] = 0;
+  _$jscoverage['jquery.smartclient.js'][214] = 0;
+  _$jscoverage['jquery.smartclient.js'][215] = 0;
   _$jscoverage['jquery.smartclient.js'][218] = 0;
-  _$jscoverage['jquery.smartclient.js'][219] = 0;
-  _$jscoverage['jquery.smartclient.js'][222] = 0;
+  _$jscoverage['jquery.smartclient.js'][220] = 0;
+  _$jscoverage['jquery.smartclient.js'][223] = 0;
   _$jscoverage['jquery.smartclient.js'][224] = 0;
-  _$jscoverage['jquery.smartclient.js'][227] = 0;
-  _$jscoverage['jquery.smartclient.js'][228] = 0;
-  _$jscoverage['jquery.smartclient.js'][229] = 0;
+  _$jscoverage['jquery.smartclient.js'][225] = 0;
+  _$jscoverage['jquery.smartclient.js'][230] = 0;
+  _$jscoverage['jquery.smartclient.js'][232] = 0;
+  _$jscoverage['jquery.smartclient.js'][233] = 0;
   _$jscoverage['jquery.smartclient.js'][234] = 0;
-  _$jscoverage['jquery.smartclient.js'][236] = 0;
-  _$jscoverage['jquery.smartclient.js'][237] = 0;
-  _$jscoverage['jquery.smartclient.js'][238] = 0;
-  _$jscoverage['jquery.smartclient.js'][242] = 0;
+  _$jscoverage['jquery.smartclient.js'][240] = 0;
+  _$jscoverage['jquery.smartclient.js'][241] = 0;
   _$jscoverage['jquery.smartclient.js'][243] = 0;
   _$jscoverage['jquery.smartclient.js'][245] = 0;
-  _$jscoverage['jquery.smartclient.js'][247] = 0;
-  _$jscoverage['jquery.smartclient.js'][248] = 0;
-  _$jscoverage['jquery.smartclient.js'][251] = 0;
+  _$jscoverage['jquery.smartclient.js'][246] = 0;
+  _$jscoverage['jquery.smartclient.js'][249] = 0;
+  _$jscoverage['jquery.smartclient.js'][252] = 0;
   _$jscoverage['jquery.smartclient.js'][253] = 0;
   _$jscoverage['jquery.smartclient.js'][254] = 0;
-  _$jscoverage['jquery.smartclient.js'][255] = 0;
-  _$jscoverage['jquery.smartclient.js'][257] = 0;
-  _$jscoverage['jquery.smartclient.js'][266] = 0;
+  _$jscoverage['jquery.smartclient.js'][258] = 0;
   _$jscoverage['jquery.smartclient.js'][267] = 0;
-  _$jscoverage['jquery.smartclient.js'][270] = 0;
+  _$jscoverage['jquery.smartclient.js'][268] = 0;
   _$jscoverage['jquery.smartclient.js'][271] = 0;
-  _$jscoverage['jquery.smartclient.js'][274] = 0;
+  _$jscoverage['jquery.smartclient.js'][272] = 0;
+  _$jscoverage['jquery.smartclient.js'][275] = 0;
   _$jscoverage['jquery.smartclient.js'][276] = 0;
   _$jscoverage['jquery.smartclient.js'][277] = 0;
-  _$jscoverage['jquery.smartclient.js'][279] = 0;
+  _$jscoverage['jquery.smartclient.js'][278] = 0;
+  _$jscoverage['jquery.smartclient.js'][280] = 0;
+  _$jscoverage['jquery.smartclient.js'][281] = 0;
   _$jscoverage['jquery.smartclient.js'][283] = 0;
-  _$jscoverage['jquery.smartclient.js'][284] = 0;
-  _$jscoverage['jquery.smartclient.js'][286] = 0;
+  _$jscoverage['jquery.smartclient.js'][287] = 0;
   _$jscoverage['jquery.smartclient.js'][288] = 0;
   _$jscoverage['jquery.smartclient.js'][290] = 0;
-  _$jscoverage['jquery.smartclient.js'][300] = 0;
+  _$jscoverage['jquery.smartclient.js'][292] = 0;
+  _$jscoverage['jquery.smartclient.js'][294] = 0;
   _$jscoverage['jquery.smartclient.js'][304] = 0;
-  _$jscoverage['jquery.smartclient.js'][307] = 0;
-  _$jscoverage['jquery.smartclient.js'][310] = 0;
-  _$jscoverage['jquery.smartclient.js'][312] = 0;
+  _$jscoverage['jquery.smartclient.js'][308] = 0;
+  _$jscoverage['jquery.smartclient.js'][311] = 0;
   _$jscoverage['jquery.smartclient.js'][314] = 0;
   _$jscoverage['jquery.smartclient.js'][316] = 0;
   _$jscoverage['jquery.smartclient.js'][318] = 0;
   _$jscoverage['jquery.smartclient.js'][320] = 0;
-  _$jscoverage['jquery.smartclient.js'][321] = 0;
   _$jscoverage['jquery.smartclient.js'][322] = 0;
   _$jscoverage['jquery.smartclient.js'][324] = 0;
-  _$jscoverage['jquery.smartclient.js'][331] = 0;
-  _$jscoverage['jquery.smartclient.js'][333] = 0;
+  _$jscoverage['jquery.smartclient.js'][325] = 0;
+  _$jscoverage['jquery.smartclient.js'][326] = 0;
+  _$jscoverage['jquery.smartclient.js'][330] = 0;
   _$jscoverage['jquery.smartclient.js'][337] = 0;
-  _$jscoverage['jquery.smartclient.js'][338] = 0;
   _$jscoverage['jquery.smartclient.js'][339] = 0;
-  _$jscoverage['jquery.smartclient.js'][341] = 0;
+  _$jscoverage['jquery.smartclient.js'][343] = 0;
+  _$jscoverage['jquery.smartclient.js'][344] = 0;
   _$jscoverage['jquery.smartclient.js'][345] = 0;
-  _$jscoverage['jquery.smartclient.js'][346] = 0;
-  _$jscoverage['jquery.smartclient.js'][348] = 0;
-  _$jscoverage['jquery.smartclient.js'][349] = 0;
-  _$jscoverage['jquery.smartclient.js'][350] = 0;
+  _$jscoverage['jquery.smartclient.js'][347] = 0;
+  _$jscoverage['jquery.smartclient.js'][351] = 0;
   _$jscoverage['jquery.smartclient.js'][352] = 0;
   _$jscoverage['jquery.smartclient.js'][355] = 0;
   _$jscoverage['jquery.smartclient.js'][356] = 0;
   _$jscoverage['jquery.smartclient.js'][357] = 0;
   _$jscoverage['jquery.smartclient.js'][359] = 0;
-  _$jscoverage['jquery.smartclient.js'][364] = 0;
-  _$jscoverage['jquery.smartclient.js'][365] = 0;
+  _$jscoverage['jquery.smartclient.js'][360] = 0;
+  _$jscoverage['jquery.smartclient.js'][361] = 0;
+  _$jscoverage['jquery.smartclient.js'][362] = 0;
   _$jscoverage['jquery.smartclient.js'][367] = 0;
   _$jscoverage['jquery.smartclient.js'][368] = 0;
-  _$jscoverage['jquery.smartclient.js'][369] = 0;
-  _$jscoverage['jquery.smartclient.js'][370] = 0;
-  _$jscoverage['jquery.smartclient.js'][374] = 0;
-  _$jscoverage['jquery.smartclient.js'][375] = 0;
-  _$jscoverage['jquery.smartclient.js'][378] = 0;
-  _$jscoverage['jquery.smartclient.js'][379] = 0;
-  _$jscoverage['jquery.smartclient.js'][380] = 0;
+  _$jscoverage['jquery.smartclient.js'][371] = 0;
+  _$jscoverage['jquery.smartclient.js'][372] = 0;
+  _$jscoverage['jquery.smartclient.js'][373] = 0;
+  _$jscoverage['jquery.smartclient.js'][377] = 0;
+  _$jscoverage['jquery.smartclient.js'][386] = 0;
+  _$jscoverage['jquery.smartclient.js'][387] = 0;
+  _$jscoverage['jquery.smartclient.js'][388] = 0;
+  _$jscoverage['jquery.smartclient.js'][389] = 0;
   _$jscoverage['jquery.smartclient.js'][391] = 0;
   _$jscoverage['jquery.smartclient.js'][392] = 0;
   _$jscoverage['jquery.smartclient.js'][393] = 0;
-  _$jscoverage['jquery.smartclient.js'][394] = 0;
+  _$jscoverage['jquery.smartclient.js'][395] = 0;
   _$jscoverage['jquery.smartclient.js'][396] = 0;
   _$jscoverage['jquery.smartclient.js'][397] = 0;
   _$jscoverage['jquery.smartclient.js'][398] = 0;
-  _$jscoverage['jquery.smartclient.js'][400] = 0;
-  _$jscoverage['jquery.smartclient.js'][401] = 0;
-  _$jscoverage['jquery.smartclient.js'][402] = 0;
-  _$jscoverage['jquery.smartclient.js'][403] = 0;
+  _$jscoverage['jquery.smartclient.js'][406] = 0;
+  _$jscoverage['jquery.smartclient.js'][407] = 0;
+  _$jscoverage['jquery.smartclient.js'][408] = 0;
+  _$jscoverage['jquery.smartclient.js'][409] = 0;
   _$jscoverage['jquery.smartclient.js'][411] = 0;
   _$jscoverage['jquery.smartclient.js'][412] = 0;
-  _$jscoverage['jquery.smartclient.js'][413] = 0;
   _$jscoverage['jquery.smartclient.js'][414] = 0;
-  _$jscoverage['jquery.smartclient.js'][416] = 0;
-  _$jscoverage['jquery.smartclient.js'][417] = 0;
-  _$jscoverage['jquery.smartclient.js'][419] = 0;
-  _$jscoverage['jquery.smartclient.js'][420] = 0;
+  _$jscoverage['jquery.smartclient.js'][415] = 0;
+  _$jscoverage['jquery.smartclient.js'][418] = 0;
+  _$jscoverage['jquery.smartclient.js'][421] = 0;
   _$jscoverage['jquery.smartclient.js'][423] = 0;
-  _$jscoverage['jquery.smartclient.js'][426] = 0;
-  _$jscoverage['jquery.smartclient.js'][428] = 0;
-  _$jscoverage['jquery.smartclient.js'][438] = 0;
+  _$jscoverage['jquery.smartclient.js'][433] = 0;
+  _$jscoverage['jquery.smartclient.js'][434] = 0;
+  _$jscoverage['jquery.smartclient.js'][435] = 0;
+  _$jscoverage['jquery.smartclient.js'][437] = 0;
   _$jscoverage['jquery.smartclient.js'][439] = 0;
-  _$jscoverage['jquery.smartclient.js'][440] = 0;
-  _$jscoverage['jquery.smartclient.js'][442] = 0;
-  _$jscoverage['jquery.smartclient.js'][444] = 0;
-  _$jscoverage['jquery.smartclient.js'][446] = 0;
-  _$jscoverage['jquery.smartclient.js'][452] = 0;
-  _$jscoverage['jquery.smartclient.js'][453] = 0;
-  _$jscoverage['jquery.smartclient.js'][456] = 0;
-  _$jscoverage['jquery.smartclient.js'][462] = 0;
+  _$jscoverage['jquery.smartclient.js'][441] = 0;
+  _$jscoverage['jquery.smartclient.js'][447] = 0;
+  _$jscoverage['jquery.smartclient.js'][448] = 0;
+  _$jscoverage['jquery.smartclient.js'][451] = 0;
+  _$jscoverage['jquery.smartclient.js'][457] = 0;
+  _$jscoverage['jquery.smartclient.js'][458] = 0;
+  _$jscoverage['jquery.smartclient.js'][460] = 0;
+  _$jscoverage['jquery.smartclient.js'][461] = 0;
+  _$jscoverage['jquery.smartclient.js'][463] = 0;
+  _$jscoverage['jquery.smartclient.js'][464] = 0;
   _$jscoverage['jquery.smartclient.js'][465] = 0;
-  _$jscoverage['jquery.smartclient.js'][466] = 0;
-  _$jscoverage['jquery.smartclient.js'][468] = 0;
-  _$jscoverage['jquery.smartclient.js'][469] = 0;
-  _$jscoverage['jquery.smartclient.js'][471] = 0;
-  _$jscoverage['jquery.smartclient.js'][472] = 0;
-  _$jscoverage['jquery.smartclient.js'][473] = 0;
+  _$jscoverage['jquery.smartclient.js'][478] = 0;
+  _$jscoverage['jquery.smartclient.js'][479] = 0;
+  _$jscoverage['jquery.smartclient.js'][481] = 0;
+  _$jscoverage['jquery.smartclient.js'][485] = 0;
   _$jscoverage['jquery.smartclient.js'][486] = 0;
-  _$jscoverage['jquery.smartclient.js'][487] = 0;
   _$jscoverage['jquery.smartclient.js'][489] = 0;
-  _$jscoverage['jquery.smartclient.js'][491] = 0;
-  _$jscoverage['jquery.smartclient.js'][493] = 0;
-  _$jscoverage['jquery.smartclient.js'][494] = 0;
-  _$jscoverage['jquery.smartclient.js'][497] = 0;
-  _$jscoverage['jquery.smartclient.js'][498] = 0;
+  _$jscoverage['jquery.smartclient.js'][490] = 0;
+  _$jscoverage['jquery.smartclient.js'][505] = 0;
+  _$jscoverage['jquery.smartclient.js'][506] = 0;
+  _$jscoverage['jquery.smartclient.js'][508] = 0;
+  _$jscoverage['jquery.smartclient.js'][509] = 0;
+  _$jscoverage['jquery.smartclient.js'][510] = 0;
   _$jscoverage['jquery.smartclient.js'][513] = 0;
   _$jscoverage['jquery.smartclient.js'][514] = 0;
-  _$jscoverage['jquery.smartclient.js'][516] = 0;
   _$jscoverage['jquery.smartclient.js'][517] = 0;
-  _$jscoverage['jquery.smartclient.js'][518] = 0;
   _$jscoverage['jquery.smartclient.js'][521] = 0;
   _$jscoverage['jquery.smartclient.js'][522] = 0;
-  _$jscoverage['jquery.smartclient.js'][525] = 0;
-  _$jscoverage['jquery.smartclient.js'][529] = 0;
-  _$jscoverage['jquery.smartclient.js'][530] = 0;
-  _$jscoverage['jquery.smartclient.js'][531] = 0;
-  _$jscoverage['jquery.smartclient.js'][535] = 0;
-  _$jscoverage['jquery.smartclient.js'][540] = 0;
-  _$jscoverage['jquery.smartclient.js'][542] = 0;
-  _$jscoverage['jquery.smartclient.js'][544] = 0;
-  _$jscoverage['jquery.smartclient.js'][546] = 0;
-  _$jscoverage['jquery.smartclient.js'][555] = 0;
-  _$jscoverage['jquery.smartclient.js'][558] = 0;
-  _$jscoverage['jquery.smartclient.js'][562] = 0;
-  _$jscoverage['jquery.smartclient.js'][580] = 0;
+  _$jscoverage['jquery.smartclient.js'][523] = 0;
+  _$jscoverage['jquery.smartclient.js'][527] = 0;
+  _$jscoverage['jquery.smartclient.js'][532] = 0;
+  _$jscoverage['jquery.smartclient.js'][534] = 0;
+  _$jscoverage['jquery.smartclient.js'][536] = 0;
+  _$jscoverage['jquery.smartclient.js'][538] = 0;
+  _$jscoverage['jquery.smartclient.js'][547] = 0;
+  _$jscoverage['jquery.smartclient.js'][550] = 0;
+  _$jscoverage['jquery.smartclient.js'][554] = 0;
+  _$jscoverage['jquery.smartclient.js'][572] = 0;
+  _$jscoverage['jquery.smartclient.js'][574] = 0;
+  _$jscoverage['jquery.smartclient.js'][576] = 0;
+  _$jscoverage['jquery.smartclient.js'][579] = 0;
+  _$jscoverage['jquery.smartclient.js'][582] = 0;
   _$jscoverage['jquery.smartclient.js'][585] = 0;
   _$jscoverage['jquery.smartclient.js'][588] = 0;
+  _$jscoverage['jquery.smartclient.js'][591] = 0;
   _$jscoverage['jquery.smartclient.js'][593] = 0;
-  _$jscoverage['jquery.smartclient.js'][594] = 0;
-  _$jscoverage['jquery.smartclient.js'][598] = 0;
+  _$jscoverage['jquery.smartclient.js'][596] = 0;
+  _$jscoverage['jquery.smartclient.js'][599] = 0;
   _$jscoverage['jquery.smartclient.js'][602] = 0;
   _$jscoverage['jquery.smartclient.js'][605] = 0;
-  _$jscoverage['jquery.smartclient.js'][608] = 0;
-  _$jscoverage['jquery.smartclient.js'][611] = 0;
-  _$jscoverage['jquery.smartclient.js'][612] = 0;
+  _$jscoverage['jquery.smartclient.js'][606] = 0;
+  _$jscoverage['jquery.smartclient.js'][609] = 0;
+  _$jscoverage['jquery.smartclient.js'][613] = 0;
   _$jscoverage['jquery.smartclient.js'][614] = 0;
+  _$jscoverage['jquery.smartclient.js'][615] = 0;
+  _$jscoverage['jquery.smartclient.js'][616] = 0;
   _$jscoverage['jquery.smartclient.js'][617] = 0;
-  _$jscoverage['jquery.smartclient.js'][621] = 0;
-  _$jscoverage['jquery.smartclient.js'][624] = 0;
+  _$jscoverage['jquery.smartclient.js'][618] = 0;
+  _$jscoverage['jquery.smartclient.js'][619] = 0;
+  _$jscoverage['jquery.smartclient.js'][625] = 0;
+  _$jscoverage['jquery.smartclient.js'][626] = 0;
   _$jscoverage['jquery.smartclient.js'][627] = 0;
-  _$jscoverage['jquery.smartclient.js'][630] = 0;
-  _$jscoverage['jquery.smartclient.js'][631] = 0;
+  _$jscoverage['jquery.smartclient.js'][628] = 0;
   _$jscoverage['jquery.smartclient.js'][634] = 0;
-  _$jscoverage['jquery.smartclient.js'][638] = 0;
-  _$jscoverage['jquery.smartclient.js'][639] = 0;
+  _$jscoverage['jquery.smartclient.js'][636] = 0;
   _$jscoverage['jquery.smartclient.js'][640] = 0;
-  _$jscoverage['jquery.smartclient.js'][641] = 0;
-  _$jscoverage['jquery.smartclient.js'][642] = 0;
-  _$jscoverage['jquery.smartclient.js'][643] = 0;
-  _$jscoverage['jquery.smartclient.js'][644] = 0;
+  _$jscoverage['jquery.smartclient.js'][645] = 0;
   _$jscoverage['jquery.smartclient.js'][650] = 0;
   _$jscoverage['jquery.smartclient.js'][651] = 0;
-  _$jscoverage['jquery.smartclient.js'][652] = 0;
-  _$jscoverage['jquery.smartclient.js'][657] = 0;
-  _$jscoverage['jquery.smartclient.js'][659] = 0;
+  _$jscoverage['jquery.smartclient.js'][656] = 0;
+  _$jscoverage['jquery.smartclient.js'][664] = 0;
   _$jscoverage['jquery.smartclient.js'][668] = 0;
-  _$jscoverage['jquery.smartclient.js'][672] = 0;
-  _$jscoverage['jquery.smartclient.js'][673] = 0;
-  _$jscoverage['jquery.smartclient.js'][674] = 0;
-  _$jscoverage['jquery.smartclient.js'][675] = 0;
-  _$jscoverage['jquery.smartclient.js'][676] = 0;
-  _$jscoverage['jquery.smartclient.js'][682] = 0;
-  _$jscoverage['jquery.smartclient.js'][685] = 0;
+  _$jscoverage['jquery.smartclient.js'][669] = 0;
+  _$jscoverage['jquery.smartclient.js'][670] = 0;
+  _$jscoverage['jquery.smartclient.js'][671] = 0;
+  _$jscoverage['jquery.smartclient.js'][677] = 0;
+  _$jscoverage['jquery.smartclient.js'][680] = 0;
 }
-_$jscoverage['jquery.smartclient.js'].source = ["<span class=\"c\">/*  &lt;reference path=\"jquery-vsdoc.js\" /&gt; */</span>","<span class=\"c\">/*  &lt;summary&gt; */</span>","<span class=\"c\">/*  SmartClient  */</span>","<span class=\"c\">/*  &lt;/summary&gt; */</span>","<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>$<span class=\"k\">)</span> <span class=\"k\">{</span>","    <span class=\"s\">\"use strict\"</span><span class=\"k\">;</span>","","    <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">    Extend jQuery with SmarClient </span>","<span class=\"c\">    ***************************************************************************************************/</span>","    $<span class=\"k\">.</span>fn<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">{</span>","","        hasControl<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>bool<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> arguments<span class=\"k\">.</span>length <span class=\"k\">?</span> <span class=\"k\">this</span><span class=\"k\">.</span>data<span class=\"k\">(</span><span class=\"s\">'control'</span><span class=\"k\">,</span> bool<span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"k\">this</span><span class=\"k\">.</span>data<span class=\"k\">(</span><span class=\"s\">'control'</span><span class=\"k\">);</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        attrUp<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>name<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>length <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>attr<span class=\"k\">(</span>name<span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"k\">this</span><span class=\"k\">.</span>parent<span class=\"k\">().</span>attrUp<span class=\"k\">(</span>name<span class=\"k\">);</span>","            <span class=\"k\">}</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        outerHtml<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>html<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> html <span class=\"k\">?</span> <span class=\"k\">this</span><span class=\"k\">.</span>before<span class=\"k\">(</span>html<span class=\"k\">).</span>remove<span class=\"k\">()</span> <span class=\"k\">:</span> $<span class=\"k\">(</span><span class=\"s\">\"&lt;p&gt;\"</span><span class=\"k\">).</span>append<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>eq<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">).</span>clone<span class=\"k\">()).</span>html<span class=\"k\">();</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","        render<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>data<span class=\"k\">,</span> options<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">throw</span> <span class=\"k\">new</span> Error<span class=\"k\">(</span><span class=\"s\">\"Zero element selected!\"</span><span class=\"k\">);</span> <span class=\"k\">}</span>","","            options <span class=\"k\">=</span> $<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> options<span class=\"k\">);</span>","","            <span class=\"c\">/*  Introduce the data as local variables using with(){} */</span>","            <span class=\"k\">var</span> html <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">,</span>","                script <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">,</span>","                fn<span class=\"k\">,</span>","                template <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>html<span class=\"k\">();</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;lt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&lt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"%3C\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&lt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;gt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&gt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"%3E\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&gt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;quot;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">'\"'</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"&lt;!--\"</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"--&gt;\"</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/'/g</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">'\"</span><span class=\"k\">);</span>","","            <span class=\"c\">/* template = template.replace(/'(?=[^$]*$&gt;)/g, \"\\t\"); */</span>","            <span class=\"c\">/* template = template.split(\"\\t\").join(\"'\"); */</span>","","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/&lt;\\$=(.+?)\\$&gt;/g</span><span class=\"k\">,</span> <span class=\"s\">\"',$1,'\"</span><span class=\"k\">);</span>","","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&lt;$\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"');\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"$&gt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"p.push('\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/[\\r\\t\\n]/g</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","","","            <span class=\"c\">/*  Convert the template into pure JavaScript */</span>","            script <span class=\"k\">=</span> <span class=\"s\">\"var p=[], dataItem = dataItem || []; with(dataItem){ p.push('\"</span> <span class=\"k\">+</span> template <span class=\"k\">+</span> <span class=\"s\">\"');} return p.join('');\"</span><span class=\"k\">;</span>","","            <span class=\"k\">try</span> <span class=\"k\">{</span>","                $<span class=\"k\">.</span>cache <span class=\"k\">=</span> $<span class=\"k\">.</span>cache <span class=\"k\">||</span> <span class=\"k\">{}</span><span class=\"k\">;</span>","                <span class=\"c\">/*  Generate a reusable function that will serve as a template */</span>","                <span class=\"c\">/*  generator (and which will be cached). */</span>","                <span class=\"c\">/* var fn = !/\\W/.test(this.id) ? cache[this.id] = (cache[this.id] || $(this).template()) : */</span>","                fn <span class=\"k\">=</span> $<span class=\"k\">.</span>cache<span class=\"k\">[</span>template<span class=\"k\">];</span>","                <span class=\"k\">if</span> <span class=\"k\">(!</span>fn<span class=\"k\">)</span> <span class=\"k\">{</span>","                    fn <span class=\"k\">=</span> $<span class=\"k\">.</span>cache<span class=\"k\">[</span>template<span class=\"k\">]</span> <span class=\"k\">=</span> <span class=\"k\">new</span> Function<span class=\"k\">(</span><span class=\"s\">\"index\"</span><span class=\"k\">,</span> <span class=\"s\">\"dataItem\"</span><span class=\"k\">,</span> script<span class=\"k\">);</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(!</span>$<span class=\"k\">.</span>isArray<span class=\"k\">(</span>data<span class=\"k\">))</span> <span class=\"k\">{</span>","                    html <span class=\"k\">+=</span> fn<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">,</span> data<span class=\"k\">);</span>","                <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> data<span class=\"k\">.</span>length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span>","                        html <span class=\"k\">+=</span> fn<span class=\"k\">(</span>i<span class=\"k\">,</span> data<span class=\"k\">[</span>i<span class=\"k\">]);</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","            <span class=\"k\">}</span> <span class=\"k\">catch</span> <span class=\"k\">(</span>err<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"c\">//#JSCOVERAGE_IF  false</span>","                <span class=\"c\">/* $(\"&lt;pre class='error' /&gt;\").text(\"The template is mal-formed, because \" + err + \"\\n\\n\" + script).appendTo(\"body\"); */</span>","                Exception<span class=\"k\">(</span><span class=\"s\">\"The template is mal-formed, because \"</span> <span class=\"k\">+</span> err <span class=\"k\">+</span> <span class=\"s\">\"</span><span class=\"t\">\\n\\n</span><span class=\"s\">\"</span> <span class=\"k\">+</span> script<span class=\"k\">);</span>","                <span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","            <span class=\"k\">}</span>","","","            <span class=\"c\">/*  Provide some basic currying to the user */</span>","            <span class=\"c\">/* var html = fn(data); */</span>","            <span class=\"c\">/* this.html(html); */</span>","            <span class=\"k\">return</span> data <span class=\"k\">?</span> html <span class=\"k\">:</span> fn<span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        ajaxIframe<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>url<span class=\"k\">,</span> ctrl<span class=\"k\">,</span> onsucess<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> iframe <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">);</span>","","            <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                iframe <span class=\"k\">=</span> $<span class=\"k\">(</span>document<span class=\"k\">.</span>body<span class=\"k\">).</span>prepend<span class=\"k\">(</span><span class=\"s\">\"&lt;IFRAME id=</span><span class=\"t\">\\\"</span><span class=\"s\">ajaxIFrame</span><span class=\"t\">\\\"</span><span class=\"s\">&gt;\"</span><span class=\"k\">).</span>find<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">);</span>","            <span class=\"k\">}</span>","","            iframe<span class=\"k\">.</span>unbind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">).</span>bind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> html <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"s\">\"body\"</span><span class=\"k\">,</span> iframe<span class=\"k\">.</span>contents<span class=\"k\">()).</span>html<span class=\"k\">();</span>","                <span class=\"c\">/* ctrl.attachHtmlInTarget(html); */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>onsucess<span class=\"k\">)</span>","                    onsucess<span class=\"k\">(</span>html<span class=\"k\">,</span> <span class=\"s\">\"notmodified\"</span><span class=\"k\">,</span> <span class=\"k\">null</span><span class=\"k\">);</span>","                iframe<span class=\"k\">.</span>unbind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","            iframe<span class=\"k\">.</span>hide<span class=\"k\">().</span>attr<span class=\"k\">(</span><span class=\"s\">\"src\"</span><span class=\"k\">,</span> url<span class=\"k\">);</span>","","        <span class=\"k\">}</span><span class=\"k\">,</span>","        warnCapsLockIsOn<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>callback<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">this</span><span class=\"k\">.</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"k\">var</span> myKeyCode <span class=\"k\">=</span> e<span class=\"k\">.</span>keyCode <span class=\"k\">||</span> e<span class=\"k\">.</span>which<span class=\"k\">;</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>e<span class=\"k\">.</span>shiftKey<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"c\">/*  Lower case letters are seen while depressing the Shift key, therefore Caps Lock is on */</span>","                    <span class=\"k\">if</span> <span class=\"k\">((</span>myKeyCode <span class=\"k\">&gt;=</span> <span class=\"s\">97</span> <span class=\"k\">&amp;&amp;</span> myKeyCode <span class=\"k\">&lt;=</span> <span class=\"s\">122</span><span class=\"k\">))</span> <span class=\"k\">{</span> callback<span class=\"k\">();</span> <span class=\"k\">}</span>","                <span class=\"k\">}</span>","                <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"c\">/*  Upper case letters are seen without depressing the Shift key, therefore Caps Lock is on */</span>","                    <span class=\"k\">if</span> <span class=\"k\">((</span>myKeyCode <span class=\"k\">&gt;=</span> <span class=\"s\">65</span> <span class=\"k\">&amp;&amp;</span> myKeyCode <span class=\"k\">&lt;=</span> <span class=\"s\">90</span><span class=\"k\">))</span> <span class=\"k\">{</span> callback<span class=\"k\">();</span> <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","            <span class=\"k\">}</span><span class=\"k\">);</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        smart<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> $this <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">[</span><span class=\"s\">0</span><span class=\"k\">]);</span>","            <span class=\"k\">if</span> <span class=\"k\">(!</span><span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"k\">var</span> smartJson <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"smart\"</span><span class=\"k\">);</span>","            ","                <span class=\"k\">this</span><span class=\"k\">.</span>_smart <span class=\"k\">=</span> $<span class=\"k\">.</span>fromJSON<span class=\"k\">(</span> smartJson <span class=\"k\">);</span>","","                <span class=\"k\">var</span> events <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span>","                <span class=\"k\">var</span> errors <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> event <span class=\"k\">in</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">var</span> obj <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">[</span>event<span class=\"k\">];</span>","                    events<span class=\"k\">++;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>show <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">(</span>obj<span class=\"k\">.</span>show<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute SHOW (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>show <span class=\"k\">+</span> <span class=\"s\">\") don&#180;t exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>hide <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">(</span>obj<span class=\"k\">.</span>hide<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute HIDE (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>hide <span class=\"k\">+</span> <span class=\"s\">\") don&#180;t exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onbinding <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onbinding<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onbinding don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onrequest <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onrequest<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onrequest don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onresponse <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onresponse<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onresponse don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onsucess <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onsucess<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onsucess don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onerror <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onerror<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onerror don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onbounded <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onbounded<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onbounded don&#180;t is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>once <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>once<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"boolean\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute ONCE is not a valid boolean!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>method <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>method<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute METHOD is not a valid boolean!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>target <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>target<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>target<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute TARGET (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>target <span class=\"k\">+</span> <span class=\"s\">\") don&#180;t exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>template <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>template<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>template<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute TEMPLATE (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>template <span class=\"k\">+</span> <span class=\"s\">\") don&#180;t exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>emptytemplate <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>emptytemplate<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute EMPTYTEMPLATE (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>emptytemplate <span class=\"k\">+</span> <span class=\"s\">\") don&#180;t exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","                        ","                        obj<span class=\"k\">.</span>source <span class=\"k\">=</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>source <span class=\"k\">||</span> <span class=\"k\">this</span><span class=\"k\">.</span>attrUp<span class=\"k\">(</span><span class=\"s\">\"href\"</span><span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">).</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span>","                        <span class=\"k\">var</span> candidate <span class=\"k\">=</span> obj<span class=\"k\">.</span>source<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/javascript(.*)/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>source <span class=\"k\">&amp;&amp;</span> obj<span class=\"k\">.</span>source <span class=\"k\">!==</span> candidate<span class=\"k\">)</span><span class=\"k\">{</span>","                        obj<span class=\"k\">.</span>source <span class=\"k\">=</span> candidate<span class=\"k\">;</span>","                        <span class=\"k\">}</span>","","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>events <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                    errors <span class=\"k\">+=</span> <span class=\"s\">\"Don&#180;t exists event configured!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","                <span class=\"k\">}</span>","                ","                ","                <span class=\"k\">if</span> <span class=\"k\">(</span>errors <span class=\"k\">!==</span> <span class=\"s\">\"\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"c\">//#JSCOVERAGE_IF false</span>","                    Exception<span class=\"k\">(</span>errors<span class=\"k\">);</span>","                    <span class=\"c\">//#JSCOVERAGE_ENDIF </span>","                <span class=\"k\">}</span>","                 ","","            <span class=\"k\">}</span>","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","","","        dataBind<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> <span class=\"k\">this</span><span class=\"k\">.</span>length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $this <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">[</span>i<span class=\"k\">]);</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>event<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $this<span class=\"k\">.</span>_dataBind<span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">);</span>","                <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> eventType <span class=\"k\">in</span> $this<span class=\"k\">.</span>smart<span class=\"k\">())</span> <span class=\"k\">{</span>","                        $this<span class=\"k\">.</span>_dataBind<span class=\"k\">(</span>options<span class=\"k\">,</span> jQuery<span class=\"k\">.</span>Event<span class=\"k\">(</span>eventType<span class=\"k\">));</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        <span class=\"c\">/* End DataBind*/</span>","","        _dataBind<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">)</span> <span class=\"k\">{</span>","","            <span class=\"k\">var</span> $this <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">;</span>","            <span class=\"k\">var</span> smart <span class=\"k\">=</span> $this<span class=\"k\">.</span>smart<span class=\"k\">();</span>","","            <span class=\"c\">/*  Get configuration for event or first configuration possible */</span>","            <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> key <span class=\"k\">in</span> smart<span class=\"k\">)</span> <span class=\"k\">{</span> smart <span class=\"k\">=</span> smart<span class=\"k\">[</span>key<span class=\"k\">];</span> <span class=\"k\">}</span>","","            smart <span class=\"k\">=</span> $this<span class=\"k\">.</span>smart<span class=\"k\">()[</span>event<span class=\"k\">.</span>type<span class=\"k\">]</span> <span class=\"k\">||</span> smart<span class=\"k\">;</span>","","            <span class=\"c\">/*  Check whether keyDown, keyPress, keyUp event fires in a specific key */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>event<span class=\"k\">.</span>type<span class=\"k\">.</span>indexOf<span class=\"k\">(</span><span class=\"s\">\"key\"</span><span class=\"k\">)</span> <span class=\"k\">&gt;=</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>event<span class=\"k\">.</span>keyCode <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>smart<span class=\"k\">[</span>event<span class=\"k\">.</span>keyCode<span class=\"k\">])</span>","                    smart <span class=\"k\">=</span> smart<span class=\"k\">[</span>event<span class=\"k\">.</span>keyCode<span class=\"k\">];</span>","            <span class=\"k\">}</span>","","            <span class=\"c\">/*  Add a {} as first parameter because otherwise override smart variable */</span>","            <span class=\"c\">/*  The order are true, {}, options, smart to copy the properties of the smart to options */</span>","            options <span class=\"k\">=</span> $<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">,</span> <span class=\"k\">{}</span><span class=\"k\">,</span> smart<span class=\"k\">,</span> options<span class=\"k\">);</span>","","            <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbinding<span class=\"k\">)</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbinding<span class=\"k\">.</span>apply<span class=\"k\">(</span>$this<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"k\">false</span><span class=\"k\">)</span> <span class=\"c\">/*  case undefined or true the code continues */</span>","                <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","","","            <span class=\"c\">/* Exists only for tests */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> options<span class=\"k\">.</span>responseBody <span class=\"k\">||</span> options<span class=\"k\">.</span>defaultResponseBody<span class=\"k\">)</span>","                options<span class=\"k\">.</span>dataSource <span class=\"k\">=</span> options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> options<span class=\"k\">.</span>responseBody <span class=\"k\">||</span> options<span class=\"k\">.</span>defaultResponseBody<span class=\"k\">;</span>","                        ","            <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>source<span class=\"k\">)</span> <span class=\"c\">/*  Only fires ajax if there are url */</span>","            <span class=\"k\">{</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>window<span class=\"k\">.</span>applicationPath<span class=\"k\">)</span> <span class=\"k\">{</span> window<span class=\"k\">.</span>applicationPath <span class=\"k\">=</span> window<span class=\"k\">.</span>applicationPath<span class=\"k\">.</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span> <span class=\"k\">}</span>","                options<span class=\"k\">.</span>source <span class=\"k\">=</span> options<span class=\"k\">.</span>source<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"~\"</span><span class=\"k\">,</span> window<span class=\"k\">.</span>applicationPath<span class=\"k\">);</span>","","","                options<span class=\"k\">.</span>method <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">[</span><span class=\"s\">0</span><span class=\"k\">].</span>tagName <span class=\"k\">===</span> <span class=\"s\">\"A\"</span> <span class=\"k\">?</span> <span class=\"s\">\"GET\"</span> <span class=\"k\">:</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>method <span class=\"k\">||</span> <span class=\"s\">\"POST\"</span><span class=\"k\">);</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onrequest<span class=\"k\">)</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onrequest<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"k\">false</span><span class=\"k\">)</span> <span class=\"c\">/*  case undefined or true the code continues */</span>","                    <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","","                $<span class=\"k\">.</span>ajax<span class=\"k\">(</span><span class=\"k\">{</span>","                    type<span class=\"k\">:</span> options<span class=\"k\">.</span>method<span class=\"k\">,</span>","                    url<span class=\"k\">:</span> options<span class=\"k\">.</span>source<span class=\"k\">,</span>","                    data<span class=\"k\">:</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>method <span class=\"k\">!==</span> <span class=\"s\">\"GET\"</span> <span class=\"k\">?</span> $<span class=\"k\">.</span>toJSON<span class=\"k\">(</span>options<span class=\"k\">.</span>sourceparams <span class=\"k\">||</span> <span class=\"k\">{}</span><span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"k\">null</span><span class=\"k\">),</span>","                    contentType<span class=\"k\">:</span> <span class=\"s\">\"application/json\"</span><span class=\"k\">,</span>","                    ifModified<span class=\"k\">:</span> <span class=\"k\">true</span><span class=\"k\">,</span>","                    success<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">)</span> <span class=\"k\">{</span>","","                        <span class=\"c\">/*  If Not Modified then get cached content file by iframe */</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>request <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>request<span class=\"k\">.</span>status <span class=\"k\">===</span> <span class=\"s\">304</span> <span class=\"k\">||</span> status <span class=\"k\">===</span> <span class=\"s\">\"notmodified\"</span><span class=\"k\">))</span> <span class=\"k\">{</span>","                            $this<span class=\"k\">.</span>ajaxIframe<span class=\"k\">(</span>options<span class=\"k\">.</span>url<span class=\"k\">,</span> $this<span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">.</span>success<span class=\"k\">);</span>","                        <span class=\"k\">}</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onresponse<span class=\"k\">)</span>","                            dataSource <span class=\"k\">=</span> options<span class=\"k\">.</span>onresponse<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        <span class=\"c\">/*  If Http Status 200 then OK, process JSON because data should be transform on html */</span>","                        options<span class=\"k\">.</span>dataSource <span class=\"k\">=</span> dataSource<span class=\"k\">;</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onsucess<span class=\"k\">)</span>","                            options<span class=\"k\">.</span>onsucess<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","","                    <span class=\"k\">}</span><span class=\"k\">,</span>","                    error<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>request<span class=\"k\">,</span> textStatus<span class=\"k\">,</span> errorThrown<span class=\"k\">)</span> <span class=\"k\">{</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onerror<span class=\"k\">)</span>","                            options<span class=\"k\">.</span>onerror<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> request<span class=\"k\">,</span> textStatus<span class=\"k\">,</span> errorThrown<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>request<span class=\"k\">.</span>status <span class=\"k\">===</span> <span class=\"s\">\"404\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            <span class=\"c\">//#JSCOVERAGE_IF false</span>","                            PageNotFoundException<span class=\"k\">(</span>options<span class=\"k\">.</span>url<span class=\"k\">);</span>","                            <span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","                        <span class=\"k\">}</span>","                    <span class=\"k\">}</span><span class=\"k\">,</span>","                    complete<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                        <span class=\"c\">/*  Retirada a fun&#231;&#227;o fireActions deste evento pois o sucess &#233; passado  */</span>","                        <span class=\"c\">/*  como argumento da fun&#231;&#227;o ajaxIframe */</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","            <span class=\"k\">}</span>","","","            <span class=\"k\">function</span> fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">,</span> mode<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"c\">/*  Get target tag */</span>","                options<span class=\"k\">.</span>target <span class=\"k\">=</span> options<span class=\"k\">.</span>target <span class=\"k\">||</span> $this<span class=\"k\">;</span>","","                <span class=\"c\">/*  options.template indicates um HTML to be transformed or a content  */</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>template <span class=\"k\">||</span> <span class=\"k\">!!</span>options<span class=\"k\">.</span>source <span class=\"k\">||</span> <span class=\"k\">!!</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">{</span>","","                    <span class=\"k\">var</span> html <span class=\"k\">=</span> options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>template<span class=\"k\">).</span>html<span class=\"k\">()</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>html<span class=\"k\">.</span>length <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">(</span>smart<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                        html <span class=\"k\">=</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>html<span class=\"k\">();</span>","","                    <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"object\"</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"array\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                        <span class=\"k\">var</span> $template <span class=\"k\">=</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>template<span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>template <span class=\"k\">&amp;&amp;</span> $template<span class=\"k\">.</span>size<span class=\"k\">()</span> <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            html <span class=\"k\">=</span> $template<span class=\"k\">.</span>render<span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">,</span> options<span class=\"k\">);</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                            html <span class=\"k\">=</span> $this<span class=\"k\">.</span>render<span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">,</span> options<span class=\"k\">);</span>","                        <span class=\"k\">}</span>","","                    <span class=\"k\">}</span>","","","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                        <span class=\"c\">//#JSCOVERAGE_IF false</span>","                        TargetMissingException<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">);</span>","                        <span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","                    <span class=\"k\">}</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>mode <span class=\"k\">===</span> <span class=\"s\">\"after\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>after<span class=\"k\">(</span>html<span class=\"k\">);</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>parent<span class=\"k\">().</span>initializeControls<span class=\"k\">();</span>","                    <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>hide<span class=\"k\">().</span>html<span class=\"k\">(</span>html<span class=\"k\">).</span>initializeControls<span class=\"k\">().</span>fadeIn<span class=\"k\">(</span>options<span class=\"k\">.</span>speed <span class=\"k\">||</span> <span class=\"s\">\"slow\"</span><span class=\"k\">);</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>once<span class=\"k\">)</span>","                    $this<span class=\"k\">.</span>unbind<span class=\"k\">(</span>event<span class=\"k\">.</span>type<span class=\"k\">);</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>hide<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>speed<span class=\"k\">)</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>hide<span class=\"k\">).</span>hide<span class=\"k\">(</span>options<span class=\"k\">.</span>speed <span class=\"k\">||</span> <span class=\"s\">\"slow\"</span><span class=\"k\">);</span>","                    <span class=\"k\">else</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>hide<span class=\"k\">).</span>hide<span class=\"k\">();</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>show<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>speed<span class=\"k\">)</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>show<span class=\"k\">).</span>show<span class=\"k\">(</span>options<span class=\"k\">.</span>speed <span class=\"k\">||</span> <span class=\"s\">\"slow\"</span><span class=\"k\">);</span>","                    <span class=\"k\">else</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>show<span class=\"k\">).</span>show<span class=\"k\">();</span>","                <span class=\"k\">}</span>","","                ","                <span class=\"c\">/*  If exists options that are jQuery methods then executes them */</span>                ","                <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> key <span class=\"k\">in</span> options<span class=\"k\">)</span> <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">.</span>fn<span class=\"k\">[</span>key<span class=\"k\">]</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>options<span class=\"k\">[</span>key<span class=\"k\">])</span> <span class=\"k\">{</span>","                    <span class=\"k\">var</span> $func <span class=\"k\">=</span> $<span class=\"k\">.</span>fn<span class=\"k\">[</span>key<span class=\"k\">],</span>","                        value <span class=\"k\">=</span> options<span class=\"k\">[</span>key<span class=\"k\">];</span>","                    <span class=\"k\">if</span><span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"string\"</span> <span class=\"k\">&amp;&amp;</span> key<span class=\"k\">!==</span> <span class=\"s\">\"trigger\"</span><span class=\"k\">)</span><span class=\"k\">{</span>                        ","                        $<span class=\"k\">(</span>value<span class=\"k\">)[</span>key<span class=\"k\">]();</span>","                    <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">[</span>key<span class=\"k\">].</span>shift<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span><span class=\"k\">{</span>          ","                        $func<span class=\"k\">.</span>apply<span class=\"k\">(</span>$<span class=\"k\">(</span>value<span class=\"k\">.</span>shift<span class=\"k\">()),</span> value<span class=\"k\">);</span>","                    <span class=\"k\">}</span>                    ","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbounded<span class=\"k\">)</span>","                    options<span class=\"k\">.</span>onbounded<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                <span class=\"c\">/*  Allow fire DataBinding in controls that has TRIGGER atribute */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>trigger<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $<span class=\"k\">(</span>options<span class=\"k\">.</span>trigger<span class=\"k\">).</span>dataBind<span class=\"k\">(</span><span class=\"k\">{</span> sourceparams<span class=\"k\">:</span> smart<span class=\"k\">.</span>sourceparams <span class=\"k\">}</span><span class=\"k\">,</span> event<span class=\"k\">);</span>","                    <span class=\"k\">return</span><span class=\"k\">;</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","        <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">        Live controls, this allow load html with plugins and load it dynamically</span>","<span class=\"c\">        ***************************************************************************************************/</span>","","        initializeControls<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","","            $<span class=\"k\">(</span><span class=\"s\">\"[smart]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $ctrl <span class=\"k\">=</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">);</span>","                <span class=\"k\">if</span> <span class=\"k\">(!</span>$ctrl<span class=\"k\">.</span>hasControl<span class=\"k\">())</span> <span class=\"k\">{</span>","                    $ctrl<span class=\"k\">.</span>hasControl<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">);</span>","","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> eventType <span class=\"k\">in</span> $ctrl<span class=\"k\">.</span>smart<span class=\"k\">())</span> <span class=\"k\">{</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>eventType <span class=\"k\">===</span> <span class=\"s\">\"load\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            $ctrl<span class=\"k\">.</span>dataBind<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> jQuery<span class=\"k\">.</span>Event<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">));</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                            $ctrl<span class=\"k\">.</span>bind<span class=\"k\">(</span>eventType<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>event<span class=\"k\">)</span> <span class=\"k\">{</span>","                                $ctrl<span class=\"k\">.</span>dataBind<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> event<span class=\"k\">);</span>","                                <span class=\"k\">if</span> <span class=\"k\">(</span>ctrl<span class=\"k\">.</span>tagName <span class=\"k\">===</span> <span class=\"s\">\"A\"</span><span class=\"k\">)</span>","                                    event<span class=\"k\">.</span>preventDefault<span class=\"k\">();</span>","                            <span class=\"k\">}</span><span class=\"k\">);</span>","                        <span class=\"k\">}</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","","            $<span class=\"k\">(</span><span class=\"s\">\"[plugin]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> it <span class=\"k\">=</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">);</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>it<span class=\"k\">.</span>hasControl<span class=\"k\">())</span> <span class=\"k\">return</span><span class=\"k\">;</span>","                it<span class=\"k\">.</span>hasControl<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">);</span>","","                <span class=\"k\">var</span> plugin <span class=\"k\">=</span> it<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"plugin\"</span><span class=\"k\">);</span>","                <span class=\"k\">var</span> options <span class=\"k\">=</span> eval<span class=\"k\">(</span><span class=\"s\">\"(\"</span> <span class=\"k\">+</span> it<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"options\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\")\"</span><span class=\"k\">);</span>","","                <span class=\"k\">if</span> <span class=\"k\">(!</span>it<span class=\"k\">[</span>plugin<span class=\"k\">])</span> <span class=\"k\">{</span>","                    alert<span class=\"k\">(</span><span class=\"s\">\"The plugin </span><span class=\"t\">\\\"</span><span class=\"s\">\"</span> <span class=\"k\">+</span> plugin <span class=\"k\">+</span> <span class=\"s\">\"</span><span class=\"t\">\\\"</span><span class=\"s\"> don&#180;t loaded!\"</span><span class=\"k\">);</span>","                <span class=\"k\">}</span>","","                it<span class=\"k\">[</span>plugin<span class=\"k\">](</span>options<span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","            <span class=\"k\">this</span><span class=\"k\">.</span>_initializeThemeStyle<span class=\"k\">();</span>","","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","","","        <span class=\"k\">}</span><span class=\"k\">,</span>","","","","<span class=\"c\">// The tests dont cover theming</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","        _initializeThemeStyle<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","            $<span class=\"k\">(</span><span class=\"s\">\":text\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>wrap<span class=\"k\">(</span><span class=\"s\">\"&lt;span class='ui-theme-textbox cDat11' /&gt;\"</span><span class=\"k\">);</span>","            $<span class=\"k\">(</span><span class=\"s\">\":text\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>focusin<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11_focus'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>focusout<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>removeClass<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>mouseenter<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11_hover'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>mouseleave<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>removeClass<span class=\"k\">(</span><span class=\"s\">'cDat11_hover'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>after<span class=\"k\">(</span><span class=\"s\">\"&lt;span /&gt;\"</span><span class=\"k\">);</span>","","            <span class=\"c\">//</span>","            <span class=\"c\">/*  Bot&#245;es */</span>","            <span class=\"c\">//</span>","            $<span class=\"k\">(</span><span class=\"s\">\":submit, :button, :reset\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span>ctrl<span class=\"k\">).</span>wrap<span class=\"k\">(</span><span class=\"s\">\"&lt;span class='ui-theme-button \"</span> <span class=\"k\">+</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">).</span>attr<span class=\"k\">(</span><span class=\"s\">\"class\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\"' /&gt;\"</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>hover<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>addClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>removeClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","            $<span class=\"k\">(</span><span class=\"s\">\":submit, :button, :reset\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>after<span class=\"k\">(</span><span class=\"s\">\"&lt;span /&gt;\"</span><span class=\"k\">);</span>","","","            <span class=\"c\">//</span>","            <span class=\"c\">/*  Grid */</span>","            <span class=\"c\">//</span>","            $<span class=\"k\">(</span><span class=\"s\">\"table[rules=all]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">)</span>","               <span class=\"k\">.</span>addClass<span class=\"k\">(</span><span class=\"s\">\"ui-theme-table\"</span><span class=\"k\">)</span>","               <span class=\"k\">.</span>filter<span class=\"k\">(</span><span class=\"s\">\"tr\"</span><span class=\"k\">)</span>","               <span class=\"k\">.</span>hover<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>addClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">,</span>","                      <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>removeClass<span class=\"k\">();</span> <span class=\"k\">}</span><span class=\"k\">);</span>","","            $<span class=\"k\">(</span><span class=\"s\">\"table[rowselectable=true]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $table <span class=\"k\">=</span> $<span class=\"k\">(</span>elem<span class=\"k\">);</span>","","                $<span class=\"k\">.</span>each<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>rows<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>has<span class=\"k\">(</span><span class=\"s\">\".delete\"</span><span class=\"k\">).</span>click<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                        __doPostBack<span class=\"k\">((</span>$table<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"id\"</span><span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">).</span>replace<span class=\"k\">(</span><span class=\"s\">/\\_/g</span><span class=\"k\">,</span> <span class=\"s\">\"$\"</span><span class=\"k\">),</span> <span class=\"s\">'Select$'</span> <span class=\"k\">+</span> <span class=\"k\">(</span>i <span class=\"k\">-</span> <span class=\"s\">1</span><span class=\"k\">));</span>","                    <span class=\"k\">}</span><span class=\"k\">);</span>","                <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">)</span>","","        <span class=\"k\">}</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF           </span>","","","    <span class=\"k\">}</span><span class=\"k\">);</span> <span class=\"c\">/*  End Initialize Controls */</span>","","<span class=\"c\">// Dont cover errors code</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","    <span class=\"k\">function</span> Exception<span class=\"k\">(</span>msg<span class=\"k\">)</span> <span class=\"k\">{</span>","        msg <span class=\"k\">=</span> <span class=\"s\">\" SmartClient Error:  </span><span class=\"t\">\\n</span><span class=\"s\">\"</span> <span class=\"k\">+</span> msg<span class=\"k\">;</span>","        <span class=\"c\">/* alert(msg); */</span>","        <span class=\"k\">throw</span> <span class=\"k\">new</span> ReferenceError<span class=\"k\">(</span>msg<span class=\"k\">);</span>","        <span class=\"c\">/* console.log(msg); */</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","","    <span class=\"k\">function</span> PageNotFoundException<span class=\"k\">(</span>url<span class=\"k\">)</span> <span class=\"k\">{</span>","        Exception<span class=\"k\">(</span><span class=\"s\">\" A p&#225;gina '\"</span> <span class=\"k\">+</span> url <span class=\"k\">+</span> <span class=\"s\">\"' n&#227;o foi encontrada!\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span>","","    <span class=\"k\">function</span> TargetMissingException<span class=\"k\">(</span>sender<span class=\"k\">)</span> <span class=\"k\">{</span>","        Exception<span class=\"k\">(</span><span class=\"s\">\" N&#227;o foi encontrado o elemento html '\"</span> <span class=\"k\">+</span> sender<span class=\"k\">.</span>attrUp<span class=\"k\">(</span><span class=\"s\">\"target\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\"'! </span><span class=\"t\">\\n\\n</span><span class=\"s\"> Html Trace: \"</span> <span class=\"k\">+</span> sender<span class=\"k\">.</span>outerHtml<span class=\"k\">());</span>","    <span class=\"k\">}</span>","    ","<span class=\"c\">//#JSCOVERAGE_ENDIF    </span>","","","","","    <span class=\"c\">//</span>","    <span class=\"c\">/*  JSON Serializer based by json2.js */</span>","    <span class=\"c\">//</span>","","    <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">    DateTime Extensions</span>","<span class=\"c\">    ***************************************************************************************************/</span>","    String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>JsonToDate <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>culture<span class=\"k\">)</span> <span class=\"k\">{</span>","        <span class=\"k\">var</span> date <span class=\"k\">=</span> <span class=\"k\">null</span><span class=\"k\">;</span>","","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">this</span> <span class=\"k\">!==</span> <span class=\"s\">\"\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> result <span class=\"k\">=</span> <span class=\"k\">new</span> Date<span class=\"k\">(</span>parseFloat<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/(\\/)|\\)|Date\\(/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">)));</span>","            date <span class=\"k\">=</span> <span class=\"k\">new</span> Date<span class=\"k\">(</span>result<span class=\"k\">.</span>valueOf<span class=\"k\">()</span> <span class=\"k\">+</span> result<span class=\"k\">.</span>getTimezoneOffset<span class=\"k\">()</span> <span class=\"k\">*</span> <span class=\"s\">60000</span><span class=\"k\">);</span>","        <span class=\"k\">}</span>","","        <span class=\"k\">if</span> <span class=\"k\">(!!</span>culture <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>$<span class=\"k\">.</span>preferCulture <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>date<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> $<span class=\"k\">.</span>format<span class=\"k\">(</span>date<span class=\"k\">,</span> <span class=\"s\">\"d\"</span><span class=\"k\">,</span> culture<span class=\"k\">);</span>","        <span class=\"k\">}</span>","","        <span class=\"k\">return</span> date<span class=\"k\">;</span>","    <span class=\"k\">}</span>","","","    String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>trimChars <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>left<span class=\"k\">,</span> right<span class=\"k\">)</span> <span class=\"k\">{</span>","        left <span class=\"k\">=</span> left <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","        right <span class=\"k\">=</span> right <span class=\"k\">||</span> left<span class=\"k\">;</span>","","        <span class=\"c\">/*         tmp = tmp.replace(new RegExp(\"^(\" + boundaries + \")\"), \"\"); */</span>","        <span class=\"c\">/*         tmp = tmp.replace(new RegExp(\"(\" + boundaries + \")$\"), \"\"); */</span>","        <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"k\">new</span> RegExp<span class=\"k\">(</span><span class=\"s\">\"^( *\"</span> <span class=\"k\">+</span> left <span class=\"k\">+</span> <span class=\"s\">\" *)(.*)( *\"</span> <span class=\"k\">+</span> right <span class=\"k\">+</span> <span class=\"s\">\" *)$\"</span><span class=\"k\">,</span> <span class=\"s\">\"g\"</span><span class=\"k\">),</span> <span class=\"s\">\"$2\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span>","","<span class=\"c\">// Does not cover the JSON Serializer, it is external plugin</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","    <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> Date<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">!==</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","        Date<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>key<span class=\"k\">)</span> <span class=\"k\">{</span>","","            <span class=\"k\">var</span> f <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>n<span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> n <span class=\"k\">&lt;</span> <span class=\"s\">10</span> <span class=\"k\">?</span> <span class=\"s\">'0'</span> <span class=\"k\">+</span> n <span class=\"k\">:</span> n<span class=\"k\">;</span> <span class=\"k\">}</span>","","            <span class=\"k\">return</span> isFinite<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>valueOf<span class=\"k\">())</span> <span class=\"k\">?</span>","                   <span class=\"k\">this</span><span class=\"k\">.</span>getUTCFullYear<span class=\"k\">()</span> <span class=\"k\">+</span> <span class=\"s\">'-'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCMonth<span class=\"k\">()</span> <span class=\"k\">+</span> <span class=\"s\">1</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'-'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCDate<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">'T'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCHours<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCMinutes<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCSeconds<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">'Z'</span> <span class=\"k\">:</span> <span class=\"k\">null</span><span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">;</span>","","        String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span>","        Number<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span>","        Boolean<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>key<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>valueOf<span class=\"k\">();</span>","        <span class=\"k\">}</span><span class=\"k\">;</span>","    <span class=\"k\">}</span>","","    <span class=\"k\">var</span> cx <span class=\"k\">=</span> <span class=\"s\">/[\\u0000\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g</span><span class=\"k\">,</span>","        escapable <span class=\"k\">=</span> <span class=\"s\">/[\\\\\\\"\\x00-\\x1f\\x7f-\\x9f\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g</span><span class=\"k\">,</span>","        meta <span class=\"k\">=</span> <span class=\"k\">{</span>    <span class=\"c\">/*  table of character substitutions */</span>","            <span class=\"s\">'</span><span class=\"t\">\\b</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">b'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\t</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">t'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\n</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">n'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\f</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">f'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\r</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">r'</span><span class=\"k\">,</span>","            <span class=\"s\">'\"'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">\"'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\\\\\</span><span class=\"s\">'</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        rep<span class=\"k\">;</span>","","","    <span class=\"c\">/*  If the string contains no control characters, no quote characters, and no */</span>","    <span class=\"c\">/*  backslash characters, then we can safely slap some quotes around it. */</span>","    <span class=\"c\">/*  Otherwise we must also replace the offending characters with safe escape */</span>","    <span class=\"c\">/*  sequences. */</span>","    <span class=\"k\">function</span> quote<span class=\"k\">(</span>string<span class=\"k\">)</span> <span class=\"k\">{</span> escapable<span class=\"k\">.</span>lastIndex <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> <span class=\"k\">return</span> escapable<span class=\"k\">.</span>test<span class=\"k\">(</span>string<span class=\"k\">)</span> <span class=\"k\">?</span><span class=\"s\">'\"'</span> <span class=\"k\">+</span> string<span class=\"k\">.</span>replace<span class=\"k\">(</span>escapable<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>a<span class=\"k\">)</span> <span class=\"k\">{</span><span class=\"k\">var</span> c <span class=\"k\">=</span> meta<span class=\"k\">[</span>a<span class=\"k\">];</span><span class=\"k\">return</span> <span class=\"k\">typeof</span> c <span class=\"k\">===</span> <span class=\"s\">'string'</span> <span class=\"k\">?</span> c <span class=\"k\">:</span><span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">u'</span> <span class=\"k\">+</span> <span class=\"k\">(</span><span class=\"s\">'0000'</span> <span class=\"k\">+</span> a<span class=\"k\">.</span>charCodeAt<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">).</span>toString<span class=\"k\">(</span><span class=\"s\">16</span><span class=\"k\">)).</span>slice<span class=\"k\">(-</span><span class=\"s\">4</span><span class=\"k\">);</span><span class=\"k\">}</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'\"'</span> <span class=\"k\">:</span><span class=\"s\">'\"'</span> <span class=\"k\">+</span> string <span class=\"k\">+</span> <span class=\"s\">'\"'</span><span class=\"k\">;</span><span class=\"k\">}</span>","","","   ","","    $<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>value<span class=\"k\">,</span> replacer<span class=\"k\">)</span> <span class=\"k\">{</span>","","        <span class=\"c\">/*  The stringify method takes a value and an optional replacer, and an optional space parameter, and returns a JSON text. The replacer can be a function *//*  that can replace values, or an array of strings that will select the keys. *//*  A default replacer method can be provided. Use of the space parameter can *//*  produce text that is more easily readable. */</span>","        <span class=\"k\">var</span> i<span class=\"k\">;</span>   ","       ","        <span class=\"c\">/*  If there is a replacer, it must be a function or an array. */</span>","        <span class=\"c\">/*  Otherwise, throw an error. */</span>","","        rep <span class=\"k\">=</span> replacer<span class=\"k\">;</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span>replacer <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> replacer <span class=\"k\">!==</span> <span class=\"s\">'function'</span> <span class=\"k\">&amp;&amp;(</span><span class=\"k\">typeof</span> replacer <span class=\"k\">!==</span> <span class=\"s\">'object'</span> <span class=\"k\">||</span><span class=\"k\">typeof</span> replacer<span class=\"k\">.</span>length <span class=\"k\">!==</span> <span class=\"s\">'number'</span><span class=\"k\">))</span> <span class=\"k\">{</span><span class=\"k\">throw</span> <span class=\"k\">new</span> Error<span class=\"k\">(</span><span class=\"s\">'JSON.stringify'</span><span class=\"k\">);</span><span class=\"k\">}</span>","","        <span class=\"c\">/*  Make a fake root object containing our value under the key of ''. */</span>","        <span class=\"c\">/*  Return the result of stringifying the value. */</span>","        <span class=\"k\">var</span> tmp <span class=\"k\">=</span> <span class=\"k\">(</span><span class=\"k\">function</span> <span class=\"k\">(</span>key<span class=\"k\">,</span> holder<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"c\">/*  Produce a string from holder[key]. */</span>","","                <span class=\"k\">var</span> <span class=\"c\">/*  The loop counter. */</span> i<span class=\"k\">,</span> <span class=\"c\">/*  The member key. */</span> k<span class=\"k\">,</span> <span class=\"c\">/*  The member value. */</span> v<span class=\"k\">,</span> length<span class=\"k\">,</span>partial<span class=\"k\">,</span>value <span class=\"k\">=</span> holder<span class=\"k\">[</span>key<span class=\"k\">];</span>","","                <span class=\"c\">/*  If the value has a toJSON method, call it to obtain a replacement value. */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>value <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">'object'</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> value<span class=\"k\">.</span>toJSON <span class=\"k\">===</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span>value <span class=\"k\">=</span> value<span class=\"k\">.</span>toJSON<span class=\"k\">(</span>key<span class=\"k\">);</span><span class=\"k\">}</span>","","                <span class=\"c\">/*  If we were called with a replacer function, then call the replacer to obtain a replacement value. */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> rep <span class=\"k\">===</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span>value <span class=\"k\">=</span> rep<span class=\"k\">.</span>call<span class=\"k\">(</span>holder<span class=\"k\">,</span> key<span class=\"k\">,</span> value<span class=\"k\">);</span><span class=\"k\">}</span>","","                <span class=\"c\">/*  What happens next depends on the value's type. */</span>","                <span class=\"k\">switch</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> value<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">case</span> <span class=\"s\">'string'</span><span class=\"k\">:</span> <span class=\"k\">return</span> quote<span class=\"k\">(</span>value<span class=\"k\">);</span>","                    <span class=\"k\">case</span> <span class=\"s\">'number'</span><span class=\"k\">:</span> <span class=\"c\">/*  JSON numbers must be finite. Encode non-finite numbers as null. */</span>","                        <span class=\"k\">return</span> isFinite<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">?</span> String<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"s\">'null'</span><span class=\"k\">;</span>","                    <span class=\"k\">case</span> <span class=\"s\">'boolean'</span><span class=\"k\">:</span>","                    <span class=\"k\">case</span> <span class=\"s\">'null'</span><span class=\"k\">:</span>","                        <span class=\"k\">return</span> String<span class=\"k\">(</span>value<span class=\"k\">);</span>","                    <span class=\"k\">case</span> <span class=\"s\">'object'</span><span class=\"k\">:</span>","","                        <span class=\"c\">/*  Due to a specification blunder in ECMAScript, typeof null is 'object', so watch out for that case. */</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!</span>value<span class=\"k\">)</span> <span class=\"k\">{</span><span class=\"k\">return</span> <span class=\"s\">'null'</span><span class=\"k\">;</span><span class=\"k\">}</span>","","                        <span class=\"c\">/*  Make an array to hold the partial results of stringifying this object value. */</span>","                        partial <span class=\"k\">=</span> <span class=\"k\">[];</span>","","                        <span class=\"c\">/*  Is the value an array? */</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>Object<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toString<span class=\"k\">.</span>apply<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">'[object Array]'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                            <span class=\"c\">/*  The value is an array. Stringify every element. Use null as a placeholder for non-JSON values. */</span>","                            length <span class=\"k\">=</span> value<span class=\"k\">.</span>length<span class=\"k\">;</span>","                            <span class=\"k\">for</span> <span class=\"k\">(</span>i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span> partial<span class=\"k\">[</span>i<span class=\"k\">]</span> <span class=\"k\">=</span> arguments<span class=\"k\">.</span>callee<span class=\"k\">(</span>i<span class=\"k\">,</span> value<span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">'null'</span><span class=\"k\">;</span> <span class=\"k\">}</span>","","                            <span class=\"c\">/*  Join all of the elements together, separated with commas, and wrap them in brackets. */</span>","                            <span class=\"k\">return</span>  <span class=\"s\">'['</span> <span class=\"k\">+</span> partial<span class=\"k\">.</span>join<span class=\"k\">(</span><span class=\"s\">','</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">']'</span><span class=\"k\">;</span>                    ","                        <span class=\"k\">}</span>","","                        <span class=\"c\">/*  If the replacer is an array, use it to select the members to be stringified. */</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>rep <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> rep <span class=\"k\">===</span> <span class=\"s\">'object'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            length <span class=\"k\">=</span> rep<span class=\"k\">.</span>length<span class=\"k\">;</span>","                            <span class=\"k\">for</span> <span class=\"k\">(</span>i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> length<span class=\"k\">;</span> i <span class=\"k\">+=</span> <span class=\"s\">1</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                                k <span class=\"k\">=</span> rep<span class=\"k\">[</span>i<span class=\"k\">];</span>","                                <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> k <span class=\"k\">===</span> <span class=\"s\">'string'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                                    v <span class=\"k\">=</span> arguments<span class=\"k\">.</span>callee<span class=\"k\">(</span>k<span class=\"k\">,</span> value<span class=\"k\">);</span>","                                    <span class=\"k\">if</span> <span class=\"k\">(</span>v<span class=\"k\">)</span> <span class=\"k\">{</span> partial<span class=\"k\">.</span>push<span class=\"k\">(</span>quote<span class=\"k\">(</span>k<span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span> v<span class=\"k\">);</span> <span class=\"k\">}</span>","                                <span class=\"k\">}</span>","                            <span class=\"k\">}</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","","                            <span class=\"c\">/*  Otherwise, iterate through all of the keys in the object. */</span>","                            <span class=\"k\">for</span> <span class=\"k\">(</span>k <span class=\"k\">in</span> value<span class=\"k\">)</span> <span class=\"k\">if</span> <span class=\"k\">(</span>Object<span class=\"k\">.</span>hasOwnProperty<span class=\"k\">.</span>call<span class=\"k\">(</span>value<span class=\"k\">,</span> k<span class=\"k\">))</span> <span class=\"k\">{</span>","                                v <span class=\"k\">=</span> arguments<span class=\"k\">.</span>callee<span class=\"k\">(</span>k<span class=\"k\">,</span> value<span class=\"k\">);</span>","                                <span class=\"k\">if</span> <span class=\"k\">(</span>v<span class=\"k\">)</span> <span class=\"k\">{</span> partial<span class=\"k\">.</span>push<span class=\"k\">(</span>quote<span class=\"k\">(</span>k<span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span> v<span class=\"k\">);</span> <span class=\"k\">}</span>                        ","                            <span class=\"k\">}</span>","                        <span class=\"k\">}</span>","","                        <span class=\"c\">/*  Join all of the member texts together, separated with commas, and wrap them in braces. */</span>","                        v <span class=\"k\">=</span> <span class=\"s\">'{'</span> <span class=\"k\">+</span> partial<span class=\"k\">.</span>join<span class=\"k\">(</span><span class=\"s\">','</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'}'</span><span class=\"k\">;</span>","          ","                        <span class=\"k\">return</span> v<span class=\"k\">;</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span><span class=\"k\">)(</span><span class=\"s\">''</span><span class=\"k\">,</span> <span class=\"k\">{</span> <span class=\"s\">''</span><span class=\"k\">:</span> value <span class=\"k\">}</span><span class=\"k\">);</span>","","        <span class=\"c\">//</span>","        <span class=\"c\">/*  Para corrigir o problema do JavascriptSerializer que n&#227;o converte o valor */</span>","        <span class=\"c\">/*  /Date(123456789000)/ -&gt; \\/Date(123456789000)\\/ */</span>","        <span class=\"c\">/*  .replace(\"\\/Date\", \"\\\\/Date\") */</span>","        <span class=\"c\">//</span>","        <span class=\"k\">return</span> tmp<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/\\/Date/g</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\\\/</span><span class=\"s\">Date\"</span><span class=\"k\">).</span>replace<span class=\"k\">(</span><span class=\"s\">/\\)(\\/)/g</span><span class=\"k\">,</span> <span class=\"s\">\")</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","","","    $<span class=\"k\">.</span>fromJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>text<span class=\"k\">,</span> reviver<span class=\"k\">)</span> <span class=\"k\">{</span>","        <span class=\"k\">var</span> str <span class=\"k\">=</span> text <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","        str <span class=\"k\">=</span> str<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/([\\n\\r\\t])|(\\u[0-9a-fA-F]{4})/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">);</span> <span class=\"c\">/*  Remove invalid chars by JSON http://www.json.org/ */</span>","                str <span class=\"k\">=</span> str<span class=\"k\">.</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">{\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">}\"</span><span class=\"k\">);</span> <span class=\"c\">/*  Remove braces if exists */</span>","                <span class=\"k\">return</span> eval<span class=\"k\">(</span><span class=\"s\">\"({\"</span> <span class=\"k\">+</span> str <span class=\"k\">+</span> <span class=\"s\">\"})\"</span><span class=\"k\">);</span>                ","    <span class=\"k\">}</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","","","    <span class=\"c\">/*  Inicializa todos os controles da tela. */</span>","    $<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span>document<span class=\"k\">).</span>initializeControls<span class=\"k\">();</span> <span class=\"k\">}</span><span class=\"k\">);</span>","","    <span class=\"c\">/*  Se o globalization for declarado ent&#227;o come&#231;a com pt-BR para facilitar o desenvolvimento */</span>","    $<span class=\"k\">.</span>preferCulture <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">.</span>preferCulture<span class=\"k\">(</span><span class=\"s\">\"pt-BR\"</span><span class=\"k\">);</span>","","<span class=\"k\">}</span><span class=\"k\">)(</span>jQuery<span class=\"k\">);</span>"];
+_$jscoverage['jquery.smartclient.js'].source = ["<span class=\"c\">///  &lt;reference path=\"jquery-vsdoc.js\" /&gt; </span>","<span class=\"c\">///  &lt;summary&gt; </span>","<span class=\"c\">///  SmartClient  </span>","<span class=\"c\">///  &lt;/summary&gt; </span>","<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>$<span class=\"k\">)</span> <span class=\"k\">{</span>","","    <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">    Extend jQuery with SmarClient </span>","<span class=\"c\">    ***************************************************************************************************/</span>","    $<span class=\"k\">.</span>fn<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">{</span>","","        hasControl<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>bool<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> arguments<span class=\"k\">.</span>length <span class=\"k\">?</span> <span class=\"k\">this</span><span class=\"k\">.</span>data<span class=\"k\">(</span><span class=\"s\">'control'</span><span class=\"k\">,</span> bool<span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"k\">this</span><span class=\"k\">.</span>data<span class=\"k\">(</span><span class=\"s\">'control'</span><span class=\"k\">);</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        attrUp<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>name<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>length <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>attr<span class=\"k\">(</span>name<span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"k\">this</span><span class=\"k\">.</span>parent<span class=\"k\">().</span>attrUp<span class=\"k\">(</span>name<span class=\"k\">);</span>","            <span class=\"k\">}</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        outerHtml<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>html<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> html <span class=\"k\">?</span> <span class=\"k\">this</span><span class=\"k\">.</span>before<span class=\"k\">(</span>html<span class=\"k\">).</span>remove<span class=\"k\">()</span> <span class=\"k\">:</span> $<span class=\"k\">(</span><span class=\"s\">\"&lt;p&gt;\"</span><span class=\"k\">).</span>append<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>eq<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">).</span>clone<span class=\"k\">()).</span>html<span class=\"k\">();</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","        render<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>data<span class=\"k\">,</span> options<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">throw</span> <span class=\"k\">new</span> Error<span class=\"k\">(</span><span class=\"s\">\"Zero element selected!\"</span><span class=\"k\">);</span> <span class=\"k\">}</span>","","            options <span class=\"k\">=</span> $<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> options<span class=\"k\">);</span>","","            <span class=\"c\">/*  Introduce the data as local variables using with(){} */</span>","            <span class=\"k\">var</span> html <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">,</span>","                script <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">,</span>","                fn<span class=\"k\">,</span>","                template <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>html<span class=\"k\">();</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;lt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&lt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"%3C\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&lt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;gt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&gt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"%3E\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"&gt;\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&amp;quot;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">'\"'</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"&lt;!--\"</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"--&gt;\"</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/'/g</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">'\"</span><span class=\"k\">);</span>","","            <span class=\"c\">/* template = template.replace(/'(?=[^$]*$&gt;)/g, \"\\t\"); */</span>","            <span class=\"c\">/* template = template.split(\"\\t\").join(\"'\"); */</span>","","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/&lt;\\$=(.+?)\\$&gt;/g</span><span class=\"k\">,</span> <span class=\"s\">\"',$1,'\"</span><span class=\"k\">);</span>","","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"&lt;$\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"');\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>split<span class=\"k\">(</span><span class=\"s\">\"$&gt;\"</span><span class=\"k\">).</span>join<span class=\"k\">(</span><span class=\"s\">\"p.push('\"</span><span class=\"k\">);</span>","            template <span class=\"k\">=</span> template<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/[\\r\\t\\n]/g</span><span class=\"k\">,</span> <span class=\"s\">\" \"</span><span class=\"k\">);</span>","","","            <span class=\"c\">/*  Convert the template into pure JavaScript */</span>","            script <span class=\"k\">=</span> <span class=\"s\">\"var p=[], dataItem = dataItem || []; with(dataItem){ p.push('\"</span> <span class=\"k\">+</span> template <span class=\"k\">+</span> <span class=\"s\">\"');} return p.join('');\"</span><span class=\"k\">;</span>","","            <span class=\"k\">try</span> <span class=\"k\">{</span>","                $<span class=\"k\">.</span>cache <span class=\"k\">=</span> $<span class=\"k\">.</span>cache <span class=\"k\">||</span> <span class=\"k\">{}</span><span class=\"k\">;</span>","                <span class=\"c\">/*  Generate a reusable function that will serve as a template */</span>","                <span class=\"c\">/*  generator (and which will be cached). */</span>","                <span class=\"c\">/* var fn = !/\\W/.test(this.id) ? cache[this.id] = (cache[this.id] || $(this).template()) : */</span>","                fn <span class=\"k\">=</span> $<span class=\"k\">.</span>cache<span class=\"k\">[</span>template<span class=\"k\">];</span>","                <span class=\"k\">if</span> <span class=\"k\">(!</span>fn<span class=\"k\">)</span> <span class=\"k\">{</span>","                    fn <span class=\"k\">=</span> $<span class=\"k\">.</span>cache<span class=\"k\">[</span>template<span class=\"k\">]</span> <span class=\"k\">=</span> <span class=\"k\">new</span> Function<span class=\"k\">(</span><span class=\"s\">\"index\"</span><span class=\"k\">,</span> <span class=\"s\">\"dataItem\"</span><span class=\"k\">,</span> script<span class=\"k\">);</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(!</span>$<span class=\"k\">.</span>isArray<span class=\"k\">(</span>data<span class=\"k\">))</span> <span class=\"k\">{</span>","                    html <span class=\"k\">+=</span> fn<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">,</span> data<span class=\"k\">);</span>","                <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> data<span class=\"k\">.</span>length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span>","                        html <span class=\"k\">+=</span> fn<span class=\"k\">(</span>i<span class=\"k\">,</span> data<span class=\"k\">[</span>i<span class=\"k\">]);</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","            <span class=\"k\">}</span> <span class=\"k\">catch</span> <span class=\"k\">(</span>err<span class=\"k\">)</span> <span class=\"k\">{</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","                <span class=\"c\">// $(\"&lt;pre class='error' /&gt;\").text(\"The template is mal-formed, because \" + err + \"\\n\\n\" + script).appendTo(\"body\"); //</span>","                Exception<span class=\"k\">(</span><span class=\"s\">\"The template is mal-formed, because \"</span> <span class=\"k\">+</span> err <span class=\"k\">+</span> <span class=\"s\">\"</span><span class=\"t\">\\n\\n</span><span class=\"s\">\"</span> <span class=\"k\">+</span> script<span class=\"k\">);</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","            <span class=\"k\">}</span>","","","            <span class=\"c\">/*  Provide some basic currying to the user */</span>","            <span class=\"c\">/* var html = fn(data); */</span>","            <span class=\"c\">/* this.html(html); */</span>","            <span class=\"k\">return</span> data <span class=\"k\">?</span> html <span class=\"k\">:</span> fn<span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        ajaxIframe<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>url<span class=\"k\">,</span> ctrl<span class=\"k\">,</span> onsucess<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> iframe <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">);</span>","","            <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                iframe <span class=\"k\">=</span> $<span class=\"k\">(</span>document<span class=\"k\">.</span>body<span class=\"k\">).</span>prepend<span class=\"k\">(</span><span class=\"s\">\"&lt;IFRAME id=</span><span class=\"t\">\\\"</span><span class=\"s\">ajaxIFrame</span><span class=\"t\">\\\"</span><span class=\"s\">&gt;\"</span><span class=\"k\">).</span>find<span class=\"k\">(</span><span class=\"s\">\"#ajaxIFrame\"</span><span class=\"k\">);</span>","            <span class=\"k\">}</span>","","            iframe<span class=\"k\">.</span>unbind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">).</span>bind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> html <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"s\">\"body\"</span><span class=\"k\">,</span> iframe<span class=\"k\">.</span>contents<span class=\"k\">()).</span>html<span class=\"k\">();</span>","                <span class=\"c\">/* ctrl.attachHtmlInTarget(html); */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>onsucess<span class=\"k\">)</span>","                    onsucess<span class=\"k\">(</span>html<span class=\"k\">,</span> <span class=\"s\">\"notmodified\"</span><span class=\"k\">,</span> <span class=\"k\">null</span><span class=\"k\">);</span>","                iframe<span class=\"k\">.</span>unbind<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","            iframe<span class=\"k\">.</span>hide<span class=\"k\">().</span>attr<span class=\"k\">(</span><span class=\"s\">\"src\"</span><span class=\"k\">,</span> url<span class=\"k\">);</span>","","        <span class=\"k\">}</span><span class=\"k\">,</span>","<span class=\"c\">//#JSCOVERAGE_IF false        </span>","        warnCapsLockIsOn<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>callback<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">this</span><span class=\"k\">.</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"k\">var</span> myKeyCode <span class=\"k\">=</span> e<span class=\"k\">.</span>keyCode <span class=\"k\">||</span> e<span class=\"k\">.</span>which<span class=\"k\">;</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>e<span class=\"k\">.</span>shiftKey<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"c\">/*  Lower case letters are seen while depressing the Shift key, therefore Caps Lock is on */</span>","                    <span class=\"k\">if</span> <span class=\"k\">((</span>myKeyCode <span class=\"k\">&gt;=</span> <span class=\"s\">97</span> <span class=\"k\">&amp;&amp;</span> myKeyCode <span class=\"k\">&lt;=</span> <span class=\"s\">122</span><span class=\"k\">))</span> <span class=\"k\">{</span> callback<span class=\"k\">();</span> <span class=\"k\">}</span>","                <span class=\"k\">}</span>","                <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"c\">/*  Upper case letters are seen without depressing the Shift key, therefore Caps Lock is on */</span>","                    <span class=\"k\">if</span> <span class=\"k\">((</span>myKeyCode <span class=\"k\">&gt;=</span> <span class=\"s\">65</span> <span class=\"k\">&amp;&amp;</span> myKeyCode <span class=\"k\">&lt;=</span> <span class=\"s\">90</span><span class=\"k\">))</span> <span class=\"k\">{</span> callback<span class=\"k\">();</span> <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","            <span class=\"k\">}</span><span class=\"k\">);</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF</span>","        smart<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> $this <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">[</span><span class=\"s\">0</span><span class=\"k\">]);</span>","            <span class=\"k\">if</span> <span class=\"k\">(!</span><span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"k\">var</span> text <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"smart\"</span><span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","","                <span class=\"c\">// Execute fromJSON by call method, because the context it's \"this\", otherwise will be $</span>","                <span class=\"k\">this</span><span class=\"k\">.</span>_smart <span class=\"k\">=</span> $<span class=\"k\">.</span>parseJSON<span class=\"k\">.</span>call<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">,</span> text<span class=\"k\">);</span>","","                <span class=\"k\">var</span> events <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span>","                <span class=\"k\">var</span> errors <span class=\"k\">=</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> event <span class=\"k\">in</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">var</span> obj <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">[</span>event<span class=\"k\">];</span>","                    events<span class=\"k\">++;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onbinding <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onbinding<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onbinding don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onrequest <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onrequest<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onrequest don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onresponse <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onresponse<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onresponse don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onsucess <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onsucess<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onsucess don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onerror <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onerror<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onerror don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>onbounded <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>onbounded<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute onbounded don't is a Function!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>once <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>once<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"boolean\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute ONCE is not a valid boolean!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>method <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>method<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">)</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute METHOD is not a valid boolean!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>target <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>target<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>target<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute TARGET (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>target <span class=\"k\">+</span> <span class=\"s\">\") don't exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>template <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>template<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>template<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute TEMPLATE (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>template <span class=\"k\">+</span> <span class=\"s\">\") don't exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>emptytemplate <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>obj<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>emptytemplate<span class=\"k\">)</span> <span class=\"k\">!==</span> <span class=\"s\">\"string\"</span><span class=\"k\">))</span>","                        errors <span class=\"k\">+=</span> <span class=\"s\">\"The attribute EMPTYTEMPLATE (\"</span> <span class=\"k\">+</span> obj<span class=\"k\">.</span>emptytemplate <span class=\"k\">+</span> <span class=\"s\">\") don't exists!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","","                    obj<span class=\"k\">.</span>source <span class=\"k\">=</span> <span class=\"k\">(</span>obj<span class=\"k\">.</span>source <span class=\"k\">||</span> <span class=\"k\">this</span><span class=\"k\">.</span>attrUp<span class=\"k\">(</span><span class=\"s\">\"href\"</span><span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">).</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span>","                    <span class=\"k\">var</span> candidate <span class=\"k\">=</span> obj<span class=\"k\">.</span>source<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/javascript(.*)/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">);</span>","                    <span class=\"k\">if</span> <span class=\"k\">(!!</span>obj<span class=\"k\">.</span>source <span class=\"k\">&amp;&amp;</span> obj<span class=\"k\">.</span>source <span class=\"k\">!==</span> candidate<span class=\"k\">)</span> <span class=\"k\">{</span>","                        obj<span class=\"k\">.</span>source <span class=\"k\">=</span> candidate<span class=\"k\">;</span>","                    <span class=\"k\">}</span>","","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>events <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                    errors <span class=\"k\">+=</span> <span class=\"s\">\"Don't exists event configured!</span><span class=\"t\">\\n</span><span class=\"s\">\"</span><span class=\"k\">;</span>","                <span class=\"k\">}</span>","","","                <span class=\"k\">if</span> <span class=\"k\">(</span>errors <span class=\"k\">!==</span> <span class=\"s\">\"\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","                    Exception<span class=\"k\">(</span>errors<span class=\"k\">);</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF </span>","                <span class=\"k\">}</span>","","","            <span class=\"k\">}</span>","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>_smart<span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","","","        dataBind<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> <span class=\"k\">this</span><span class=\"k\">.</span>length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $this <span class=\"k\">=</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">[</span>i<span class=\"k\">]);</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>event<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $this<span class=\"k\">.</span>_dataBind<span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">);</span>","                <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> eventType <span class=\"k\">in</span> $this<span class=\"k\">.</span>smart<span class=\"k\">())</span> <span class=\"k\">{</span>","                        $this<span class=\"k\">.</span>_dataBind<span class=\"k\">(</span>options<span class=\"k\">,</span> jQuery<span class=\"k\">.</span>Event<span class=\"k\">(</span>eventType<span class=\"k\">));</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        <span class=\"c\">/* End DataBind*/</span>","","        _dataBind<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>options<span class=\"k\">,</span> event<span class=\"k\">)</span> <span class=\"k\">{</span>","","            <span class=\"k\">var</span> $this <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">;</span>","            <span class=\"k\">var</span> smart <span class=\"k\">=</span> $this<span class=\"k\">.</span>smart<span class=\"k\">();</span>","","            <span class=\"c\">/*  Get configuration for event or first configuration possible */</span>","            <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> key <span class=\"k\">in</span> smart<span class=\"k\">)</span> <span class=\"k\">{</span> smart <span class=\"k\">=</span> smart<span class=\"k\">[</span>key<span class=\"k\">];</span> <span class=\"k\">}</span>","","            smart <span class=\"k\">=</span> $this<span class=\"k\">.</span>smart<span class=\"k\">()[</span>event<span class=\"k\">.</span>type<span class=\"k\">]</span> <span class=\"k\">||</span> smart<span class=\"k\">;</span>","","            <span class=\"c\">/*  Check whether keyDown, keyPress, keyUp event fires in a specific key */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>event<span class=\"k\">.</span>type<span class=\"k\">.</span>indexOf<span class=\"k\">(</span><span class=\"s\">\"key\"</span><span class=\"k\">)</span> <span class=\"k\">&gt;=</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>event<span class=\"k\">.</span>keyCode <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>smart<span class=\"k\">[</span>event<span class=\"k\">.</span>keyCode<span class=\"k\">])</span>","                    smart <span class=\"k\">=</span> smart<span class=\"k\">[</span>event<span class=\"k\">.</span>keyCode<span class=\"k\">];</span>","            <span class=\"k\">}</span>","","            <span class=\"c\">/*  Add a {} as first parameter because otherwise override smart variable */</span>","            <span class=\"c\">/*  The order are true, {}, options, smart to copy the properties of the smart to options */</span>","            options <span class=\"k\">=</span> $<span class=\"k\">.</span>extend<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">,</span> <span class=\"k\">{}</span><span class=\"k\">,</span> smart<span class=\"k\">,</span> options<span class=\"k\">);</span>","","            <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbinding<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbinding<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"k\">false</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"c\">/*  case undefined or true the code continues */</span>","                    <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","","","            <span class=\"c\">/* Exists only for tests */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> options<span class=\"k\">.</span>responseBody <span class=\"k\">||</span> options<span class=\"k\">.</span>defaultResponseBody<span class=\"k\">)</span>","                options<span class=\"k\">.</span>dataSource <span class=\"k\">=</span> options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> options<span class=\"k\">.</span>responseBody <span class=\"k\">||</span> options<span class=\"k\">.</span>defaultResponseBody<span class=\"k\">;</span>","","            <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>source<span class=\"k\">)</span> <span class=\"c\">/*  Only fires ajax if there are url */</span>","            <span class=\"k\">{</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>window<span class=\"k\">.</span>applicationPath<span class=\"k\">)</span> <span class=\"k\">{</span> window<span class=\"k\">.</span>applicationPath <span class=\"k\">=</span> window<span class=\"k\">.</span>applicationPath<span class=\"k\">.</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span> <span class=\"k\">}</span>","                options<span class=\"k\">.</span>source <span class=\"k\">=</span> options<span class=\"k\">.</span>source<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">\"~\"</span><span class=\"k\">,</span> window<span class=\"k\">.</span>applicationPath<span class=\"k\">);</span>","","","                options<span class=\"k\">.</span>method <span class=\"k\">=</span> <span class=\"k\">this</span><span class=\"k\">[</span><span class=\"s\">0</span><span class=\"k\">].</span>tagName <span class=\"k\">===</span> <span class=\"s\">\"A\"</span> <span class=\"k\">?</span> <span class=\"s\">\"GET\"</span> <span class=\"k\">:</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>method <span class=\"k\">||</span> <span class=\"s\">\"POST\"</span><span class=\"k\">);</span>","","                <span class=\"c\">/*  case undefined or true the code continues */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onrequest<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onrequest<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"k\">false</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                        <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","                $<span class=\"k\">.</span>ajax<span class=\"k\">(</span><span class=\"k\">{</span>","                    type<span class=\"k\">:</span> options<span class=\"k\">.</span>method<span class=\"k\">,</span>","                    url<span class=\"k\">:</span> options<span class=\"k\">.</span>source<span class=\"k\">,</span>","                    data<span class=\"k\">:</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>method <span class=\"k\">!==</span> <span class=\"s\">\"GET\"</span> <span class=\"k\">?</span> $<span class=\"k\">.</span>toJSON<span class=\"k\">(</span>options<span class=\"k\">.</span>sourceparams <span class=\"k\">||</span> <span class=\"k\">{}</span><span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"k\">null</span><span class=\"k\">),</span>","                    contentType<span class=\"k\">:</span> <span class=\"s\">\"application/json\"</span><span class=\"k\">,</span>","                    ifModified<span class=\"k\">:</span> <span class=\"k\">true</span><span class=\"k\">,</span>","                    success<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">)</span> <span class=\"k\">{</span>","","                        <span class=\"c\">/*  If Not Modified then get cached content file by iframe */</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>request <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span>request<span class=\"k\">.</span>status <span class=\"k\">===</span> <span class=\"s\">304</span> <span class=\"k\">||</span> status <span class=\"k\">===</span> <span class=\"s\">\"notmodified\"</span><span class=\"k\">))</span> <span class=\"k\">{</span>","                            $this<span class=\"k\">.</span>ajaxIframe<span class=\"k\">(</span>options<span class=\"k\">.</span>url<span class=\"k\">,</span> $this<span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">.</span>success<span class=\"k\">);</span>","                        <span class=\"k\">}</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onresponse<span class=\"k\">)</span>","                            dataSource <span class=\"k\">=</span> options<span class=\"k\">.</span>onresponse<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        <span class=\"c\">/*  If Http Status 200 then OK, process JSON because data should be transform on html */</span>","                        options<span class=\"k\">.</span>dataSource <span class=\"k\">=</span> dataSource<span class=\"k\">;</span>","                        <span class=\"k\">var</span> contentType <span class=\"k\">=</span> request<span class=\"k\">.</span>getResponseHeader<span class=\"k\">(</span><span class=\"s\">\"Content-Type\"</span><span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>contentType <span class=\"k\">&amp;&amp;</span> contentType<span class=\"k\">.</span>indexOf<span class=\"k\">(</span><span class=\"s\">\"javascript\"</span><span class=\"k\">)</span> <span class=\"k\">&gt;=</span> <span class=\"s\">0</span><span class=\"k\">)</span>","                            options<span class=\"k\">.</span>dataSource <span class=\"k\">=</span> eval<span class=\"k\">(</span>dataSource<span class=\"k\">);</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onsucess<span class=\"k\">)</span>","                            options<span class=\"k\">.</span>onsucess<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> dataSource<span class=\"k\">,</span> status<span class=\"k\">,</span> request<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","","                    <span class=\"k\">}</span><span class=\"k\">,</span>","                    error<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">(</span>request<span class=\"k\">,</span> textStatus<span class=\"k\">,</span> errorThrown<span class=\"k\">)</span> <span class=\"k\">{</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onerror<span class=\"k\">)</span>","                            options<span class=\"k\">.</span>onerror<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> request<span class=\"k\">,</span> textStatus<span class=\"k\">,</span> errorThrown<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                        fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","","                        <span class=\"k\">if</span> <span class=\"k\">(</span>request<span class=\"k\">.</span>status <span class=\"k\">===</span> <span class=\"s\">\"404\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","                            PageNotFoundException<span class=\"k\">(</span>options<span class=\"k\">.</span>url<span class=\"k\">);</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","                        <span class=\"k\">}</span>","                    <span class=\"k\">}</span><span class=\"k\">,</span>","                    complete<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                        <span class=\"c\">/*  Retirada a funcao fireActions deste evento pois o sucess e passado  */</span>","                        <span class=\"c\">/*  como argumento da funcao ajaxIframe */</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">);</span>","            <span class=\"k\">}</span>","","","            <span class=\"k\">function</span> fireActions<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">,</span> smart<span class=\"k\">,</span> mode<span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"c\">/*  Get target tag */</span>","                options<span class=\"k\">.</span>target <span class=\"k\">=</span> options<span class=\"k\">.</span>target <span class=\"k\">||</span> $this<span class=\"k\">;</span>","","                <span class=\"c\">/*  options.template indicates um HTML to be transformed or a content  */</span>","                <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>template <span class=\"k\">||</span> <span class=\"k\">!!</span>options<span class=\"k\">.</span>source <span class=\"k\">||</span> <span class=\"k\">!!</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">{</span>","","                    <span class=\"k\">var</span> html <span class=\"k\">=</span> options<span class=\"k\">.</span>dataSource <span class=\"k\">||</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>template<span class=\"k\">).</span>html<span class=\"k\">()</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>html<span class=\"k\">.</span>length <span class=\"k\">===</span> <span class=\"s\">0</span> <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">(</span>smart<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                        html <span class=\"k\">=</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>emptytemplate<span class=\"k\">).</span>html<span class=\"k\">();</span>","","                    <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"object\"</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"array\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                        <span class=\"k\">var</span> $template <span class=\"k\">=</span> $<span class=\"k\">(</span>options<span class=\"k\">.</span>template<span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(!!</span>options<span class=\"k\">.</span>template <span class=\"k\">&amp;&amp;</span> $template<span class=\"k\">.</span>size<span class=\"k\">()</span> <span class=\"k\">&gt;</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            html <span class=\"k\">=</span> $template<span class=\"k\">.</span>render<span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">,</span> options<span class=\"k\">);</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                            <span class=\"c\">// Save current template</span>","                            <span class=\"c\">// $this.data(\"template\", $this.html())</span>","                            html <span class=\"k\">=</span> $this<span class=\"k\">.</span>render<span class=\"k\">(</span>options<span class=\"k\">.</span>dataSource<span class=\"k\">,</span> options<span class=\"k\">);</span>","                        <span class=\"k\">}</span>","","                    <span class=\"k\">}</span>","","","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>size<span class=\"k\">()</span> <span class=\"k\">===</span> <span class=\"s\">0</span><span class=\"k\">)</span> <span class=\"k\">{</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","                        TargetMissingException<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">);</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","                    <span class=\"k\">}</span>","","                    <span class=\"k\">if</span> <span class=\"k\">(</span>mode <span class=\"k\">===</span> <span class=\"s\">\"after\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>after<span class=\"k\">(</span>html<span class=\"k\">);</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>parent<span class=\"k\">().</span>initializeControls<span class=\"k\">();</span>","                    <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                        $<span class=\"k\">(</span>options<span class=\"k\">.</span>target<span class=\"k\">).</span>hide<span class=\"k\">().</span>html<span class=\"k\">(</span>html<span class=\"k\">).</span>initializeControls<span class=\"k\">().</span>fadeIn<span class=\"k\">(</span>options<span class=\"k\">.</span>speed <span class=\"k\">||</span> <span class=\"s\">\"slow\"</span><span class=\"k\">);</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>once<span class=\"k\">)</span>","                    $this<span class=\"k\">.</span>unbind<span class=\"k\">(</span>event<span class=\"k\">.</span>type<span class=\"k\">);</span>","","                <span class=\"c\">/*  If exists options that are jQuery methods then executes them */</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> key <span class=\"k\">in</span> options<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>$<span class=\"k\">.</span>fn<span class=\"k\">[</span>key<span class=\"k\">]</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>options<span class=\"k\">[</span>key<span class=\"k\">])</span> <span class=\"k\">{</span>","                        <span class=\"k\">var</span> $func <span class=\"k\">=</span> $<span class=\"k\">.</span>fn<span class=\"k\">[</span>key<span class=\"k\">],</span>","                        value <span class=\"k\">=</span> options<span class=\"k\">[</span>key<span class=\"k\">];</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"string\"</span> <span class=\"k\">&amp;&amp;</span> key <span class=\"k\">!==</span> <span class=\"s\">\"trigger\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            $func<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> value<span class=\"k\">);</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> <span class=\"k\">(</span>options<span class=\"k\">[</span>key<span class=\"k\">].</span>shift<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">\"function\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            $func<span class=\"k\">.</span>apply<span class=\"k\">(</span>$<span class=\"k\">(</span>value<span class=\"k\">.</span>shift<span class=\"k\">()),</span> value<span class=\"k\">);</span>","                        <span class=\"k\">}</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>onbounded<span class=\"k\">)</span>","                    options<span class=\"k\">.</span>onbounded<span class=\"k\">.</span>call<span class=\"k\">(</span>$this<span class=\"k\">,</span> options<span class=\"k\">);</span>","","                <span class=\"c\">/*  Allow fire DataBinding in controls that has TRIGGER atribute */</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>options<span class=\"k\">.</span>trigger<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $<span class=\"k\">(</span>options<span class=\"k\">.</span>trigger<span class=\"k\">).</span>dataBind<span class=\"k\">(</span><span class=\"k\">{</span> sourceparams<span class=\"k\">:</span> smart<span class=\"k\">.</span>sourceparams <span class=\"k\">}</span><span class=\"k\">,</span> event<span class=\"k\">);</span>","                    <span class=\"k\">return</span><span class=\"k\">;</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","","            <span class=\"k\">return</span> <span class=\"k\">null</span><span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","","        <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">        Live controls, this allow load html with plugins and load it dynamically</span>","<span class=\"c\">        ***************************************************************************************************/</span>","","        initializeControls<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","","            $<span class=\"k\">(</span><span class=\"s\">\"[smart]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $ctrl <span class=\"k\">=</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">);</span>","                <span class=\"k\">if</span> <span class=\"k\">(!</span>$ctrl<span class=\"k\">.</span>hasControl<span class=\"k\">())</span> <span class=\"k\">{</span>","                    $ctrl<span class=\"k\">.</span>hasControl<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">);</span>","","                    <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> eventType <span class=\"k\">in</span> $ctrl<span class=\"k\">.</span>smart<span class=\"k\">())</span> <span class=\"k\">{</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>eventType <span class=\"k\">===</span> <span class=\"s\">\"load\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                            $ctrl<span class=\"k\">.</span>dataBind<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> jQuery<span class=\"k\">.</span>Event<span class=\"k\">(</span><span class=\"s\">\"load\"</span><span class=\"k\">));</span>","                        <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","                            $ctrl<span class=\"k\">.</span>bind<span class=\"k\">(</span>eventType<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>event<span class=\"k\">)</span> <span class=\"k\">{</span>","                                $ctrl<span class=\"k\">.</span>dataBind<span class=\"k\">(</span><span class=\"k\">{}</span><span class=\"k\">,</span> event<span class=\"k\">);</span>","                                <span class=\"k\">if</span> <span class=\"k\">(</span>ctrl<span class=\"k\">.</span>tagName <span class=\"k\">===</span> <span class=\"s\">\"A\"</span><span class=\"k\">)</span>","                                    event<span class=\"k\">.</span>preventDefault<span class=\"k\">();</span>","                            <span class=\"k\">}</span><span class=\"k\">);</span>","                        <span class=\"k\">}</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","","            $<span class=\"k\">(</span><span class=\"s\">\"[plugin]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> it <span class=\"k\">=</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">);</span>","                <span class=\"k\">if</span> <span class=\"k\">(</span>it<span class=\"k\">.</span>hasControl<span class=\"k\">())</span> <span class=\"k\">return</span><span class=\"k\">;</span>","                it<span class=\"k\">.</span>hasControl<span class=\"k\">(</span><span class=\"k\">true</span><span class=\"k\">);</span>","","                <span class=\"k\">var</span> plugin <span class=\"k\">=</span> it<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"plugin\"</span><span class=\"k\">);</span>","                <span class=\"k\">var</span> options <span class=\"k\">=</span> eval<span class=\"k\">(</span><span class=\"s\">\"(\"</span> <span class=\"k\">+</span> it<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"options\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\")\"</span><span class=\"k\">);</span>","","                <span class=\"k\">if</span> <span class=\"k\">(!</span>it<span class=\"k\">[</span>plugin<span class=\"k\">])</span> <span class=\"k\">{</span>","                    alert<span class=\"k\">(</span><span class=\"s\">\"The plugin </span><span class=\"t\">\\\"</span><span class=\"s\">\"</span> <span class=\"k\">+</span> plugin <span class=\"k\">+</span> <span class=\"s\">\"</span><span class=\"t\">\\\"</span><span class=\"s\"> don't loaded!\"</span><span class=\"k\">);</span>","                <span class=\"k\">}</span>","","                it<span class=\"k\">[</span>plugin<span class=\"k\">](</span>options<span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","            <span class=\"k\">this</span><span class=\"k\">.</span>_initializeThemeStyle<span class=\"k\">();</span>","","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">;</span>","","","        <span class=\"k\">}</span><span class=\"k\">,</span>","","","","        <span class=\"c\">// The tests dont cover theming</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","        _initializeThemeStyle<span class=\"k\">:</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","            $<span class=\"k\">(</span><span class=\"s\">\":text\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>wrap<span class=\"k\">(</span><span class=\"s\">\"&lt;span class='ui-theme-textbox cDat11' /&gt;\"</span><span class=\"k\">);</span>","            $<span class=\"k\">(</span><span class=\"s\">\":text\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>focusin<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11_focus'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>focusout<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>removeClass<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>mouseenter<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>addClass<span class=\"k\">(</span><span class=\"s\">'cDat11_hover'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>mouseleave<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>removeClass<span class=\"k\">(</span><span class=\"s\">'cDat11_hover'</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">).</span>after<span class=\"k\">(</span><span class=\"s\">\"&lt;span /&gt;\"</span><span class=\"k\">);</span>","","            <span class=\"c\">//</span>","            <span class=\"c\">/*  Buttons */</span>","            <span class=\"c\">//</span>","            $<span class=\"k\">(</span><span class=\"s\">\":submit, :button, :reset\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> ctrl<span class=\"k\">)</span> <span class=\"k\">{</span>","                $<span class=\"k\">(</span>ctrl<span class=\"k\">).</span>wrap<span class=\"k\">(</span><span class=\"s\">\"&lt;span class='ui-theme-button \"</span> <span class=\"k\">+</span> $<span class=\"k\">(</span>ctrl<span class=\"k\">).</span>attr<span class=\"k\">(</span><span class=\"s\">\"class\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\"' /&gt;\"</span><span class=\"k\">).</span>parent<span class=\"k\">().</span>hover<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>addClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>removeClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","            $<span class=\"k\">(</span><span class=\"s\">\":submit, :button, :reset\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>after<span class=\"k\">(</span><span class=\"s\">\"&lt;span /&gt;\"</span><span class=\"k\">);</span>","","","            <span class=\"c\">//</span>","            <span class=\"c\">/*  Grid */</span>","            <span class=\"c\">//</span>","            $<span class=\"k\">(</span><span class=\"s\">\"table[rules=all]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>addClass<span class=\"k\">(</span><span class=\"s\">\"ui-theme-table\"</span><span class=\"k\">).</span>filter<span class=\"k\">(</span><span class=\"s\">\"tr\"</span><span class=\"k\">).</span>hover<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>addClass<span class=\"k\">(</span><span class=\"s\">'hover'</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">,</span>","                      <span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>removeClass<span class=\"k\">();</span> <span class=\"k\">}</span><span class=\"k\">);</span>","","            $<span class=\"k\">(</span><span class=\"s\">\"table[rowselectable=true]\"</span><span class=\"k\">,</span> <span class=\"k\">this</span><span class=\"k\">).</span>each<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","                <span class=\"k\">var</span> $table <span class=\"k\">=</span> $<span class=\"k\">(</span>elem<span class=\"k\">);</span>","","                $<span class=\"k\">.</span>each<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>rows<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>i<span class=\"k\">,</span> elem<span class=\"k\">)</span> <span class=\"k\">{</span>","                    $<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">).</span>has<span class=\"k\">(</span><span class=\"s\">\".delete\"</span><span class=\"k\">).</span>click<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span>","                        __doPostBack<span class=\"k\">((</span>$table<span class=\"k\">.</span>attr<span class=\"k\">(</span><span class=\"s\">\"id\"</span><span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">).</span>replace<span class=\"k\">(</span><span class=\"s\">/\\_/g</span><span class=\"k\">,</span> <span class=\"s\">\"$\"</span><span class=\"k\">),</span> <span class=\"s\">'Select$'</span> <span class=\"k\">+</span> <span class=\"k\">(</span>i <span class=\"k\">-</span> <span class=\"s\">1</span><span class=\"k\">));</span>","                    <span class=\"k\">}</span><span class=\"k\">);</span>","                <span class=\"k\">}</span><span class=\"k\">);</span>","            <span class=\"k\">}</span><span class=\"k\">);</span>","","        <span class=\"k\">}</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF           </span>","","","    <span class=\"k\">}</span><span class=\"k\">);</span> <span class=\"c\">/*  End Initialize Controls */</span>","","    <span class=\"c\">// Dont cover errors code</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","    <span class=\"k\">function</span> Exception<span class=\"k\">(</span>msg<span class=\"k\">)</span> <span class=\"k\">{</span>","        msg <span class=\"k\">=</span> <span class=\"s\">\" SmartClient Error:  </span><span class=\"t\">\\n</span><span class=\"s\">\"</span> <span class=\"k\">+</span> msg<span class=\"k\">;</span>","        <span class=\"c\">/* alert(msg); */</span>","        <span class=\"k\">throw</span> <span class=\"k\">new</span> ReferenceError<span class=\"k\">(</span>msg<span class=\"k\">);</span>","        <span class=\"c\">/* console.log(msg); */</span>","    <span class=\"k\">}</span>","","    <span class=\"k\">function</span> PageNotFoundException<span class=\"k\">(</span>url<span class=\"k\">)</span> <span class=\"k\">{</span>","        Exception<span class=\"k\">(</span><span class=\"s\">\" A pagina '\"</span> <span class=\"k\">+</span> url <span class=\"k\">+</span> <span class=\"s\">\"' n&#239;&#191;&#189;o foi encontrada!\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span>","","    <span class=\"k\">function</span> TargetMissingException<span class=\"k\">(</span>sender<span class=\"k\">)</span> <span class=\"k\">{</span>","        Exception<span class=\"k\">(</span><span class=\"s\">\" N&#239;&#191;&#189;o foi encontrado o elemento html '\"</span> <span class=\"k\">+</span> sender<span class=\"k\">.</span>attrUp<span class=\"k\">(</span><span class=\"s\">\"target\"</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">\"'! </span><span class=\"t\">\\n\\n</span><span class=\"s\"> Html Trace: \"</span> <span class=\"k\">+</span> sender<span class=\"k\">.</span>outerHtml<span class=\"k\">());</span>","    <span class=\"k\">}</span>","","<span class=\"c\">//#JSCOVERAGE_ENDIF    </span>","","","","","    <span class=\"c\">//</span>","    <span class=\"c\">/*  JSON Serializer based by json2.js */</span>","    <span class=\"c\">//</span>","","    <span class=\"c\">/***************************************************************************************************</span>","<span class=\"c\">    DateTime Extensions</span>","<span class=\"c\">    ***************************************************************************************************/</span>","    String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>JsonToDate <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>culture<span class=\"k\">)</span> <span class=\"k\">{</span>","        <span class=\"k\">var</span> date <span class=\"k\">=</span> <span class=\"k\">null</span><span class=\"k\">;</span>","","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">this</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">this</span> <span class=\"k\">!==</span> <span class=\"s\">\"\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">var</span> result <span class=\"k\">=</span> <span class=\"k\">new</span> Date<span class=\"k\">(</span>parseFloat<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/(\\/)|\\)|Date\\(/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">)));</span>","            date <span class=\"k\">=</span> <span class=\"k\">new</span> Date<span class=\"k\">(</span>result<span class=\"k\">.</span>valueOf<span class=\"k\">()</span> <span class=\"k\">+</span> result<span class=\"k\">.</span>getTimezoneOffset<span class=\"k\">()</span> <span class=\"k\">*</span> <span class=\"s\">60000</span><span class=\"k\">);</span>","        <span class=\"k\">}</span>","","        <span class=\"k\">if</span> <span class=\"k\">(!!</span>culture <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>$<span class=\"k\">.</span>preferCulture <span class=\"k\">&amp;&amp;</span> <span class=\"k\">!!</span>date<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> $<span class=\"k\">.</span>format<span class=\"k\">(</span>date<span class=\"k\">,</span> <span class=\"s\">\"d\"</span><span class=\"k\">,</span> culture<span class=\"k\">);</span>","        <span class=\"k\">}</span>","","        <span class=\"k\">return</span> date<span class=\"k\">;</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","","","    String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>trimChars <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>left<span class=\"k\">,</span> right<span class=\"k\">)</span> <span class=\"k\">{</span>","        left <span class=\"k\">=</span> left <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">;</span>","        right <span class=\"k\">=</span> right <span class=\"k\">||</span> left<span class=\"k\">;</span>","","        <span class=\"c\">/*         tmp = tmp.replace(new RegExp(\"^(\" + boundaries + \")\"), \"\"); */</span>","        <span class=\"c\">/*         tmp = tmp.replace(new RegExp(\"(\" + boundaries + \")$\"), \"\"); */</span>","        <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"k\">new</span> RegExp<span class=\"k\">(</span><span class=\"s\">\"^( *\"</span> <span class=\"k\">+</span> left <span class=\"k\">+</span> <span class=\"s\">\" *)(.*)( *\"</span> <span class=\"k\">+</span> right <span class=\"k\">+</span> <span class=\"s\">\" *)$\"</span><span class=\"k\">,</span> <span class=\"s\">\"g\"</span><span class=\"k\">),</span> <span class=\"s\">\"$2\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","","    <span class=\"c\">// Does not cover the JSON Serializer, it is external plugin</span>","<span class=\"c\">//#JSCOVERAGE_IF false</span>","    <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> Date<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">!==</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","        Date<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>key<span class=\"k\">)</span> <span class=\"k\">{</span>","","            <span class=\"k\">var</span> f <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>n<span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> n <span class=\"k\">&lt;</span> <span class=\"s\">10</span> <span class=\"k\">?</span> <span class=\"s\">'0'</span> <span class=\"k\">+</span> n <span class=\"k\">:</span> n<span class=\"k\">;</span> <span class=\"k\">}</span><span class=\"k\">;</span>","","            <span class=\"k\">return</span> isFinite<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>valueOf<span class=\"k\">())</span> <span class=\"k\">?</span>","                   <span class=\"k\">this</span><span class=\"k\">.</span>getUTCFullYear<span class=\"k\">()</span> <span class=\"k\">+</span> <span class=\"s\">'-'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCMonth<span class=\"k\">()</span> <span class=\"k\">+</span> <span class=\"s\">1</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'-'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCDate<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">'T'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCHours<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCMinutes<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span>","                 f<span class=\"k\">(</span><span class=\"k\">this</span><span class=\"k\">.</span>getUTCSeconds<span class=\"k\">())</span> <span class=\"k\">+</span> <span class=\"s\">'Z'</span> <span class=\"k\">:</span> <span class=\"k\">null</span><span class=\"k\">;</span>","        <span class=\"k\">}</span><span class=\"k\">;</span>","","        String<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span>","        Number<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span>","        Boolean<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>key<span class=\"k\">)</span> <span class=\"k\">{</span>","            <span class=\"k\">return</span> <span class=\"k\">this</span><span class=\"k\">.</span>valueOf<span class=\"k\">();</span>","        <span class=\"k\">}</span><span class=\"k\">;</span>","    <span class=\"k\">}</span>","","    <span class=\"k\">var</span> cx <span class=\"k\">=</span> <span class=\"s\">/[\\u0000\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g</span><span class=\"k\">,</span>","        escapable <span class=\"k\">=</span> <span class=\"s\">/[\\\\\\\"\\x00-\\x1f\\x7f-\\x9f\\u00ad\\u0600-\\u0604\\u070f\\u17b4\\u17b5\\u200c-\\u200f\\u2028-\\u202f\\u2060-\\u206f\\ufeff\\ufff0-\\uffff]/g</span><span class=\"k\">,</span>","        meta <span class=\"k\">=</span> <span class=\"k\">{</span>    <span class=\"c\">/*  table of character substitutions */</span>","            <span class=\"s\">'</span><span class=\"t\">\\b</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">b'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\t</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">t'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\n</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">n'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\f</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">f'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\r</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">r'</span><span class=\"k\">,</span>","            <span class=\"s\">'\"'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">\"'</span><span class=\"k\">,</span>","            <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">'</span><span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\\\\\</span><span class=\"s\">'</span>","        <span class=\"k\">}</span><span class=\"k\">,</span>","        rep<span class=\"k\">;</span>","","","    <span class=\"c\">/*  If the string contains no control characters, no quote characters, and no */</span>","    <span class=\"c\">/*  backslash characters, then we can safely slap some quotes around it. */</span>","    <span class=\"c\">/*  Otherwise we must also replace the offending characters with safe escape */</span>","    <span class=\"c\">/*  sequences. */</span>","    <span class=\"k\">function</span> quote<span class=\"k\">(</span>string<span class=\"k\">)</span> <span class=\"k\">{</span> escapable<span class=\"k\">.</span>lastIndex <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> <span class=\"k\">return</span> escapable<span class=\"k\">.</span>test<span class=\"k\">(</span>string<span class=\"k\">)</span> <span class=\"k\">?</span> <span class=\"s\">'\"'</span> <span class=\"k\">+</span> string<span class=\"k\">.</span>replace<span class=\"k\">(</span>escapable<span class=\"k\">,</span> <span class=\"k\">function</span><span class=\"k\">(</span>a<span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">var</span> c <span class=\"k\">=</span> meta<span class=\"k\">[</span>a<span class=\"k\">];</span> <span class=\"k\">return</span> <span class=\"k\">typeof</span> c <span class=\"k\">===</span> <span class=\"s\">'string'</span> <span class=\"k\">?</span> c <span class=\"k\">:</span> <span class=\"s\">'</span><span class=\"t\">\\\\</span><span class=\"s\">u'</span> <span class=\"k\">+</span> <span class=\"k\">(</span><span class=\"s\">'0000'</span> <span class=\"k\">+</span> a<span class=\"k\">.</span>charCodeAt<span class=\"k\">(</span><span class=\"s\">0</span><span class=\"k\">).</span>toString<span class=\"k\">(</span><span class=\"s\">16</span><span class=\"k\">)).</span>slice<span class=\"k\">(-</span><span class=\"s\">4</span><span class=\"k\">);</span> <span class=\"k\">}</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'\"'</span> <span class=\"k\">:</span> <span class=\"s\">'\"'</span> <span class=\"k\">+</span> string <span class=\"k\">+</span> <span class=\"s\">'\"'</span><span class=\"k\">;</span> <span class=\"k\">}</span>","","    <span class=\"k\">function</span> str<span class=\"k\">(</span>key<span class=\"k\">,</span> holder<span class=\"k\">)</span> <span class=\"k\">{</span>","        <span class=\"c\">/*  Produce a string from holder[key]. */</span>","        <span class=\"k\">var</span> i<span class=\"k\">,</span> <span class=\"c\">/*  The member value. */</span>v<span class=\"k\">,</span> length<span class=\"k\">,</span> partial<span class=\"k\">,</span> value <span class=\"k\">=</span> holder<span class=\"k\">[</span>key<span class=\"k\">];</span>","","        <span class=\"c\">/*  If the value has a toJSON method, call it to obtain a replacement value. */</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span>value <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">'object'</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> value<span class=\"k\">.</span>toJSON <span class=\"k\">===</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span> value <span class=\"k\">=</span> value<span class=\"k\">.</span>toJSON<span class=\"k\">(</span>key<span class=\"k\">);</span> <span class=\"k\">}</span>","","        <span class=\"c\">/*  If we were called with a replacer function, then call the replacer to obtain a replacement value. */</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> rep <span class=\"k\">===</span> <span class=\"s\">'function'</span><span class=\"k\">)</span> <span class=\"k\">{</span> value <span class=\"k\">=</span> rep<span class=\"k\">.</span>call<span class=\"k\">(</span>holder<span class=\"k\">,</span> key<span class=\"k\">,</span> value<span class=\"k\">);</span> <span class=\"k\">}</span>","","        <span class=\"c\">/*  What happens next depends on the value's type. */</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">\"string\"</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> quote<span class=\"k\">(</span>value<span class=\"k\">);</span> <span class=\"k\">}</span>","","        <span class=\"c\">/*  JSON numbers must be finite. Encode non-finite numbers as null. */</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">\"number\"</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> isFinite<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">?</span> String<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">:</span> <span class=\"s\">'null'</span><span class=\"k\">;</span> <span class=\"k\">}</span>","","        <span class=\"c\">/* boolean or null should return String */</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">\"boolean\"</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">\"null\"</span><span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> String<span class=\"k\">(</span>value<span class=\"k\">);</span> <span class=\"k\">}</span>","","        <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> value <span class=\"k\">===</span> <span class=\"s\">\"object\"</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","            <span class=\"c\">/*  Due to a specification blunder in ECMAScript, typeof null is 'object', so watch out for that case. */</span>","            <span class=\"k\">if</span> <span class=\"k\">(!</span>value<span class=\"k\">)</span> <span class=\"k\">{</span> <span class=\"k\">return</span> <span class=\"s\">'null'</span><span class=\"k\">;</span> <span class=\"k\">}</span>","","            <span class=\"c\">/*  Make an array to hold the partial results of stringifying this object value. */</span>","            partial <span class=\"k\">=</span> <span class=\"k\">[];</span>","","            <span class=\"c\">/*  Is the value an array? */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>Object<span class=\"k\">.</span>prototype<span class=\"k\">.</span>toString<span class=\"k\">.</span>apply<span class=\"k\">(</span>value<span class=\"k\">)</span> <span class=\"k\">===</span> <span class=\"s\">'[object Array]'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","","                <span class=\"c\">/*  The value is an array. Stringify every element. Use null as a placeholder for non-JSON values. */</span>","                length <span class=\"k\">=</span> value<span class=\"k\">.</span>length<span class=\"k\">;</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span>i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> length<span class=\"k\">;</span> i<span class=\"k\">++)</span> <span class=\"k\">{</span> partial<span class=\"k\">[</span>i<span class=\"k\">]</span> <span class=\"k\">=</span> str<span class=\"k\">(</span>i<span class=\"k\">,</span> value<span class=\"k\">)</span> <span class=\"k\">||</span> <span class=\"s\">'null'</span><span class=\"k\">;</span> <span class=\"k\">}</span>","","                <span class=\"c\">/*  Join all of the elements together, separated with commas, and wrap them in brackets. */</span>","                <span class=\"k\">return</span> <span class=\"s\">'['</span> <span class=\"k\">+</span> partial<span class=\"k\">.</span>join<span class=\"k\">(</span><span class=\"s\">','</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">']'</span><span class=\"k\">;</span>","            <span class=\"k\">}</span>","","            <span class=\"c\">/*  If the replacer is an array, use it to select the members to be stringified. */</span>","            <span class=\"k\">if</span> <span class=\"k\">(</span>rep <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> rep <span class=\"k\">===</span> <span class=\"s\">'object'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                length <span class=\"k\">=</span> rep<span class=\"k\">.</span>length<span class=\"k\">;</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span>i <span class=\"k\">=</span> <span class=\"s\">0</span><span class=\"k\">;</span> i <span class=\"k\">&lt;</span> length<span class=\"k\">;</span> i <span class=\"k\">+=</span> <span class=\"s\">1</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                    k <span class=\"k\">=</span> rep<span class=\"k\">[</span>i<span class=\"k\">];</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> k <span class=\"k\">===</span> <span class=\"s\">'string'</span><span class=\"k\">)</span> <span class=\"k\">{</span>","                        v <span class=\"k\">=</span> str<span class=\"k\">(</span>k<span class=\"k\">,</span> value<span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>v<span class=\"k\">)</span> <span class=\"k\">{</span> partial<span class=\"k\">.</span>push<span class=\"k\">(</span>quote<span class=\"k\">(</span>k<span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span> v<span class=\"k\">);</span> <span class=\"k\">}</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span> <span class=\"k\">else</span> <span class=\"k\">{</span>","","                <span class=\"c\">/*  Otherwise, iterate through all of the keys in the object. */</span>","                <span class=\"k\">for</span> <span class=\"k\">(</span><span class=\"k\">var</span> k <span class=\"k\">in</span> value<span class=\"k\">)</span> <span class=\"k\">{</span>","                    <span class=\"k\">if</span> <span class=\"k\">(</span>Object<span class=\"k\">.</span>hasOwnProperty<span class=\"k\">.</span>call<span class=\"k\">(</span>value<span class=\"k\">,</span> k<span class=\"k\">))</span> <span class=\"k\">{</span>","                        v <span class=\"k\">=</span> str<span class=\"k\">(</span>k<span class=\"k\">,</span> value<span class=\"k\">);</span>","                        <span class=\"k\">if</span> <span class=\"k\">(</span>v<span class=\"k\">)</span> <span class=\"k\">{</span> partial<span class=\"k\">.</span>push<span class=\"k\">(</span>quote<span class=\"k\">(</span>k<span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">':'</span> <span class=\"k\">+</span> v<span class=\"k\">);</span> <span class=\"k\">}</span>","                    <span class=\"k\">}</span>","                <span class=\"k\">}</span>","            <span class=\"k\">}</span>","","            <span class=\"c\">/*  Join all of the member texts together, separated with commas, and wrap them in braces. */</span>","            v <span class=\"k\">=</span> <span class=\"s\">'{'</span> <span class=\"k\">+</span> partial<span class=\"k\">.</span>join<span class=\"k\">(</span><span class=\"s\">','</span><span class=\"k\">)</span> <span class=\"k\">+</span> <span class=\"s\">'}'</span><span class=\"k\">;</span>","","            <span class=\"k\">return</span> v<span class=\"k\">;</span>","        <span class=\"k\">}</span>","    <span class=\"k\">}</span>","","    $<span class=\"k\">.</span>toJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>value<span class=\"k\">,</span> replacer<span class=\"k\">)</span> <span class=\"k\">{</span>","","","","        <span class=\"c\">/*  The stringify method takes a value and an optional replacer, and an optional space parameter, and returns a JSON text. The replacer can be a function *//*  that can replace values, or an array of strings that will select the keys. *//*  A default replacer method can be provided. Use of the space parameter can *//*  produce text that is more easily readable. */</span>","        <span class=\"k\">var</span> i<span class=\"k\">;</span>","","        <span class=\"c\">/*  If there is a replacer, it must be a function or an array. */</span>","        <span class=\"c\">/*  Otherwise, throw an error. */</span>","","        rep <span class=\"k\">=</span> replacer<span class=\"k\">;</span>","        <span class=\"k\">if</span> <span class=\"k\">(</span>replacer <span class=\"k\">&amp;&amp;</span> <span class=\"k\">typeof</span> replacer <span class=\"k\">!==</span> <span class=\"s\">'function'</span> <span class=\"k\">&amp;&amp;</span> <span class=\"k\">(</span><span class=\"k\">typeof</span> replacer <span class=\"k\">!==</span> <span class=\"s\">'object'</span> <span class=\"k\">||</span> <span class=\"k\">typeof</span> replacer<span class=\"k\">.</span>length <span class=\"k\">!==</span> <span class=\"s\">'number'</span><span class=\"k\">))</span> <span class=\"k\">{</span> <span class=\"k\">throw</span> <span class=\"k\">new</span> Error<span class=\"k\">(</span><span class=\"s\">'JSON.stringify'</span><span class=\"k\">);</span> <span class=\"k\">}</span>","","","        <span class=\"c\">/*  Make a fake root object containing our value under the key of ''. */</span>","        <span class=\"c\">/*  Return the result of stringifying the value. */</span>","        <span class=\"k\">var</span> tmp <span class=\"k\">=</span> str<span class=\"k\">(</span><span class=\"s\">''</span><span class=\"k\">,</span> <span class=\"k\">{</span> <span class=\"s\">''</span><span class=\"k\">:</span> value <span class=\"k\">}</span><span class=\"k\">);</span>","","","        <span class=\"c\">//</span>","        <span class=\"c\">/*  Para corrigir o problema do JavascriptSerializer que n&#239;&#191;&#189;o converte o valor */</span>","        <span class=\"c\">/*  /Date(123456789000)/ -&gt; \\/Date(123456789000)\\/ */</span>","        <span class=\"c\">/*  .replace(\"\\/Date\", \"\\\\/Date\") */</span>","        <span class=\"c\">//</span>","        <span class=\"k\">return</span> tmp<span class=\"k\">.</span>replace<span class=\"k\">(</span><span class=\"s\">/\\/Date/g</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\\\/</span><span class=\"s\">Date\"</span><span class=\"k\">).</span>replace<span class=\"k\">(</span><span class=\"s\">/\\)(\\/)/g</span><span class=\"k\">,</span> <span class=\"s\">\")</span><span class=\"t\">\\\\</span><span class=\"s\">/\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","","","    $<span class=\"k\">.</span>parseJSON <span class=\"k\">=</span> <span class=\"k\">function</span><span class=\"k\">(</span>text<span class=\"k\">)</span> <span class=\"k\">{</span>","        text <span class=\"k\">=</span> <span class=\"k\">(</span>text <span class=\"k\">||</span> <span class=\"s\">\"\"</span><span class=\"k\">).</span>replace<span class=\"k\">(</span><span class=\"s\">/([\\n\\r\\t]|(\\\\u[0-9a-fA-F]{4}))/g</span><span class=\"k\">,</span> <span class=\"s\">\"\"</span><span class=\"k\">);</span> <span class=\"c\">/*  Remove invalid chars by JSON http://www.json.org/ */</span>","        text <span class=\"k\">=</span> text<span class=\"k\">.</span>trimChars<span class=\"k\">(</span><span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">{\"</span><span class=\"k\">,</span> <span class=\"s\">\"</span><span class=\"t\">\\\\</span><span class=\"s\">}\"</span><span class=\"k\">);</span> <span class=\"c\">/*  Remove braces if exists */</span>","        <span class=\"k\">return</span> eval<span class=\"k\">(</span><span class=\"s\">\"({\"</span> <span class=\"k\">+</span> text <span class=\"k\">+</span> <span class=\"s\">\"})\"</span><span class=\"k\">);</span>","    <span class=\"k\">}</span><span class=\"k\">;</span>","<span class=\"c\">//#JSCOVERAGE_ENDIF  </span>","","","    <span class=\"c\">/*  Inicializa todos os controles da tela. */</span>","    $<span class=\"k\">(</span><span class=\"k\">function</span><span class=\"k\">()</span> <span class=\"k\">{</span> $<span class=\"k\">(</span>document<span class=\"k\">).</span>initializeControls<span class=\"k\">();</span> <span class=\"k\">}</span><span class=\"k\">);</span>","","    <span class=\"c\">/*  Se o globalization for declarado ent&#239;&#191;&#189;o come&#239;&#191;&#189;a com pt-BR para facilitar o desenvolvimento */</span>","    $<span class=\"k\">.</span>preferCulture <span class=\"k\">&amp;&amp;</span> $<span class=\"k\">.</span>preferCulture<span class=\"k\">(</span><span class=\"s\">\"pt-BR\"</span><span class=\"k\">);</span>","","<span class=\"k\">}</span><span class=\"k\">)(</span>jQuery<span class=\"k\">);</span>","",""];
 _$jscoverage['jquery.smartclient.js'].conditionals = [];
 _$jscoverage['jquery.smartclient.js'][5]++;
 (function ($) {
-  _$jscoverage['jquery.smartclient.js'][6]++;
-  "use strict";
-  _$jscoverage['jquery.smartclient.js'][11]++;
+  _$jscoverage['jquery.smartclient.js'][10]++;
   $.fn.extend({hasControl: (function (bool) {
-  _$jscoverage['jquery.smartclient.js'][14]++;
+  _$jscoverage['jquery.smartclient.js'][13]++;
   return (arguments.length? this.data("control", bool): this.data("control"));
 }), attrUp: (function (name) {
-  _$jscoverage['jquery.smartclient.js'][17]++;
+  _$jscoverage['jquery.smartclient.js'][16]++;
   if ((this.length > 0)) {
-    _$jscoverage['jquery.smartclient.js'][18]++;
+    _$jscoverage['jquery.smartclient.js'][17]++;
     return (this.attr(name) || this.parent().attrUp(name));
   }
 }), outerHtml: (function (html) {
-  _$jscoverage['jquery.smartclient.js'][22]++;
+  _$jscoverage['jquery.smartclient.js'][21]++;
   return (html? this.before(html).remove(): $("<p>").append(this.eq(0).clone()).html());
 }), render: (function (data, options) {
-  _$jscoverage['jquery.smartclient.js'][26]++;
+  _$jscoverage['jquery.smartclient.js'][25]++;
   if ((this.size() === 0)) {
-    _$jscoverage['jquery.smartclient.js'][26]++;
+    _$jscoverage['jquery.smartclient.js'][25]++;
     throw new Error("Zero element selected!");
   }
-  _$jscoverage['jquery.smartclient.js'][28]++;
+  _$jscoverage['jquery.smartclient.js'][27]++;
   options = $.extend({}, options);
-  _$jscoverage['jquery.smartclient.js'][31]++;
+  _$jscoverage['jquery.smartclient.js'][30]++;
   var html = "", script = "", fn, template = this.html();
-  _$jscoverage['jquery.smartclient.js'][35]++;
+  _$jscoverage['jquery.smartclient.js'][34]++;
   template = template.split("&lt;").join("<");
-  _$jscoverage['jquery.smartclient.js'][36]++;
+  _$jscoverage['jquery.smartclient.js'][35]++;
   template = template.split("%3C").join("<");
-  _$jscoverage['jquery.smartclient.js'][37]++;
+  _$jscoverage['jquery.smartclient.js'][36]++;
   template = template.split("&gt;").join(">");
-  _$jscoverage['jquery.smartclient.js'][38]++;
+  _$jscoverage['jquery.smartclient.js'][37]++;
   template = template.split("%3E").join(">");
-  _$jscoverage['jquery.smartclient.js'][39]++;
+  _$jscoverage['jquery.smartclient.js'][38]++;
   template = template.split("&quot;").join("\"");
-  _$jscoverage['jquery.smartclient.js'][40]++;
+  _$jscoverage['jquery.smartclient.js'][39]++;
   template = template.replace("<!--", " ");
-  _$jscoverage['jquery.smartclient.js'][41]++;
+  _$jscoverage['jquery.smartclient.js'][40]++;
   template = template.replace("-->", " ");
-  _$jscoverage['jquery.smartclient.js'][42]++;
+  _$jscoverage['jquery.smartclient.js'][41]++;
   template = template.replace(/'/g, "\\'");
-  _$jscoverage['jquery.smartclient.js'][47]++;
+  _$jscoverage['jquery.smartclient.js'][46]++;
   template = template.replace(/<\$=(.+?)\$>/g, "',$1,'");
-  _$jscoverage['jquery.smartclient.js'][49]++;
+  _$jscoverage['jquery.smartclient.js'][48]++;
   template = template.split("<$").join("');");
-  _$jscoverage['jquery.smartclient.js'][50]++;
+  _$jscoverage['jquery.smartclient.js'][49]++;
   template = template.split("$>").join("p.push('");
-  _$jscoverage['jquery.smartclient.js'][51]++;
+  _$jscoverage['jquery.smartclient.js'][50]++;
   template = template.replace(/[\r\t\n]/g, " ");
-  _$jscoverage['jquery.smartclient.js'][55]++;
+  _$jscoverage['jquery.smartclient.js'][54]++;
   script = ("var p=[], dataItem = dataItem || []; with(dataItem){ p.push('" + template + "');} return p.join('');");
-  _$jscoverage['jquery.smartclient.js'][57]++;
+  _$jscoverage['jquery.smartclient.js'][56]++;
   try {
-    _$jscoverage['jquery.smartclient.js'][58]++;
+    _$jscoverage['jquery.smartclient.js'][57]++;
     $.cache = ($.cache || {});
-    _$jscoverage['jquery.smartclient.js'][62]++;
+    _$jscoverage['jquery.smartclient.js'][61]++;
     fn = $.cache[template];
-    _$jscoverage['jquery.smartclient.js'][63]++;
+    _$jscoverage['jquery.smartclient.js'][62]++;
     if ((! fn)) {
-      _$jscoverage['jquery.smartclient.js'][64]++;
+      _$jscoverage['jquery.smartclient.js'][63]++;
       fn = ($.cache[template] = new Function("index", "dataItem", script));
     }
-    _$jscoverage['jquery.smartclient.js'][67]++;
+    _$jscoverage['jquery.smartclient.js'][66]++;
     if ((! $.isArray(data))) {
-      _$jscoverage['jquery.smartclient.js'][68]++;
+      _$jscoverage['jquery.smartclient.js'][67]++;
       html += fn(0, data);
     }
     else {
-      _$jscoverage['jquery.smartclient.js'][70]++;
+      _$jscoverage['jquery.smartclient.js'][69]++;
       for (var i = 0; (i < data.length); (i++)) {
-        _$jscoverage['jquery.smartclient.js'][71]++;
+        _$jscoverage['jquery.smartclient.js'][70]++;
         html += fn(i, data[i]);
 }
     }
   }
   catch (err) {
-    _$jscoverage['jquery.smartclient.js'][78]++;
+    _$jscoverage['jquery.smartclient.js'][77]++;
     Exception(("The template is mal-formed, because " + err + "\n\n" + script));
   }
-  _$jscoverage['jquery.smartclient.js'][86]++;
+  _$jscoverage['jquery.smartclient.js'][85]++;
   return (data? html: fn);
 }), ajaxIframe: (function (url, ctrl, onsucess) {
-  _$jscoverage['jquery.smartclient.js'][89]++;
+  _$jscoverage['jquery.smartclient.js'][88]++;
   var iframe = $("#ajaxIFrame");
-  _$jscoverage['jquery.smartclient.js'][91]++;
+  _$jscoverage['jquery.smartclient.js'][90]++;
   if (($("#ajaxIFrame").size() === 0)) {
-    _$jscoverage['jquery.smartclient.js'][92]++;
+    _$jscoverage['jquery.smartclient.js'][91]++;
     iframe = $(document.body).prepend("<IFRAME id=\"ajaxIFrame\">").find("#ajaxIFrame");
   }
-  _$jscoverage['jquery.smartclient.js'][95]++;
+  _$jscoverage['jquery.smartclient.js'][94]++;
   iframe.unbind("load").bind("load", (function () {
-  _$jscoverage['jquery.smartclient.js'][96]++;
+  _$jscoverage['jquery.smartclient.js'][95]++;
   var html = $("body", iframe.contents()).html();
-  _$jscoverage['jquery.smartclient.js'][98]++;
+  _$jscoverage['jquery.smartclient.js'][97]++;
   if (onsucess) {
-    _$jscoverage['jquery.smartclient.js'][99]++;
+    _$jscoverage['jquery.smartclient.js'][98]++;
     onsucess(html, "notmodified", null);
   }
-  _$jscoverage['jquery.smartclient.js'][100]++;
+  _$jscoverage['jquery.smartclient.js'][99]++;
   iframe.unbind("load");
 }));
-  _$jscoverage['jquery.smartclient.js'][102]++;
+  _$jscoverage['jquery.smartclient.js'][101]++;
   iframe.hide().attr("src", url);
 }), warnCapsLockIsOn: (function (callback) {
   _$jscoverage['jquery.smartclient.js'][106]++;
@@ -446,359 +435,334 @@ _$jscoverage['jquery.smartclient.js'][5]++;
   }
 }));
 }), smart: (function () {
-  _$jscoverage['jquery.smartclient.js'][122]++;
-  var $this = $(this[0]);
   _$jscoverage['jquery.smartclient.js'][123]++;
+  var $this = $(this[0]);
+  _$jscoverage['jquery.smartclient.js'][124]++;
   if ((! this._smart)) {
-    _$jscoverage['jquery.smartclient.js'][125]++;
-    var smartJson = this.attr("smart");
-    _$jscoverage['jquery.smartclient.js'][127]++;
-    this._smart = $.fromJSON(smartJson);
+    _$jscoverage['jquery.smartclient.js'][126]++;
+    var text = (this.attr("smart") || "");
     _$jscoverage['jquery.smartclient.js'][129]++;
-    var events = 0;
-    _$jscoverage['jquery.smartclient.js'][130]++;
-    var errors = "";
+    this._smart = $.parseJSON.call(this, text);
     _$jscoverage['jquery.smartclient.js'][131]++;
+    var events = 0;
+    _$jscoverage['jquery.smartclient.js'][132]++;
+    var errors = "";
+    _$jscoverage['jquery.smartclient.js'][133]++;
     for (var event in this._smart) {
-      _$jscoverage['jquery.smartclient.js'][132]++;
+      _$jscoverage['jquery.smartclient.js'][134]++;
       var obj = this._smart[event];
-      _$jscoverage['jquery.smartclient.js'][133]++;
-      (events++);
       _$jscoverage['jquery.smartclient.js'][135]++;
-      if (((! (! obj.show)) && ($(obj.show).size() === 0))) {
-        _$jscoverage['jquery.smartclient.js'][136]++;
-        errors += ("The attribute SHOW (" + obj.show + ") don\u00b4t exists!\n");
-      }
-      _$jscoverage['jquery.smartclient.js'][138]++;
-      if (((! (! obj.hide)) && ($(obj.hide).size() === 0))) {
-        _$jscoverage['jquery.smartclient.js'][139]++;
-        errors += ("The attribute HIDE (" + obj.hide + ") don\u00b4t exists!\n");
-      }
-      _$jscoverage['jquery.smartclient.js'][141]++;
+      (events++);
+      _$jscoverage['jquery.smartclient.js'][137]++;
       if (((! (! obj.onbinding)) && ((typeof obj.onbinding) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][142]++;
-        errors += "The attribute onbinding don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][138]++;
+        errors += "The attribute onbinding don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][144]++;
+      _$jscoverage['jquery.smartclient.js'][140]++;
       if (((! (! obj.onrequest)) && ((typeof obj.onrequest) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][145]++;
-        errors += "The attribute onrequest don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][141]++;
+        errors += "The attribute onrequest don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][147]++;
+      _$jscoverage['jquery.smartclient.js'][143]++;
       if (((! (! obj.onresponse)) && ((typeof obj.onresponse) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][148]++;
-        errors += "The attribute onresponse don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][144]++;
+        errors += "The attribute onresponse don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][150]++;
+      _$jscoverage['jquery.smartclient.js'][146]++;
       if (((! (! obj.onsucess)) && ((typeof obj.onsucess) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][151]++;
-        errors += "The attribute onsucess don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][147]++;
+        errors += "The attribute onsucess don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][153]++;
+      _$jscoverage['jquery.smartclient.js'][149]++;
       if (((! (! obj.onerror)) && ((typeof obj.onerror) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][154]++;
-        errors += "The attribute onerror don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][150]++;
+        errors += "The attribute onerror don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][156]++;
+      _$jscoverage['jquery.smartclient.js'][152]++;
       if (((! (! obj.onbounded)) && ((typeof obj.onbounded) !== "function"))) {
-        _$jscoverage['jquery.smartclient.js'][157]++;
-        errors += "The attribute onbounded don\u00b4t is a Function!\n";
+        _$jscoverage['jquery.smartclient.js'][153]++;
+        errors += "The attribute onbounded don't is a Function!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][159]++;
+      _$jscoverage['jquery.smartclient.js'][155]++;
       if (((! (! obj.once)) && ((typeof obj.once) !== "boolean"))) {
-        _$jscoverage['jquery.smartclient.js'][160]++;
+        _$jscoverage['jquery.smartclient.js'][156]++;
         errors += "The attribute ONCE is not a valid boolean!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][162]++;
+      _$jscoverage['jquery.smartclient.js'][158]++;
       if (((! (! obj.method)) && ((typeof obj.method) !== "string"))) {
-        _$jscoverage['jquery.smartclient.js'][163]++;
+        _$jscoverage['jquery.smartclient.js'][159]++;
         errors += "The attribute METHOD is not a valid boolean!\n";
       }
-      _$jscoverage['jquery.smartclient.js'][165]++;
+      _$jscoverage['jquery.smartclient.js'][161]++;
       if (((! (! obj.target)) && (($(obj.target).size() === 0) || ((typeof obj.target) !== "string")))) {
-        _$jscoverage['jquery.smartclient.js'][166]++;
-        errors += ("The attribute TARGET (" + obj.target + ") don\u00b4t exists!\n");
+        _$jscoverage['jquery.smartclient.js'][162]++;
+        errors += ("The attribute TARGET (" + obj.target + ") don't exists!\n");
       }
-      _$jscoverage['jquery.smartclient.js'][168]++;
+      _$jscoverage['jquery.smartclient.js'][164]++;
       if (((! (! obj.template)) && (($(obj.template).size() === 0) || ((typeof obj.template) !== "string")))) {
-        _$jscoverage['jquery.smartclient.js'][169]++;
-        errors += ("The attribute TEMPLATE (" + obj.template + ") don\u00b4t exists!\n");
+        _$jscoverage['jquery.smartclient.js'][165]++;
+        errors += ("The attribute TEMPLATE (" + obj.template + ") don't exists!\n");
       }
-      _$jscoverage['jquery.smartclient.js'][171]++;
+      _$jscoverage['jquery.smartclient.js'][167]++;
       if (((! (! obj.emptytemplate)) && (($(obj.emptytemplate).size() === 0) || ((typeof obj.emptytemplate) !== "string")))) {
-        _$jscoverage['jquery.smartclient.js'][172]++;
-        errors += ("The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don\u00b4t exists!\n");
+        _$jscoverage['jquery.smartclient.js'][168]++;
+        errors += ("The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don't exists!\n");
       }
-      _$jscoverage['jquery.smartclient.js'][174]++;
+      _$jscoverage['jquery.smartclient.js'][170]++;
       obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
-      _$jscoverage['jquery.smartclient.js'][175]++;
+      _$jscoverage['jquery.smartclient.js'][171]++;
       var candidate = obj.source.replace(/javascript(.*)/g, "");
-      _$jscoverage['jquery.smartclient.js'][176]++;
+      _$jscoverage['jquery.smartclient.js'][172]++;
       if (((! (! obj.source)) && (obj.source !== candidate))) {
-        _$jscoverage['jquery.smartclient.js'][177]++;
+        _$jscoverage['jquery.smartclient.js'][173]++;
         obj.source = candidate;
       }
 }
-    _$jscoverage['jquery.smartclient.js'][182]++;
+    _$jscoverage['jquery.smartclient.js'][178]++;
     if ((events === 0)) {
-      _$jscoverage['jquery.smartclient.js'][183]++;
-      errors += "Don\u00b4t exists event configured!\n";
+      _$jscoverage['jquery.smartclient.js'][179]++;
+      errors += "Don't exists event configured!\n";
     }
-    _$jscoverage['jquery.smartclient.js'][187]++;
+    _$jscoverage['jquery.smartclient.js'][183]++;
     if ((errors !== "")) {
-      _$jscoverage['jquery.smartclient.js'][189]++;
+      _$jscoverage['jquery.smartclient.js'][185]++;
       Exception(errors);
     }
   }
-  _$jscoverage['jquery.smartclient.js'][195]++;
+  _$jscoverage['jquery.smartclient.js'][191]++;
   return this._smart;
 }), dataBind: (function (options, event) {
-  _$jscoverage['jquery.smartclient.js'][201]++;
+  _$jscoverage['jquery.smartclient.js'][197]++;
   for (var i = 0; (i < this.length); (i++)) {
-    _$jscoverage['jquery.smartclient.js'][202]++;
+    _$jscoverage['jquery.smartclient.js'][198]++;
     var $this = $(this[i]);
-    _$jscoverage['jquery.smartclient.js'][203]++;
+    _$jscoverage['jquery.smartclient.js'][199]++;
     if ((! (! event))) {
-      _$jscoverage['jquery.smartclient.js'][204]++;
+      _$jscoverage['jquery.smartclient.js'][200]++;
       $this._dataBind(options, event);
     }
     else {
-      _$jscoverage['jquery.smartclient.js'][206]++;
+      _$jscoverage['jquery.smartclient.js'][202]++;
       for (var eventType in $this.smart()) {
-        _$jscoverage['jquery.smartclient.js'][207]++;
+        _$jscoverage['jquery.smartclient.js'][203]++;
         $this._dataBind(options, jQuery.Event(eventType));
 }
     }
 }
-  _$jscoverage['jquery.smartclient.js'][212]++;
+  _$jscoverage['jquery.smartclient.js'][208]++;
   return this;
 }), _dataBind: (function (options, event) {
-  _$jscoverage['jquery.smartclient.js'][218]++;
+  _$jscoverage['jquery.smartclient.js'][214]++;
   var $this = this;
-  _$jscoverage['jquery.smartclient.js'][219]++;
+  _$jscoverage['jquery.smartclient.js'][215]++;
   var smart = $this.smart();
-  _$jscoverage['jquery.smartclient.js'][222]++;
+  _$jscoverage['jquery.smartclient.js'][218]++;
   for (var key in smart) {
-    _$jscoverage['jquery.smartclient.js'][222]++;
+    _$jscoverage['jquery.smartclient.js'][218]++;
     smart = smart[key];
 }
-  _$jscoverage['jquery.smartclient.js'][224]++;
+  _$jscoverage['jquery.smartclient.js'][220]++;
   smart = ($this.smart()[event.type] || smart);
-  _$jscoverage['jquery.smartclient.js'][227]++;
+  _$jscoverage['jquery.smartclient.js'][223]++;
   if ((event.type.indexOf("key") >= 0)) {
-    _$jscoverage['jquery.smartclient.js'][228]++;
+    _$jscoverage['jquery.smartclient.js'][224]++;
     if (((! (! event.keyCode)) && (! (! smart[event.keyCode])))) {
-      _$jscoverage['jquery.smartclient.js'][229]++;
+      _$jscoverage['jquery.smartclient.js'][225]++;
       smart = smart[event.keyCode];
     }
   }
-  _$jscoverage['jquery.smartclient.js'][234]++;
+  _$jscoverage['jquery.smartclient.js'][230]++;
   options = $.extend(true, {}, smart, options);
-  _$jscoverage['jquery.smartclient.js'][236]++;
+  _$jscoverage['jquery.smartclient.js'][232]++;
   if (options.onbinding) {
-    _$jscoverage['jquery.smartclient.js'][237]++;
-    if ((options.onbinding.apply($this) === false)) {
-      _$jscoverage['jquery.smartclient.js'][238]++;
+    _$jscoverage['jquery.smartclient.js'][233]++;
+    if ((options.onbinding.call($this, options) === false)) {
+      _$jscoverage['jquery.smartclient.js'][234]++;
       return this;
     }
   }
-  _$jscoverage['jquery.smartclient.js'][242]++;
+  _$jscoverage['jquery.smartclient.js'][240]++;
   if ((options.dataSource || options.responseBody || options.defaultResponseBody)) {
-    _$jscoverage['jquery.smartclient.js'][243]++;
+    _$jscoverage['jquery.smartclient.js'][241]++;
     options.dataSource = (options.dataSource || options.responseBody || options.defaultResponseBody);
   }
-  _$jscoverage['jquery.smartclient.js'][245]++;
+  _$jscoverage['jquery.smartclient.js'][243]++;
   if ((! (! options.source))) {
-    _$jscoverage['jquery.smartclient.js'][247]++;
+    _$jscoverage['jquery.smartclient.js'][245]++;
     if ((! (! window.applicationPath))) {
-      _$jscoverage['jquery.smartclient.js'][247]++;
+      _$jscoverage['jquery.smartclient.js'][245]++;
       window.applicationPath = window.applicationPath.trimChars("", "\\/");
     }
-    _$jscoverage['jquery.smartclient.js'][248]++;
+    _$jscoverage['jquery.smartclient.js'][246]++;
     options.source = options.source.replace("~", window.applicationPath);
-    _$jscoverage['jquery.smartclient.js'][251]++;
+    _$jscoverage['jquery.smartclient.js'][249]++;
     options.method = ((this[0].tagName === "A")? "GET": (options.method || "POST"));
-    _$jscoverage['jquery.smartclient.js'][253]++;
+    _$jscoverage['jquery.smartclient.js'][252]++;
     if (options.onrequest) {
-      _$jscoverage['jquery.smartclient.js'][254]++;
+      _$jscoverage['jquery.smartclient.js'][253]++;
       if ((options.onrequest.call($this, options) === false)) {
-        _$jscoverage['jquery.smartclient.js'][255]++;
+        _$jscoverage['jquery.smartclient.js'][254]++;
         return this;
       }
     }
-    _$jscoverage['jquery.smartclient.js'][257]++;
+    _$jscoverage['jquery.smartclient.js'][258]++;
     $.ajax({type: options.method, url: options.source, data: ((options.method !== "GET")? $.toJSON((options.sourceparams || {})): null), contentType: "application/json", ifModified: true, success: (function (dataSource, status, request) {
-  _$jscoverage['jquery.smartclient.js'][266]++;
+  _$jscoverage['jquery.smartclient.js'][267]++;
   if (((! (! request)) && ((request.status === 304) || (status === "notmodified")))) {
-    _$jscoverage['jquery.smartclient.js'][267]++;
+    _$jscoverage['jquery.smartclient.js'][268]++;
     $this.ajaxIframe(options.url, $this, this.success);
   }
-  _$jscoverage['jquery.smartclient.js'][270]++;
+  _$jscoverage['jquery.smartclient.js'][271]++;
   if (options.onresponse) {
-    _$jscoverage['jquery.smartclient.js'][271]++;
+    _$jscoverage['jquery.smartclient.js'][272]++;
     dataSource = options.onresponse.call($this, dataSource, status, request, options);
   }
-  _$jscoverage['jquery.smartclient.js'][274]++;
+  _$jscoverage['jquery.smartclient.js'][275]++;
   options.dataSource = dataSource;
   _$jscoverage['jquery.smartclient.js'][276]++;
+  var contentType = request.getResponseHeader("Content-Type");
+  _$jscoverage['jquery.smartclient.js'][277]++;
+  if (((! (! contentType)) && (contentType.indexOf("javascript") >= 0))) {
+    _$jscoverage['jquery.smartclient.js'][278]++;
+    options.dataSource = eval(dataSource);
+  }
+  _$jscoverage['jquery.smartclient.js'][280]++;
   if (options.onsucess) {
-    _$jscoverage['jquery.smartclient.js'][277]++;
+    _$jscoverage['jquery.smartclient.js'][281]++;
     options.onsucess.call($this, dataSource, status, request, options);
   }
-  _$jscoverage['jquery.smartclient.js'][279]++;
+  _$jscoverage['jquery.smartclient.js'][283]++;
   fireActions($this, options, smart);
 }), error: (function (request, textStatus, errorThrown) {
-  _$jscoverage['jquery.smartclient.js'][283]++;
+  _$jscoverage['jquery.smartclient.js'][287]++;
   if (options.onerror) {
-    _$jscoverage['jquery.smartclient.js'][284]++;
+    _$jscoverage['jquery.smartclient.js'][288]++;
     options.onerror.call($this, request, textStatus, errorThrown, options);
   }
-  _$jscoverage['jquery.smartclient.js'][286]++;
+  _$jscoverage['jquery.smartclient.js'][290]++;
   fireActions($this, options, smart);
-  _$jscoverage['jquery.smartclient.js'][288]++;
+  _$jscoverage['jquery.smartclient.js'][292]++;
   if ((request.status === "404")) {
-    _$jscoverage['jquery.smartclient.js'][290]++;
+    _$jscoverage['jquery.smartclient.js'][294]++;
     PageNotFoundException(options.url);
   }
 }), complete: (function () {
 })});
   }
   else {
-    _$jscoverage['jquery.smartclient.js'][300]++;
+    _$jscoverage['jquery.smartclient.js'][304]++;
     fireActions($this, options, smart);
   }
-  _$jscoverage['jquery.smartclient.js'][304]++;
+  _$jscoverage['jquery.smartclient.js'][308]++;
   function fireActions($this, options, smart, mode) {
-    _$jscoverage['jquery.smartclient.js'][307]++;
+    _$jscoverage['jquery.smartclient.js'][311]++;
     options.target = (options.target || $this);
-    _$jscoverage['jquery.smartclient.js'][310]++;
+    _$jscoverage['jquery.smartclient.js'][314]++;
     if (((! (! options.template)) || (! (! options.source)) || (! (! options.dataSource)))) {
-      _$jscoverage['jquery.smartclient.js'][312]++;
+      _$jscoverage['jquery.smartclient.js'][316]++;
       var html = (options.dataSource || $(options.template).html() || "");
-      _$jscoverage['jquery.smartclient.js'][314]++;
+      _$jscoverage['jquery.smartclient.js'][318]++;
       if (((html.length === 0) && ($(smart.emptytemplate).size() > 0))) {
-        _$jscoverage['jquery.smartclient.js'][316]++;
+        _$jscoverage['jquery.smartclient.js'][320]++;
         html = $(options.emptytemplate).html();
       }
       else {
-        _$jscoverage['jquery.smartclient.js'][318]++;
+        _$jscoverage['jquery.smartclient.js'][322]++;
         if ((((typeof options.dataSource) === "object") || ((typeof options.dataSource) === "array"))) {
-          _$jscoverage['jquery.smartclient.js'][320]++;
+          _$jscoverage['jquery.smartclient.js'][324]++;
           var $template = $(options.template);
-          _$jscoverage['jquery.smartclient.js'][321]++;
+          _$jscoverage['jquery.smartclient.js'][325]++;
           if (((! (! options.template)) && ($template.size() > 0))) {
-            _$jscoverage['jquery.smartclient.js'][322]++;
+            _$jscoverage['jquery.smartclient.js'][326]++;
             html = $template.render(options.dataSource, options);
           }
           else {
-            _$jscoverage['jquery.smartclient.js'][324]++;
+            _$jscoverage['jquery.smartclient.js'][330]++;
             html = $this.render(options.dataSource, options);
           }
         }
       }
-      _$jscoverage['jquery.smartclient.js'][331]++;
+      _$jscoverage['jquery.smartclient.js'][337]++;
       if (($(options.target).size() === 0)) {
-        _$jscoverage['jquery.smartclient.js'][333]++;
+        _$jscoverage['jquery.smartclient.js'][339]++;
         TargetMissingException(this);
       }
-      _$jscoverage['jquery.smartclient.js'][337]++;
+      _$jscoverage['jquery.smartclient.js'][343]++;
       if ((mode === "after")) {
-        _$jscoverage['jquery.smartclient.js'][338]++;
+        _$jscoverage['jquery.smartclient.js'][344]++;
         $(options.target).after(html);
-        _$jscoverage['jquery.smartclient.js'][339]++;
+        _$jscoverage['jquery.smartclient.js'][345]++;
         $(options.target).parent().initializeControls();
       }
       else {
-        _$jscoverage['jquery.smartclient.js'][341]++;
+        _$jscoverage['jquery.smartclient.js'][347]++;
         $(options.target).hide().html(html).initializeControls().fadeIn((options.speed || "slow"));
       }
     }
-    _$jscoverage['jquery.smartclient.js'][345]++;
+    _$jscoverage['jquery.smartclient.js'][351]++;
     if (options.once) {
-      _$jscoverage['jquery.smartclient.js'][346]++;
+      _$jscoverage['jquery.smartclient.js'][352]++;
       $this.unbind(event.type);
     }
-    _$jscoverage['jquery.smartclient.js'][348]++;
-    if (options.hide) {
-      _$jscoverage['jquery.smartclient.js'][349]++;
-      if (options.speed) {
-        _$jscoverage['jquery.smartclient.js'][350]++;
-        $(options.hide).hide((options.speed || "slow"));
-      }
-      else {
-        _$jscoverage['jquery.smartclient.js'][352]++;
-        $(options.hide).hide();
-      }
-    }
     _$jscoverage['jquery.smartclient.js'][355]++;
-    if (options.show) {
-      _$jscoverage['jquery.smartclient.js'][356]++;
-      if (options.speed) {
-        _$jscoverage['jquery.smartclient.js'][357]++;
-        $(options.show).show((options.speed || "slow"));
-      }
-      else {
-        _$jscoverage['jquery.smartclient.js'][359]++;
-        $(options.show).show();
-      }
-    }
-    _$jscoverage['jquery.smartclient.js'][364]++;
     for (var key in options) {
-      _$jscoverage['jquery.smartclient.js'][364]++;
+      _$jscoverage['jquery.smartclient.js'][356]++;
       if (($.fn[key] && (! (! options[key])))) {
-        _$jscoverage['jquery.smartclient.js'][365]++;
+        _$jscoverage['jquery.smartclient.js'][357]++;
         var $func = $.fn[key], value = options[key];
-        _$jscoverage['jquery.smartclient.js'][367]++;
+        _$jscoverage['jquery.smartclient.js'][359]++;
         if ((((typeof value) === "string") && (key !== "trigger"))) {
-          _$jscoverage['jquery.smartclient.js'][368]++;
-          ($(value)[key])();
+          _$jscoverage['jquery.smartclient.js'][360]++;
+          $func.call($this, value);
         }
         else {
-          _$jscoverage['jquery.smartclient.js'][369]++;
+          _$jscoverage['jquery.smartclient.js'][361]++;
           if (((typeof options[key].shift) === "function")) {
-            _$jscoverage['jquery.smartclient.js'][370]++;
+            _$jscoverage['jquery.smartclient.js'][362]++;
             $func.apply($(value.shift()), value);
           }
         }
       }
 }
-    _$jscoverage['jquery.smartclient.js'][374]++;
+    _$jscoverage['jquery.smartclient.js'][367]++;
     if (options.onbounded) {
-      _$jscoverage['jquery.smartclient.js'][375]++;
+      _$jscoverage['jquery.smartclient.js'][368]++;
       options.onbounded.call($this, options);
     }
-    _$jscoverage['jquery.smartclient.js'][378]++;
+    _$jscoverage['jquery.smartclient.js'][371]++;
     if (options.trigger) {
-      _$jscoverage['jquery.smartclient.js'][379]++;
+      _$jscoverage['jquery.smartclient.js'][372]++;
       $(options.trigger).dataBind({sourceparams: smart.sourceparams}, event);
-      _$jscoverage['jquery.smartclient.js'][380]++;
+      _$jscoverage['jquery.smartclient.js'][373]++;
       return;
     }
 }
+  _$jscoverage['jquery.smartclient.js'][377]++;
+  return null;
 }), initializeControls: (function () {
-  _$jscoverage['jquery.smartclient.js'][391]++;
+  _$jscoverage['jquery.smartclient.js'][386]++;
   $("[smart]", this).each((function (i, ctrl) {
-  _$jscoverage['jquery.smartclient.js'][392]++;
+  _$jscoverage['jquery.smartclient.js'][387]++;
   var $ctrl = $(ctrl);
-  _$jscoverage['jquery.smartclient.js'][393]++;
+  _$jscoverage['jquery.smartclient.js'][388]++;
   if ((! $ctrl.hasControl())) {
-    _$jscoverage['jquery.smartclient.js'][394]++;
+    _$jscoverage['jquery.smartclient.js'][389]++;
     $ctrl.hasControl(true);
-    _$jscoverage['jquery.smartclient.js'][396]++;
+    _$jscoverage['jquery.smartclient.js'][391]++;
     for (var eventType in $ctrl.smart()) {
-      _$jscoverage['jquery.smartclient.js'][397]++;
+      _$jscoverage['jquery.smartclient.js'][392]++;
       if ((eventType === "load")) {
-        _$jscoverage['jquery.smartclient.js'][398]++;
+        _$jscoverage['jquery.smartclient.js'][393]++;
         $ctrl.dataBind({}, jQuery.Event("load"));
       }
       else {
-        _$jscoverage['jquery.smartclient.js'][400]++;
+        _$jscoverage['jquery.smartclient.js'][395]++;
         $ctrl.bind(eventType, (function (event) {
-  _$jscoverage['jquery.smartclient.js'][401]++;
+  _$jscoverage['jquery.smartclient.js'][396]++;
   $ctrl.dataBind({}, event);
-  _$jscoverage['jquery.smartclient.js'][402]++;
+  _$jscoverage['jquery.smartclient.js'][397]++;
   if ((ctrl.tagName === "A")) {
-    _$jscoverage['jquery.smartclient.js'][403]++;
+    _$jscoverage['jquery.smartclient.js'][398]++;
     event.preventDefault();
   }
 }));
@@ -806,290 +770,307 @@ _$jscoverage['jquery.smartclient.js'][5]++;
 }
   }
 }));
-  _$jscoverage['jquery.smartclient.js'][411]++;
+  _$jscoverage['jquery.smartclient.js'][406]++;
   $("[plugin]", this).each((function (i, ctrl) {
-  _$jscoverage['jquery.smartclient.js'][412]++;
+  _$jscoverage['jquery.smartclient.js'][407]++;
   var it = $(ctrl);
-  _$jscoverage['jquery.smartclient.js'][413]++;
+  _$jscoverage['jquery.smartclient.js'][408]++;
   if (it.hasControl()) {
-    _$jscoverage['jquery.smartclient.js'][413]++;
+    _$jscoverage['jquery.smartclient.js'][408]++;
     return;
   }
-  _$jscoverage['jquery.smartclient.js'][414]++;
+  _$jscoverage['jquery.smartclient.js'][409]++;
   it.hasControl(true);
-  _$jscoverage['jquery.smartclient.js'][416]++;
+  _$jscoverage['jquery.smartclient.js'][411]++;
   var plugin = it.attr("plugin");
-  _$jscoverage['jquery.smartclient.js'][417]++;
+  _$jscoverage['jquery.smartclient.js'][412]++;
   var options = eval(("(" + it.attr("options") + ")"));
-  _$jscoverage['jquery.smartclient.js'][419]++;
+  _$jscoverage['jquery.smartclient.js'][414]++;
   if ((! it[plugin])) {
-    _$jscoverage['jquery.smartclient.js'][420]++;
-    alert(("The plugin \"" + plugin + "\" don\u00b4t loaded!"));
+    _$jscoverage['jquery.smartclient.js'][415]++;
+    alert(("The plugin \"" + plugin + "\" don't loaded!"));
   }
-  _$jscoverage['jquery.smartclient.js'][423]++;
+  _$jscoverage['jquery.smartclient.js'][418]++;
   (it[plugin])(options);
 }));
-  _$jscoverage['jquery.smartclient.js'][426]++;
+  _$jscoverage['jquery.smartclient.js'][421]++;
   this._initializeThemeStyle();
-  _$jscoverage['jquery.smartclient.js'][428]++;
+  _$jscoverage['jquery.smartclient.js'][423]++;
   return this;
 }), _initializeThemeStyle: (function () {
-  _$jscoverage['jquery.smartclient.js'][438]++;
+  _$jscoverage['jquery.smartclient.js'][433]++;
   $(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
-  _$jscoverage['jquery.smartclient.js'][439]++;
+  _$jscoverage['jquery.smartclient.js'][434]++;
   $(":text", this).focusin((function () {
-  _$jscoverage['jquery.smartclient.js'][440]++;
+  _$jscoverage['jquery.smartclient.js'][435]++;
   $(this).parent().addClass("cDat11_focus");
 })).focusout((function () {
-  _$jscoverage['jquery.smartclient.js'][442]++;
+  _$jscoverage['jquery.smartclient.js'][437]++;
   $(this).parent().removeClass().addClass("cDat11");
 })).mouseenter((function () {
-  _$jscoverage['jquery.smartclient.js'][444]++;
+  _$jscoverage['jquery.smartclient.js'][439]++;
   $(this).parent().addClass("cDat11_hover");
 })).mouseleave((function () {
-  _$jscoverage['jquery.smartclient.js'][446]++;
+  _$jscoverage['jquery.smartclient.js'][441]++;
   $(this).parent().removeClass("cDat11_hover");
 })).after("<span />");
-  _$jscoverage['jquery.smartclient.js'][452]++;
+  _$jscoverage['jquery.smartclient.js'][447]++;
   $(":submit, :button, :reset", this).each((function (i, ctrl) {
-  _$jscoverage['jquery.smartclient.js'][453]++;
+  _$jscoverage['jquery.smartclient.js'][448]++;
   $(ctrl).wrap(("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />")).parent().hover((function () {
-  _$jscoverage['jquery.smartclient.js'][453]++;
+  _$jscoverage['jquery.smartclient.js'][448]++;
   $(this).addClass("hover");
 }), (function () {
-  _$jscoverage['jquery.smartclient.js'][453]++;
+  _$jscoverage['jquery.smartclient.js'][448]++;
   $(this).removeClass("hover");
 }));
 }));
-  _$jscoverage['jquery.smartclient.js'][456]++;
+  _$jscoverage['jquery.smartclient.js'][451]++;
   $(":submit, :button, :reset", this).after("<span />");
-  _$jscoverage['jquery.smartclient.js'][462]++;
+  _$jscoverage['jquery.smartclient.js'][457]++;
   $("table[rules=all]", this).addClass("ui-theme-table").filter("tr").hover((function () {
-  _$jscoverage['jquery.smartclient.js'][465]++;
+  _$jscoverage['jquery.smartclient.js'][457]++;
   $(this).addClass("hover");
 }), (function () {
-  _$jscoverage['jquery.smartclient.js'][466]++;
+  _$jscoverage['jquery.smartclient.js'][458]++;
   $(this).removeClass();
 }));
-  _$jscoverage['jquery.smartclient.js'][468]++;
+  _$jscoverage['jquery.smartclient.js'][460]++;
   $("table[rowselectable=true]", this).each((function (i, elem) {
-  _$jscoverage['jquery.smartclient.js'][469]++;
+  _$jscoverage['jquery.smartclient.js'][461]++;
   var $table = $(elem);
-  _$jscoverage['jquery.smartclient.js'][471]++;
+  _$jscoverage['jquery.smartclient.js'][463]++;
   $.each(this.rows, (function (i, elem) {
-  _$jscoverage['jquery.smartclient.js'][472]++;
+  _$jscoverage['jquery.smartclient.js'][464]++;
   $(this).has(".delete").click((function () {
-  _$jscoverage['jquery.smartclient.js'][473]++;
+  _$jscoverage['jquery.smartclient.js'][465]++;
   __doPostBack(($table.attr("id") || "").replace(/\_/g, "$"), ("Select$" + (i - 1)));
 }));
 }));
 }));
 })});
-  _$jscoverage['jquery.smartclient.js'][486]++;
+  _$jscoverage['jquery.smartclient.js'][478]++;
   function Exception(msg) {
-    _$jscoverage['jquery.smartclient.js'][487]++;
+    _$jscoverage['jquery.smartclient.js'][479]++;
     msg = (" SmartClient Error:  \n" + msg);
-    _$jscoverage['jquery.smartclient.js'][489]++;
+    _$jscoverage['jquery.smartclient.js'][481]++;
     throw new ReferenceError(msg);
 }
-  _$jscoverage['jquery.smartclient.js'][491]++;
-  ;
-  _$jscoverage['jquery.smartclient.js'][493]++;
+  _$jscoverage['jquery.smartclient.js'][485]++;
   function PageNotFoundException(url) {
-    _$jscoverage['jquery.smartclient.js'][494]++;
-    Exception((" A p\u00e1gina '" + url + "' n\u00e3o foi encontrada!"));
+    _$jscoverage['jquery.smartclient.js'][486]++;
+    Exception((" A pagina '" + url + "' n\u00ef\u00bf\u00bdo foi encontrada!"));
 }
-  _$jscoverage['jquery.smartclient.js'][497]++;
+  _$jscoverage['jquery.smartclient.js'][489]++;
   function TargetMissingException(sender) {
-    _$jscoverage['jquery.smartclient.js'][498]++;
-    Exception((" N\u00e3o foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml()));
+    _$jscoverage['jquery.smartclient.js'][490]++;
+    Exception((" N\u00ef\u00bf\u00bdo foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml()));
 }
-  _$jscoverage['jquery.smartclient.js'][513]++;
+  _$jscoverage['jquery.smartclient.js'][505]++;
   String.prototype.JsonToDate = (function (culture) {
-  _$jscoverage['jquery.smartclient.js'][514]++;
+  _$jscoverage['jquery.smartclient.js'][506]++;
   var date = null;
-  _$jscoverage['jquery.smartclient.js'][516]++;
+  _$jscoverage['jquery.smartclient.js'][508]++;
   if ((this !== "")) {
-    _$jscoverage['jquery.smartclient.js'][517]++;
+    _$jscoverage['jquery.smartclient.js'][509]++;
     var result = new Date(parseFloat(this.replace(/(\/)|\)|Date\(/g, "")));
-    _$jscoverage['jquery.smartclient.js'][518]++;
+    _$jscoverage['jquery.smartclient.js'][510]++;
     date = new Date((result.valueOf() + (result.getTimezoneOffset() * 60000)));
   }
-  _$jscoverage['jquery.smartclient.js'][521]++;
+  _$jscoverage['jquery.smartclient.js'][513]++;
   if (((! (! culture)) && (! (! $.preferCulture)) && (! (! date)))) {
-    _$jscoverage['jquery.smartclient.js'][522]++;
+    _$jscoverage['jquery.smartclient.js'][514]++;
     return $.format(date, "d", culture);
   }
-  _$jscoverage['jquery.smartclient.js'][525]++;
+  _$jscoverage['jquery.smartclient.js'][517]++;
   return date;
 });
-  _$jscoverage['jquery.smartclient.js'][529]++;
+  _$jscoverage['jquery.smartclient.js'][521]++;
   String.prototype.trimChars = (function (left, right) {
-  _$jscoverage['jquery.smartclient.js'][530]++;
+  _$jscoverage['jquery.smartclient.js'][522]++;
   left = (left || "");
-  _$jscoverage['jquery.smartclient.js'][531]++;
+  _$jscoverage['jquery.smartclient.js'][523]++;
   right = (right || left);
-  _$jscoverage['jquery.smartclient.js'][535]++;
+  _$jscoverage['jquery.smartclient.js'][527]++;
   return this.replace(new RegExp(("^( *" + left + " *)(.*)( *" + right + " *)$"), "g"), "$2");
 });
-  _$jscoverage['jquery.smartclient.js'][540]++;
+  _$jscoverage['jquery.smartclient.js'][532]++;
   if (((typeof Date.prototype.toJSON) !== "function")) {
-    _$jscoverage['jquery.smartclient.js'][542]++;
+    _$jscoverage['jquery.smartclient.js'][534]++;
     Date.prototype.toJSON = (function (key) {
-  _$jscoverage['jquery.smartclient.js'][544]++;
+  _$jscoverage['jquery.smartclient.js'][536]++;
   var f = (function (n) {
-  _$jscoverage['jquery.smartclient.js'][544]++;
+  _$jscoverage['jquery.smartclient.js'][536]++;
   return ((n < 10)? ("0" + n): n);
 });
-  _$jscoverage['jquery.smartclient.js'][546]++;
+  _$jscoverage['jquery.smartclient.js'][538]++;
   return (isFinite(this.valueOf())? (this.getUTCFullYear() + "-" + f((this.getUTCMonth() + 1)) + "-" + f(this.getUTCDate()) + "T" + f(this.getUTCHours()) + ":" + f(this.getUTCMinutes()) + ":" + f(this.getUTCSeconds()) + "Z"): null);
 });
-    _$jscoverage['jquery.smartclient.js'][555]++;
+    _$jscoverage['jquery.smartclient.js'][547]++;
     String.prototype.toJSON = (Number.prototype.toJSON = (Boolean.prototype.toJSON = (function (key) {
-  _$jscoverage['jquery.smartclient.js'][558]++;
+  _$jscoverage['jquery.smartclient.js'][550]++;
   return this.valueOf();
 })));
   }
-  _$jscoverage['jquery.smartclient.js'][562]++;
+  _$jscoverage['jquery.smartclient.js'][554]++;
   var cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, escapable = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g, meta = {"\b": "\\b", "\t": "\\t", "\n": "\\n", "\f": "\\f", "\r": "\\r", "\"": "\\\"", "\\": "\\\\"}, rep;
-  _$jscoverage['jquery.smartclient.js'][580]++;
+  _$jscoverage['jquery.smartclient.js'][572]++;
   function quote(string) {
-    _$jscoverage['jquery.smartclient.js'][580]++;
+    _$jscoverage['jquery.smartclient.js'][572]++;
     escapable.lastIndex = 0;
-    _$jscoverage['jquery.smartclient.js'][580]++;
+    _$jscoverage['jquery.smartclient.js'][572]++;
     return (escapable.test(string)? ("\"" + string.replace(escapable, (function (a) {
-  _$jscoverage['jquery.smartclient.js'][580]++;
+  _$jscoverage['jquery.smartclient.js'][572]++;
   var c = meta[a];
-  _$jscoverage['jquery.smartclient.js'][580]++;
+  _$jscoverage['jquery.smartclient.js'][572]++;
   return (((typeof c) === "string")? c: ("\\u" + ("0000" + a.charCodeAt(0).toString(16)).slice(-4)));
 })) + "\""): ("\"" + string + "\""));
 }
-  _$jscoverage['jquery.smartclient.js'][585]++;
+  _$jscoverage['jquery.smartclient.js'][574]++;
+  function str(key, holder) {
+    _$jscoverage['jquery.smartclient.js'][576]++;
+    var i, v, length, partial, value = holder[key];
+    _$jscoverage['jquery.smartclient.js'][579]++;
+    if ((value && ((typeof value) === "object") && ((typeof value.toJSON) === "function"))) {
+      _$jscoverage['jquery.smartclient.js'][579]++;
+      value = value.toJSON(key);
+    }
+    _$jscoverage['jquery.smartclient.js'][582]++;
+    if (((typeof rep) === "function")) {
+      _$jscoverage['jquery.smartclient.js'][582]++;
+      value = rep.call(holder, key, value);
+    }
+    _$jscoverage['jquery.smartclient.js'][585]++;
+    if (((typeof value) === "string")) {
+      _$jscoverage['jquery.smartclient.js'][585]++;
+      return quote(value);
+    }
+    _$jscoverage['jquery.smartclient.js'][588]++;
+    if (((typeof value) === "number")) {
+      _$jscoverage['jquery.smartclient.js'][588]++;
+      return (isFinite(value)? String(value): "null");
+    }
+    _$jscoverage['jquery.smartclient.js'][591]++;
+    if ((((typeof value) === "boolean") || ((typeof value) === "null"))) {
+      _$jscoverage['jquery.smartclient.js'][591]++;
+      return String(value);
+    }
+    _$jscoverage['jquery.smartclient.js'][593]++;
+    if (((typeof value) === "object")) {
+      _$jscoverage['jquery.smartclient.js'][596]++;
+      if ((! value)) {
+        _$jscoverage['jquery.smartclient.js'][596]++;
+        return "null";
+      }
+      _$jscoverage['jquery.smartclient.js'][599]++;
+      partial = [];
+      _$jscoverage['jquery.smartclient.js'][602]++;
+      if ((Object.prototype.toString.apply(value) === "[object Array]")) {
+        _$jscoverage['jquery.smartclient.js'][605]++;
+        length = value.length;
+        _$jscoverage['jquery.smartclient.js'][606]++;
+        for (i = 0; (i < length); (i++)) {
+          _$jscoverage['jquery.smartclient.js'][606]++;
+          partial[i] = (str(i, value) || "null");
+}
+        _$jscoverage['jquery.smartclient.js'][609]++;
+        return ("[" + partial.join(",") + "]");
+      }
+      _$jscoverage['jquery.smartclient.js'][613]++;
+      if ((rep && ((typeof rep) === "object"))) {
+        _$jscoverage['jquery.smartclient.js'][614]++;
+        length = rep.length;
+        _$jscoverage['jquery.smartclient.js'][615]++;
+        for (i = 0; (i < length); (i += 1)) {
+          _$jscoverage['jquery.smartclient.js'][616]++;
+          k = rep[i];
+          _$jscoverage['jquery.smartclient.js'][617]++;
+          if (((typeof k) === "string")) {
+            _$jscoverage['jquery.smartclient.js'][618]++;
+            v = str(k, value);
+            _$jscoverage['jquery.smartclient.js'][619]++;
+            if (v) {
+              _$jscoverage['jquery.smartclient.js'][619]++;
+              partial.push((quote(k) + ":" + v));
+            }
+          }
+}
+      }
+      else {
+        _$jscoverage['jquery.smartclient.js'][625]++;
+        for (var k in value) {
+          _$jscoverage['jquery.smartclient.js'][626]++;
+          if (Object.hasOwnProperty.call(value, k)) {
+            _$jscoverage['jquery.smartclient.js'][627]++;
+            v = str(k, value);
+            _$jscoverage['jquery.smartclient.js'][628]++;
+            if (v) {
+              _$jscoverage['jquery.smartclient.js'][628]++;
+              partial.push((quote(k) + ":" + v));
+            }
+          }
+}
+      }
+      _$jscoverage['jquery.smartclient.js'][634]++;
+      v = ("{" + partial.join(",") + "}");
+      _$jscoverage['jquery.smartclient.js'][636]++;
+      return v;
+    }
+}
+  _$jscoverage['jquery.smartclient.js'][640]++;
   $.toJSON = (function (value, replacer) {
-  _$jscoverage['jquery.smartclient.js'][588]++;
+  _$jscoverage['jquery.smartclient.js'][645]++;
   var i;
-  _$jscoverage['jquery.smartclient.js'][593]++;
+  _$jscoverage['jquery.smartclient.js'][650]++;
   rep = replacer;
-  _$jscoverage['jquery.smartclient.js'][594]++;
+  _$jscoverage['jquery.smartclient.js'][651]++;
   if ((replacer && ((typeof replacer) !== "function") && (((typeof replacer) !== "object") || ((typeof replacer.length) !== "number")))) {
-    _$jscoverage['jquery.smartclient.js'][594]++;
+    _$jscoverage['jquery.smartclient.js'][651]++;
     throw new Error("JSON.stringify");
   }
-  _$jscoverage['jquery.smartclient.js'][598]++;
-  var tmp = (function (key, holder) {
-  _$jscoverage['jquery.smartclient.js'][602]++;
-  var i, k, v, length, partial, value = holder[key];
-  _$jscoverage['jquery.smartclient.js'][605]++;
-  if ((value && ((typeof value) === "object") && ((typeof value.toJSON) === "function"))) {
-    _$jscoverage['jquery.smartclient.js'][605]++;
-    value = value.toJSON(key);
-  }
-  _$jscoverage['jquery.smartclient.js'][608]++;
-  if (((typeof rep) === "function")) {
-    _$jscoverage['jquery.smartclient.js'][608]++;
-    value = rep.call(holder, key, value);
-  }
-  _$jscoverage['jquery.smartclient.js'][611]++;
-  switch ((typeof value)) {
-  case "string":
-    _$jscoverage['jquery.smartclient.js'][612]++;
-    return quote(value);
-  case "number":
-    _$jscoverage['jquery.smartclient.js'][614]++;
-    return (isFinite(value)? String(value): "null");
-  case "boolean":
-  case "null":
-    _$jscoverage['jquery.smartclient.js'][617]++;
-    return String(value);
-  case "object":
-    _$jscoverage['jquery.smartclient.js'][621]++;
-    if ((! value)) {
-      _$jscoverage['jquery.smartclient.js'][621]++;
-      return "null";
-    }
-    _$jscoverage['jquery.smartclient.js'][624]++;
-    partial = [];
-    _$jscoverage['jquery.smartclient.js'][627]++;
-    if ((Object.prototype.toString.apply(value) === "[object Array]")) {
-      _$jscoverage['jquery.smartclient.js'][630]++;
-      length = value.length;
-      _$jscoverage['jquery.smartclient.js'][631]++;
-      for (i = 0; (i < length); (i++)) {
-        _$jscoverage['jquery.smartclient.js'][631]++;
-        partial[i] = (arguments.callee(i, value) || "null");
-}
-      _$jscoverage['jquery.smartclient.js'][634]++;
-      return ("[" + partial.join(",") + "]");
-    }
-    _$jscoverage['jquery.smartclient.js'][638]++;
-    if ((rep && ((typeof rep) === "object"))) {
-      _$jscoverage['jquery.smartclient.js'][639]++;
-      length = rep.length;
-      _$jscoverage['jquery.smartclient.js'][640]++;
-      for (i = 0; (i < length); (i += 1)) {
-        _$jscoverage['jquery.smartclient.js'][641]++;
-        k = rep[i];
-        _$jscoverage['jquery.smartclient.js'][642]++;
-        if (((typeof k) === "string")) {
-          _$jscoverage['jquery.smartclient.js'][643]++;
-          v = arguments.callee(k, value);
-          _$jscoverage['jquery.smartclient.js'][644]++;
-          if (v) {
-            _$jscoverage['jquery.smartclient.js'][644]++;
-            partial.push((quote(k) + ":" + v));
-          }
-        }
-}
-    }
-    else {
-      _$jscoverage['jquery.smartclient.js'][650]++;
-      for (k in value) {
-        _$jscoverage['jquery.smartclient.js'][650]++;
-        if (Object.hasOwnProperty.call(value, k)) {
-          _$jscoverage['jquery.smartclient.js'][651]++;
-          v = arguments.callee(k, value);
-          _$jscoverage['jquery.smartclient.js'][652]++;
-          if (v) {
-            _$jscoverage['jquery.smartclient.js'][652]++;
-            partial.push((quote(k) + ":" + v));
-          }
-        }
-}
-    }
-    _$jscoverage['jquery.smartclient.js'][657]++;
-    v = ("{" + partial.join(",") + "}");
-    _$jscoverage['jquery.smartclient.js'][659]++;
-    return v;
-  }
-})("", {"": value});
-  _$jscoverage['jquery.smartclient.js'][668]++;
+  _$jscoverage['jquery.smartclient.js'][656]++;
+  var tmp = str("", {"": value});
+  _$jscoverage['jquery.smartclient.js'][664]++;
   return tmp.replace(/\/Date/g, "\\/Date").replace(/\)(\/)/g, ")\\/");
 });
-  _$jscoverage['jquery.smartclient.js'][672]++;
-  $.fromJSON = (function (text, reviver) {
-  _$jscoverage['jquery.smartclient.js'][673]++;
-  var str = (text || "");
-  _$jscoverage['jquery.smartclient.js'][674]++;
-  str = str.replace(/([\n\r\t])|(\u[0-9a-fA-F]{4})/g, "");
-  _$jscoverage['jquery.smartclient.js'][675]++;
-  str = str.trimChars("\\{", "\\}");
-  _$jscoverage['jquery.smartclient.js'][676]++;
-  return eval(("({" + str + "})"));
+  _$jscoverage['jquery.smartclient.js'][668]++;
+  $.parseJSON = (function (text) {
+  _$jscoverage['jquery.smartclient.js'][669]++;
+  text = (text || "").replace(/([\n\r\t]|(\\u[0-9a-fA-F]{4}))/g, "");
+  _$jscoverage['jquery.smartclient.js'][670]++;
+  text = text.trimChars("\\{", "\\}");
+  _$jscoverage['jquery.smartclient.js'][671]++;
+  return eval(("({" + text + "})"));
 });
-  _$jscoverage['jquery.smartclient.js'][682]++;
+  _$jscoverage['jquery.smartclient.js'][677]++;
   $((function () {
-  _$jscoverage['jquery.smartclient.js'][682]++;
+  _$jscoverage['jquery.smartclient.js'][677]++;
   $(document).initializeControls();
 }));
-  _$jscoverage['jquery.smartclient.js'][685]++;
+  _$jscoverage['jquery.smartclient.js'][680]++;
   ($.preferCulture && $.preferCulture("pt-BR"));
 })(jQuery);
 if (!( false)) {
-  _$jscoverage['jquery.smartclient.js'].conditionals[539] = 678;
+  _$jscoverage['jquery.smartclient.js'].conditionals[531] = 673;
 }
 if (!( false)) {
-  _$jscoverage['jquery.smartclient.js'].conditionals[485] = 501;
+  _$jscoverage['jquery.smartclient.js'].conditionals[477] = 493;
 }
 if (!( false)) {
-  _$jscoverage['jquery.smartclient.js'].conditionals[436] = 479;
+  _$jscoverage['jquery.smartclient.js'].conditionals[431] = 471;
+}
+if (!( false)) {
+  _$jscoverage['jquery.smartclient.js'].conditionals[338] = 340;
+}
+if (!( false)) {
+  _$jscoverage['jquery.smartclient.js'].conditionals[293] = 295;
+}
+if (!( false)) {
+  _$jscoverage['jquery.smartclient.js'].conditionals[184] = 186;
+}
+if (!( false        )) {
+  _$jscoverage['jquery.smartclient.js'].conditionals[104] = 121;
+}
+if (!( false)) {
+  _$jscoverage['jquery.smartclient.js'].conditionals[75] = 78;
 }
