@@ -72,10 +72,10 @@
                 }
 
             } catch (err) {
-                //#JSCOVERAGE_IF  false
-                /* $("<pre class='error' />").text("The template is mal-formed, because " + err + "\n\n" + script).appendTo("body"); */
+//#JSCOVERAGE_IF false
+                // $("<pre class='error' />").text("The template is mal-formed, because " + err + "\n\n" + script).appendTo("body"); //
                 Exception("The template is mal-formed, because " + err + "\n\n" + script);
-                //#JSCOVERAGE_ENDIF  
+//#JSCOVERAGE_ENDIF  
             }
 
 
@@ -101,6 +101,7 @@
             iframe.hide().attr("src", url);
 
         },
+//#JSCOVERAGE_IF false        
         warnCapsLockIsOn: function(callback) {
             this.each(function(i, elem) {
 
@@ -117,13 +118,14 @@
 
             });
         },
+//#JSCOVERAGE_ENDIF
         smart: function() {
             var $this = $(this[0]);
             if (!this._smart) {
 
                 var text = this.attr("smart") || "";
 
-                // Execute fromJSON by call method, because the context it´s "this", otherwise will be $
+                // Execute fromJSON by call method, because the context it's "this", otherwise will be $
                 this._smart = $.parseJSON.call(this, text);
 
                 var events = 0;
@@ -132,29 +134,23 @@
                     var obj = this._smart[event];
                     events++;
 
-                    if (!!obj.show && $(obj.show).size() === 0)
-                        errors += "The attribute SHOW (" + obj.show + ") don´t exists!\n";
-
-                    if (!!obj.hide && $(obj.hide).size() === 0)
-                        errors += "The attribute HIDE (" + obj.hide + ") don´t exists!\n";
-
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
-                        errors += "The attribute onbinding don´t is a Function!\n";
+                        errors += "The attribute onbinding don't is a Function!\n";
 
                     if (!!obj.onrequest && typeof (obj.onrequest) !== "function")
-                        errors += "The attribute onrequest don´t is a Function!\n";
+                        errors += "The attribute onrequest don't is a Function!\n";
 
                     if (!!obj.onresponse && typeof (obj.onresponse) !== "function")
-                        errors += "The attribute onresponse don´t is a Function!\n";
+                        errors += "The attribute onresponse don't is a Function!\n";
 
                     if (!!obj.onsucess && typeof (obj.onsucess) !== "function")
-                        errors += "The attribute onsucess don´t is a Function!\n";
+                        errors += "The attribute onsucess don't is a Function!\n";
 
                     if (!!obj.onerror && typeof (obj.onerror) !== "function")
-                        errors += "The attribute onerror don´t is a Function!\n";
+                        errors += "The attribute onerror don't is a Function!\n";
 
                     if (!!obj.onbounded && typeof (obj.onbounded) !== "function")
-                        errors += "The attribute onbounded don´t is a Function!\n";
+                        errors += "The attribute onbounded don't is a Function!\n";
 
                     if (!!obj.once && typeof (obj.once) !== "boolean")
                         errors += "The attribute ONCE is not a valid boolean!\n";
@@ -163,13 +159,13 @@
                         errors += "The attribute METHOD is not a valid boolean!\n";
 
                     if (!!obj.target && ($(obj.target).size() === 0 || typeof (obj.target) !== "string"))
-                        errors += "The attribute TARGET (" + obj.target + ") don´t exists!\n";
+                        errors += "The attribute TARGET (" + obj.target + ") don't exists!\n";
 
                     if (!!obj.template && ($(obj.template).size() === 0 || typeof (obj.template) !== "string"))
-                        errors += "The attribute TEMPLATE (" + obj.template + ") don´t exists!\n";
+                        errors += "The attribute TEMPLATE (" + obj.template + ") don't exists!\n";
 
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
-                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don´t exists!\n";
+                        errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don't exists!\n";
 
                     obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
                     var candidate = obj.source.replace(/javascript(.*)/g, "");
@@ -180,14 +176,14 @@
                 }
 
                 if (events === 0) {
-                    errors += "Don´t exists event configured!\n";
+                    errors += "Don't exists event configured!\n";
                 }
 
 
                 if (errors !== "") {
-                    //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
                     Exception(errors);
-                    //#JSCOVERAGE_ENDIF 
+//#JSCOVERAGE_ENDIF 
                 }
 
 
@@ -234,7 +230,7 @@
             options = $.extend(true, {}, smart, options);
 
             if (options.onbinding) {
-                if (options.onbinding.apply($this) === false) { /*  case undefined or true the code continues */
+                if (options.onbinding.call($this, options) === false) { /*  case undefined or true the code continues */
                     return this;
                 }
             }
@@ -277,6 +273,9 @@
 
                         /*  If Http Status 200 then OK, process JSON because data should be transform on html */
                         options.dataSource = dataSource;
+                        var contentType = request.getResponseHeader("Content-Type");
+                        if (!!contentType && contentType.indexOf("javascript") >= 0)
+                            options.dataSource = eval(dataSource);
 
                         if (options.onsucess)
                             options.onsucess.call($this, dataSource, status, request, options);
@@ -291,14 +290,14 @@
                         fireActions($this, options, smart);
 
                         if (request.status === "404") {
-                            //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
                             PageNotFoundException(options.url);
-                            //#JSCOVERAGE_ENDIF  
+//#JSCOVERAGE_ENDIF  
                         }
                     },
                     complete: function() {
-                        /*  Retirada a função fireActions deste evento pois o sucess é passado  */
-                        /*  como argumento da função ajaxIframe */
+                        /*  Retirada a funcao fireActions deste evento pois o sucess e passado  */
+                        /*  como argumento da funcao ajaxIframe */
                     }
                 });
             } else {
@@ -326,6 +325,8 @@
                         if (!!options.template && $template.size() > 0) {
                             html = $template.render(options.dataSource, options);
                         } else {
+                            // Save current template
+                            // $this.data("template", $this.html())
                             html = $this.render(options.dataSource, options);
                         }
 
@@ -334,9 +335,9 @@
 
 
                     if ($(options.target).size() === 0) {
-                        //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
                         TargetMissingException(this);
-                        //#JSCOVERAGE_ENDIF  
+//#JSCOVERAGE_ENDIF  
                     }
 
                     if (mode === "after") {
@@ -411,7 +412,7 @@
                 var options = eval("(" + it.attr("options") + ")");
 
                 if (!it[plugin]) {
-                    alert("The plugin \"" + plugin + "\" don´t loaded!");
+                    alert("The plugin \"" + plugin + "\" don't loaded!");
                 }
 
                 it[plugin](options);
@@ -427,7 +428,7 @@
 
 
         // The tests dont cover theming
-        //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
         _initializeThemeStyle: function() {
             $(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
             $(":text", this).focusin(function() {
@@ -441,7 +442,7 @@
             }).after("<span />");
 
             //
-            /*  Botões */
+            /*  Buttons */
             //
             $(":submit, :button, :reset", this).each(function(i, ctrl) {
                 $(ctrl).wrap("<span class='ui-theme-button " + $(ctrl).attr("class") + "' />").parent().hover(function() { $(this).addClass('hover'); }, function() { $(this).removeClass('hover'); });
@@ -467,13 +468,13 @@
             });
 
         }
-        //#JSCOVERAGE_ENDIF           
+//#JSCOVERAGE_ENDIF           
 
 
     }); /*  End Initialize Controls */
 
     // Dont cover errors code
-    //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
     function Exception(msg) {
         msg = " SmartClient Error:  \n" + msg;
         /* alert(msg); */
@@ -482,14 +483,14 @@
     }
 
     function PageNotFoundException(url) {
-        Exception(" A página '" + url + "' não foi encontrada!");
+        Exception(" A pagina '" + url + "' nï¿½o foi encontrada!");
     }
 
     function TargetMissingException(sender) {
-        Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
+        Exception(" Nï¿½o foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
     }
 
-    //#JSCOVERAGE_ENDIF    
+//#JSCOVERAGE_ENDIF    
 
 
 
@@ -527,7 +528,7 @@
     };
 
     // Does not cover the JSON Serializer, it is external plugin
-    //#JSCOVERAGE_IF false
+//#JSCOVERAGE_IF false
     if (typeof Date.prototype.toJSON !== 'function') {
 
         Date.prototype.toJSON = function(key) {
@@ -656,7 +657,7 @@
 
 
         //
-        /*  Para corrigir o problema do JavascriptSerializer que não converte o valor */
+        /*  Para corrigir o problema do JavascriptSerializer que nï¿½o converte o valor */
         /*  /Date(123456789000)/ -> \/Date(123456789000)\/ */
         /*  .replace("\/Date", "\\/Date") */
         //
@@ -669,13 +670,13 @@
         text = text.trimChars("\\{", "\\}"); /*  Remove braces if exists */
         return eval("({" + text + "})");
     };
-    //#JSCOVERAGE_ENDIF  
+//#JSCOVERAGE_ENDIF  
 
 
     /*  Inicializa todos os controles da tela. */
     $(function() { $(document).initializeControls(); });
 
-    /*  Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento */
+    /*  Se o globalization for declarado entï¿½o comeï¿½a com pt-BR para facilitar o desenvolvimento */
     $.preferCulture && $.preferCulture("pt-BR");
 
 })(jQuery);
