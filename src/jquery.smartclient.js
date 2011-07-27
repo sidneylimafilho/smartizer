@@ -1,4 +1,4 @@
-///  <reference path="jquery-vsdoc.js" /> 
+﻿///  <reference path="jquery-vsdoc.js" /> 
 ///  <summary> 
 ///  SmartClient  
 ///  </summary> 
@@ -121,17 +121,31 @@
 //#JSCOVERAGE_ENDIF
         smart: function() {
             var $this = $(this[0]);
-            if (!this._smart) {
+            var smart = $this.data("_smart");
+            if (!smart) {
 
                 var text = this.attr("smart") || "";
 
                 // Execute fromJSON by call method, because the context it's "this", otherwise will be $
-                this._smart = $.parseJSON.call(this, text);
+                smart = $.parseJSON.call(this, text);
+
+                if (this.attr("£")) {
+                    smart.load = $.parseJSON.call(this, this.attr("£"));
+                }
+
+                if (this.attr("¢")) {
+                    smart.click = $.parseJSON.call(this, this.attr("¢"));
+                }
 
                 var events = 0;
                 var errors = "";
-                for (var event in this._smart) {
-                    var obj = this._smart[event];
+                for (var event in smart) {
+                    var obj = smart[event];
+
+                    if (!!smart[event].inherits) {
+                        smart[event] = $.extend(true, $(obj.inherits).smart()[event], smart[event]);
+                    }
+
                     events++;
 
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
@@ -186,9 +200,9 @@
 //#JSCOVERAGE_ENDIF 
                 }
 
-
+                $this.data("_smart", smart); // Cache smart value
             }
-            return this._smart;
+            return smart;
         },
 
 
@@ -215,7 +229,7 @@
             var smart = $this.smart();
 
             /*  Get configuration for event or first configuration possible */
-            for (var key in smart) { smart = smart[key]; }
+            for (var key in smart) { smart = smart[key]; break; }
 
             smart = $this.smart()[event.type] || smart;
 
@@ -229,16 +243,44 @@
             /*  The order are true, {}, options, smart to copy the properties of the smart to options */
             options = $.extend(true, {}, smart, options);
 
-            if (options.onbinding) {
+            if (!!options.onbinding) {
                 if (options.onbinding.call($this, options) === false) { /*  case undefined or true the code continues */
                     return this;
                 }
             }
 
 
+            window.dataSources = window.dataSources || {};
+
             /* Exists only for tests */
             if (options.dataSource || options.responseBody || options.defaultResponseBody)
                 options.dataSource = options.dataSource || options.responseBody || options.defaultResponseBody;
+
+            if (!!options.dataSource && !!options.dataMember) {
+
+                // Busca a variável do window caso exista, senão usa ela mesma não importando o tipo
+                var dataSource = window.dataSources[options.dataSource];
+                var dataMember = options.dataMember;
+                var propGetSetName = "$" + dataMember;
+                var method = $.fn.val;
+
+                (dataSource[propGetSetName] = function(value) {
+                    dataSource[dataMember] = value || method.call($this);
+                    if (!!value) method.call($this, value);
+                    return dataSource[dataMember];
+                })(dataSource[dataMember]);
+
+                //
+                // Seta um evento que irá pegar o valor digitado e colocará no dataSource
+                //
+                $this.bind("keyup", function(event) {
+                    for (var member in dataSource) if (dataSource.hasOwnProperty(member) && member[0] === "$") {
+                        dataSource[member]();
+                    }
+                });
+            }
+
+
 
             if (!!options.source) /*  Only fires ajax if there are url */
             {
@@ -261,39 +303,49 @@
                     data: (options.method !== "GET" ? $.toJSON(options.sourceparams || {}) : null),
                     contentType: "application/json",
                     ifModified: true,
-                    success: function(dataSource, status, request) {
+                    success: function(responseBody, status, request) {
 
-                        /*  If Not Modified then get cached content file by iframe */
-                        if (!!request && (request.status === 304 || status === "notmodified")) {
-                            $this.ajaxIframe(options.url, $this, this.success);
+                        var dataSource = responseBody;
+
+                        if (!!request) {
+                            /*  If Not Modified then get cached content file by iframe */
+                            if (request.status === 304 || status === "notmodified") {
+                                $this.ajaxIframe(options.source, $this, this.success);
+                                return;
+                            } else {
+                                /*  If Http Status 200 then OK, process JSON because data should be transform on html */
+                                var contentType = request.getResponseHeader("Content-Type");
+                                if (!!contentType && contentType.indexOf("javascript") >= 0)
+                                    dataSource = eval("(" + dataSource + ")");
+                            }
                         }
 
-                        if (options.onresponse)
+                        if (!!options.onresponse)
                             dataSource = options.onresponse.call($this, dataSource, status, request, options);
 
-                        /*  If Http Status 200 then OK, process JSON because data should be transform on html */
-                        options.dataSource = dataSource;
-                        var contentType = request.getResponseHeader("Content-Type");
-                        if (!!contentType && contentType.indexOf("javascript") >= 0)
-                            options.dataSource = eval(dataSource);
+                        if (typeof (options.dataSource) === "string") {
+                            window.dataSources[options.dataSource] = dataSource;
+                        } else {
+                            options.dataSource = dataSource;
+                        }
 
-                        if (options.onsucess)
-                            options.onsucess.call($this, dataSource, status, request, options);
+                        //
+                        // DEPRECATED
+                        //
+                        if (options.onsucess) options.onsucess.call($this, dataSource, status, request, options);
 
                         fireActions($this, options, smart);
 
                     },
                     error: function(request, textStatus, errorThrown) {
-                        if (options.onerror)
-                            options.onerror.call($this, request, textStatus, errorThrown, options);
+
+                        if (options.onerror) options.onerror.call($this, request, textStatus, errorThrown, options);
 
                         fireActions($this, options, smart);
 
-                        if (request.status === "404") {
 //#JSCOVERAGE_IF false
-                            PageNotFoundException(options.url);
-//#JSCOVERAGE_ENDIF  
-                        }
+                        if (request.status === "404") PageNotFoundException(options.url);
+//#JSCOVERAGE_ENDIF
                     },
                     complete: function() {
                         /*  Retirada a funcao fireActions deste evento pois o sucess e passado  */
@@ -305,7 +357,7 @@
             }
 
 
-            function fireActions($this, options, smart, mode) {
+            function fireActions($this, options, smart) {
 
                 /*  Get target tag */
                 options.target = options.target || $this;
@@ -316,11 +368,8 @@
                     var html = options.dataSource || $(options.template).html() || "";
 
                     if (html.length === 0 && $(smart.emptytemplate).size() > 0) {
-
                         html = $(options.emptytemplate).html();
-
                     } else if (typeof (options.dataSource) === "object" || typeof (options.dataSource) === "array") {
-
                         var $template = $(options.template);
                         if (!!options.template && $template.size() > 0) {
                             html = $template.render(options.dataSource, options);
@@ -333,14 +382,11 @@
                     }
 
 
-
-                    if ($(options.target).size() === 0) {
 //#JSCOVERAGE_IF false
-                        TargetMissingException(this);
-//#JSCOVERAGE_ENDIF  
-                    }
+                    if ($(options.target).size() === 0) TargetMissingException(this);
+//#JSCOVERAGE_ENDIF
 
-                    if (mode === "after") {
+                    if (options.targetPosition === "after") {
                         $(options.target).after(html);
                         $(options.target).parent().initializeControls();
                     } else {
@@ -364,7 +410,7 @@
                     }
                 }
 
-                if (options.onbounded)
+                if (!!options.onbounded)
                     options.onbounded.call($this, options);
 
                 /*  Allow fire DataBinding in controls that has TRIGGER atribute */
@@ -373,6 +419,9 @@
                     return;
                 }
             }
+
+
+
 
             return null;
         },
@@ -383,7 +432,7 @@
 
         initializeControls: function() {
 
-            $("[smart]", this).each(function(i, ctrl) {
+            $("[smart], [£], [¢]", this).each(function(i, ctrl) {
                 var $ctrl = $(ctrl);
                 if (!$ctrl.hasControl()) {
                     $ctrl.hasControl(true);
@@ -394,15 +443,19 @@
                         } else {
                             $ctrl.bind(eventType, function(event) {
                                 $ctrl.dataBind({}, event);
-                                if (ctrl.tagName === "A")
+                                if (ctrl.tagName === "A") {
+                                    if ($ctrl.attr("href")[0] === "#") {
+                                        location.hash = $ctrl.attr("href");
+                                    }
                                     event.preventDefault();
+                                }
                             });
                         }
                     }
                 }
             });
 
-
+//#JSCOVERAGE_IF false
             $("[plugin]", this).each(function(i, ctrl) {
                 var it = $(ctrl);
                 if (it.hasControl()) return;
@@ -417,6 +470,7 @@
 
                 it[plugin](options);
             });
+//#JSCOVERAGE_ENDIF
 
             this._initializeThemeStyle();
 
@@ -483,11 +537,11 @@
     }
 
     function PageNotFoundException(url) {
-        Exception(" A pagina '" + url + "' n�o foi encontrada!");
+        Exception(" A pagina '" + url + "' não foi encontrada!");
     }
 
     function TargetMissingException(sender) {
-        Exception(" N�o foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
+        Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
     }
 
 //#JSCOVERAGE_ENDIF    
@@ -498,7 +552,7 @@
     //
     /*  JSON Serializer based by json2.js */
     //
-
+//#JSCOVERAGE_IF false
     /***************************************************************************************************
     DateTime Extensions
     ***************************************************************************************************/
@@ -517,6 +571,7 @@
         return date;
     };
 
+//#JSCOVERAGE_ENDIF
 
     String.prototype.trimChars = function(left, right) {
         left = left || "";
@@ -657,7 +712,7 @@
 
 
         //
-        /*  Para corrigir o problema do JavascriptSerializer que n�o converte o valor */
+        /*  Para corrigir o problema do JavascriptSerializer que não converte o valor */
         /*  /Date(123456789000)/ -> \/Date(123456789000)\/ */
         /*  .replace("\/Date", "\\/Date") */
         //
@@ -676,7 +731,7 @@
     /*  Inicializa todos os controles da tela. */
     $(function() { $(document).initializeControls(); });
 
-    /*  Se o globalization for declarado ent�o come�a com pt-BR para facilitar o desenvolvimento */
+    /*  Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento */
     $.preferCulture && $.preferCulture("pt-BR");
 
 })(jQuery);

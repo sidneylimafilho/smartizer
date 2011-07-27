@@ -126,7 +126,7 @@ $(function() {
 
         var html = "<a id='teste' smart=\"{click:{ source:'javascript:void(0);' } }\" ></a>";
         equal(sandbox.html(html).find("A").smart().click.source, "", "source inválido!");
-        
+
         var html = "<a id='teste' smart=\"{click:{onbinding:1}}\" ></a>";
         raises(function() { sandbox.html(html).find("A").smart(); }, "onbinding inválido!");
 
@@ -267,17 +267,8 @@ $(function() {
         equals(t, 3);
     });
 
-    
 
-    test("Um elemento com atributo SMART deve disparar o HIDE/SHOW", function() {
-        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
-                               "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
-                               "<div smart=\"{load:{hide:['#visivel'], show:['#oculto'], speed:0}}\" ></div>")
-               .initializeControls()
-               .find("p");
-        ok($("#oculto").is(":visible"));
-        ok($("#visivel").is(":hidden"));
-    });
+
 
 
     test("Um elemento com atributo SMART deve disparar o evento onbinding", function() {
@@ -346,6 +337,80 @@ $(function() {
     });
 
 
+    test("Um elemento com atributo SMART pode chamar funções do jQuery no mesmo elemento", function() {
+        var tag = sandbox.html("<div smart=\"{load:{hide:'0'}}\" ></div>").initializeControls().find("div");
+        ok(tag.is(":hidden"));
+    });
+
+    test("Um elemento com atributo SMART pode chamar funções do jQuery, passando o contexto", function() {
+        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
+                               "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
+                               "<div smart=\"{load:{hide:['#visivel'], show:['#oculto'], speed:0}}\" ></div>")
+               .initializeControls()
+               .find("p");
+        ok($("#oculto").is(":visible"));
+        ok($("#visivel").is(":hidden"));
+    });
+
+
+    test("Um elemento pode ser configurado com atributos iniciando com £", function() {
+        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
+                               "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
+                               "<div £=\"hide:['#visivel'], show:['#oculto']\" ></div>")
+               .initializeControls()
+               .find("p");
+        ok($("#oculto").is(":visible"));
+        ok($("#visivel").is(":hidden"));
+    });
+
+
+    asyncTest("Um elemento que está configurado com ¢ deve responder ao evento click", function() {
+
+        sandbox.html("<p><div ¢=\"onbinding:function() {ok(true);start();}\" /></p>")
+                    .initializeControls()
+                    .find("div")
+                    .trigger($.Event("click"));
+    });
+
+
+    asyncTest("Um elemento com atributo SMART configurado, pode ser copiado por outro elemento que use a diretiva INHERITS", function() {
+        t = 0;
+        sandbox.html("<p><div id='base' smart=\"load:{sourceparams:1}\" /></p>" +
+                     "<p><div £=\"inherits:'#base', onbinding:function(options){equals(options.sourceparams, 1); start();}\" /></p>")
+               .initializeControls()
+               .find("div");
+    });
+
+
+    test("A diretiva ONCE só permite executar o evento uma vez", function() {
+        window.t = 0;
+        sandbox.html("<p><div smart=\"{click:{once:true, onbinding:function(){window.t++}}}\" /></p>")
+               .initializeControls()
+               .find("div")
+               .click()
+               .click();
+
+        equals(t, 1);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     module("RENDER");
@@ -373,7 +438,7 @@ $(function() {
         sandbox.html("<p id='template'>teste <$=t$></p>" +
                      "<span id='target'>Teste</span>" +
                      "<div smart=\"{click:{" +
-                                      "defaultResponseBody:{t:1}, " +
+                                      "dataSource:{t:1}, " +
                                       "method:'GET', " +
                                       "target:'#target', " +
                                       "template:'#template', " +
@@ -384,12 +449,15 @@ $(function() {
                .click();
     });
 
+
+
+
     asyncTest("A renderização deve funcionar informando o item a ser renderizado!", function() {
         window.t = 0;
         sandbox.html("<p id='template'>teste <$=index$> </p>" +
                      "<span id='target'>Teste</span>" +
                      "<div smart=\"{click:{" +
-                                      "defaultResponseBody:[{t:1},{t:4},{t:6},{t:8}], " +
+                                      "dataSource:[{t:1},{t:4},{t:6},{t:8}], " +
                                       "method:'GET', " +
                                       "target:'#target', " +
                                       "template:'#template', " +
@@ -399,6 +467,84 @@ $(function() {
                .find("div")
                .click();
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    module("DATA BINDING");
+
+    test("A diretiva dataMember indica onde a informação deve ser inserida ", function() {
+
+        window.dataSources.temp = { teste: 2 };
+        var tag = sandbox.html("<input type='text' value='err' ¢=\"dataSource:'temp', dataMember:'teste'\" />")
+               .initializeControls()
+               .find("input");
+
+        tag.trigger($.Event("click"));
+        equals(tag.val(), 2);
+    });
+
+
+    asyncTest("Quando o retorno do source é JSON e há um dataSource como string, salvar o dado no dataSource", function() {
+        window.t = 0;
+        sandbox.html("<p id='template'>teste <$=t$></p>" +
+                     "<span id='target'>Teste</span>" +
+                     "<div ¢=\"dataSource:'temp', " +
+                              "method:'GET', " +
+                              "source:'data.js', " +
+                              "onbounded:function(){ok(window.dataSources.temp); start();}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
+
+
+
+
+
+
+
+    module("TARGET POSITION");
+
+
+    test("Quando adicionar um conteúdo a uma tag, deve usar a diretiva targetPosition para indicar onde colocar", function() {
+        window.dataSources.temp = [{ t: 1 }, { t: 2 }, { t: 3 }, { t: 4}];
+        sandbox.html("<p id='target'><u>ini</u></p>" +
+                     "<div ¢=\"dataSource:'temp', target:'#target', targetPosition:'after'\"><span><$=t$></span></div>")
+                .initializeControls()
+                .find("div")
+                .click();
+
+    });
+
+
+
+
+
+
+
 
 
 
@@ -470,7 +616,7 @@ $(function() {
                                   "}\" ></p>" +
                      "<div smart=\"click: {method:'POST', " +
                                   "sourceparams:{div:true}, " +
-                                  "once:false, " +                                                            
+                                  "once:false, " +
                                   "trigger:'#target' " +
                                   "}\" ></div>")
                 .initializeControls()
@@ -570,6 +716,17 @@ $(function() {
                 .initializeControls()
                 .find("#link")
                 .trigger($.Event("click"));
+    });
+
+
+    module("HASH");
+
+    test("Links que começam com # devem marcar na barra de endereços", function() {
+        sandbox.html("<a href='#data.aspx' ¢=\"onbinding:function(){}\" /></p>")
+                .initializeControls()
+                .find("a")
+                .trigger($.Event("click"));
+        equals(location.hash, '#data.aspx');
     });
 
     //    test("GRID Editável", function() {

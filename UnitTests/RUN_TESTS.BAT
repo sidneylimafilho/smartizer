@@ -1,4 +1,4 @@
 "D:\ProReserve\Sistemas\nodejs\node.exe" "PrepareFile.js"
-jscoverage ..\src .\.tmp
+jscoverage --encoding=UTF-8 ..\src .\.tmp
 xcopy .tmp\j*.* .\ /q /c /y 
 rd /s /q .tmp
