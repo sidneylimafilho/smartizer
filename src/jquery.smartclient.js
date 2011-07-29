@@ -188,9 +188,11 @@
 
                 }
 
+
                 //#JSCOVERAGE_IF false
                 if (errors !== "") { Exception(errors); }
                 //#JSCOVERAGE_ENDIF 
+
 
                 $this.data("_smart", smart); // Cache smart value
             }
@@ -205,10 +207,12 @@
 
                 var smart = $this.smart();
 
+
                 /*  Get configuration for event or first configuration possible */
                 for (var key in smart) { smart = smart[key]; break; }
 
                 if (!!event) smart = $this.smart()[event.type] || smart;
+
 
                 /*  Check whether keyDown, keyPress, keyUp event fires in a specific key */
                 if (event.type.indexOf("key") >= 0) {
@@ -248,7 +252,9 @@
                             return dataSource[dataMember];
                         })(dataSource[dataMember]);
 
+
                         //#JSCOVERAGE_IF false
+
                         //
                         // Seta um evento que irá pegar o valor digitado e colocará no dataSource
                         //
@@ -257,7 +263,9 @@
                                 dataSource[member]();
                             }
                         });
+
                         //#JSCOVERAGE_ENDIF
+
                     }
                 }
 
@@ -324,9 +332,11 @@
 
                             fireActions($this, options, smart);
 
+
                             //#JSCOVERAGE_IF false
                             if (request.status === "404") PageNotFoundException(options.url);
                             //#JSCOVERAGE_ENDIF
+
                         }
                     });
                 } else {
@@ -363,9 +373,11 @@
                         }
 
 
+
                         //#JSCOVERAGE_IF false
                         if ($(options.target).size() === 0) { TargetMissingException(this); }
                         //#JSCOVERAGE_ENDIF
+
 
                         if (options.targetPosition === "after") {
                             $(options.target).after(html);
@@ -381,7 +393,9 @@
                     /*  If exists options that are jQuery methods then executes them */
                     for (var key in options) {
                         if ($.fn[key] && !!options[key]) {
+
                             var $func = $.fn[key], value = options[key];
+
                             if (typeof (value) === "string" && key !== "trigger") {
                                 $func.call($this, value);
                             } else if (typeof (options[key].shift) === "function") {
@@ -411,6 +425,7 @@
         ***************************************************************************************************/
 
         initializeControls: function() {
+
 
             $("[smart]", this).each(function(i, ctrl) {
                 var $ctrl = $(ctrl);
