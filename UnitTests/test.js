@@ -109,11 +109,6 @@ $(function() {
 
     test("SMART: Deve validar os argumentos do atributo SMART", function() {
 
-        var html = "<a id='teste' smart=\"\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "Validação Conteúdo Vazio disparada!");
-
-        var html = "<a id='teste' smart=\"{}\" ></a>";
-        raises(function() { sandbox.html(html).find("A").smart(); }, "Validação Conteúdo Vazio disparada!");
 
         var html = "<a id='teste' smart=\"{click:{ source:'blank.htm' } }\" ></a>";
         equal(sandbox.html(html).find("A").smart().click.source, "blank.htm", "source válido!");
@@ -223,6 +218,14 @@ $(function() {
     test("Um elemento com atributo SMART deve disparar o evento LOAD", function() {
         //window.t = 0;
         sandbox.html("<p><div smart=\"{load:{onbinding:function(){window.t=2}}}\" /></p>")
+               .initializeControls()
+               .find("div")
+        equals(t, 2);
+    });
+
+    test("Um elemento com atributo SMART não tiver evento, automaticamente usará o evento load", function() {
+        //window.t = 0;
+        sandbox.html("<p><div smart=\"onbinding:function(){window.t=2}\" /></p>")
                .initializeControls()
                .find("div")
         equals(t, 2);
@@ -353,30 +356,13 @@ $(function() {
     });
 
 
-    test("Um elemento pode ser configurado com atributos iniciando com £", function() {
-        var tag = sandbox.html("<p style=\"display: none;\" id=\"oculto\">teste</p>" +
-                               "<p style=\"display: block;\" id=\"visivel\">teste</p>" +
-                               "<div £=\"hide:['#visivel'], show:['#oculto']\" ></div>")
-               .initializeControls()
-               .find("p");
-        ok($("#oculto").is(":visible"));
-        ok($("#visivel").is(":hidden"));
-    });
 
-
-    asyncTest("Um elemento que está configurado com ¢ deve responder ao evento click", function() {
-
-        sandbox.html("<p><div ¢=\"onbinding:function() {ok(true);start();}\" /></p>")
-                    .initializeControls()
-                    .find("div")
-                    .trigger($.Event("click"));
-    });
 
 
     asyncTest("Um elemento com atributo SMART configurado, pode ser copiado por outro elemento que use a diretiva INHERITS", function() {
         t = 0;
         sandbox.html("<p><div id='base' smart=\"load:{sourceparams:1}\" /></p>" +
-                     "<p><div £=\"inherits:'#base', onbinding:function(options){equals(options.sourceparams, 1); start();}\" /></p>")
+                     "<p><div smart=\"load:{inherits:'#base', onbinding:function(options){equals(options.sourceparams, 1); start();}}\" /></p>")
                .initializeControls()
                .find("div");
     });
@@ -430,6 +416,23 @@ $(function() {
     });
 
 
+    test("Uma renderização sem dados deve usar o EMPTY TEMPLATE!", function() {
+        window.t = 0;
+        sandbox.html("<p id='template'>teste</p>" +
+                     "<p id='emptytemplate'>Vazio</p>" +
+                     "<span id='target'></span>" +
+                     "<div smart=\"{click:{" +
+                                      "dataSource:[], " +
+                                      "template:'#template', " +
+                                      "emptytemplate:'#emptytemplate', " +
+                                      "target:'#target', " +
+                                      "onbounded:function(){equals($('#target').html(), 'Vazio');}" +
+                                      "}}\" />")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
+
 
 
 
@@ -471,9 +474,29 @@ $(function() {
 
 
 
+    test("Uma renderização com dados deve usar o próprio html quando NÃO tiver TEMPLATE!", function() {
+        window.t = 0;
+        sandbox.html("<span id='target'></span>" +
+                     "<div smart=\"{click:{" +
+                                      "dataSource:[{t:1},{t:4},{t:6},{t:8}], " +                                      
+                                      "target:'#target', " +
+                                      "onbounded:function(){equals($('#target').html(), 'teste 1 teste 4 teste 6 teste 8 ');}" +
+                                      "}}\" >teste <$=t$> </div>")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
 
-
-
+    test("Uma renderização com dados usando o próprio html deve permitir renderizar mais de uma vez!", function() {
+        window.t = 0;
+        sandbox.html("<div id='second' smart=\"click:{trigger:'#first', onbounded:function(){ equals($('#first').html(), 'teste 1 teste 4 ');}}\"></span>" +
+                     "<span id='first' smart=\"dataSource:[{t:1},{t:4}], " +                                  
+                                      "onbounded:function(){ equals($('#first').html(), 'teste 1 teste 4 ');}\" >" +
+                                      "teste <$=t$> </span>")
+               .initializeControls()
+               .find("div")
+               .click();
+    });
 
 
 
@@ -498,7 +521,7 @@ $(function() {
     test("A diretiva dataMember indica onde a informação deve ser inserida ", function() {
 
         window.dataSources.temp = { teste: 2 };
-        var tag = sandbox.html("<input type='text' value='err' ¢=\"dataSource:'temp', dataMember:'teste'\" />")
+        var tag = sandbox.html("<input type='text' value='err' smart=\"click:{dataSource:'temp', dataMember:'teste'}\" />")
                .initializeControls()
                .find("input");
 
@@ -511,13 +534,12 @@ $(function() {
         window.t = 0;
         sandbox.html("<p id='template'>teste <$=t$></p>" +
                      "<span id='target'>Teste</span>" +
-                     "<div ¢=\"dataSource:'temp', " +
+                     "<div smart=\"dataSource:'temp', " +
                               "method:'GET', " +
                               "source:'data.js', " +
                               "onbounded:function(){ok(window.dataSources.temp); start();}\" />")
                .initializeControls()
-               .find("div")
-               .click();
+               .find("div");
     });
 
 
@@ -532,10 +554,9 @@ $(function() {
     test("Quando adicionar um conteúdo a uma tag, deve usar a diretiva targetPosition para indicar onde colocar", function() {
         window.dataSources.temp = [{ t: 1 }, { t: 2 }, { t: 3 }, { t: 4}];
         sandbox.html("<p id='target'><u>ini</u></p>" +
-                     "<div ¢=\"dataSource:'temp', target:'#target', targetPosition:'after'\"><span><$=t$></span></div>")
+                     "<div smart=\"dataSource:'temp', target:'#target', targetPosition:'after'\"><span><$=t$></span></div>")
                 .initializeControls()
-                .find("div")
-                .click();
+                .find("div");
 
     });
 
@@ -722,7 +743,7 @@ $(function() {
     module("HASH");
 
     test("Links que começam com # devem marcar na barra de endereços", function() {
-        sandbox.html("<a href='#data.aspx' ¢=\"onbinding:function(){}\" /></p>")
+        sandbox.html("<a href='#data.aspx' smart=\"click:{onbinding:function(){}}\" /></p>")
                 .initializeControls()
                 .find("a")
                 .trigger($.Event("click"));

@@ -127,14 +127,14 @@
                 var text = this.attr("smart") || "";
 
                 // Execute fromJSON by call method, because the context it's "this", otherwise will be $
-                smart = $.parseJSON.call(this, text);
+                var smart = $.parseJSON.call(this, text);
 
-                if (this.attr("£")) {
-                    smart.load = $.parseJSON.call(this, this.attr("£"));
-                }
-
-                if (this.attr("¢")) {
-                    smart.click = $.parseJSON.call(this, this.attr("¢"));
+                //
+                // Check if has someone event configured else uses load
+                //
+                for (var event in smart) if (!$.fn[event]) {
+                    smart = { load: smart };
+                    break;
                 }
 
                 var events = 0;
@@ -142,11 +142,10 @@
                 for (var event in smart) {
                     var obj = smart[event];
 
-                    if (!!smart[event].inherits) {
-                        smart[event] = $.extend(true, $(obj.inherits).smart()[event], smart[event]);
+                    if (!!obj.inherits) {
+                        obj = smart[event] = $.extend(true, $(obj.inherits).smart()[event], smart[event]);
                     }
 
-                    events++;
 
                     if (!!obj.onbinding && typeof (obj.onbinding) !== "function")
                         errors += "The attribute onbinding don't is a Function!\n";
@@ -181,24 +180,17 @@
                     if (!!obj.emptytemplate && ($(obj.emptytemplate).size() === 0 || typeof (obj.emptytemplate) !== "string"))
                         errors += "The attribute EMPTYTEMPLATE (" + obj.emptytemplate + ") don't exists!\n";
 
-                    obj.source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
-                    var candidate = obj.source.replace(/javascript(.*)/g, "");
-                    if (!!obj.source && obj.source !== candidate) {
-                        obj.source = candidate;
+                    var source = (obj.source || this.attrUp("href") || "").trimChars("", "\\/");
+                    var candidate = source.replace(/javascript(.*)/g, "");
+                    if (!!source) {
+                        obj.source = (source !== candidate) ? candidate : source;
                     }
 
                 }
 
-                if (events === 0) {
-                    errors += "Don't exists event configured!\n";
-                }
-
-
-                if (errors !== "") {
 //#JSCOVERAGE_IF false
-                    Exception(errors);
+                if (errors !== "") { Exception(errors); }
 //#JSCOVERAGE_ENDIF 
-                }
 
                 $this.data("_smart", smart); // Cache smart value
             }
@@ -210,11 +202,202 @@
         dataBind: function(options, event) {
             for (var i = 0; i < this.length; i++) {
                 var $this = $(this[i]);
-                if (!!event) {
-                    $this._dataBind(options, event);
+
+                var smart = $this.smart();
+
+                /*  Get configuration for event or first configuration possible */
+                for (var key in smart) { smart = smart[key]; break; }
+
+                if (!!event) smart = $this.smart()[event.type] || smart;
+
+                /*  Check whether keyDown, keyPress, keyUp event fires in a specific key */
+                if (event.type.indexOf("key") >= 0) {
+                    if (!!event.keyCode && !!smart[event.keyCode])
+                        smart = smart[event.keyCode];
+                }
+
+                /*  Add a {} as first parameter because otherwise override smart variable */
+                /*  The order are true, {}, options, smart to copy the properties of the smart to options */
+                options = $.extend(true, {}, smart, options);
+
+                if (!!options.onbinding) {
+                    if (options.onbinding.call($this, options) === false) { /*  case undefined or true the code continues */
+                        return this;
+                    }
+                }
+
+
+                window.dataSources = window.dataSources || {};
+
+                /* Exists only for tests */
+                var dataSource = options.dataSource || options.responseBody || options.defaultResponseBody
+                if (!!dataSource) {
+                    options.dataSource = dataSource;
+
+                    if (!!options.dataMember) {
+
+                        // Busca a variável do window caso exista, senão usa ela mesma não importando o tipo
+                        var dataSource = window.dataSources[options.dataSource];
+                        var dataMember = options.dataMember;
+                        var propGetSetName = "$" + dataMember;
+                        var method = $.fn.val;
+
+                        (dataSource[propGetSetName] = function(value) {
+                            dataSource[dataMember] = value || method.call($this);
+                            if (!!value) method.call($this, value);
+                            return dataSource[dataMember];
+                        })(dataSource[dataMember]);
+
+//#JSCOVERAGE_IF false
+                        //
+                        // Seta um evento que irá pegar o valor digitado e colocará no dataSource
+                        //
+                        $this.bind("keyup", function(event) {
+                            for (var member in dataSource) if (dataSource.hasOwnProperty(member) && member[0] === "$") {
+                                dataSource[member]();
+                            }
+                        });
+//#JSCOVERAGE_ENDIF
+                    }
+                }
+
+
+
+                if (!!options.source) /*  Only fires ajax if there are url */
+                {
+                    if (!!window.applicationPath) { window.applicationPath = window.applicationPath.trimChars("", "\\/"); }
+                    options.source = options.source.replace("~", window.applicationPath);
+
+
+                    options.method = this[0].tagName === "A" ? "GET" : (options.method || "POST");
+
+                    /*  case undefined or true the code continues */
+                    if (options.onrequest) {
+                        if (options.onrequest.call($this, options) === false) {
+                            return this;
+                        }
+                    }
+
+                    $.ajax({
+                        type: options.method,
+                        url: options.source,
+                        data: (options.method !== "GET" ? $.toJSON(options.sourceparams || {}) : null),
+                        contentType: "application/json",
+                        ifModified: true,
+                        success: function(responseBody, status, request) {
+
+                            var dataSource = responseBody;
+
+                            if (!!request) {
+                                /*  If Not Modified then get cached content file by iframe */
+                                if (request.status === 304 || status === "notmodified") {
+                                    $this.ajaxIframe(options.source, $this, this.success);
+                                    return;
+                                } else {
+                                    /*  If Http Status 200 then OK, process JSON because data should be transform on html */
+                                    var contentType = request.getResponseHeader("Content-Type");
+                                    if (!!contentType && contentType.indexOf("javascript") >= 0)
+                                        dataSource = eval("(" + dataSource + ")");
+                                }
+                            }
+
+                            if (!!options.onresponse)
+                                dataSource = options.onresponse.call($this, dataSource, status, request, options);
+
+                            if (typeof (options.dataSource) === "string") {
+                                window.dataSources[options.dataSource] = dataSource;
+                            } else {
+                                options.dataSource = dataSource;
+                            }
+
+                            //
+                            // DEPRECATED
+                            //
+                            if (options.onsucess) options.onsucess.call($this, dataSource, status, request, options);
+
+                            fireActions($this, options, smart);
+
+                        },
+                        error: function(request, textStatus, errorThrown) {
+
+                            if (options.onerror) options.onerror.call($this, request, textStatus, errorThrown, options);
+
+                            fireActions($this, options, smart);
+
+//#JSCOVERAGE_IF false
+                            if (request.status === "404") PageNotFoundException(options.url);
+//#JSCOVERAGE_ENDIF
+                        }
+                    });
                 } else {
-                    for (var eventType in $this.smart()) {
-                        $this._dataBind(options, jQuery.Event(eventType));
+                    fireActions($this, options, smart);
+                }
+
+                function fireActions($this, options, smart) {
+
+                    /*  Get target tag */
+                    options.target = options.target || $this;
+
+                    /*  options.template indicates um HTML to be transformed or a content  */
+                    if (!!options.template || !!options.source || !!options.dataSource) {
+
+                        var html = options.dataSource || $(options.template).html() || "";
+
+                        if (html.length === 0 && $(smart.emptytemplate).size() > 0) {
+                            html = $(options.emptytemplate).html();
+                        } else if (typeof (options.dataSource) === "object" || typeof (options.dataSource) === "array") {
+                            var $template = $(options.template);
+                            if (!!options.template && $template.size() > 0) {
+                                html = $template.render(options.dataSource, options);
+                            } else {
+                                // Save current template
+                                var savedTemplate = $this.data("template");
+                                if (!!savedTemplate) {
+                                    $this.html(savedTemplate);
+                                } else {
+                                    $this.data("template", $this.html());
+                                }
+                                html = $this.render(options.dataSource, options);
+                            }
+
+                        }
+
+
+//#JSCOVERAGE_IF false
+                        if ($(options.target).size() === 0) { TargetMissingException(this); }
+//#JSCOVERAGE_ENDIF
+
+                        if (options.targetPosition === "after") {
+                            $(options.target).after(html);
+                            $(options.target).parent().initializeControls();
+                        } else {
+                            $(options.target).hide().html(html).initializeControls().fadeIn(options.speed || "slow");
+                        }
+                    }
+
+                    if (options.once)
+                        $this.unbind(event.type);
+
+                    /*  If exists options that are jQuery methods then executes them */
+                    for (var key in options) {
+                        if ($.fn[key] && !!options[key]) {
+                            var $func = $.fn[key],
+                        value = options[key];
+                            if (typeof (value) === "string" && key !== "trigger") {
+                                $func.call($this, value);
+                            } else if (typeof (options[key].shift) === "function") {
+                                $func.apply($(value.shift()), value);
+                            }
+                        }
+                    }
+
+                    if (!!options.onbounded)
+                        options.onbounded.call($this, options);
+
+                    /*  Allow fire DataBinding in controls that has TRIGGER atribute */
+                    if (options.trigger) {
+                        $(options.trigger).dataBind({ sourceparams: smart.sourceparams }, event);
+                        return;
                     }
                 }
             }
@@ -223,208 +406,6 @@
         },
         /* End DataBind*/
 
-        _dataBind: function(options, event) {
-
-            var $this = this;
-            var smart = $this.smart();
-
-            /*  Get configuration for event or first configuration possible */
-            for (var key in smart) { smart = smart[key]; break; }
-
-            smart = $this.smart()[event.type] || smart;
-
-            /*  Check whether keyDown, keyPress, keyUp event fires in a specific key */
-            if (event.type.indexOf("key") >= 0) {
-                if (!!event.keyCode && !!smart[event.keyCode])
-                    smart = smart[event.keyCode];
-            }
-
-            /*  Add a {} as first parameter because otherwise override smart variable */
-            /*  The order are true, {}, options, smart to copy the properties of the smart to options */
-            options = $.extend(true, {}, smart, options);
-
-            if (!!options.onbinding) {
-                if (options.onbinding.call($this, options) === false) { /*  case undefined or true the code continues */
-                    return this;
-                }
-            }
-
-
-            window.dataSources = window.dataSources || {};
-
-            /* Exists only for tests */
-            if (options.dataSource || options.responseBody || options.defaultResponseBody)
-                options.dataSource = options.dataSource || options.responseBody || options.defaultResponseBody;
-
-            if (!!options.dataSource && !!options.dataMember) {
-
-                // Busca a variável do window caso exista, senão usa ela mesma não importando o tipo
-                var dataSource = window.dataSources[options.dataSource];
-                var dataMember = options.dataMember;
-                var propGetSetName = "$" + dataMember;
-                var method = $.fn.val;
-
-                (dataSource[propGetSetName] = function(value) {
-                    dataSource[dataMember] = value || method.call($this);
-                    if (!!value) method.call($this, value);
-                    return dataSource[dataMember];
-                })(dataSource[dataMember]);
-
-                //
-                // Seta um evento que irá pegar o valor digitado e colocará no dataSource
-                //
-                $this.bind("keyup", function(event) {
-                    for (var member in dataSource) if (dataSource.hasOwnProperty(member) && member[0] === "$") {
-                        dataSource[member]();
-                    }
-                });
-            }
-
-
-
-            if (!!options.source) /*  Only fires ajax if there are url */
-            {
-                if (!!window.applicationPath) { window.applicationPath = window.applicationPath.trimChars("", "\\/"); }
-                options.source = options.source.replace("~", window.applicationPath);
-
-
-                options.method = this[0].tagName === "A" ? "GET" : (options.method || "POST");
-
-                /*  case undefined or true the code continues */
-                if (options.onrequest) {
-                    if (options.onrequest.call($this, options) === false) {
-                        return this;
-                    }
-                }
-
-                $.ajax({
-                    type: options.method,
-                    url: options.source,
-                    data: (options.method !== "GET" ? $.toJSON(options.sourceparams || {}) : null),
-                    contentType: "application/json",
-                    ifModified: true,
-                    success: function(responseBody, status, request) {
-
-                        var dataSource = responseBody;
-
-                        if (!!request) {
-                            /*  If Not Modified then get cached content file by iframe */
-                            if (request.status === 304 || status === "notmodified") {
-                                $this.ajaxIframe(options.source, $this, this.success);
-                                return;
-                            } else {
-                                /*  If Http Status 200 then OK, process JSON because data should be transform on html */
-                                var contentType = request.getResponseHeader("Content-Type");
-                                if (!!contentType && contentType.indexOf("javascript") >= 0)
-                                    dataSource = eval("(" + dataSource + ")");
-                            }
-                        }
-
-                        if (!!options.onresponse)
-                            dataSource = options.onresponse.call($this, dataSource, status, request, options);
-
-                        if (typeof (options.dataSource) === "string") {
-                            window.dataSources[options.dataSource] = dataSource;
-                        } else {
-                            options.dataSource = dataSource;
-                        }
-
-                        //
-                        // DEPRECATED
-                        //
-                        if (options.onsucess) options.onsucess.call($this, dataSource, status, request, options);
-
-                        fireActions($this, options, smart);
-
-                    },
-                    error: function(request, textStatus, errorThrown) {
-
-                        if (options.onerror) options.onerror.call($this, request, textStatus, errorThrown, options);
-
-                        fireActions($this, options, smart);
-
-//#JSCOVERAGE_IF false
-                        if (request.status === "404") PageNotFoundException(options.url);
-//#JSCOVERAGE_ENDIF
-                    },
-                    complete: function() {
-                        /*  Retirada a funcao fireActions deste evento pois o sucess e passado  */
-                        /*  como argumento da funcao ajaxIframe */
-                    }
-                });
-            } else {
-                fireActions($this, options, smart);
-            }
-
-
-            function fireActions($this, options, smart) {
-
-                /*  Get target tag */
-                options.target = options.target || $this;
-
-                /*  options.template indicates um HTML to be transformed or a content  */
-                if (!!options.template || !!options.source || !!options.dataSource) {
-
-                    var html = options.dataSource || $(options.template).html() || "";
-
-                    if (html.length === 0 && $(smart.emptytemplate).size() > 0) {
-                        html = $(options.emptytemplate).html();
-                    } else if (typeof (options.dataSource) === "object" || typeof (options.dataSource) === "array") {
-                        var $template = $(options.template);
-                        if (!!options.template && $template.size() > 0) {
-                            html = $template.render(options.dataSource, options);
-                        } else {
-                            // Save current template
-                            // $this.data("template", $this.html())
-                            html = $this.render(options.dataSource, options);
-                        }
-
-                    }
-
-
-//#JSCOVERAGE_IF false
-                    if ($(options.target).size() === 0) TargetMissingException(this);
-//#JSCOVERAGE_ENDIF
-
-                    if (options.targetPosition === "after") {
-                        $(options.target).after(html);
-                        $(options.target).parent().initializeControls();
-                    } else {
-                        $(options.target).hide().html(html).initializeControls().fadeIn(options.speed || "slow");
-                    }
-                }
-
-                if (options.once)
-                    $this.unbind(event.type);
-
-                /*  If exists options that are jQuery methods then executes them */
-                for (var key in options) {
-                    if ($.fn[key] && !!options[key]) {
-                        var $func = $.fn[key],
-                        value = options[key];
-                        if (typeof (value) === "string" && key !== "trigger") {
-                            $func.call($this, value);
-                        } else if (typeof (options[key].shift) === "function") {
-                            $func.apply($(value.shift()), value);
-                        }
-                    }
-                }
-
-                if (!!options.onbounded)
-                    options.onbounded.call($this, options);
-
-                /*  Allow fire DataBinding in controls that has TRIGGER atribute */
-                if (options.trigger) {
-                    $(options.trigger).dataBind({ sourceparams: smart.sourceparams }, event);
-                    return;
-                }
-            }
-
-
-
-
-            return null;
-        },
 
         /***************************************************************************************************
         Live controls, this allow load html with plugins and load it dynamically
@@ -432,7 +413,10 @@
 
         initializeControls: function() {
 
-            $("[smart], [£], [¢]", this).each(function(i, ctrl) {
+            var keywords = ["dataSource", "dataMember", "target", "trigger", "template", "emptytemplate", "once", "source", "method"];
+            keywords = "[" + keywords.join("], [") + "]";
+
+            $("[smart]", this).each(function(i, ctrl) {
                 var $ctrl = $(ctrl);
                 if (!$ctrl.hasControl()) {
                     $ctrl.hasControl(true);
@@ -541,7 +525,7 @@
     }
 
     function TargetMissingException(sender) {
-        Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
+        Exception(" N�o foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
     }
 
 //#JSCOVERAGE_ENDIF    
@@ -733,6 +717,8 @@
 
     /*  Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento */
     $.preferCulture && $.preferCulture("pt-BR");
+
+
 
 })(jQuery);
 
