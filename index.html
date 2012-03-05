@@ -1,73 +1,73 @@
-<!DOCTYPE HTML>
+ï»¿<!DOCTYPE HTML>
 <html>
 	<head> 
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<link rel="icon" href="docs/images/favicon.ico" />
-		<title>Smartize.js</title>
+		<title>Smartizer.js</title>
 		<style>
 			body {
-				font-size: 14px;
-				line-height: 22px;
-				font-family: Segoe UI, Trebuchet MS;
-				background: #f4f4f4 url(docs/images/background.png);
+			font-size: 14px;
+			line-height: 22px;
+			font-family: Segoe UI, Trebuchet MS;
+			background: #f4f4f4 url(docs/images/background.png);
 			}
-		
+			
 			
 			/******************************************************************************************************** 
 			MENU 
 			*********************************************************************************************************/
 			div#sidebar {
-				background: #fff;
-				position: fixed;
-				top: 0; left: 0; bottom: 0;
-				width: 200px;
-				overflow-y: auto;
-				overflow-x: hidden;
-				padding: 15px 0 30px 30px;
-				border-right: 1px solid #bbb;
-				box-shadow: 0 0 20px #ccc; -webkit-box-shadow: 0 0 20px #ccc; -moz-box-shadow: 0 0 20px #ccc;
+			background: #fff;
+			position: fixed;
+			top: 0; left: 0; bottom: 0;
+			width: 200px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 15px 0 30px 30px;
+			border-right: 1px solid #bbb;
+			box-shadow: 0 0 20px #ccc; -webkit-box-shadow: 0 0 20px #ccc; -moz-box-shadow: 0 0 20px #ccc;
 			}
 			a.toc_title, a.toc_title:visited {
-				display: block;
-				color: black;
-				font-weight: bold;
-				margin-top: 15px;
+			display: block;
+			color: black;
+			font-weight: bold;
+			margin-top: 15px;
 			}
 			a.toc_title:hover {
-				text-decoration: underline;
+			text-decoration: underline;
 			}
 			#sidebar .version {
-				font-size: 10px;
-				font-weight: normal;
+			font-size: 10px;
+			font-weight: normal;
 			}
 			ul.toc_section {
-				font-size: 11px;
-				line-height: 14px;
-				margin: 5px 0 0 0;
-				padding-left: 0px;
-				list-style-type: none;
-				font-family: Lucida Grande;
+			font-size: 11px;
+			line-height: 14px;
+			margin: 5px 0 0 0;
+			padding-left: 0px;
+			list-style-type: none;
+
 			}
 			.toc_section li {
-				cursor: pointer;
-				margin: 0 0 3px 0;
+			cursor: pointer;
+			margin: 0 0 3px 0;
 			}
 			.toc_section li a {
-				text-decoration: none;
-				color: black;
+			text-decoration: none;
+			color: black;
 			}
             .toc_section li a:hover {
-				text-decoration: underline;
+			text-decoration: underline;
             }
 			
 			/******************************************************************************************************** 
 			CONTENT
 			*********************************************************************************************************/
 			div.container {
-				position: relative;
-				width: 550px;
-				margin: 40px 0 50px 260px;
+			position: relative;
+			width: 550px;
+			margin: 40px 0 50px 260px;
 			}
 			div.run {
 			position: absolute;
@@ -106,48 +106,48 @@
 			color: #000;
 			}
 			a.punch {
-				display: inline-block;
-				background: #4162a8;
-				border-top: 1px solid #38538c;
-				border-right: 1px solid #1f2d4d;
-				border-bottom: 1px solid #151e33;
-				border-left: 1px solid #1f2d4d;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				-ms-border-radius: 4px;
-				-o-border-radius: 4px;
-				border-radius: 4px;
-				-webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				color: #fff;
-				font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
-				line-height: 1;
-				margin-bottom: 15px;
-				padding: 8px 0 10px 0;
-				text-align: center;
-				text-shadow: 0px -1px 1px #1e2d4d;
-				text-decoration: none;
-				width: 225px;
-				-webkit-background-clip: padding-box; 
+			display: inline-block;
+			background: #4162a8;
+			border-top: 1px solid #38538c;
+			border-right: 1px solid #1f2d4d;
+			border-bottom: 1px solid #151e33;
+			border-left: 1px solid #1f2d4d;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-ms-border-radius: 4px;
+			-o-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			color: #fff;
+			font: bold 14px "helvetica neue", helvetica, arial, sans-serif;
+			line-height: 1;
+			margin-bottom: 15px;
+			padding: 8px 0 10px 0;
+			text-align: center;
+			text-shadow: 0px -1px 1px #1e2d4d;
+			text-decoration: none;
+			width: 225px;
+			-webkit-background-clip: padding-box; 
 			}
 			a.punch:hover {
-				-webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-ms-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				-o-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
-				cursor: pointer; 
+			-webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-ms-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			-o-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111111;
+			cursor: pointer; 
 			}
 			a.punch:active {
-				-webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-				-moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-				-ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-				-o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-				box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
-				margin-top: 5px; margin-bottom: 10px 
+			-webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+			-moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+			-ms-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+			-o-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+			box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+			margin-top: 5px; margin-bottom: 10px 
 			}
 			a img {
 			border: 0;
@@ -204,206 +204,91 @@
 	</head>
 	<body>
 		
-		<div id="sidebar" >
+		<div id="sidebar">
 			
 			<a class="toc_title" href="#">
-			Smartclient.js <span class="version">(0.9.1)</span>
+				Smartizer.js <span class="version">(0.2.0)</span>
 			</a>
+			
 			<ul class="toc_section">
-				<li>? <a href="http://github.com/documentcloud/backbone">github repo</a></li>
-				<li>– <a href="docs/backbone.html">annotated source</a></li>
+				<li><a href="http://github.com/sidneylimafilho/backbone">github repo</a></li>				
 			</ul>
 			
-			<a class="toc_title" href="#introduction">
-			Introduction
-			</a>
+			<a class="toc_title" href="#introduction">Objetivos</a>
 			
-			<a class="toc_title" href="#upgrading">
-			Upgrading
-			</a>
-			
-			<a class="toc_title" href="#Events">
-			Events
-			</a>
 			<ul class="toc_section">
-				<li>– <a href="#Events-on">on</a></li>
-				<li>– <a href="#Events-off">off</a></li>
-				<li>– <a href="#Events-trigger">trigger</a></li>
+				<li>â€“ <a href="#Events-on">Buscar html partials</a></li>
+				<li>â€“ <a href="#Events-off">Buscar Dados</a></li>
+				<li>â€“ <a href="#Events-trigger">Enviar Dados</a></li>
+				<li>â€“ <a href="#Events-trigger">Validar Rapidamente Funcionalidades</a></li>
 			</ul>
 			
-			<a class="toc_title" href="#Model">
-			Model
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#Model-extend">extend</a></li>
-				<li>– <a href="#Model-constructor">constructor / initialize</a></li>
-				<li>– <a href="#Model-get">get</a></li>
-				<li>– <a href="#Model-set">set</a></li>
-				<li>– <a href="#Model-escape">escape</a></li>
-				<li>– <a href="#Model-has">has</a></li>
-				<li>– <a href="#Model-unset">unset</a></li>
-				<li>– <a href="#Model-clear">clear</a></li>
-				<li>– <a href="#Model-id">id</a></li>
-				<li>– <a href="#Model-idAttribute">idAttribute</a></li>
-				<li>– <a href="#Model-cid">cid</a></li>
-				<li>– <a href="#Model-attributes">attributes</a></li>
-				<li>– <a href="#Model-changed">changed</a></li>
-				<li>– <a href="#Model-defaults">defaults</a></li>
-				<li>– <a href="#Model-toJSON">toJSON</a></li>
-				<li>– <a href="#Model-fetch">fetch</a></li>
-				<li>– <a href="#Model-save">save</a></li>
-				<li>– <a href="#Model-destroy">destroy</a></li>
-				<li>– <a href="#Model-validate">validate</a></li>
-				<li>– <a href="#Model-isValid">isValid</a></li>
-				<li>– <a href="#Model-url">url</a></li>
-				<li>– <a href="#Model-urlRoot">urlRoot</a></li>
-				<li>– <a href="#Model-parse">parse</a></li>
-				<li>– <a href="#Model-clone">clone</a></li>
-				<li>– <a href="#Model-isNew">isNew</a></li>
-				<li>– <a href="#Model-change">change</a></li>
-				<li>– <a href="#Model-hasChanged">hasChanged</a></li>
-				<li>– <a href="#Model-changedAttributes">changedAttributes</a></li>
-				<li>– <a href="#Model-previous">previous</a></li>
-				<li>– <a href="#Model-previousAttributes">previousAttributes</a></li>
-			</ul>
+			<a class="toc_title" href="#upgrading">VersÃ£o Markup</a>
 			
-			<a class="toc_title" href="#Collection">
-			Collection
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#Collection-extend">extend</a></li>
-				<li>– <a href="#Collection-model">model</a></li>
-				<li>– <a href="#Collection-constructor">constructor / initialize</a></li>
-				<li>– <a href="#Collection-models">models</a></li>
-				<li>– <a href="#Collection-toJSON">toJSON</a></li>
-				<li>– <a href="#Collection-Underscore-Methods"><b>Underscore Methods (28)</b></a></li>
-				<li>– <a href="#Collection-add">add</a></li>
-				<li>– <a href="#Collection-remove">remove</a></li>
-				<li>– <a href="#Collection-get">get</a></li>
-				<li>– <a href="#Collection-getByCid">getByCid</a></li>
-				<li>– <a href="#Collection-at">at</a></li>
-				<li>– <a href="#Collection-length">length</a></li>
-				<li>– <a href="#Collection-comparator">comparator</a></li>
-				<li>– <a href="#Collection-sort">sort</a></li>
-				<li>– <a href="#Collection-pluck">pluck</a></li>
-				<li>– <a href="#Collection-url">url</a></li>
-				<li>– <a href="#Collection-parse">parse</a></li>
-				<li>– <a href="#Collection-fetch">fetch</a></li>
-				<li>– <a href="#Collection-reset">reset</a></li>
-				<li>– <a href="#Collection-create">create</a></li>
-			</ul>
+			<a class="toc_title" href="#Events">VersÃ£o Javascript</a>
+								
+			<a class="toc_title" href="#Model">OpÃ§Ãµes</a>
 			
-			<a class="toc_title" href="#Router">
-			Router
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#Router-extend">extend</a></li>
-				<li>– <a href="#Router-routes">routes</a></li>
-				<li>– <a href="#Router-constructor">constructor / initialize</a></li>
-				<li>– <a href="#Router-route">route</a></li>
-				<li>– <a href="#Router-navigate">navigate</a></li>
-			</ul>
+			<!-- <ul class="toc_section">
+				<li>â€“ <a href="#Model-extend">extend</a></li>
+				<li>â€“ <a href="#Model-constructor">constructor / initialize</a></li>
+				<li>â€“ <a href="#Model-get">get</a></li>
+				<li>â€“ <a href="#Model-set">set</a></li>
+				<li>â€“ <a href="#Model-escape">escape</a></li>
+				<li>â€“ <a href="#Model-has">has</a></li>
+				<li>â€“ <a href="#Model-unset">unset</a></li>
+				<li>â€“ <a href="#Model-clear">clear</a></li>
+				<li>â€“ <a href="#Model-id">id</a></li>
+				<li>â€“ <a href="#Model-idAttribute">idAttribute</a></li>
+				<li>â€“ <a href="#Model-cid">cid</a></li>
+				<li>â€“ <a href="#Model-attributes">attributes</a></li>
+				<li>â€“ <a href="#Model-changed">changed</a></li>
+				<li>â€“ <a href="#Model-defaults">defaults</a></li>
+				<li>â€“ <a href="#Model-toJSON">toJSON</a></li>
+				<li>â€“ <a href="#Model-fetch">fetch</a></li>
+				<li>â€“ <a href="#Model-save">save</a></li>
+				<li>â€“ <a href="#Model-destroy">destroy</a></li>
+				<li>â€“ <a href="#Model-validate">validate</a></li>
+				<li>â€“ <a href="#Model-isValid">isValid</a></li>
+				<li>â€“ <a href="#Model-url">url</a></li>
+				<li>â€“ <a href="#Model-urlRoot">urlRoot</a></li>
+				<li>â€“ <a href="#Model-parse">parse</a></li>
+				<li>â€“ <a href="#Model-clone">clone</a></li>
+				<li>â€“ <a href="#Model-isNew">isNew</a></li>
+				<li>â€“ <a href="#Model-change">change</a></li>
+				<li>â€“ <a href="#Model-hasChanged">hasChanged</a></li>
+				<li>â€“ <a href="#Model-changedAttributes">changedAttributes</a></li>
+				<li>â€“ <a href="#Model-previous">previous</a></li>
+				<li>â€“ <a href="#Model-previousAttributes">previousAttributes</a></li>
+			</ul> -->
+	
 			
-			<a class="toc_title" href="#History">
-			History
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#History-start">start</a></li>
-			</ul>
-			
-			<a class="toc_title" href="#Sync">
-			Sync
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#Sync">Backbone.sync</a></li>
-				<li>– <a href="#Sync-emulateHTTP">Backbone.emulateHTTP</a></li>
-				<li>– <a href="#Sync-emulateJSON">Backbone.emulateJSON</a></li>
-			</ul>
-			
-			<a class="toc_title" href="#View">
-			View
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#View-extend">extend</a></li>
-				<li>– <a href="#View-constructor">constructor / initialize</a></li>
-				<li>– <a href="#View-el">el</a></li>
-				<li>– <a href="#View-$el">$el</a></li>
-				<li>– <a href="#View-setElement">setElement</a></li>
-				<li>– <a href="#View-attributes">attributes</a></li>
-				<li>– <a href="#View-dollar">$ (jQuery or Zepto)</a></li>
-				<li>– <a href="#View-render">render</a></li>
-				<li>– <a href="#View-remove">remove</a></li>
-				<li>– <a href="#View-make">make</a></li>
-				<li>– <a href="#View-delegateEvents">delegateEvents</a></li>
-				<li>– <a href="#View-undelegateEvents">undelegateEvents</a></li>
-			</ul>
-			
-			<a class="toc_title" href="#Utility">
-			Utility
-			</a>
-			<ul class="toc_section">
-				<li>– <a href="#Utility-noConflict">noConflict</a></li>
-				<li>– <a href="#Utility-setDomLibrary">setDomLibrary</a></li>
-			</ul>
 			
 			<a class="toc_title" href="#examples">
-			Examples
+				Examples
 			</a>
 			<ul class="toc_section">
-				<li>– <a href="#examples-todos">Todos</a></li>
-				<li>– <a href="#examples-documentcloud">DocumentCloud</a></li>
-				<li>– <a href="#examples-linkedin">LinkedIn Mobile</a></li>
-				<li>– <a href="#examples-flow">Flow</a></li>
-				<li>– <a href="#examples-audiovroom">AudioVroom</a></li>
-				<li>– <a href="#examples-foursquare">Foursquare</a></li>
-				<li>– <a href="#examples-wunderkit">Wunderkit</a></li>
-				<li>– <a href="#examples-khan-academy">Khan Academy</a></li>
-				<li>– <a href="#examples-do">Do</a></li>
-				<li>– <a href="#examples-posterous">Posterous Spaces</a></li>
-				<li>– <a href="#examples-groupon">Groupon Now!</a></li>
-				<li>– <a href="#examples-basecamp">Basecamp Mobile</a></li>
-				<li>– <a href="#examples-slavery-footprint">Slavery Footprint</a></li>
-				<li>– <a href="#examples-stripe">Stripe</a></li>
-				<li>– <a href="#examples-diaspora">Diaspora</a></li>
-				<li>– <a href="#examples-soundcloud">SoundCloud Mobile</a></li>
-				<li>– <a href="#examples-pandora">Pandora</a></li>
-				<li>– <a href="#examples-code-school">Code School</a></li>
-				<li>– <a href="#examples-cloudapp">CloudApp</a></li>
-				<li>– <a href="#examples-seatgeek">SeatGeek</a></li>
-				<li>– <a href="#examples-grove">Grove.io</a></li>
-				<li>– <a href="#examples-kicksend">Kicksend</a></li>
-				<li>– <a href="#examples-shortmail">Shortmail</a></li>
-				<li>– <a href="#examples-battlefield">Battlefield Play4Free</a></li>
-				<li>– <a href="#examples-salon">Salon.io</a></li>
-				<li>– <a href="#examples-tilemill">TileMill</a></li>
-				<li>– <a href="#examples-blossom">Blossom</a></li>
-				<li>– <a href="#examples-animoto">Animoto</a></li>
-				<li>– <a href="#examples-codiqa">Codiqa</a></li>
-				<li>– <a href="#examples-attictv">AtticTV</a></li>
-				<li>– <a href="#examples-decide">Decide</a></li>
-				<li>– <a href="#examples-trello">Trello</a></li>
-				<li>– <a href="#examples-ducksboard">Ducksboard</a></li>
-				<li>– <a href="#examples-picklive">Picklive</a></li>
-				<li>– <a href="#examples-quietwrite">QuietWrite</a></li>
-				<li>– <a href="#examples-tzigla">Tzigla</a></li>
+				<li>â€“ <a href="#examples-todos">Todos</a></li>
+				<li>â€“ <a href="#examples-tabs">DocumentCloud</a></li>
+				<li>â€“ <a href="#examples-combos">LinkedIn Mobile</a></li>				
 			</ul>
 			
-			<a class="toc_title" href="#faq">
-			F.A.Q.
+			<!-- <a class="toc_title" href="#faq">
+				F.A.Q.
 			</a>
 			<ul class="toc_section">
-				<li>– <a href="#FAQ-events">Catalog of Events</a></li>
-				<li>– <a href="#FAQ-tim-toady">More Than One Way To Do It</a></li>
-				<li>– <a href="#FAQ-nested">Nested Models &amp; Collections</a></li>
-				<li>– <a href="#FAQ-bootstrap">Loading Bootstrapped Models</a></li>
-				<li>– <a href="#FAQ-extending">Extending Backbone</a></li>
-				<li>– <a href="#FAQ-mvc">Traditional MVC</a></li>
-				<li>– <a href="#FAQ-this">Binding "this"</a></li>
-				<li>– <a href="#FAQ-rails">Working with Rails</a></li>
-			</ul>
+				<li>â€“ <a href="#FAQ-events">Catalog of Events</a></li>
+				<li>â€“ <a href="#FAQ-tim-toady">More Than One Way To Do It</a></li>
+				<li>â€“ <a href="#FAQ-nested">Nested Models &amp; Collections</a></li>
+				<li>â€“ <a href="#FAQ-bootstrap">Loading Bootstrapped Models</a></li>
+				<li>â€“ <a href="#FAQ-extending">Extending Backbone</a></li>
+				<li>â€“ <a href="#FAQ-mvc">Traditional MVC</a></li>
+				<li>â€“ <a href="#FAQ-this">Binding "this"</a></li>
+				<li>â€“ <a href="#FAQ-rails">Working with Rails</a></li>
+			</ul> -->
 			
 			<a class="toc_title" href="#changelog">
-			Change Log
+				Change Log
 			</a>
 			
 		</div>
@@ -442,15 +327,11 @@
 			</p>
 			
 			<p>
-				<i>
-					Backbone is an open-source component of
-					<a href="http://documentcloud.org/">DocumentCloud</a>.
-				</i>
+				<i>Backbone is an open-source component of <a href="http://documentcloud.org/">DocumentCloud</a>.</i>
 			</p>
 			
 			<h2 id="downloads">
-				Downloads &amp; Dependencies
-				<span style="padding-left: 7px; font-size:11px; font-weight: normal;" >(Right-click, and use "Save As")</span>
+				Downloads &amp; Dependencies <span style="padding-left: 7px; font-size:11px; font-weight: normal;" >(Right-click, and use "Save As")</span>
 			</h2>
 			
 			<table>
@@ -470,8 +351,7 @@
 				For RESTful persistence, history support via <a href="#Router">Backbone.Router</a>
 				and DOM manipulation with <a href="#View">Backbone.View</a>, include
 				<a href="https://github.com/douglascrockford/JSON-js">json2.js</a>, and either
-				<a href="http://jquery.com">jQuery</a> <small>( > 1.4.2)</small> or
-				<a href="http://zeptojs.com/">Zepto</a>.
+				<a href="http://jquery.com">jQuery</a> <small>( > 1.4.2)</small> or <a href="http://zeptojs.com/">Zepto</a>.
 			</p>
 			
 			<h2 id="introduction">Introduction</h2>
@@ -1904,9 +1784,9 @@
 					</p>
 					
 					<ul>
-						<li><b>method</b> – the CRUD method (<tt>"create"</tt>, <tt>"read"</tt>, <tt>"update"</tt>, or <tt>"delete"</tt>)</li>
-						<li><b>model</b> – the model to be saved (or collection to be read)</li>
-						<li><b>options</b> – success and error callbacks, and all other jQuery request options</li>
+						<li><b>method</b> â€“ the CRUD method (<tt>"create"</tt>, <tt>"read"</tt>, <tt>"update"</tt>, or <tt>"delete"</tt>)</li>
+						<li><b>model</b> â€“ the model to be saved (or collection to be read)</li>
+						<li><b>options</b> â€“ success and error callbacks, and all other jQuery request options</li>
 					</ul>
 					
 					<p>
@@ -2296,14 +2176,14 @@
 					</p>
 					
 					<p id="examples-todos">
-						<a href="http://jgn.me/">Jérôme Gravel-Niquet</a> has contributed a
+						<a href="http://jgn.me/">JÃ©rÃ´me Gravel-Niquet</a> has contributed a
 						<a href="examples/todos/index.html">Todo List application</a>
 						that is bundled in the repository as Backbone example. If you're wondering
 						where to get started with Backbone in general, take a moment to
 						<a href="docs/todos.html">read through the annotated source</a>. The app uses a
 						<a href="docs/backbone-localstorage.html">LocalStorage adapter</a>
 						to transparently save all of your todos within your browser, instead of
-						sending them to a server. Jérôme also has a version hosted at
+						sending them to a server. JÃ©rÃ´me also has a version hosted at
 						<a href="http://localtodos.com/">localtodos.com</a> that uses a
 						<a href="http://github.com/jeromegn/backbone-mootools">MooTools-backed version of Backbone</a>
 						instead of jQuery.
@@ -2311,7 +2191,7 @@
 					
 					<div style="text-align: center;">
 						<a href="examples/todos/index.html">
-						<img src="docs/images/todos.png" alt="Todos" class="example_image" />
+							<img src="docs/images/todos.png" alt="Todos" class="example_image" />
 						</a>
 					</div>
 					
@@ -2328,7 +2208,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.documentcloud.org/public/#search/">
-						<img src="docs/images/dc-workspace.png" alt="DocumentCloud Workspace" class="example_image" />
+							<img src="docs/images/dc-workspace.png" alt="DocumentCloud Workspace" class="example_image" />
 						</a>
 					</div>
 					
@@ -2347,7 +2227,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.linkedin.com/static?key=mobile">
-						<img src="docs/images/linkedin-mobile.png" alt="LinkedIn Mobile" class="example_image" />
+							<img src="docs/images/linkedin-mobile.png" alt="LinkedIn Mobile" class="example_image" />
 						</a>
 					</div>
 					
@@ -2362,7 +2242,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.getflow.com/">
-						<img src="docs/images/flow.png" alt="Flow" class="example_image" />
+							<img src="docs/images/flow.png" alt="Flow" class="example_image" />
 						</a>
 					</div>
 					
@@ -2380,7 +2260,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.audiovroom.com/">
-						<img src="docs/images/audiovroom.png" alt="AudioVroom" class="example_image" />
+							<img src="docs/images/audiovroom.png" alt="AudioVroom" class="example_image" />
 						</a>
 					</div>
 					
@@ -2396,7 +2276,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://foursquare.com">
-						<img src="docs/images/foursquare.png" alt="Foursquare" class="example_image" />
+							<img src="docs/images/foursquare.png" alt="Foursquare" class="example_image" />
 						</a>
 					</div>
 					
@@ -2417,7 +2297,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://get.wunderkit.com/">
-						<img src="docs/images/wunderkit.png" alt="Wunderkit" class="example_image" />
+							<img src="docs/images/wunderkit.png" alt="Wunderkit" class="example_image" />
 						</a>
 					</div>
 					
@@ -2437,7 +2317,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.khanacademy.org">
-						<img src="docs/images/khan-academy.png" alt="Khan Academy" class="example_image" />
+							<img src="docs/images/khan-academy.png" alt="Khan Academy" class="example_image" />
 						</a>
 					</div>
 					
@@ -2455,7 +2335,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://do.com">
-						<img src="docs/images/do.png" alt="Do" class="example_image" />
+							<img src="docs/images/do.png" alt="Do" class="example_image" />
 						</a>
 					</div>
 					
@@ -2473,7 +2353,7 @@
 					
 					<div style="text-align: center;">
 						<a href="https://posterous.com/">
-						<img src="docs/images/posterous-spaces.png" alt="Posterous Spaces" class="example_image" />
+							<img src="docs/images/posterous-spaces.png" alt="Posterous Spaces" class="example_image" />
 						</a>
 					</div>
 					
@@ -2495,7 +2375,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.groupon.com/now">
-						<img src="docs/images/groupon.png" alt="Groupon Now!" class="example_image" />
+							<img src="docs/images/groupon.png" alt="Groupon Now!" class="example_image" />
 						</a>
 					</div>
 					
@@ -2511,7 +2391,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://basecamphq.com/mobile">
-						<img src="docs/images/basecamp-mobile.png" alt="Basecamp Mobile" class="example_image" />
+							<img src="docs/images/basecamp-mobile.png" alt="Basecamp Mobile" class="example_image" />
 						</a>
 					</div>
 					
@@ -2532,7 +2412,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://slaveryfootprint.org/survey">
-						<img src="docs/images/slavery-footprint.png" alt="Slavery Footprint" class="example_image" />
+							<img src="docs/images/slavery-footprint.png" alt="Slavery Footprint" class="example_image" />
 						</a>
 					</div>
 					
@@ -2552,7 +2432,7 @@
 					
 					<div style="text-align: center;">
 						<a href="https://stripe.com">
-						<img src="docs/images/stripe.png" alt="Stripe" class="example_image" />
+							<img src="docs/images/stripe.png" alt="Stripe" class="example_image" />
 						</a>
 					</div>
 					
@@ -2568,7 +2448,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.joindiaspora.com/">
-						<img src="docs/images/diaspora.png" alt="Diaspora" class="example_image" />
+							<img src="docs/images/diaspora.png" alt="Diaspora" class="example_image" />
 						</a>
 					</div>
 					
@@ -2595,7 +2475,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://m.soundcloud.com">
-						<img src="docs/images/soundcloud.png" alt="SoundCloud" class="example_image" />
+							<img src="docs/images/soundcloud.png" alt="SoundCloud" class="example_image" />
 						</a>
 					</div>
 					
@@ -2612,7 +2492,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.pandora.com/newpandora">
-						<img src="docs/images/pandora.png" alt="Pandora" class="example_image" />
+							<img src="docs/images/pandora.png" alt="Pandora" class="example_image" />
 						</a>
 					</div>
 					
@@ -2632,7 +2512,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.codeschool.com">
-						<img src="docs/images/code-school.png" alt="Code School" class="example_image" />
+							<img src="docs/images/code-school.png" alt="Code School" class="example_image" />
 						</a>
 					</div>
 					
@@ -2651,7 +2531,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://getcloudapp.com">
-						<img src="docs/images/cloudapp.png" alt="CloudApp" class="example_image" />
+							<img src="docs/images/cloudapp.png" alt="CloudApp" class="example_image" />
 						</a>
 					</div>
 					
@@ -2667,7 +2547,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://seatgeek.com">
-						<img src="docs/images/seatgeek.png" alt="SeatGeek" class="example_image" />
+							<img src="docs/images/seatgeek.png" alt="SeatGeek" class="example_image" />
 						</a>
 					</div>
 					
@@ -2681,7 +2561,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://grove.io">
-						<img src="docs/images/grove.png" alt="Grove.io" class="example_image" />
+							<img src="docs/images/grove.png" alt="Grove.io" class="example_image" />
 						</a>
 					</div>
 					
@@ -2696,7 +2576,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://kicksend.com">
-						<img src="docs/images/kicksend.png" alt="Kicksend" class="example_image" />
+							<img src="docs/images/kicksend.png" alt="Kicksend" class="example_image" />
 						</a>
 					</div>
 					
@@ -2715,7 +2595,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://shortmail.com">
-						<img src="docs/images/shortmail.png" alt="Shortmail" class="example_image" />
+							<img src="docs/images/shortmail.png" alt="Shortmail" class="example_image" />
 						</a>
 					</div>
 					
@@ -2731,7 +2611,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://battlefield.play4free.com/">
-						<img src="docs/images/battlefield.png" alt="Battlefield Play4Free" class="example_image" />
+							<img src="docs/images/battlefield.png" alt="Battlefield Play4Free" class="example_image" />
 						</a>
 					</div>
 					
@@ -2748,7 +2628,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://salon.io">
-						<img src="docs/images/salon.png" alt="Salon.io" class="example_image" />
+							<img src="docs/images/salon.png" alt="Salon.io" class="example_image" />
 						</a>
 					</div>
 					
@@ -2769,7 +2649,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://mapbox.github.com/tilemill/">
-						<img src="docs/images/tilemill.png" alt="TileMill" class="example_image" />
+							<img src="docs/images/tilemill.png" alt="TileMill" class="example_image" />
 						</a>
 					</div>
 					
@@ -2785,7 +2665,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://blossom.io">
-						<img src="docs/images/blossom.png" alt="Blossom" class="example_image" />
+							<img src="docs/images/blossom.png" alt="Blossom" class="example_image" />
 						</a>
 					</div>
 					
@@ -2802,7 +2682,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.animoto.com/">
-						<img src="docs/images/animoto.png" alt="Tzigla" class="Animoto Video Editor" />
+							<img src="docs/images/animoto.png" alt="Tzigla" class="Animoto Video Editor" />
 						</a>
 					</div>
 					
@@ -2820,7 +2700,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://codiqa.com/">
-						<img src="docs/images/codiqa.png" alt="Codiqa" class="example_image" />
+							<img src="docs/images/codiqa.png" alt="Codiqa" class="example_image" />
 						</a>
 					</div>
 					
@@ -2838,7 +2718,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://attictv.com/">
-						<img src="docs/images/attictv.png" alt="AtticTV" class="example_image" />
+							<img src="docs/images/attictv.png" alt="AtticTV" class="example_image" />
 						</a>
 					</div>
 					
@@ -2857,7 +2737,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://decide.com">
-						<img src="docs/images/decide.png" alt="Decide" class="example_image" />
+							<img src="docs/images/decide.png" alt="Decide" class="example_image" />
 						</a>
 					</div>
 					
@@ -2874,7 +2754,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://trello.com">
-						<img src="docs/images/trello.png" alt="Trello" class="example_image" />
+							<img src="docs/images/trello.png" alt="Trello" class="example_image" />
 						</a>
 					</div>
 					
@@ -2896,7 +2776,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://ducksboard.com/">
-						<img src="docs/images/ducksboard.png" alt="Ducksboard" class="example_image" />
+							<img src="docs/images/ducksboard.png" alt="Ducksboard" class="example_image" />
 						</a>
 					</div>
 					
@@ -2914,7 +2794,7 @@
 					
 					<div style="text-align: center;">
 						<a href="https://free.picklive.com/">
-						<img src="docs/images/picklive.png" alt="picklive" class="example_image" />
+							<img src="docs/images/picklive.png" alt="picklive" class="example_image" />
 						</a>
 					</div>
 					
@@ -2931,7 +2811,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.quietwrite.com/">
-						<img src="docs/images/quietwrite.png" alt="QuietWrite" class="example_image" />
+							<img src="docs/images/quietwrite.png" alt="QuietWrite" class="example_image" />
 						</a>
 					</div>
 					
@@ -2956,7 +2836,7 @@
 					
 					<div style="text-align: center;">
 						<a href="http://www.tzigla.com/">
-						<img src="docs/images/tzigla.png" alt="Tzigla" class="example_image" />
+							<img src="docs/images/tzigla.png" alt="Tzigla" class="example_image" />
 						</a>
 					</div>
 					
@@ -3149,7 +3029,7 @@
 						<b class="header">How does Backbone relate to "traditional" MVC?</b>
 						<br />
 						Different implementations of the
-						<a href="http://en.wikipedia.org/wiki/Model–View–Controller">Model-View-Controller</a>
+						<a href="http://en.wikipedia.org/wiki/Modelâ€“Viewâ€“Controller">Model-View-Controller</a>
 						pattern tend to disagree about the definition of a controller. If it helps any, in
 						Backbone, the <a href="#View">View</a> class can also be thought of as a
 						kind of controller, dispatching events that originate from the UI, with
@@ -3499,7 +3379,7 @@
 					<p>
 						<br />
 						<a href="http://documentcloud.org/" title="A DocumentCloud Project" style="background:none;">
-						<img src="http://jashkenas.s3.amazonaws.com/images/a_documentcloud_project.png" alt="A DocumentCloud Project" style="position:relative;left:-10px;" />
+							<img src="http://jashkenas.s3.amazonaws.com/images/a_documentcloud_project.png" alt="A DocumentCloud Project" style="position:relative;left:-10px;" />
 						</a>
 					</p>
 					
@@ -3524,4 +3404,4 @@
 				</script>
 				
 			</body>
-		</html>				
+		</html>									
