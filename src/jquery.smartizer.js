@@ -285,6 +285,8 @@
                             return this;
                         }
                     }
+					
+					$.getJSON(options.source);
 
                     $.ajax({
                         type: options.method,
