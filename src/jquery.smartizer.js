@@ -286,8 +286,6 @@
                         }
                     }
 					
-					$.getJSON(options.source);
-
                     $.ajax({
                         type: options.method,
                         url: options.source,
@@ -385,7 +383,7 @@
                             $(options.target).after(html);
                             $(options.target).parent().initializeControls();
                         } else {
-                            $(options.target).hide().html(html).initializeControls().fadeIn(options.speed || "slow");
+                            $(options.target).hide().html(html).initializeControls().show(options.speed || "slow");
                         }
                     }
 

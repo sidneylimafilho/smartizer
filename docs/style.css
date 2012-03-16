@@ -1,5 +1,5 @@
 body {
-	font-size: 14px ;
+	font-size: 12pt ;
 	line-height: 22px ;
 	font-family: Segoe UI,	Trebuchet MS;
 	background:  #f4f4f4;
@@ -27,6 +27,7 @@ div#sidebar  {
 	display: block;
 	color: black;
 	font-weight: bold;
+	font-family: Segoe UI Semibold,	Trebuchet MS;
 	margin-top: 15px ;
 	
 }
