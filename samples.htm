@@ -1,0 +1,566 @@
+﻿<div id="samples">
+	<h2>Exemplos</h2>
+	
+	
+	<div id="actions">
+		<h3>Actions</h3>
+		As actions são as possibilidades de usar funções do jQuery de forma declarada em conjunto, sem necessidade de programar.
+		
+		<h4>Botão que dispara ações de ocultar divs</h4>
+		<h4>Botão que ser acionado busca uma página e coloca seu conteúdo numa div</h4>
+		<h4>Botão que ser acionado muda seu status = ToggleButton</h4>
+		<h4>Implementando um controle tabs, só com botões</h4>
+	</div>
+	
+	<div id="links">
+		<h3>Links</h3>
+	</div>
+	
+	<div id="templates">
+		<h3>Templates</h3>
+		<h4>Usando um template para gerar um conteúdo num div</h4>
+		<h4>Transformando o retorno JSON de uma requisição e preenchendo colocando no target</h4>
+	</div>
+	
+	<div id="combos">
+		<h3>Combos</h3>		
+		<h4>Combos vinculadas</h4>		
+		<h4>Combos com valor default</h4>
+		<h4>Carregando uma combobox dinamicamente</h4>
+		<h4>Populando uma combobox através da seleção de outra combobox, usando REST</h4>
+	</div>
+	
+	<div id="grid">
+		<h3>Grid</h3>		
+		<h4>Grid com ordenação</h4>		
+		<h4>Grid com paginação</h4>		
+	</div>
+	
+	<div id="forms">
+		<h3>Forms</h3>
+		<h4>Criando um form e usando um button para disparar o request via ajax</h4>
+		<h4>Form + Plugin: Validando um form com o plugin jQuery Validate</h4>
+	</div>
+	
+	<div id="plugins">
+		<h3>Plugins</h3>
+		<h4>Atribuindo um plugin a tags</h4>
+		<h4>Autocomplete</h4>
+		<h4>DateInput</h4>
+	</div>
+	
+	<div id="offline">
+		<h3>Trabalhando Offline</h3>
+	</div>
+</div>
+
+
+<!-- 
+	Abaixo estão descritas alguns exemplos de funcionalidades que normalmente criamos, apesar de as vezes requerer muito html, todo o controle fica na mão do desenvolvedor, podendo manipular com maior precisão aquilo que lhe convier. Para começar a entender e brincar com o SmartClient, primeiros vamos aos conceitos básicos, este plugin se baseia no conceito de que a maior parte do desenvolvimento de qualquer software consiste em 1/3 do tempo trabalhando na interface, logo o plugin visa facilitar este passo, permitindo convencionar algumas caracteristicas básicas do jQuery e ajax, que usamos muitas vezes. 
+	
+	No exemplo abaixo vamos colocar uma caixa de texto e ao digitar algum texto nela será apresentada na linha abaixo uma mensagem no famoso estilo Hello World.
+	
+	
+	
+	
+	Road map
+	
+	O RoadMap abaixo são as funcionalidades escolhidas para serem desenvolvidas de acordo
+	
+	com o projeto inicial, divididas em releases. <br />
+	
+	<div smart="{load:{hide:['.roadMapItems'], show:['.v0_8']}}">
+	
+    
+	
+	<table width="100%">
+	
+	
+	
+	<tbody>
+	
+	
+	
+	<tr>
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="javascript:;" smart="{click:{hide:['.roadMapItems'], show:['.v0_2']}}">
+	
+	0.2</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Tags de link buscar via ajax e colocar seu conteúdo em outra tag</td>
+	
+	
+	
+	<td width="60px"><b>Concluido&nbsp;</b><br />
+	
+	05/03/2011</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v0_2">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Disparar Requests de acordo com a configuração na tag</li>
+	
+	
+	
+	<li>Determinar qual verbo será executado no request</li>
+	
+	
+	
+	<li>Determinar qual será a tag que receberá o conteúdo do request</li>
+	
+	
+	
+	<li>Permitir ocultar/mostrar outras tags</li></ul>
+	
+	
+	
+	<div><br />
+	
+	</div>
+	
+    </div>
+	
+    
+	
+	<table width="100%">
+	
+	
+	
+	<tbody>
+	
+	
+	
+	<tr>
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="javascript:;" smart="{click:{hide:['.roadMapItems'], show:['.v0_4']}}">
+	
+	0.4</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Permitir o carregamento de uma combo ser via ajax, além de permitir que uma combo
+	
+	dispare o preenchimento de outra combo</td>
+	
+	
+	
+	<td width="60px"><b>Concluido</b><br />
+	
+	02/04/2011</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v0_4">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Tratar retorno de requisições (XML, JSON, etc) como fonte de dados</li>
+	
+	
+	
+	<li>Permitir usar um mecanismo de template</li>
+	
+	
+	
+	<li>Utilizar o retorno dos dados como fonte do template</li>
+	
+	
+	
+	<li>Anexar o template tratado com os dados em uma tag definida por seletor</li></ul>
+	
+	
+	
+	<div><br />
+	
+	</div>
+	
+    </div>
+	
+    
+	
+	<table width="100%" style="font-family: 'Segoe UI';">
+	
+	
+	
+	<tbody style="font-family: 'Segoe UI';">
+	
+	
+	
+	<tr style="font-family: 'Segoe UI';">
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="" smart="{click:{hide:['.roadMapItems'], show:['.v0_6']}}">0.6</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Telas serem recursivas, ou seja, uma tela com configuração Smart, chamar um recurso
+	
+	externo com configuração Smart</td>
+	
+	
+	
+	<td width="60px"><b><b>Concluido</b></b><br />
+	
+	02/05/2011</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v0_6">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Adicionar eventos que reflitam cada passo do processamento ajax</li>
+	
+	
+	
+	<li>Tratar retorno 304 (Not Modified), para então recuperar do cache via iframe</li>
+	
+	
+	
+	<li>Permitir que um ajax ao retornar um html inicialize cada tag que possua o atributo
+	
+	smart</li></ul>
+	
+    </div>
+	
+    
+	
+	<table width="100%">
+	
+	
+	
+	<tbody>
+	
+	
+	
+	<tr>
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="" smart="{click:{hide:['.roadMapItems'], show:['.v0_7']}}">0.7</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Permitir uma configuração mais enxuta, para casos de evento load </td>
+	
+	
+	
+	<td width="60px"><b><b>Concluido</b></b><br />
+	
+	26/07/2011</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v0_7">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Correção de alguns bugs</li>
+	
+	
+	
+	<li>Maior cobertura de testes</li>
+	
+	
+	
+	<li>Adicionar a opção <b>inherits</b>, para permitir reaproveitar uma configuração anterior</li>
+	
+	</ul>
+	
+    </div>
+	
+    
+	
+	<table width="100%">
+	
+	
+	
+	<tbody>
+	
+	
+	
+	<tr>
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="javascript:;" smart="{click:{hide:['.roadMapItems'], show:['.v0_8']}}">
+	
+	0.8</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Uso de controles jQuery UI, sem programar; Permitir configurar uma tela programaticamente
+	
+	</td>
+	
+	
+	
+	<td style="text-align: center;" width="60px"><br />
+	
+	</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v0_8">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Permitir uso programático do atributo Smart, através da função dataBind</li>
+	
+	
+	
+	<li>Adicionar a opção <b>plugin</b>, para permitir instanciar controles jQuery UI</li>
+	
+	
+	
+	<li>Adicionar a opção <b>confirmMessage </b>que definirá qual mensagem será apresentada,
+	
+	na janela de solicitação de confirmação</li>
+	
+	
+	
+	<li>Adicionar a opção <b>dataSource </b>que permitirá uilizar um objeto como fonte de
+	
+	dados para o templating </li>
+	
+	
+	
+	<li>Adicionar a opção <b>dataMember </b>que indicará qual propriedade do objeto receberá
+	
+	a informação </li>
+	
+	</ul>
+	
+	
+	
+	<div><br />
+	
+	</div>
+	
+    </div>
+	
+    
+	
+	<table width="100%">
+	
+	
+	
+	<tbody>
+	
+	
+	
+	<tr>
+	
+	
+	
+	<td width="1%">
+	
+	
+	
+	<h1><a href="javascript:;" smart="{click:{hide:['.roadMapItems'], show:['.v1_0']}}">
+	
+	1.0</a></h1>
+	
+	</td>
+	
+	
+	
+	<td><b>Meta:</b><br />
+	
+	Criar uma interface que trabalhe com dados locais sem necessitar de requisições;
+	
+	Permitir criar um aplicativo como Gmail</td>
+	
+	
+	
+	<td style="text-align: center;" width="60px"><br />
+	
+	</td>
+	
+	</tr>
+	
+	</tbody>
+	
+    </table>
+	
+    
+	
+	<hr />
+	
+    
+	
+	<div class="roadMapItems v1_0">
+	
+	
+	
+	<ul>
+	
+	
+	
+	<li>Permitir atributo Smart SOURCE, receber tanto um endereço url, como um objeto para
+	
+	usar como fonte de dados ViewModel</li></ul>
+	
+    </div>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+-->
