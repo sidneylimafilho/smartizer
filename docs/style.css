@@ -28,7 +28,7 @@ div#sidebar  {
 	color: black;
 	font-weight: bold;
 	font-family: Segoe UI Semibold,	Trebuchet MS;
-	margin-top: 15px ;
+	margin-top: 10pt ;
 	
 }
 
@@ -42,7 +42,7 @@ div#sidebar  {
 	
 }
 ul.toc_section {
-	font-size: 11px ;
+	font-size: 10pt ;
 	line-height: 14px ;
 	margin: 5px 0 0 0;
 	padding-left: 0px ;
@@ -94,7 +94,7 @@ p, div.container ul {
 }
 
 p.warning {
-	font-size: 12px ;
+	font-size: 10pt ;
 	line-height: 18px ;
 	font-style: italic;
 	
@@ -112,11 +112,11 @@ div.container ul li {
 }
 
 div.container ul.small {
-	font-size: 12px ;	
+	font-size: 10pt ;	
 }
 
-a, a:visited {	color:  #444; 	}
-a:active, a:hover {	color:  #000;} 
+a, a:visited {	color:  #0066FF; 	}
+a:active, a:hover {	color:  #FF6600;} 
 
 a.punch {
 	display: inline-block;
@@ -125,31 +125,31 @@ a.punch {
 	border-right: 1px solid  #1f2d4d;
 	border-bottom: 1px solid  #151e33;
 	border-left: 1px solid  #1f2d4d;
-	-webkit-border-radius: 4px ;
-	-moz-border-radius: 4px ;
-	-ms-border-radius: 4px ;
-	-o-border-radius: 4px ;
-	border-radius: 4px ;
-	-webkit-box-shadow: inset 01px 10px 1px  #5c8bee,
+	-webkit-border-radius: 20px ;
+	-moz-border-radius: 20px ;
+	-ms-border-radius: 20px ;
+	-o-border-radius: 20px ;
+	border-radius: 20px ;
+	-webkit-box-shadow: inset 01px 4px 1px  #5c8bee,
 	0px 1px 0 #1d2c4d,
-	06px 0px  #1f3053,
-	08px 4px 1px  #111111;
-	-moz-box-shadow: inset 01px 10px 1px  #5c8bee,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #f4f4f4;
+	-moz-box-shadow: inset 01px 4px 1px  #5c8bee,
 	0px 1px 0 #1d2c4d,
-	06px 0px  #1f3053,
-	08px 4px 1px  #111111;
-	-ms-box-shadow: inset 01px 10px 1px  #5c8bee,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #f4f4f4;
+	-ms-box-shadow: inset 01px 4px 1px  #5c8bee,
 	0px 1px 0 #1d2c4d,
-	06px 0px  #1f3053,
-	08px 4px 1px  #111111;
-	-o-box-shadow: inset 01px 10px 1px  #5c8bee,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #f4f4f4;
+	-o-box-shadow: inset 01px 4px 1px  #5c8bee,
 	0px 1px 0 #1d2c4d,
-	06px 0px  #1f3053,
-	08px 4px 1px  #111111;
-	box-shadow: inset 01px 10px 1px  #5c8bee,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #f4f4f4;
+	box-shadow: inset 01px 4px 1px  #5c8bee,
 	0px 1px 0 #1d2c4d,
-	06px 0px  #1f3053,
-	08px 4px 1px  #111111;
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #f4f4f4;
 	color:  #fff;
 	font: bold14px "helvetica neue", helvetica,	arial,	sans-serif;
 	line-height: 1;
@@ -164,26 +164,26 @@ a.punch {
 }
 
 a.punch:hover {
-	-webkit-box-shadow: inset 0 0px 20px 1px  #87adff,
+	-webkit-box-shadow: inset 01px 2px 1px  #88AAFF,
 	0px 1px 0 #1d2c4d,
-	0 6px 0px  #1f3053,
+	0 0px 0px  #1f3053,
 	0 8px 4px 1px  #111111;
-	-moz-box-shadow: inset 0 0px 20px 1px  #87adff,
+	-moz-box-shadow:inset 01px 2px 1px  #88AAFF,
 	0px 1px 0 #1d2c4d,
-	0 6px 0px  #1f3053,
-	0 8px 4px 1px  #111111;
-	-ms-box-shadow: inset 0 0px 20px 1px  #87adff,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #111111;
+	-ms-box-shadow: inset 01px 2px 1px  #88AAFF,
 	0px 1px 0 #1d2c4d,
-	0 6px 0px  #1f3053,
-	0 8px 4px 1px  #111111;
-	-o-box-shadow: inset 0 0px 20px 1px  #87adff,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #111111;
+	-o-box-shadow: inset 01px 2px 1px  #88AAFF,
 	0px 1px 0 #1d2c4d,
-	0 6px 0px  #1f3053,
-	0 8px 4px 1px  #111111;
-	box-shadow: inset 0 0px 20px 1px  #87adff,
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #111111;
+	box-shadow: inset 01px 2px 1px  #88AAFF,
 	0px 1px 0 #1d2c4d,
-	0 6px 0px  #1f3053,
-	0 8px 4px 1px  #111111;
+	0 0px 0px  #1f3053,
+	0 1px 4px 1px  #111111;
 	cursor: pointer;
 	
 }
@@ -219,7 +219,8 @@ a img {
 	
 }
 
-h1,h2,h3,h4,h5,h6 {	padding-top: 20px ;		}
+h1,h2,h3,h4,h5,h6 {	padding-top: 20px ;	font-weight: bold;
+	font-family: Segoe UI Semibold,	Trebuchet MS;	}
 
 h2 {font-size: 22px ;	}
 
@@ -259,7 +260,7 @@ code,pre,tt {
 	Consolas,
 	"Lucida Console",
 	monospace;
-	font-size: 12px ;
+	font-size: 10pt ;
 	line-height: 18px ;
 	font-style: normal;
 	
@@ -279,7 +280,7 @@ code {
 }
 
 pre {
-	font-size: 12px ;
+	font-size: 10pt ;
 	padding: 2px 0 2px 15px ;
 	border: 4px solid #bbb;
 	border-top: 0;
