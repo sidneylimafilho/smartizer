@@ -1,2 +1,0 @@
-﻿<h4>Muito bom!</h4>
-O <b>SmartClient</b> buscou este html e colocou nesta caixa. Viu como é facil? Basta configurar o atributo <b>"smart"</b>. Veja mais na <a href="Documentacao,432.aspx?format=RAW" smart="{click:{target:'#conteudoSmartClient'}}">documentação</a> os outros parametros que darão um upgrade na sua interface! 
